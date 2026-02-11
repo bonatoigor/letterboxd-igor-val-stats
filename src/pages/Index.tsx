@@ -3,6 +3,7 @@ import HorizontalBarChart from "@/components/HorizontalBarChart";
 import RatedGenresChart from "@/components/RatedGenresChart";
 import PosterGrid from "@/components/PosterGrid";
 import DecadeChart from "@/components/DecadeChart";
+import WorldMapChart from "@/components/WorldMapChart";
 import {
   getGeneralInfo,
   getMovies,
