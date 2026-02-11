@@ -13,31 +13,35 @@ export default function RatedGenresChart({ data }: RatedGenresChartProps) {
         Highest Rated Genres
       </h3>
       <div className="space-y-3">
-        {data.map((item) => (
-          <div key={item.name}>
-            <div className="flex items-center justify-between mb-1">
-              <span className="text-sm text-lb-bright truncate mr-3">{item.name}</span>
-              <div className="flex gap-3 text-xs tabular-nums">
-                <span className="text-lb-green">I: {item.avgIgor.toFixed(1)}★</span>
-                <span className="text-lb-orange">V: {item.avgValeria.toFixed(1)}★</span>
+          {data.map((item) => (
+            <div key={item.name} className="group">
+              <div className="flex items-center justify-between mb-1.5">
+                {/* Nome do Gênero: de text-sm para text-base */}
+                <span className="text-base text-lb-bright truncate mr-3 font-medium">
+                  {item.name}
+                </span>
+                {/* Notas: de text-xs para text-sm e fonte mais negritada */}
+                <div className="flex gap-3 text-sm font-bold tabular-nums">
+                  <span className="text-lb-green">I: {item.avgIgor.toFixed(1)}★</span>
+                  <span className="text-lb-orange">V: {item.avgValeria.toFixed(1)}★</span>
+                </div>
+              </div>
+              <div className="flex gap-1.5 h-2"> {/* Aumentado gap e altura da barra para h-2 */}
+                <div className="flex-1 bg-lb-bar rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-lb-green rounded-full transition-all duration-700 ease-out"
+                    style={{ width: `${(item.avgIgor / maxRating) * 100}%` }}
+                  />
+                </div>
+                <div className="flex-1 bg-lb-bar rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-lb-orange rounded-full transition-all duration-700 ease-out"
+                    style={{ width: `${(item.avgValeria / maxRating) * 100}%` }}
+                  />
+                </div>
               </div>
             </div>
-            <div className="flex gap-1 h-1.5">
-              <div className="flex-1 bg-lb-bar rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-lb-green rounded-full"
-                  style={{ width: `${(item.avgIgor / maxRating) * 100}%` }}
-                />
-              </div>
-              <div className="flex-1 bg-lb-bar rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-lb-orange rounded-full"
-                  style={{ width: `${(item.avgValeria / maxRating) * 100}%` }}
-                />
-              </div>
-            </div>
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   );
