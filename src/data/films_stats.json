@@ -4523,7 +4523,7 @@
             ],
             "Film_URL": "https://letterboxd.com/film/night-of-the-lepus/",
             "Rating_Igor": 2.0,
-            "Rating_Valeria": 0.0
+            "Rating_Valeria": 2.0
         },
         {
             "id": 95,
@@ -8570,3 +8570,4 @@
     ]
 
 }
+
