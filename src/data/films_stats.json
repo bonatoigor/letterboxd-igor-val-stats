@@ -4425,7 +4425,7 @@
                 "Faux Beef"
             ],
             "Film_URL": "https://letterboxd.com/film/munchausen/",
-            "Rating_Igor": 0.0,
+            "Rating_Igor": 3.0,
             "Rating_Valeria": 3.0
         },
         {
@@ -8568,4 +8568,5 @@
             "Rating_Valeria": 4.0
         }
     ]
+
 }
