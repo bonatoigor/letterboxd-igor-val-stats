@@ -20,6 +20,7 @@ import {
   getUniqueLanguagesCount,
   getTopActors,
   getTopLanguages,
+  getGlobalAverage
 } from "@/lib/filmUtils";
 
 const info = getGeneralInfo();
@@ -38,6 +39,7 @@ const uniqueCountries = getUniqueCountriesCount(movies);
 const uniqueLanguages = getUniqueLanguagesCount(movies);
 const topActors = getTopActors(movies);
 const topLanguages = getTopLanguages(movies);
+const globalAverage = getGlobalAverage(movies);
 
 const Index = () => {
   return (
@@ -47,6 +49,7 @@ const Index = () => {
         totalMovies={movies.length}
         totalHours={totalHours}
         totalDays={totalDays}
+        globalAverage={globalAverage}
         uniqueDirectors={uniqueDirectors}
         uniqueCountries={uniqueCountries}
         uniqueLanguages={uniqueLanguages}
