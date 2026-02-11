@@ -134,7 +134,7 @@ export function getGlobalAverage(movies: Movie[]): string {
 
 export function getGlobalSumRating(movies: Movie[]): string {
   const totalSum = movies.reduce((acc, m) => acc + (m.Average_rating || 0), 0);
-  return totalSum.toFixed(1);
+  return totalSum.toFixed(2);
 }
 
 export function getRecentMovies(movies: Movie[], limit = 12): Movie[] {
