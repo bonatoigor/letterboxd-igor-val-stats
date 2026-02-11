@@ -19,9 +19,10 @@ export default function ProfileHeader({
 }: ProfileHeaderProps) {
   return (
     <header className="relative overflow-hidden bg-lb-body border-b border-border">
-      {/* Decorative bars pattern */}
+
       <div className="absolute inset-0 pointer-events-none opacity-20">
-        <DecorativeBars />
+        <DecorativeBars side="left" />
+        <DecorativeBars side="right" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 py-12 md:py-20">
@@ -29,7 +30,6 @@ export default function ProfileHeader({
           A Life in Film
         </h1>
 
-        {/* Avatars + Compatibility */}
         <div className="flex items-center justify-center gap-4 mb-10">
           <div className="flex flex-col items-center">
             <img
@@ -64,7 +64,6 @@ export default function ProfileHeader({
           </div>
         </div>
 
-        {/* 4 Metric Cards */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-3xl mx-auto">
           <MetricCard value={totalMovies} label="Films" icon="🎬" />
           <MetricCard value={totalHours} label="Hours" icon="⏱" />
@@ -73,7 +72,6 @@ export default function ProfileHeader({
           <MetricCard value={uniqueLanguages} label="Languages" icon="🗣" />
         </div>
 
-        {/* Rating totals */}
         <div className="flex justify-center gap-8 md:gap-16 mt-8">
           <Stat value={info.Sum_Rating_Igor.toFixed(1)} label="Igor ★" />
           <Stat value={info.Sum_Rating_Valeria.toFixed(1)} label="Valéria ★" />
@@ -104,7 +102,7 @@ function Stat({ value, label }: { value: string; label: string }) {
   );
 }
 
-function DecorativeBars() {
+function DecorativeBars({ side = "right" }: { side?: "left" | "right" }) {
   const bars = Array.from({ length: 18 }, (_, i) => ({
     x: i * 20,
     green: 40 + Math.random() * 80,
@@ -113,9 +111,11 @@ function DecorativeBars() {
     offsetY: 40 + Math.random() * 80,
   }));
 
+  const positionClass = side === "right" ? "right-0" : "left-0 -scale-x-100";
+
   return (
     <svg
-      className="absolute right-0 top-0 h-full w-80 hidden md:block"
+      className={`absolute top-0 h-full w-80 hidden md:block ${positionClass}`}
       viewBox="0 0 320 390"
       preserveAspectRatio="none"
     >
