@@ -28,9 +28,6 @@ export default function ProfileHeader({
         <h1 className="text-center font-display text-4xl md:text-6xl text-lb-bright tracking-tight mb-1">
           A Life in Film
         </h1>
-        <p className="text-center text-lb-text text-sm tracking-widest uppercase mb-8">
-          Year in Review
-        </p>
 
         {/* Avatars + Compatibility */}
         <div className="flex items-center justify-center gap-4 mb-10">
