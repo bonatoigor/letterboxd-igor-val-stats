@@ -82,7 +82,7 @@ export default function ProfileHeader({
 
           <div className="text-center">
               <span className="block text-2xl md:text-3xl font-bold text-lb-blue">{globalSumRating}</span>
-              <span className="text-xs text-lb-text uppercase tracking-widest">Average ★</span>
+              <span className="text-xs text-lb-text uppercase tracking-widest">Global Average ★</span>
           </div>
           
           <Stat value={info.Sum_Rating_Valeria.toFixed(1)} label="Valéria ★" />
