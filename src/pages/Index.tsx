@@ -56,10 +56,8 @@ const Index = () => {
       />
 
       <main className="max-w-5xl mx-auto px-4 py-8 space-y-6">
-        {/* Decade distribution */}
         <DecadeChart data={decades} />
 
-        {/* Charts grid */}
         <div className="grid md:grid-cols-2 gap-6">
           <HorizontalBarChart title="Most Watched Genres" data={topGenres} color="green" />
           <HorizontalBarChart title="Most Watched Countries" data={topCountries} color="blue" />
@@ -69,11 +67,11 @@ const Index = () => {
           <HorizontalBarChart title="Most Watched Languages" data={topLanguages} color="blue" />
         </div>
 
-        {/* Poster grids */}
+        <WorldMapChart movies={movies} />
+        
         <PosterGrid title="Highest Rated" movies={highestRated} />
         <PosterGrid title="Recent Films" movies={recent} />
 
-        {/* Footer */}
         <footer className="text-center py-8 text-lb-text text-xs">
           <p>Igor & Valéria • Film Stats Dashboard</p>
         </footer>
