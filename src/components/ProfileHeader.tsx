@@ -8,7 +8,7 @@ interface ProfileHeaderProps {
   uniqueDirectors: number;
   uniqueCountries: number;
   uniqueLanguages: number;
-  globalAverage: string;
+  globalSumRating: string;
 }
 
 export default function ProfileHeader({
@@ -19,7 +19,7 @@ export default function ProfileHeader({
   uniqueDirectors,
   uniqueCountries,
   uniqueLanguages,
-  globalAverage,
+  globalSumRating,
 }: ProfileHeaderProps) {
   return (
     <header className="relative overflow-hidden bg-lb-body border-b border-border">
@@ -81,7 +81,7 @@ export default function ProfileHeader({
           <Stat value={info.Sum_Rating_Igor.toFixed(1)} label="Igor ★" />
 
           <div className="flex flex-col items-center px-6 py-2 bg-lb-surface/50 rounded-2xl border border-lb-blue/20">
-              <span className="block text-2xl md:text-3xl font-bold text-lb-blue">{globalAverage}</span>
+              <span className="block text-2xl md:text-3xl font-bold text-lb-blue">{globalSumRating}</span>
               <span className="text-xs text-lb-text uppercase tracking-widest">Average ★</span>
           </div>
           
