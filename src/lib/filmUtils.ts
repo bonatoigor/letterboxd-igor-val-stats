@@ -126,6 +126,12 @@ export function getHighestRatedMovies(movies: Movie[], limit = 12): Movie[] {
     .slice(0, limit);
 }
 
+export function getGlobalAverage(movies: Movie[]): string {
+  if (movies.length === 0) return "0.0";
+  const sum = movies.reduce((acc, m) => acc + (m.Average_rating || 0), 0);
+  return (sum / movies.length).toFixed(1);
+}
+
 export function getRecentMovies(movies: Movie[], limit = 12): Movie[] {
   return [...movies]
     .sort((a, b) => b.Release_year - a.Release_year || b.id - a.id)
