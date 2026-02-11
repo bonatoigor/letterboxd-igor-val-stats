@@ -45,12 +45,12 @@ export default function ProfileHeader({
           </div>
 
           <div className="flex flex-col items-center mx-4">
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-lb-green flex items-center justify-center bg-lb-surface">
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-lb-blue flex items-center justify-center bg-lb-surface">
               <div className="text-center">
                 <span className="text-2xl md:text-3xl font-bold text-lb-blue">
                   {info.Compatibility}
                 </span>
-                <span className="text-xs text-lb-green">%</span>
+                <span className="text-xs text-lb-blue">%</span>
               </div>
             </div>
             <span className="text-xs text-lb-text mt-2 uppercase tracking-widest">
