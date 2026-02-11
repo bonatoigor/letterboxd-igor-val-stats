@@ -13,6 +13,11 @@ import {
   getHighestRatedMovies,
   getRecentMovies,
   getDecadeDistribution,
+  getTotalHours,
+  getUniqueDirectorsCount,
+  getUniqueCountriesCount,
+  getTopActors,
+  getTopLanguages,
 } from "@/lib/filmUtils";
 
 const info = getGeneralInfo();
@@ -24,11 +29,22 @@ const topDirectors = getTopDirectors(movies);
 const highestRated = getHighestRatedMovies(movies);
 const recent = getRecentMovies(movies);
 const decades = getDecadeDistribution(movies);
+const totalHours = getTotalHours(movies);
+const uniqueDirectors = getUniqueDirectorsCount(movies);
+const uniqueCountries = getUniqueCountriesCount(movies);
+const topActors = getTopActors(movies);
+const topLanguages = getTopLanguages(movies);
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-lb-body">
-      <ProfileHeader info={info} totalMovies={movies.length} />
+      <ProfileHeader
+        info={info}
+        totalMovies={movies.length}
+        totalHours={totalHours}
+        uniqueDirectors={uniqueDirectors}
+        uniqueCountries={uniqueCountries}
+      />
 
       <main className="max-w-5xl mx-auto px-4 py-8 space-y-6">
         {/* Decade distribution */}
@@ -40,6 +56,8 @@ const Index = () => {
           <HorizontalBarChart title="Most Watched Countries" data={topCountries} color="blue" />
           <RatedGenresChart data={ratedGenres} />
           <HorizontalBarChart title="Most Watched Directors" data={topDirectors} color="orange" />
+          <HorizontalBarChart title="Most Watched Actors" data={topActors} color="green" />
+          <HorizontalBarChart title="Most Watched Languages" data={topLanguages} color="blue" />
         </div>
 
         {/* Poster grids */}

@@ -142,3 +142,59 @@ export function getDecadeDistribution(movies: Movie[]) {
     .sort((a, b) => a[0].localeCompare(b[0]))
     .map(([name, count]) => ({ name, count }));
 }
+
+export function getTotalHours(movies: Movie[]): number {
+  const totalMinutes = movies.reduce((sum, m) => sum + (m.Runtime || 0), 0);
+  return Math.round(totalMinutes / 60);
+}
+
+export function getUniqueDirectorsCount(movies: Movie[]): number {
+  return new Set(movies.map((m) => m.Director)).size;
+}
+
+export function getUniqueCountriesCount(movies: Movie[]): number {
+  const countries = new Set<string>();
+  movies.forEach((m) => m.Countries.forEach((c) => countries.add(c)));
+  return countries.size;
+}
+
+export function getTopActors(movies: Movie[], limit = 10): FrequencyItem[] {
+  const freq: Record<string, number> = {};
+  movies.forEach((m) => {
+    m.Cast.forEach((actor) => {
+      freq[actor] = (freq[actor] || 0) + 1;
+    });
+  });
+  const sorted = Object.entries(freq)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit);
+  const max = sorted[0]?.[1] || 1;
+  return sorted.map(([name, count]) => ({
+    name,
+    count,
+    percentage: (count / max) * 100,
+  }));
+}
+
+export function getTopLanguages(movies: Movie[], limit = 10): FrequencyItem[] {
+  const freq: Record<string, number> = {};
+  movies.forEach((m) => {
+    if (m.Original_language) {
+      freq[m.Original_language] = (freq[m.Original_language] || 0) + 1;
+    }
+    m.Spoken_languages?.forEach((lang) => {
+      if (lang !== m.Original_language) {
+        freq[lang] = (freq[lang] || 0) + 1;
+      }
+    });
+  });
+  const sorted = Object.entries(freq)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit);
+  const max = sorted[0]?.[1] || 1;
+  return sorted.map(([name, count]) => ({
+    name,
+    count,
+    percentage: (count / max) * 100,
+  }));
+}
