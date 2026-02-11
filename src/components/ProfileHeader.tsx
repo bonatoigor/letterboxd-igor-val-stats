@@ -25,7 +25,7 @@ export default function ProfileHeader({
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 py-12 md:py-20">
-        <h1 className="text-center font-display text-4xl md:text-6xl text-lb-bright tracking-tight mb-1">
+        <h1 className="text-center font-display text-4xl md:text-6xl text-lb-bright tracking-tight mb-4">
           A Life in Film
         </h1>
 
@@ -35,9 +35,9 @@ export default function ProfileHeader({
             <img
               src={info.Avatar_Igor}
               alt="Igor"
-              className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-lb-green object-cover"
+              className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-lb-orange object-cover shadow-lg"
             />
-            <span className="text-sm text-lb-text mt-2">Igor</span>
+            <span className="text-lg md:text-lg font-semibold text-lb-text mt-3">Igor</span>
           </div>
 
           <div className="flex flex-col items-center mx-4">
@@ -58,9 +58,9 @@ export default function ProfileHeader({
             <img
               src={info.Avatar_Valeria}
               alt="Valeria"
-              className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-lb-orange object-cover"
+              className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-lb-orange object-cover shadow-lg"
             />
-            <span className="text-sm text-lb-text mt-2">Valéria</span>
+            <span className="text-lg md:text-lg font-semibold text-lb-text mt-3">Valéria</span>
           </div>
         </div>
 
