@@ -14,6 +14,7 @@ import {
   getRecentMovies,
   getDecadeDistribution,
   getTotalHours,
+  getTotalDays,
   getUniqueDirectorsCount,
   getUniqueCountriesCount,
   getUniqueLanguagesCount,
@@ -31,6 +32,7 @@ const highestRated = getHighestRatedMovies(movies);
 const recent = getRecentMovies(movies);
 const decades = getDecadeDistribution(movies);
 const totalHours = getTotalHours(movies);
+const totalDays = getTotalDays(movies);
 const uniqueDirectors = getUniqueDirectorsCount(movies);
 const uniqueCountries = getUniqueCountriesCount(movies);
 const uniqueLanguages = getUniqueLanguagesCount(movies);
