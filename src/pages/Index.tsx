@@ -46,6 +46,7 @@ const Index = () => {
         info={info}
         totalMovies={movies.length}
         totalHours={totalHours}
+        totalDays={totalDays}
         uniqueDirectors={uniqueDirectors}
         uniqueCountries={uniqueCountries}
         uniqueLanguages={uniqueLanguages}
