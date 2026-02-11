@@ -3,9 +3,18 @@ import { GeneralInfo } from "@/lib/filmUtils";
 interface ProfileHeaderProps {
   info: GeneralInfo;
   totalMovies: number;
+  totalHours: number;
+  uniqueDirectors: number;
+  uniqueCountries: number;
 }
 
-export default function ProfileHeader({ info, totalMovies }: ProfileHeaderProps) {
+export default function ProfileHeader({
+  info,
+  totalMovies,
+  totalHours,
+  uniqueDirectors,
+  uniqueCountries,
+}: ProfileHeaderProps) {
   return (
     <header className="relative overflow-hidden bg-lb-body border-b border-border">
       {/* Decorative bars pattern */}
@@ -13,12 +22,16 @@ export default function ProfileHeader({ info, totalMovies }: ProfileHeaderProps)
         <DecorativeBars />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 py-10 md:py-16">
-        <h1 className="text-center font-display text-3xl md:text-5xl text-lb-bright tracking-tight mb-2">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 py-12 md:py-20">
+        <h1 className="text-center font-display text-4xl md:text-6xl text-lb-bright tracking-tight mb-1">
           A Life in Film
         </h1>
+        <p className="text-center text-lb-text text-sm tracking-widest uppercase mb-8">
+          Year in Review
+        </p>
 
-        <div className="flex items-center justify-center gap-4 mt-6">
+        {/* Avatars + Compatibility */}
+        <div className="flex items-center justify-center gap-4 mb-10">
           <div className="flex flex-col items-center">
             <img
               src={info.Avatar_Igor}
@@ -29,15 +42,17 @@ export default function ProfileHeader({ info, totalMovies }: ProfileHeaderProps)
           </div>
 
           <div className="flex flex-col items-center mx-4">
-            <div className="relative">
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-lb-green flex items-center justify-center bg-lb-surface">
-                <div className="text-center">
-                  <span className="text-2xl md:text-3xl font-bold text-lb-green">{info.Compatibility}</span>
-                  <span className="text-xs text-lb-green">%</span>
-                </div>
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-lb-green flex items-center justify-center bg-lb-surface">
+              <div className="text-center">
+                <span className="text-2xl md:text-3xl font-bold text-lb-green">
+                  {info.Compatibility}
+                </span>
+                <span className="text-xs text-lb-green">%</span>
               </div>
             </div>
-            <span className="text-xs text-lb-text mt-2 uppercase tracking-widest">Compatibility</span>
+            <span className="text-xs text-lb-text mt-2 uppercase tracking-widest">
+              Compatibility
+            </span>
           </div>
 
           <div className="flex flex-col items-center">
@@ -50,14 +65,33 @@ export default function ProfileHeader({ info, totalMovies }: ProfileHeaderProps)
           </div>
         </div>
 
-        {/* Stats row */}
+        {/* 4 Metric Cards */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+          <MetricCard value={totalMovies} label="Films" icon="🎬" />
+          <MetricCard value={totalHours} label="Hours" icon="⏱" />
+          <MetricCard value={uniqueDirectors} label="Directors" icon="🎥" />
+          <MetricCard value={uniqueCountries} label="Countries" icon="🌍" />
+        </div>
+
+        {/* Rating totals */}
         <div className="flex justify-center gap-8 md:gap-16 mt-8">
-          <Stat value={totalMovies.toString()} label="Films" />
           <Stat value={info.Sum_Rating_Igor.toFixed(1)} label="Igor ★" />
           <Stat value={info.Sum_Rating_Valeria.toFixed(1)} label="Valéria ★" />
         </div>
       </div>
     </header>
+  );
+}
+
+function MetricCard({ value, label, icon }: { value: number; label: string; icon: string }) {
+  return (
+    <div className="bg-lb-surface rounded-lg p-4 text-center border border-border/50">
+      <span className="text-lg mb-1 block">{icon}</span>
+      <span className="block text-2xl md:text-3xl font-bold text-lb-bright tabular-nums">
+        {value.toLocaleString()}
+      </span>
+      <span className="text-xs text-lb-text uppercase tracking-widest">{label}</span>
+    </div>
   );
 }
 
@@ -80,7 +114,11 @@ function DecorativeBars() {
   }));
 
   return (
-    <svg className="absolute right-0 top-0 h-full w-80 hidden md:block" viewBox="0 0 320 390" preserveAspectRatio="none">
+    <svg
+      className="absolute right-0 top-0 h-full w-80 hidden md:block"
+      viewBox="0 0 320 390"
+      preserveAspectRatio="none"
+    >
       <g fill="none">
         {bars.map((b, i) => (
           <g key={i} transform={`translate(${b.x} ${b.offsetY})`}>
