@@ -176,16 +176,17 @@ export function getTopActors(movies: Movie[], limit = 10): FrequencyItem[] {
   }));
 }
 
+export function getUniqueLanguagesCount(movies: Movie[]): number {
+  const langs = new Set<string>();
+  movies.forEach((m) => m.Spoken_languages?.forEach((l) => langs.add(l)));
+  return langs.size;
+}
+
 export function getTopLanguages(movies: Movie[], limit = 10): FrequencyItem[] {
   const freq: Record<string, number> = {};
   movies.forEach((m) => {
-    if (m.Original_language) {
-      freq[m.Original_language] = (freq[m.Original_language] || 0) + 1;
-    }
     m.Spoken_languages?.forEach((lang) => {
-      if (lang !== m.Original_language) {
-        freq[lang] = (freq[lang] || 0) + 1;
-      }
+      freq[lang] = (freq[lang] || 0) + 1;
     });
   });
   const sorted = Object.entries(freq)

@@ -16,6 +16,7 @@ import {
   getTotalHours,
   getUniqueDirectorsCount,
   getUniqueCountriesCount,
+  getUniqueLanguagesCount,
   getTopActors,
   getTopLanguages,
 } from "@/lib/filmUtils";
@@ -32,6 +33,7 @@ const decades = getDecadeDistribution(movies);
 const totalHours = getTotalHours(movies);
 const uniqueDirectors = getUniqueDirectorsCount(movies);
 const uniqueCountries = getUniqueCountriesCount(movies);
+const uniqueLanguages = getUniqueLanguagesCount(movies);
 const topActors = getTopActors(movies);
 const topLanguages = getTopLanguages(movies);
 
@@ -44,6 +46,7 @@ const Index = () => {
         totalHours={totalHours}
         uniqueDirectors={uniqueDirectors}
         uniqueCountries={uniqueCountries}
+        uniqueLanguages={uniqueLanguages}
       />
 
       <main className="max-w-5xl mx-auto px-4 py-8 space-y-6">
