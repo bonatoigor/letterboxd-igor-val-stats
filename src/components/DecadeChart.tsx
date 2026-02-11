@@ -20,9 +20,9 @@ export default function DecadeChart({ data }: DecadeChartProps) {
                 className="w-full bg-gradient-to-t from-lb-green to-lb-blue rounded-t transition-all duration-500"
                 style={{ height: `${barHeight}%`, minHeight: d.count > 0 ? "4px" : "0" }}
               />
-              <span className="text-[9px] md:text-[10px] text-lb-text truncate w-full text-center">
-                {d.name}
-              </span>
+                <span className="text-xs md:text-sm font-medium text-lb-text truncate w-full text-center mt-1">
+                  {d.name}
+                </span>
             </div>
           );
         })}
