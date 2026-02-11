@@ -4,6 +4,7 @@ interface ProfileHeaderProps {
   info: GeneralInfo;
   totalMovies: number;
   totalHours: number;
+  totalDays: number;
   uniqueDirectors: number;
   uniqueCountries: number;
   uniqueLanguages: number;
@@ -13,6 +14,7 @@ export default function ProfileHeader({
   info,
   totalMovies,
   totalHours,
+  totalDays,
   uniqueDirectors,
   uniqueCountries,
   uniqueLanguages,
@@ -64,9 +66,10 @@ export default function ProfileHeader({
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-3xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
           <MetricCard value={totalMovies} label="Films" icon="🎬" />
-          <MetricCard value={totalHours} label="Hours" icon="⏱" />
+          <MetricCard value={totalHours} label="Hours" icon="⏱" isDecimal={true} />
+          <MetricCard value={totalDays} label="Days" icon="📅" isDecimal={true} />
           <MetricCard value={uniqueDirectors} label="Directors" icon="🎥" />
           <MetricCard value={uniqueCountries} label="Countries" icon="🌍" />
           <MetricCard value={uniqueLanguages} label="Languages" icon="🗣" />
@@ -81,12 +84,15 @@ export default function ProfileHeader({
   );
 }
 
-function MetricCard({ value, label, icon }: { value: number; label: string; icon: string }) {
+function MetricCard({ value, label, icon, isDecimal = false }: { value: number; label: string; icon: string; isDecimal?: boolean }) {
   return (
     <div className="bg-lb-surface rounded-lg p-4 text-center border border-border/50">
       <span className="text-lg mb-1 block">{icon}</span>
       <span className="block text-2xl md:text-3xl font-bold text-lb-bright tabular-nums">
-        {(value ?? 0).toLocaleString()}
+        {isDecimal 
+          ? value.toLocaleString(undefined, { minimumFractionDigits: 3, maximumFractionDigits: 3 })
+          : Math.floor(value).toLocaleString()
+        }
       </span>
       <span className="text-xs text-lb-text uppercase tracking-widest">{label}</span>
     </div>
