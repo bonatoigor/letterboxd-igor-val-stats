@@ -23,15 +23,17 @@ export default function HorizontalBarChart({ title, data, color }: HorizontalBar
     <div className="bg-lb-surface rounded-lg p-5 md:p-6">
       <h3 className="text-sm uppercase tracking-widest text-lb-text mb-4 font-medium">{title}</h3>
       <div className="space-y-2.5">
-        {data.map((item) => (
+       {data.map((item) => (
           <div key={item.name} className="group">
-            <div className="flex items-center justify-between mb-1">
-              <span className="text-sm text-lb-bright truncate mr-3">{item.name}</span>
-              <span className={`text-xs font-semibold ${textColorMap[color]} tabular-nums`}>
+            <div className="flex items-center justify-between mb-1.5">
+              <span className="text-base text-lb-bright truncate mr-3 font-medium">
+                {item.name}
+              </span>
+              <span className={`text-sm font-bold ${textColorMap[color]} tabular-nums`}>
                 {item.count}
               </span>
             </div>
-            <div className="h-1.5 bg-lb-bar rounded-full overflow-hidden">
+            <div className="h-2 bg-lb-bar rounded-full overflow-hidden">
               <div
                 className={`h-full ${colorMap[color]} rounded-full transition-all duration-700 ease-out`}
                 style={{ width: `${item.percentage}%` }}
