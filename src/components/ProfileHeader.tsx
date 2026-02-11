@@ -6,6 +6,7 @@ interface ProfileHeaderProps {
   totalHours: number;
   uniqueDirectors: number;
   uniqueCountries: number;
+  uniqueLanguages: number;
 }
 
 export default function ProfileHeader({
@@ -14,6 +15,7 @@ export default function ProfileHeader({
   totalHours,
   uniqueDirectors,
   uniqueCountries,
+  uniqueLanguages,
 }: ProfileHeaderProps) {
   return (
     <header className="relative overflow-hidden bg-lb-body border-b border-border">
@@ -66,11 +68,12 @@ export default function ProfileHeader({
         </div>
 
         {/* 4 Metric Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-3xl mx-auto">
           <MetricCard value={totalMovies} label="Films" icon="🎬" />
           <MetricCard value={totalHours} label="Hours" icon="⏱" />
           <MetricCard value={uniqueDirectors} label="Directors" icon="🎥" />
           <MetricCard value={uniqueCountries} label="Countries" icon="🌍" />
+          <MetricCard value={uniqueLanguages} label="Languages" icon="🗣" />
         </div>
 
         {/* Rating totals */}
