@@ -88,7 +88,7 @@ function MetricCard({ value, label, icon }: { value: number; label: string; icon
     <div className="bg-lb-surface rounded-lg p-4 text-center border border-border/50">
       <span className="text-lg mb-1 block">{icon}</span>
       <span className="block text-2xl md:text-3xl font-bold text-lb-bright tabular-nums">
-        {value.toLocaleString()}
+        {(value ?? 0).toLocaleString()}
       </span>
       <span className="text-xs text-lb-text uppercase tracking-widest">{label}</span>
     </div>
