@@ -145,7 +145,11 @@ export function getDecadeDistribution(movies: Movie[]) {
 
 export function getTotalHours(movies: Movie[]): number {
   const totalMinutes = movies.reduce((sum, m) => sum + (m.Runtime || 0), 0);
-  return Math.round(totalMinutes / 60);
+  return totalMinutes / 60; 
+}
+
+export function getTotalDays(movies: Movie[]): number {
+  return getTotalHours(movies) / 24;
 }
 
 export function getUniqueDirectorsCount(movies: Movie[]): number {
