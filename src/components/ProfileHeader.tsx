@@ -39,7 +39,7 @@ export default function ProfileHeader({
             <img
               src={info.Avatar_Igor}
               alt="Igor"
-              className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-lb-orange object-cover shadow-lg"
+              className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-lb-green object-cover shadow-lg"
             />
             <span className="text-lg md:text-lg font-semibold text-lb-text mt-3">Igor</span>
           </div>
