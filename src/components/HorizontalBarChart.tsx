@@ -25,11 +25,11 @@ export default function HorizontalBarChart({ title, data, color }: HorizontalBar
       <div className="space-y-2.5">
        {data.map((item) => (
           <div key={item.name} className="group">
-            <div className="flex items-center justify-between mb-1.5">
-              <span className="text-base text-lb-bright truncate mr-3 font-medium">
+            <div className="flex items-center justify-between mb-1 sm:mb-1.5">
+              <span className="text-sm sm:text-base text-lb-bright truncate mr-2 sm:mr-3 font-medium">
                 {item.name}
               </span>
-              <span className={`text-sm font-bold ${textColorMap[color]} tabular-nums`}>
+              <span className={`text-xs sm:text-sm font-bold ${textColorMap[color]} tabular-nums shrink-0`}>
                 {item.count}
               </span>
             </div>

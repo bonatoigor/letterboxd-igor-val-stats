@@ -60,7 +60,7 @@ const Index = () => {
         uniqueLanguages={uniqueLanguages}
       />
 
-      <main className="max-w-5xl mx-auto px-4 py-8 space-y-6">
+      <main className="max-w-5xl mx-auto px-3 sm:px-4 py-6 sm:py-8 space-y-4 sm:space-y-6">
         <DecadeChart data={decades} />
 
         <div className="grid md:grid-cols-2 gap-6">

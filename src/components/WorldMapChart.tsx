@@ -58,13 +58,13 @@ export default function WorldMapChart({ movies }: WorldMapProps) {
     .range(["#1a232e", "#00e054"]); 
 
   return (
-    <div className="bg-lb-surface rounded-xl p-6 border border-border/50 shadow-lg relative">
-      <div className="flex justify-between items-center mb-6">
-        <h3 className="text-lb-text text-xs uppercase tracking-widest">Global Film Reach</h3>
-        <span className="text-[10px] text-lb-text/60">{Object.keys(countryData).length} Countries Explored</span>
+    <div className="bg-lb-surface rounded-xl p-3 sm:p-6 border border-border/50 shadow-lg relative">
+      <div className="flex justify-between items-center mb-4 sm:mb-6">
+        <h3 className="text-lb-text text-[10px] sm:text-xs uppercase tracking-widest">Global Film Reach</h3>
+        <span className="text-[9px] sm:text-[10px] text-lb-text/60">{Object.keys(countryData).length} Countries</span>
       </div>
       
-      <div className="h-[300px] md:h-[450px] w-full overflow-hidden rounded-lg bg-lb-body/50 border border-white/5">
+      <div className="h-[220px] sm:h-[300px] md:h-[450px] w-full overflow-hidden rounded-lg bg-lb-body/50 border border-white/5">
         <ComposableMap projectionConfig={{ rotate: [-10, 0, 0], scale: 190 }}>
           <ZoomableGroup zoom={1} maxZoom={3}>
             <Geographies geography={geoUrl}>
