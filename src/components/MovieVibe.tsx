@@ -34,10 +34,12 @@ export default function MovieVibe({ keywords }: MovieVibeProps) {
 
 useEffect(() => {
     if (keywords.length >= 15) {
+      const visualStyles = ["dark,atmosphere", "noir,shadow", "cinematic,gloomy"];
+      
       const prompts = [
-        keywords.slice(0, 5).map(k => k.word.trim()).join(","),
-        keywords.slice(5, 10).map(k => k.word.trim()).join(","),
-        keywords.slice(10, 15).map(k => k.word.trim()).join(","),
+        `${visualStyles[0]},${keywords.slice(0, 5).map(k => k.word.trim()).join(",")}`,
+        `${visualStyles[1]},${keywords.slice(5, 10).map(k => k.word.trim()).join(",")}`,
+        `${visualStyles[2]},${keywords.slice(10, 15).map(k => k.word.trim()).join(",")}`,
       ];
       setImagePrompts(prompts);
     }
@@ -88,10 +90,11 @@ useEffect(() => {
         {imagePrompts.map((prompt, idx) => (
           <div key={`${seed}-${idx}`} className="relative group overflow-hidden rounded-lg bg-lb-body aspect-[3/4] border border-white/5">
             <img
-              src={`https://loremflickr.com/600/800/dark,cinema,${prompt}/all?sig=${seed + (idx * 13)}&lock=${idx}`}
+              src={`https://loremflickr.com/600/800/${prompt}/all?sig=${seed + (idx * 147)}`}
               alt="Movie Vibe"
               className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110 brightness-50 group-hover:brightness-75"
               loading="lazy"
+              key={`${seed}-${idx}`}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
                <span className="text-[10px] text-lb-bright font-bold uppercase tracking-widest bg-black/60 px-2 py-1 rounded self-start backdrop-blur-sm border border-white/10 mb-2">
