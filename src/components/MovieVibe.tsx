@@ -27,7 +27,7 @@ const colorClasses = [
 ];
 
 export default function MovieVibe({ keywords }: MovieVibeProps) {
-  const [seed, setSeed] = useState(Math.floor(Math.random() * 1000));
+  const [seed, setSeed] = useState(Date.now());
   const [imagePrompts, setImagePrompts] = useState<string[]>([]);
   
   if (!keywords.length) return null;
@@ -35,11 +35,9 @@ export default function MovieVibe({ keywords }: MovieVibeProps) {
 useEffect(() => {
     if (keywords.length >= 15) {
       const prompts = [
-        keywords.slice(0, 3).map(k => k.word.trim()).join(","),
-        keywords.slice(3, 6).map(k => k.word.trim()).join(","),
-        keywords.slice(6, 9).map(k => k.word.trim()).join(","),
-        keywords.slice(9, 12).map(k => k.word.trim()).join(","),
-        keywords.slice(12, 15).map(k => k.word.trim()).join(","),
+        keywords.slice(0, 5).map(k => k.word.trim()).join(","),
+        keywords.slice(5, 10).map(k => k.word.trim()).join(","),
+        keywords.slice(10, 15).map(k => k.word.trim()).join(","),
       ];
       setImagePrompts(prompts);
     }
@@ -86,20 +84,20 @@ useEffect(() => {
         })}
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {imagePrompts.map((prompt, idx) => (
-          <div key={idx} className="relative group overflow-hidden rounded-lg bg-lb-body aspect-[3/4] border border-white/5">
+          <div key={`${seed}-${idx}`} className="relative group overflow-hidden rounded-lg bg-lb-body aspect-[3/4] border border-white/5">
             <img
-              src={`https://loremflickr.com/600/800/dark,cinema,${prompt}/all?sig=${seed + idx}`}
+              src={`https://loremflickr.com/600/800/dark,cinema,${prompt}/all?sig=${seed + (idx * 13)}&lock=${idx}`}
               alt="Movie Vibe"
               className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110 brightness-50 group-hover:brightness-75"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex flex-col justify-end p-3 opacity-0 group-hover:opacity-100 transition-opacity">
-               <span className="text-[9px] text-lb-bright font-bold uppercase tracking-tighter bg-black/60 px-1.5 py-0.5 rounded self-start backdrop-blur-sm border border-white/10 mb-1">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+               <span className="text-[10px] text-lb-bright font-bold uppercase tracking-widest bg-black/60 px-2 py-1 rounded self-start backdrop-blur-sm border border-white/10 mb-2">
                  Vibe Match
                </span>
-               <p className="text-[8px] text-lb-text/60 leading-tight italic line-clamp-2">
+               <p className="text-[9px] text-lb-text/70 leading-relaxed italic line-clamp-2">
                  {prompt.replace(/,/g, " • ")}
                </p>
             </div>
