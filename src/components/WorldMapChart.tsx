@@ -25,19 +25,19 @@ interface WorldMapProps {
   movies: Movie[];
 }
 
-const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
-const [isModalOpen, setIsModalOpen] = useState(false);
-
-const filteredMovies = useMemo(() => {
-  if (!selectedCountry) return [];
-  return movies.filter(m => 
-    m.Countries.some(c => (countryMapping[c] || c) === selectedCountry)
-  );
-}, [selectedCountry, movies]);
-
 export default function WorldMapChart({ movies }: WorldMapProps) {
   const [tooltipContent, setTooltipContent] = useState("");
 
+  const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const filteredMovies = useMemo(() => {
+    if (!selectedCountry) return [];
+    return movies.filter(m => 
+      m.Countries.some(c => (countryMapping[c] || c) === selectedCountry)
+    );
+  }, [selectedCountry, movies]);
+  
   const countryData = useMemo(() => {
     const counts: Record<string, number> = {};
     movies.forEach((m) => {
