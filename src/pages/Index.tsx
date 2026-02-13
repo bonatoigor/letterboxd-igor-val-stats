@@ -4,6 +4,7 @@ import RatedGenresChart from "@/components/RatedGenresChart";
 import PosterGrid from "@/components/PosterGrid";
 import DecadeChart from "@/components/DecadeChart";
 import WorldMapChart from "@/components/WorldMapChart";
+import MovieVibe from "@/components/MovieVibe";
 import {
   getGeneralInfo,
   getMovies,
@@ -23,7 +24,8 @@ import {
   getTopLanguages,
   getTopThemes,
   getTopNanogenres,
-  getGlobalSumRating
+  getGlobalSumRating,
+  getTopKeywords
 } from "@/lib/filmUtils";
 
 const info = getGeneralInfo();
@@ -78,6 +80,8 @@ const Index = () => {
         
         <PosterGrid title="Highest Rated" movies={highestRated} />
         <PosterGrid title="Recent Films" movies={recent} />
+
+        <MovieVibe keywords={getTopKeywords(movies)} />
 
         <footer className="text-center py-8 text-lb-text text-xs">
           <p>Igor & Valéria • Film Stats Dashboard</p>

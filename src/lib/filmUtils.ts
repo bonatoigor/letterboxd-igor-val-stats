@@ -250,3 +250,37 @@ export function getTopNanogenres(movies: Movie[], limit = 10): FrequencyItem[] {
     percentage: (count / max) * 100,
   }));
 }
+
+export function getTopKeywords(movies: Movie[], limit = 20): { word: string; count: number }[] {
+  const stopWords = new Set([
+    "a","an","the","and","or","but","in","on","at","to","for","of","with","by","from","is","are","was","were","be","been","being",
+    "have","has","had","do","does","did","will","would","could","should","may","might","shall","can","need","must",
+    "it","its","he","she","they","them","their","his","her","him","we","our","you","your","i","my","me","us",
+    "this","that","these","those","who","which","what","where","when","how","why","if","then","than","so","as",
+    "not","no","nor","up","out","about","into","over","after","before","between","under","again","further",
+    "once","here","there","all","each","every","both","few","more","most","other","some","such","only","own",
+    "same","too","very","just","also","now","new","one","two","three","find","finds","man","woman","young",
+    "life","world","story","film","movie","while","through","during","against","himself","herself","themselves",
+    "whose","whom","get","gets","set","sets","back","way","around","take","takes","make","makes","goes","come",
+    "becomes","begins","turns","must","however","yet","upon","among","across","along","within","without",
+    "de","le","la","les","un","une","des","et","en","du","que","qui","dans","par","pour","sur","au","aux",
+    "se","ce","son","sa","ses","il","elle","ils","elles","est","sont","ne","pas","di","da","del","della"
+  ]);
+
+  const freq: Record<string, number> = {};
+  movies.forEach((m) => {
+    if (!m.Description) return;
+    const words = m.Description.toLowerCase().replace(/[^a-záàâãéèêíïóôõúüç'-]/g, " ").split(/\s+/);
+    words.forEach((w) => {
+      const clean = w.replace(/^['-]+|['-]+$/g, "");
+      if (clean.length > 2 && !stopWords.has(clean)) {
+        freq[clean] = (freq[clean] || 0) + 1;
+      }
+    });
+  });
+
+  return Object.entries(freq)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit)
+    .map(([word, count]) => ({ word, count }));
+}
