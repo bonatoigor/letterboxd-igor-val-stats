@@ -1,4 +1,9 @@
 import { Badge } from "@/components/ui/badge";
+import vibe1 from "@/assets/vibe-1.jpg";
+import vibe2 from "@/assets/vibe-2.jpg";
+import vibe3 from "@/assets/vibe-3.jpg";
+import vibe4 from "@/assets/vibe-4.jpg";
+import vibe5 from "@/assets/vibe-5.jpg";
 
 interface KeywordItem {
   word: string;
@@ -26,6 +31,14 @@ const colorClasses = [
   "bg-lb-orange/15 text-lb-orange/80 border-lb-orange/20",
 ];
 
+const vibeImages = [
+  { src: vibe1, label: "Love & Drama" },
+  { src: vibe2, label: "War & Power" },
+  { src: vibe3, label: "Mystery & Truth" },
+  { src: vibe4, label: "Adventure & Discovery" },
+  { src: vibe5, label: "Loss & Memory" },
+];
+
 export default function MovieVibe({ keywords }: MovieVibeProps) {
   if (!keywords.length) return null;
 
@@ -33,7 +46,7 @@ export default function MovieVibe({ keywords }: MovieVibeProps) {
 
   return (
     <section className="bg-lb-surface rounded-lg p-4 sm:p-6">
-      <h3 className="text-sm uppercase tracking-widest text-lb-text mb-4 font-medium">
+      <h3 className="text-sm sm:text-base font-semibold text-lb-bright mb-4 uppercase tracking-wider">
         The Movie Vibe
       </h3>
       <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
@@ -52,6 +65,26 @@ export default function MovieVibe({ keywords }: MovieVibeProps) {
             </Badge>
           );
         })}
+      </div>
+
+      <div className="mt-5 sm:mt-6">
+        <div className="grid grid-cols-5 gap-1.5 sm:gap-2">
+          {vibeImages.map((img) => (
+            <div key={img.label} className="relative group overflow-hidden rounded-md">
+              <img
+                src={img.src}
+                alt={img.label}
+                className="w-full h-20 sm:h-28 md:h-36 object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-1.5 sm:pb-2">
+                <span className="text-[9px] sm:text-[11px] text-lb-bright font-medium tracking-wide">
+                  {img.label}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
