@@ -92,12 +92,13 @@ useEffect(() => {
           return (
             <div key={idx} className="relative group overflow-hidden rounded-lg bg-lb-body aspect-[3/4] border border-white/5">
               <img
-                src={`https://image.pollinations.ai/prompt/${query}?seed=${seed + idx}&width=600&height=800&nologo=true&enhance=false`}
+                src={`https://ai-api.magicstudio.com/api/ai-generator?prompt=${encodeURIComponent("cinematic movie scene, " + prompt)}&output_format=jpg`}
                 alt="Movie Vibe"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 onError={(e) => {
+                  // Se falhar, tentamos a Opção 2 (Unsplash)
                   const fallbackTerm = prompt.split(',')[0];
-                  (e.target as HTMLImageElement).src = `https://source.unsplash.com/featured/600x800/?movie,${fallbackTerm}`;
+                  (e.target as HTMLImageElement).src = `https://source.unsplash.com/featured/600x800/?cinema,${fallbackTerm}`;
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
