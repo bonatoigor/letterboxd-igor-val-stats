@@ -85,24 +85,29 @@ useEffect(() => {
         })}
       </div>
 
-     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        {imagePrompts.map((prompt, idx) => (
-          <div key={idx} className="relative group overflow-hidden rounded-lg bg-lb-body aspect-[3/4] border border-white/5">
-            <img
-              src={`https://image.pollinations.ai/prompt/cinematic%20movie%20still%20photography%20representing%20${encodeURIComponent(prompt)}?width=600&height=800&seed=${seed + idx}&model=flux&nologo=true`}
-              alt="Movie Vibe"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=600&h=800&auto=format&fit=crop";
-              }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-               <p className="text-[10px] text-lb-bright/70 leading-relaxed italic">
-                 Mix: {prompt}
-               </p>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {imagePrompts.map((prompt, idx) => {
+          const query = encodeURIComponent(`cinematic movie shot ${prompt}`);
+          
+          return (
+            <div key={idx} className="relative group overflow-hidden rounded-lg bg-lb-body aspect-[3/4] border border-white/5">
+              <img
+                src={`https://image.pollinations.ai/prompt/${query}?seed=${seed + idx}&width=600&height=800&nologo=true&enhance=false`}
+                alt="Movie Vibe"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                onError={(e) => {
+                  const fallbackTerm = prompt.split(',')[0];
+                  (e.target as HTMLImageElement).src = `https://source.unsplash.com/featured/600x800/?movie,${fallbackTerm}`;
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                 <p className="text-[10px] text-lb-bright/70 leading-relaxed italic">
+                   Mix: {prompt}
+                 </p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
