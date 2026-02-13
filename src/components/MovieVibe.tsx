@@ -1,9 +1,6 @@
+import { useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
-import vibe1 from "@/assets/vibe-1.jpg";
-import vibe2 from "@/assets/vibe-2.jpg";
-import vibe3 from "@/assets/vibe-3.jpg";
-import vibe4 from "@/assets/vibe-4.jpg";
-import vibe5 from "@/assets/vibe-5.jpg";
+import { RefreshCw } from "lucide-react";
 
 interface KeywordItem {
   word: string;
@@ -31,24 +28,41 @@ const colorClasses = [
   "bg-lb-orange/15 text-lb-orange/80 border-lb-orange/20",
 ];
 
-const vibeImages = [
-  { src: vibe1, label: "Love & Drama" },
-  { src: vibe2, label: "War & Power" },
-  { src: vibe3, label: "Mystery & Truth" },
-  { src: vibe4, label: "Adventure & Discovery" },
-  { src: vibe5, label: "Loss & Memory" },
-];
-
 export default function MovieVibe({ keywords }: MovieVibeProps) {
+  const [seed, setSeed] = useState(Math.floor(Math.random() * 1000));
+  const [topWords, setTopWords] = useState<string[]>([]);
+  
   if (!keywords.length) return null;
+
+  useEffect(() => {
+    if (keywords.length > 0) {
+      setTopWords(keywords.slice(0, 5).map(k => k.word));
+    }
+  }, [keywords]);
+
+  if (!keywords.length) return null;
+
+  const handleRefresh = () => {
+    setSeed(Math.floor(Math.random() * 1000));
+  };
 
   const max = keywords[0].count;
 
   return (
-    <section className="bg-lb-surface rounded-lg p-4 sm:p-6">
-      <h3 className="text-sm sm:text-base font-semibold text-lb-bright mb-4 uppercase tracking-wider">
-        The Movie Vibe
-      </h3>
+    <section className="bg-lb-surface rounded-lg p-4 sm:p-6 border border-border/50 shadow-lg">
+      <div className="flex justify-between items-center mb-6">
+        <h3 className="text-sm sm:text-base font-semibold text-lb-bright uppercase tracking-wider">
+          The Movie Vibe
+        </h3>
+        <button 
+          onClick={handleRefresh}
+          className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-lb-text hover:text-lb-blue transition-colors group"
+        >
+          <RefreshCw className="w-3 h-3 group-hover:rotate-180 transition-transform duration-500" />
+          Refresh Vibe
+        </button>
+      </div>
+      
       <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
         {keywords.map((kw, i) => {
           const ratio = kw.count / max;
@@ -67,24 +81,22 @@ export default function MovieVibe({ keywords }: MovieVibeProps) {
         })}
       </div>
 
-      <div className="mt-5 sm:mt-6">
-        <div className="grid grid-cols-5 gap-1.5 sm:gap-2">
-          {vibeImages.map((img) => (
-            <div key={img.label} className="relative group overflow-hidden rounded-md">
-              <img
-                src={img.src}
-                alt={img.label}
-                className="w-full h-20 sm:h-28 md:h-36 object-cover transition-transform duration-500 group-hover:scale-110"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-1.5 sm:pb-2">
-                <span className="text-[9px] sm:text-[11px] text-lb-bright font-medium tracking-wide">
-                  {img.label}
-                </span>
-              </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+        {topWords.map((word) => (
+          <div key={word} className="relative group overflow-hidden rounded-lg bg-lb-body aspect-[3/4]">
+            <img
+              src={`https://image.pollinations.ai/prompt/cinematic%20movie%20still%20style%20of%20${word}?width=600&height=800&seed=${seed}&nologo=true`}
+              alt={word}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-3">
+              <span className="text-[10px] sm:text-xs text-lb-bright font-bold uppercase tracking-widest px-2 py-1 rounded bg-black/20 backdrop-blur-sm border border-white/5">
+                {word}
+              </span>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
