@@ -37,6 +37,10 @@ export default function WorldMapChart({ movies }: WorldMapProps) {
       m.Countries.some(c => (countryMapping[c] || c) === selectedCountry)
     );
   }, [selectedCountry, movies]);
+
+  if (filtered.length > 0) {
+      console.log("Filme encontrado:", filtered[0]);
+    }
   
   const countryData = useMemo(() => {
     const counts: Record<string, number> = {};
