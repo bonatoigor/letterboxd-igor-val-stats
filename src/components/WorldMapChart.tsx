@@ -38,10 +38,8 @@ export default function WorldMapChart({ movies }: WorldMapProps) {
     );
   }, [selectedCountry, movies]);
 
-  if (filtered.length > 0) {
-      console.log("Filme encontrado:", filtered[0]);
-    }
-  
+
+
   const countryData = useMemo(() => {
     const counts: Record<string, number> = {};
     movies.forEach((m) => {
@@ -141,10 +139,10 @@ export default function WorldMapChart({ movies }: WorldMapProps) {
                 {filteredMovies.map((movie, idx) => (
                   <li key={idx} className="flex justify-between items-center group border-b border-white/5 pb-2 last:border-0">
                     <span className="text-lb-bright group-hover:text-lb-blue transition-colors">
-                      {movie.Title || movie.title} 
+                      {movie.Film_title} 
                     </span>
                     <span className="text-lb-text/60 text-sm italic">
-                      {movie.Year || movie.year}
+                      {movie.Release_year}
                     </span>
                   </li>
                 ))}
