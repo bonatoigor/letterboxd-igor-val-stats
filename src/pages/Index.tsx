@@ -65,11 +65,11 @@ const Index = () => {
 
         <div className="grid md:grid-cols-2 gap-6">
           <HorizontalBarChart title="Most Watched Genres" data={topGenres} color="green" />
-          <HorizontalBarChart title="Most Watched Themes" data={topThemes} color="blu" />
+          <HorizontalBarChart title="Most Watched Themes" data={topThemes} color="blue" />
           <HorizontalBarChart title="Most Watched Nanogenres" data={topNanogenres} color="green" />
           <HorizontalBarChart title="Most Watched Countries" data={topCountries} color="blue" />
           <RatedGenresChart data={ratedGenres} />
-          <HorizontalBarChart title="Most Watched Directors" data={topDirectors} color="orange" />
+          <HorizontalBarChart title="Most Watched Directors" data={topDirectors} color="blue" />
           <HorizontalBarChart title="Most Watched Actors" data={topActors} color="green" />
           <HorizontalBarChart title="Most Watched Languages" data={topLanguages} color="blue" />
         </div>
