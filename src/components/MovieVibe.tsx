@@ -34,11 +34,14 @@ export default function MovieVibe({ keywords }: MovieVibeProps) {
 
 useEffect(() => {
     if (keywords.length >= 15) {
-      const group1 = keywords.slice(0, 5).map(k => k.word).join(", ");
-      const group2 = keywords.slice(5, 10).map(k => k.word).join(", ");
-      const group3 = keywords.slice(10, 15).map(k => k.word).join(", ");
-      
-      setImagePrompts([group1, group2, group3]);
+      const prompts = [
+        keywords.slice(0, 3).map(k => k.word.trim()).join(","),
+        keywords.slice(3, 6).map(k => k.word.trim()).join(","),
+        keywords.slice(6, 9).map(k => k.word.trim()).join(","),
+        keywords.slice(9, 12).map(k => k.word.trim()).join(","),
+        keywords.slice(12, 15).map(k => k.word.trim()).join(","),
+      ];
+      setImagePrompts(prompts);
     }
   }, [keywords]);
 
@@ -87,7 +90,7 @@ useEffect(() => {
         {imagePrompts.map((prompt, idx) => (
           <div key={idx} className="relative group overflow-hidden rounded-lg bg-lb-body aspect-[3/4] border border-white/5">
             <img
-              src={`https://loremflickr.com/600/800/dark,cinema,${encodeURIComponent(prompt)}/all?sig=${seed + idx}`}
+              src={`https://loremflickr.com/600/800/dark,cinema,${prompt}/all?sig=${seed + idx}`}
               alt="Movie Vibe"
               className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110 brightness-50 group-hover:brightness-75"
               loading="lazy"
