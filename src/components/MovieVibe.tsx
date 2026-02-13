@@ -30,13 +30,17 @@ const colorClasses = [
 
 export default function MovieVibe({ keywords }: MovieVibeProps) {
   const [seed, setSeed] = useState(Math.floor(Math.random() * 1000));
-  const [topWords, setTopWords] = useState<string[]>([]);
+  const [imagePrompts, setImagePrompts] = useState<string[]>([]);
   
   if (!keywords.length) return null;
 
-  useEffect(() => {
-    if (keywords.length > 0) {
-      setTopWords(keywords.slice(0, 5).map(k => k.word));
+useEffect(() => {
+    if (keywords.length >= 10) {
+      const group1 = keywords.slice(0, 5).map(k => k.word).join(", ");
+      const group2 = keywords.slice(5, 10).map(k => k.word).join(", ");
+      const group3 = keywords.slice(10, 15).map(k => k.word).join(", ");
+      
+      setImagePrompts([group1, group2, group3]);
     }
   }, [keywords]);
 
@@ -81,19 +85,21 @@ export default function MovieVibe({ keywords }: MovieVibeProps) {
         })}
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-        {topWords.map((word) => (
-          <div key={word} className="relative group overflow-hidden rounded-lg bg-lb-body aspect-[3/4]">
+     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {imagePrompts.map((prompt, idx) => (
+          <div key={idx} className="relative group overflow-hidden rounded-lg bg-lb-body aspect-[3/4] border border-white/5">
             <img
-              src={`https://image.pollinations.ai/prompt/cinematic%20movie%20still%20style%20of%20${word}?width=600&height=800&seed=${seed}&nologo=true`}
-              alt={word}
+              src={`https://image.pollinations.ai/prompt/cinematic%20movie%20still%20photography%20representing%20${encodeURIComponent(prompt)}?width=600&height=800&seed=${seed + idx}&model=flux&nologo=true`}
+              alt="Movie Vibe"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              loading="lazy"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=600&h=800&auto=format&fit=crop";
+              }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-3">
-              <span className="text-[10px] sm:text-xs text-lb-bright font-bold uppercase tracking-widest px-2 py-1 rounded bg-black/20 backdrop-blur-sm border border-white/5">
-                {word}
-              </span>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+               <p className="text-[10px] text-lb-bright/70 leading-relaxed italic">
+                 Mix: {prompt}
+               </p>
             </div>
           </div>
         ))}
