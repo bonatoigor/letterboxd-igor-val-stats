@@ -214,3 +214,39 @@ export function getTopLanguages(movies: Movie[], limit = 10): FrequencyItem[] {
     percentage: (count / max) * 100,
   }));
 }
+
+export function getTopThemes(movies: Movie[], limit = 10): FrequencyItem[] {
+  const freq: Record<string, number> = {};
+  movies.forEach((m) => {
+    m.Themes?.forEach((lang) => {
+      freq[lang] = (freq[lang] || 0) + 1;
+    });
+  });
+  const sorted = Object.entries(freq)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit);
+  const max = sorted[0]?.[1] || 1;
+  return sorted.map(([name, count]) => ({
+    name,
+    count,
+    percentage: (count / max) * 100,
+  }));
+}
+
+export function getTopNanogenres(movies: Movie[], limit = 10): FrequencyItem[] {
+  const freq: Record<string, number> = {};
+  movies.forEach((m) => {
+    m.Nanogenres?.forEach((lang) => {
+      freq[lang] = (freq[lang] || 0) + 1;
+    });
+  });
+  const sorted = Object.entries(freq)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit);
+  const max = sorted[0]?.[1] || 1;
+  return sorted.map(([name, count]) => ({
+    name,
+    count,
+    percentage: (count / max) * 100,
+  }));
+}
