@@ -40,31 +40,31 @@ export default function ProfileHeader({
         <DecorativeBars side="right" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 py-12 md:py-20">
-        <h1 className="text-center font-display text-4xl md:text-6xl text-lb-bright tracking-tight mb-4">
+      <div className="relative z-10 max-w-5xl mx-auto px-3 sm:px-4 py-8 sm:py-12 md:py-20">
+        <h1 className="text-center font-display text-3xl sm:text-4xl md:text-6xl text-lb-bright tracking-tight mb-3 sm:mb-4">
           A Life in Film
         </h1>
 
-        <div className="flex items-center justify-center gap-4 mb-10">
+        <div className="flex items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
           <div className="flex flex-col items-center">
             <img
               src={info.Avatar_Igor}
               alt="Igor"
-              className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-lb-green object-cover shadow-lg"
+              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full border-2 border-lb-green object-cover shadow-lg"
             />
-            <span className="text-lg md:text-lg font-semibold text-lb-text mt-3">Igor</span>
+            <span className="text-sm sm:text-lg font-semibold text-lb-text mt-2 sm:mt-3">Igor</span>
           </div>
 
-          <div className="flex flex-col items-center mx-4">
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-lb-blue flex items-center justify-center bg-lb-surface">
+          <div className="flex flex-col items-center mx-2 sm:mx-4">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full border-3 sm:border-4 border-lb-blue flex items-center justify-center bg-lb-surface">
               <div className="text-center">
-                <span className="text-2xl md:text-3xl font-bold text-lb-blue">
+                <span className="text-xl sm:text-2xl md:text-3xl font-bold text-lb-blue">
                   {info.Compatibility}
                 </span>
-                <span className="text-xs text-lb-blue">%</span>
+                <span className="text-[10px] sm:text-xs text-lb-blue">%</span>
               </div>
             </div>
-            <span className="text-xs text-lb-text mt-2 uppercase tracking-widest">
+            <span className="text-[10px] sm:text-xs text-lb-text mt-1.5 sm:mt-2 uppercase tracking-widest">
               Compatibility
             </span>
           </div>
@@ -73,13 +73,13 @@ export default function ProfileHeader({
             <img
               src={info.Avatar_Valeria}
               alt="Valeria"
-              className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-lb-orange object-cover shadow-lg"
+              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full border-2 border-lb-orange object-cover shadow-lg"
             />
-            <span className="text-lg md:text-lg font-semibold text-lb-text mt-3">Valéria</span>
+            <span className="text-sm sm:text-lg font-semibold text-lb-text mt-2 sm:mt-3">Valéria</span>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-4 max-w-5xl mx-auto">
           <MetricCard value={totalMovies} label="Films" icon="🎬" />
           <MetricCard value={totalHours} label="Hours" icon="⏱" isDecimal={true} />
           <MetricCard value={totalDays} label="Days" icon="📅" isDecimal={true} />
@@ -88,12 +88,12 @@ export default function ProfileHeader({
           <MetricCard value={uniqueLanguages} label="Languages" icon="🗣" />
         </div>
 
-        <div className="flex justify-center gap-8 md:gap-16 mt-8">
+        <div className="flex justify-center gap-4 sm:gap-8 md:gap-16 mt-6 sm:mt-8">
           <Stat value={info.Sum_Rating_Igor.toFixed(1)} label="Igor ★" />
 
           <div className="text-center">
-              <span className="block text-2xl md:text-3xl font-bold text-lb-blue">{globalSumRating}</span>
-              <span className="text-xs text-lb-text uppercase tracking-widest">Global Average ★</span>
+              <span className="block text-xl sm:text-2xl md:text-3xl font-bold text-lb-blue">{globalSumRating}</span>
+              <span className="text-[10px] sm:text-xs text-lb-text uppercase tracking-widest">Global Avg ★</span>
           </div>
           
           <Stat value={info.Sum_Rating_Valeria.toFixed(1)} label="Valéria ★" />
@@ -113,15 +113,15 @@ export default function ProfileHeader({
 
 function MetricCard({ value, label, icon, isDecimal = false }: { value: number; label: string; icon: string; isDecimal?: boolean }) {
   return (
-    <div className="bg-lb-surface rounded-lg p-4 text-center border border-border/50">
-      <span className="text-lg mb-1 block">{icon}</span>
-      <span className="block text-2xl md:text-3xl font-bold text-lb-bright tabular-nums">
+    <div className="bg-lb-surface rounded-lg p-2.5 sm:p-4 text-center border border-border/50">
+      <span className="text-sm sm:text-lg mb-0.5 sm:mb-1 block">{icon}</span>
+      <span className="block text-lg sm:text-2xl md:text-3xl font-bold text-lb-bright tabular-nums">
         {isDecimal 
-          ? value.toLocaleString(undefined, { minimumFractionDigits: 3, maximumFractionDigits: 3 })
+          ? value.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })
           : Math.floor(value).toLocaleString()
         }
       </span>
-      <span className="text-xs text-lb-text uppercase tracking-widest">{label}</span>
+      <span className="text-[10px] sm:text-xs text-lb-text uppercase tracking-widest">{label}</span>
     </div>
   );
 }
@@ -129,8 +129,8 @@ function MetricCard({ value, label, icon, isDecimal = false }: { value: number; 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div className="text-center">
-      <span className="block text-2xl md:text-3xl font-bold text-lb-bright">{value}</span>
-      <span className="text-xs md:text-sm text-lb-text uppercase tracking-wider">{label}</span>
+      <span className="block text-xl sm:text-2xl md:text-3xl font-bold text-lb-bright">{value}</span>
+      <span className="text-[10px] sm:text-xs md:text-sm text-lb-text uppercase tracking-wider">{label}</span>
     </div>
   );
 }

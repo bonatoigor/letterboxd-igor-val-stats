@@ -14,19 +14,17 @@ export default function RatedGenresChart({ data }: RatedGenresChartProps) {
       </h3>
       <div className="space-y-3">
           {data.map((item) => (
-            <div key={item.name} className="group">
-              <div className="flex items-center justify-between mb-1.5">
-                {/* Nome do Gênero: de text-sm para text-base */}
-                <span className="text-base text-lb-bright truncate mr-3 font-medium">
+        <div key={item.name} className="group">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1.5 gap-0.5 sm:gap-0">
+                <span className="text-sm sm:text-base text-lb-bright truncate mr-0 sm:mr-3 font-medium">
                   {item.name}
                 </span>
-                {/* Notas: de text-xs para text-sm e fonte mais negritada */}
-                <div className="flex gap-3 text-sm font-bold tabular-nums">
+                <div className="flex gap-3 text-xs sm:text-sm font-bold tabular-nums shrink-0">
                   <span className="text-lb-green">I: {item.avgIgor.toFixed(1)}★</span>
                   <span className="text-lb-orange">V: {item.avgValeria.toFixed(1)}★</span>
                 </div>
               </div>
-              <div className="flex gap-1.5 h-2"> {/* Aumentado gap e altura da barra para h-2 */}
+              <div className="flex gap-1.5 h-2">
                 <div className="flex-1 bg-lb-bar rounded-full overflow-hidden">
                   <div
                     className="h-full bg-lb-green rounded-full transition-all duration-700 ease-out"
