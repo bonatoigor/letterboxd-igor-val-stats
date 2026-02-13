@@ -251,7 +251,7 @@ export function getTopNanogenres(movies: Movie[], limit = 10): FrequencyItem[] {
   }));
 }
 
-export function getTopKeywords(movies: Movie[], limit = 20): { word: string; count: number }[] {
+export function getTopKeywords(movies: Movie[], limit = 25): { word: string; count: number }[] {
   const stopWords = new Set([
     "a","an","the","and","or","but","in","on","at","to","for","of","with","by","from","is","are","was","were","be","been","being",
     "have","has","had","do","does","did","will","would","could","should","may","might","shall","can","need","must",
