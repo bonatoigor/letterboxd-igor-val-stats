@@ -25,6 +25,16 @@ interface WorldMapProps {
   movies: Movie[];
 }
 
+const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
+const [isModalOpen, setIsModalOpen] = useState(false);
+
+const filteredMovies = useMemo(() => {
+  if (!selectedCountry) return [];
+  return movies.filter(m => 
+    m.Countries.some(c => (countryMapping[c] || c) === selectedCountry)
+  );
+}, [selectedCountry, movies]);
+
 export default function WorldMapChart({ movies }: WorldMapProps) {
   const [tooltipContent, setTooltipContent] = useState("");
 
@@ -75,6 +85,12 @@ export default function WorldMapChart({ movies }: WorldMapProps) {
                       }}
                       data-tooltip-id="map-tooltip"
                       data-tooltip-content={tooltipContent}
+                      onClick={() => {
+                        if (count > 0) {
+                          setSelectedCountry(countryName);
+                          setIsModalOpen(true);
+                        }
+                      }}
                       style={{
                         default: { outline: "none" },
                         hover: { fill: "#40bcf4", outline: "none", cursor: "pointer" },
@@ -93,6 +109,53 @@ export default function WorldMapChart({ movies }: WorldMapProps) {
         id="map-tooltip" 
         style={{ backgroundColor: "#2c3440", color: "#fff", borderRadius: "8px", fontSize: "12px", zIndex: 100 }}
       />
+
+      {/* Modal de Filmes */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+          <div className="bg-lb-surface border border-border w-full max-w-md max-h-[70vh] rounded-xl overflow-hidden flex flex-col shadow-2xl">
+            
+            {/* Header do Modal */}
+            <div className="p-4 border-b border-border flex justify-between items-center bg-lb-body/50">
+              <h3 className="text-lb-bright font-bold flex items-center gap-2">
+                <span className="text-xl">🎬</span> {selectedCountry}
+              </h3>
+              <button 
+                onClick={() => setIsModalOpen(false)}
+                className="text-lb-text hover:text-white p-1"
+              >
+                ✕
+              </button>
+            </div>
+      
+            {/* Lista de Filmes */}
+            <div className="overflow-y-auto p-4 custom-scrollbar">
+              <ul className="space-y-3">
+                {filteredMovies.map((movie, idx) => (
+                  <li key={idx} className="flex justify-between items-center group border-b border-white/5 pb-2 last:border-0">
+                    <span className="text-lb-bright group-hover:text-lb-blue transition-colors">
+                      {movie.Title}
+                    </span>
+                    <span className="text-lb-text/60 text-sm italic">
+                      {movie.Year}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+      
+            {/* Footer */}
+            <div className="p-3 bg-lb-body/30 text-center">
+              <span className="text-[10px] text-lb-text/40 uppercase tracking-widest">
+                Total: {filteredMovies.length} {filteredMovies.length === 1 ? 'film' : 'films'}
+              </span>
+            </div>
+          </div>
+          
+          {/* Área de clique fora para fechar */}
+          <div className="absolute inset-0 -z-10" onClick={() => setIsModalOpen(false)}></div>
+        </div>
+      )}
     </div>
   );
 }
