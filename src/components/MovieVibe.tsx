@@ -85,30 +85,26 @@ useEffect(() => {
         })}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        {imagePrompts.map((prompt, idx) => {
-          const query = encodeURIComponent(`cinematic movie shot ${prompt}`);
-          
-          return (
-            <div key={idx} className="relative group overflow-hidden rounded-lg bg-lb-body aspect-[3/4] border border-white/5">
-              <img
-                src={`https://ai-api.magicstudio.com/api/ai-generator?prompt=${encodeURIComponent("cinematic movie scene, " + prompt)}&output_format=jpg`}
-                alt="Movie Vibe"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                onError={(e) => {
-                  // Se falhar, tentamos a Opção 2 (Unsplash)
-                  const fallbackTerm = prompt.split(',')[0];
-                  (e.target as HTMLImageElement).src = `https://source.unsplash.com/featured/600x800/?cinema,${fallbackTerm}`;
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                 <p className="text-[10px] text-lb-bright/70 leading-relaxed italic">
-                   Mix: {prompt}
-                 </p>
-              </div>
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {imagePrompts.map((prompt, idx) => (
+          <div key={idx} className="relative group overflow-hidden rounded-lg bg-lb-body aspect-[3/4] border border-white/5">
+            <img
+              src={`https://picsum.photos/seed/${seed + idx + prompt.length}/600/800`}
+              alt="Movie Vibe"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              loading="lazy"
+              crossOrigin="anonymous"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+               <p className="text-[10px] text-lb-bright font-bold uppercase tracking-widest mb-1">
+                 Vibe Match
+               </p>
+               <p className="text-[10px] text-lb-text/70 leading-relaxed italic line-clamp-2">
+                 {prompt}
+               </p>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </section>
   );
