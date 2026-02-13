@@ -266,7 +266,7 @@ export function getTopKeywords(movies: Movie[], limit = 25): { word: string; cou
     "tells", "shows", "following", "features", "includes", "including", "involved", 
     "living", "named", "called", "starts", "starting", "meets", "meeting", "becomes", 
     "became", "taken", "made", "seen", "gives", "given", "known", "years", "time", 
-    "days", "everything", "something", "anything", "another", "others", 
+    "days", "everything", "something", "anything", "another", "others", "discovers", "soon",
     "together", "first", "last", "home", "place", "someone", "everyone", "looking",
     "de","le","la","les","un","une","des","et","en","du","que","qui","dans","par","pour","sur","au","aux",
     "se","ce","son","sa","ses","il","elle","ils","elles","est","sont","ne","pas","di","da","del","della"
