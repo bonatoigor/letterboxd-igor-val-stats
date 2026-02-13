@@ -2,9 +2,9 @@
     "General_Info": [
         {
             "Total_Movies": 175,
-            "Compatibility": 92.4,
+            "Compatibility": 92.63,
             "Sum_Rating_Igor": 533.5,
-            "Sum_Rating_Valeria": 523.0,
+            "Sum_Rating_Valeria": 525.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -30,12 +30,14 @@
             ],
             "Average_rating": 3.77,
             "Genres": [
-                "Drama",
-                "Moving relationship stories",
+                "Drama"
+            ],
+            "Themes": [
+                "Moving relationship stories"
+            ],
+            "Nanogenres": [
                 "Gripping, intense violent crime"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 100,
             "Countries": [
                 "Austria",
@@ -76,13 +78,15 @@
             "Average_rating": 3.8,
             "Genres": [
                 "Comedy",
-                "Drama",
-                "Humanity and the world around us",
+                "Drama"
+            ],
+            "Themes": [
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
                 "Surreal and thought-provoking visions of life and death",
                 "Dreamlike, quirky, and surreal storytelling"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 112,
             "Countries": [
                 "USA"
@@ -123,16 +127,18 @@
             "Average_rating": 2.49,
             "Genres": [
                 "Horror",
-                "Comedy",
-                "Crude humor and satire",
+                "Comedy"
+            ],
+            "Themes": [
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
                 "Funny jokes and crude humor",
                 "Gags, jokes, and slapstick humor",
                 "Spooky, scary comedy",
                 "Amusing jokes and witty satire",
                 "Catchy songs and hilarious musical comedy"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 86,
             "Countries": [
                 "USA"
@@ -174,18 +180,20 @@
             "Genres": [
                 "Thriller",
                 "Drama",
-                "Crime",
+                "Crime"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
                 "Crime, drugs and gangsters",
-                "Epic heroes",
+                "Epic heroes"
+            ],
+            "Nanogenres": [
                 "Violent action, guns, and crime",
                 "Twisted dark psychological thriller",
                 "Gritty crime and ruthless gangsters",
                 "Gripping, intense violent crime",
                 "Graphic violence and brutal revenge"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 96,
             "Countries": [
                 "Germany",
@@ -225,17 +233,19 @@
             "Average_rating": 4.25,
             "Genres": [
                 "Horror",
-                "Science Fiction",
+                "Science Fiction"
+            ],
+            "Themes": [
                 "Monsters, aliens, sci-fi and the apocalypse",
-                "Horror, the undead and monster classics",
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Sci-fi horror, creatures, and aliens",
                 "Terrifying, haunted, and supernatural horror",
                 "Creepy, chilling, and terrifying horror",
                 "Imaginative space odysseys and alien encounters",
                 "Action-packed space and alien sagas"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 117,
             "Countries": [
                 "USA",
@@ -243,8 +253,8 @@
             ],
             "Original_language": "English",
             "Spoken_languages": [
-                "Spanish",
-                "English"
+                "English",
+                "Spanish"
             ],
             "Description": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed.",
             "Studios": [
@@ -279,19 +289,21 @@
                 "Thriller",
                 "Science Fiction",
                 "Horror",
-                "Action",
+                "Action"
+            ],
+            "Themes": [
                 "Monsters, aliens, sci-fi and the apocalypse",
                 "Horror, the undead and monster classics",
                 "War and historical adventure",
-                "Epic heroes",
+                "Epic heroes"
+            ],
+            "Nanogenres": [
                 "Action-packed space and alien sagas",
                 "Sci-fi horror, creatures, and aliens",
                 "Thought-provoking sci-fi action and future technology",
                 "Imaginative space odysseys and alien encounters",
                 "Superheroes in action-packed battles with villains"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 137,
             "Countries": [
                 "USA"
@@ -328,15 +340,17 @@
                 "James Cade",
                 "Dawn Greenhalgh"
             ],
-            "Average_rating": 3.28,
+            "Average_rating": 3.29,
             "Genres": [
                 "Science Fiction",
-                "Horror",
-                "Intense violence and sexual transgression",
+                "Horror"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Gory, gruesome, and slasher horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 110,
             "Countries": [
                 "Canada"
@@ -375,16 +389,18 @@
             ],
             "Average_rating": 3.25,
             "Genres": [
-                "Horror",
-                "Horror, the undead and monster classics",
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Creepy, chilling, and terrifying horror",
                 "Gothic and eerie haunting horror",
                 "Gory, gruesome, and slasher horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 96,
             "Countries": [
                 "Canada",
@@ -553,12 +569,14 @@
                 "Adventure",
                 "Drama",
                 "Animation",
-                "Action",
-                "Humanity and the world around us",
+                "Action"
+            ],
+            "Themes": [
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
                 "Surreal and thought-provoking visions of life and death"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 145,
             "Countries": [
                 "Japan"
@@ -681,16 +699,18 @@
             "Average_rating": 2.78,
             "Genres": [
                 "Thriller",
-                "Horror",
-                "Horror, the undead and monster classics",
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Gory, gruesome, and slasher horror",
                 "Twisted dark psychological thriller",
                 "Sci-fi horror, creatures, and aliens",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 92,
             "Countries": [
                 "Canada"
@@ -729,16 +749,18 @@
             "Genres": [
                 "Comedy",
                 "Animation",
-                "Family",
-                "Crude humor and satire",
+                "Family"
+            ],
+            "Themes": [
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
                 "Kids' animated fun and adventure",
                 "Adorable animals and heartwarming families",
                 "Gags, jokes, and slapstick humor",
                 "Funny jokes and crude humor",
                 "Holiday joy and heartwarming Christmas"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 90,
             "Countries": [
                 "USA"
@@ -779,14 +801,16 @@
             "Genres": [
                 "Thriller",
                 "Drama",
-                "Comedy",
-                "Thrillers and murder mysteries",
+                "Comedy"
+            ],
+            "Themes": [
+                "Thrillers and murder mysteries"
+            ],
+            "Nanogenres": [
                 "Dreamlike, quirky, and surreal storytelling",
                 "Surreal and thought-provoking visions of life and death",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 117,
             "Countries": [
                 "UK",
@@ -827,17 +851,19 @@
             "Genres": [
                 "Crime",
                 "Action",
-                "Drama",
+                "Drama"
+            ],
+            "Themes": [
                 "Epic heroes",
-                "High speed and special ops",
+                "High speed and special ops"
+            ],
+            "Nanogenres": [
                 "Superheroes in action-packed battles with villains",
                 "Explosive and action-packed heroes vs. villains",
                 "Intense combat and martial arts",
                 "Action comedy and silly heroics",
                 "Fantasy adventure, heroism, and swordplay"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 140,
             "Countries": [
                 "UK",
@@ -845,9 +871,9 @@
             ],
             "Original_language": "English",
             "Spoken_languages": [
-                "Urdu",
                 "English",
-                "Chinese"
+                "Chinese",
+                "Urdu"
             ],
             "Description": "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City. Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld - The Batman.",
             "Studios": [
@@ -884,16 +910,18 @@
                 "Comedy",
                 "Family",
                 "Animation",
-                "Adventure",
-                "Crude humor and satire",
+                "Adventure"
+            ],
+            "Themes": [
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
                 "Kids' animated fun and adventure",
                 "Gags, jokes, and slapstick humor",
                 "Funny jokes and crude humor",
                 "Adorable animals and heartwarming families",
                 "Amusing jokes and witty satire"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 91,
             "Countries": [
                 "USA"
@@ -933,18 +961,20 @@
             "Genres": [
                 "Horror",
                 "Mystery",
-                "Crime",
+                "Crime"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
                 "Intense violence and sexual transgression",
-                "Thrillers and murder mysteries",
+                "Thrillers and murder mysteries"
+            ],
+            "Nanogenres": [
                 "Gory, gruesome, and slasher horror",
                 "Twisted dark psychological thriller",
                 "Terrifying, haunted, and supernatural horror",
                 "Gothic and eerie haunting horror",
                 "Creepy, chilling, and terrifying horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 98,
             "Countries": [
                 "Canada"
@@ -1666,24 +1696,26 @@
             "Average_rating": 3.09,
             "Genres": [
                 "Horror",
-                "Thriller",
-                "Horror, the undead and monster classics",
+                "Thriller"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Gothic and eerie haunting horror",
                 "Gory, gruesome, and slasher horror",
                 "Creepy, chilling, and terrifying horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 114,
             "Countries": [
                 "USA"
             ],
             "Original_language": "English",
             "Spoken_languages": [
-                "Spanish",
-                "English"
+                "English",
+                "Spanish"
             ],
             "Description": "Four years after escaping The Grabber, Finney Blake is struggling with his life after captivity. When his sister Gwen begins receiving calls in her dreams from the black phone and seeing disturbing visions of three boys being stalked at a winter camp, the siblings become determined to solve the mystery and confront a killer who has grown more powerful in death and more significant to them than either could imagine.",
             "Studios": [
@@ -1717,23 +1749,25 @@
             "Average_rating": 3.62,
             "Genres": [
                 "Drama",
-                "Crime",
-                "Intense violence and sexual transgression",
+                "Crime"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Challenging or sexual themes & twists",
                 "Heartfelt and sentimental family stories",
                 "Gritty crime and ruthless gangsters",
                 "Violent crime and drugs"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 97,
             "Countries": [
                 "Denmark"
             ],
             "Original_language": "Danish",
             "Spoken_languages": [
-                "Danish",
-                "Serbian"
+                "Serbian",
+                "Danish"
             ],
             "Description": "Two stories for the price of one: a video store clerk tries to get acquainted with a waitress; a man beats his pregnant wife, unaware that her brother is a violent racist.",
             "Studios": [
@@ -1769,17 +1803,19 @@
             "Average_rating": 3.72,
             "Genres": [
                 "Crime",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
-                "Crime, drugs and gangsters",
+                "Crime, drugs and gangsters"
+            ],
+            "Nanogenres": [
                 "Gripping, intense violent crime",
                 "Suspenseful crime thrillers",
                 "Gory, gruesome, and slasher horror",
                 "Twisted dark psychological thriller",
                 "Noir and dark crime dramas"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 90,
             "Countries": [
                 "USA",
@@ -1821,17 +1857,19 @@
             "Average_rating": 3.61,
             "Genres": [
                 "Thriller",
-                "Drama",
+                "Drama"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
-                "Horror, the undead and monster classics",
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Terrifying, haunted, and supernatural horror",
                 "Graphic violence and brutal revenge",
                 "Challenging or sexual themes & twists",
                 "Dreamlike, quirky, and surreal storytelling"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 113,
             "Countries": [
                 "Netherlands",
@@ -1840,8 +1878,8 @@
             ],
             "Original_language": "Dutch",
             "Spoken_languages": [
-                "Dutch",
-                "English"
+                "English",
+                "Dutch"
             ],
             "Description": "An enigmatic vagrant cons himself into the home life of an arrogant upper-class family, turning their lives into a psychological nightmare in the process.",
             "Studios": [
@@ -1873,17 +1911,19 @@
             ],
             "Average_rating": 3.68,
             "Genres": [
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Gory, gruesome, and slasher horror",
                 "Creepy, chilling, and terrifying horror",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 104,
             "Countries": [
                 "Australia",
@@ -1925,16 +1965,18 @@
             ],
             "Average_rating": 3.73,
             "Genres": [
-                "Drama",
+                "Drama"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
-                "Humanity and the world around us",
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
                 "Surreal and thought-provoking visions of life and death",
                 "Dreamlike, quirky, and surreal storytelling",
                 "Religious faith, sin, and forgiveness",
                 "Powerful stories of heartbreak and suffering"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 121,
             "Countries": [
                 "USA"
@@ -1973,17 +2015,19 @@
             "Genres": [
                 "Thriller",
                 "Drama",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
-                "Horror, the undead and monster classics",
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Gothic and eerie haunting horror",
                 "Terrifying, haunted, and supernatural horror",
                 "Gory, gruesome, and slasher horror",
                 "Challenging or sexual themes & twists"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 98,
             "Countries": [
                 "Germany",
@@ -2025,18 +2069,20 @@
             "Genres": [
                 "Thriller",
                 "Science Fiction",
-                "Comedy",
+                "Comedy"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
                 "Monsters, aliens, sci-fi and the apocalypse",
-                "Humanity and the world around us",
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Dreamlike, quirky, and surreal storytelling",
                 "Challenging or sexual themes & twists",
                 "Surreal and thought-provoking visions of life and death",
                 "Thought-provoking sci-fi action and future technology"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 118,
             "Countries": [
                 "Ireland",
@@ -2084,16 +2130,18 @@
                 "Fantasy",
                 "Romance",
                 "Action",
-                "Animation",
-                "Humanity and the world around us",
+                "Animation"
+            ],
+            "Themes": [
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
                 "Emotional and captivating fantasy storytelling",
                 "Powerful stories of heartbreak and suffering",
                 "Heartfelt and sentimental family stories",
                 "Captivating relationships and charming romance",
                 "Superheroes in action-packed battles with villains"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 99,
             "Countries": [
                 "Japan"
@@ -2175,16 +2223,18 @@
             "Average_rating": 3.41,
             "Genres": [
                 "Thriller",
-                "Action",
-                "Thrillers and murder mysteries",
+                "Action"
+            ],
+            "Themes": [
+                "Thrillers and murder mysteries"
+            ],
+            "Nanogenres": [
                 "Suspenseful crime thrillers",
                 "Intriguing and suspenseful murder mysteries",
                 "Twisted dark psychological thriller",
                 "Noir and dark crime dramas",
                 "Adrenaline-fueled action and fast cars"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 119,
             "Countries": [
                 "South Korea"
@@ -2224,17 +2274,19 @@
             "Genres": [
                 "Action",
                 "Horror",
-                "Fantasy",
+                "Fantasy"
+            ],
+            "Themes": [
                 "Faith and religion",
                 "Horror, the undead and monster classics",
-                "Epic heroes",
+                "Epic heroes"
+            ],
+            "Nanogenres": [
                 "Faith and spiritual journeys",
                 "Religious faith, sin, and forgiveness",
                 "Superheroes in action-packed battles with villains",
                 "Thought-provoking sci-fi action and future technology"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 121,
             "Countries": [
                 "Germany",
@@ -2242,10 +2294,10 @@
             ],
             "Original_language": "English",
             "Spoken_languages": [
-                "Spanish",
                 "English",
-                "Tagalog",
-                "Latin"
+                "Latin",
+                "Spanish",
+                "Tagalog"
             ],
             "Description": "John Constantine has literally been to Hell and back. When he teams up with a policewoman to solve the mysterious suicide of her twin sister, their investigation takes them through the world of demons and angels that exists beneath the landscape of contemporary Los Angeles.",
             "Studios": [
@@ -2283,17 +2335,19 @@
             "Average_rating": 3.96,
             "Genres": [
                 "Horror",
-                "Science Fiction",
+                "Science Fiction"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Survival horror and zombie carnage",
                 "Gory, gruesome, and slasher horror",
                 "Sci-fi horror, creatures, and aliens",
                 "Terrifying, haunted, and supernatural horror",
                 "Extreme gory horror and cannibalism"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 127,
             "Countries": [
                 "Italy",
@@ -2332,16 +2386,18 @@
             ],
             "Average_rating": 3.08,
             "Genres": [
-                "Horror",
-                "Horror, the undead and monster classics",
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Gory, gruesome, and slasher horror",
                 "Creepy, chilling, and terrifying horror",
                 "Extreme gory horror and cannibalism",
                 "Survival horror and zombie carnage",
                 "Chilling experiments and classic monster horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 87,
             "Countries": [
                 "UK"
@@ -2380,16 +2436,18 @@
             "Average_rating": 4.38,
             "Genres": [
                 "Animation",
-                "Mystery",
-                "Thrillers and murder mysteries",
+                "Mystery"
+            ],
+            "Themes": [
+                "Thrillers and murder mysteries"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Suspenseful crime thrillers",
                 "Noir and dark crime dramas",
                 "Intriguing and suspenseful murder mysteries",
                 "Intense political and terrorist thrillers"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 851,
             "Countries": [
                 "Japan"
@@ -2487,8 +2545,8 @@
             ],
             "Original_language": "Finnish",
             "Spoken_languages": [
-                "Finnish",
-                "Swedish"
+                "Swedish",
+                "Finnish"
             ],
             "Description": "The ever-poker-faced Ilona loses her job as a restaurant hostess, as her tram driver husband, Lauri, also finds himself out of work. Together they must hit the streets of Helsinki, facing up to hardship and humiliation in their quest for survival, guided through the gloom by a ray of hope.",
             "Studios": [
@@ -2522,14 +2580,16 @@
             "Average_rating": 2.73,
             "Genres": [
                 "Mystery",
-                "Thriller",
-                "High speed and special ops",
+                "Thriller"
+            ],
+            "Themes": [
+                "High speed and special ops"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Intriguing and suspenseful murder mysteries",
                 "Suspenseful crime thrillers"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 95,
             "Countries": [
                 "USA",
@@ -2570,18 +2630,20 @@
             "Average_rating": 3.22,
             "Genres": [
                 "Horror",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
                 "Horror, the undead and monster classics",
-                "Crime, drugs and gangsters",
+                "Crime, drugs and gangsters"
+            ],
+            "Nanogenres": [
                 "Gory, gruesome, and slasher horror",
                 "Graphic violence and brutal revenge",
                 "Twisted dark psychological thriller",
                 "Challenging or sexual themes & twists",
                 "Terrifying, haunted, and supernatural horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 91,
             "Countries": [
                 "UK"
@@ -2620,15 +2682,17 @@
             "Average_rating": 2.91,
             "Genres": [
                 "Thriller",
-                "Action",
-                "High speed and special ops",
+                "Action"
+            ],
+            "Themes": [
+                "High speed and special ops"
+            ],
+            "Nanogenres": [
                 "Explosive and action-packed heroes vs. villains",
                 "Superheroes in action-packed battles with villains",
                 "Brutal, violent prison drama",
                 "Violent action, guns, and crime"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 115,
             "Countries": [
                 "UK",
@@ -2636,10 +2700,10 @@
             ],
             "Original_language": "English",
             "Spoken_languages": [
-                "Urdu",
                 "English",
-                "Arabic",
-                "German"
+                "German",
+                "Urdu",
+                "Arabic"
             ],
             "Description": "Ray Breslin is the world's foremost authority on structural security. After analyzing every high security prison and learning a vast array of survival skills so he can design escape-proof prisons, his skills are put to the test. He's framed and incarcerated in a master prison he designed himself. He needs to escape and find the person who put him behind bars.",
             "Studios": [
@@ -2677,24 +2741,26 @@
             "Genres": [
                 "Thriller",
                 "Horror",
-                "Mystery",
-                "Horror, the undead and monster classics",
+                "Mystery"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Creepy, chilling, and terrifying horror",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 134,
             "Countries": [
                 "South Korea"
             ],
             "Original_language": "Korean",
             "Spoken_languages": [
-                "Korean",
                 "English",
-                "Japanese"
+                "Japanese",
+                "Korean"
             ],
             "Description": "After tracing the origin of a disturbing supernatural affliction to a wealthy family's ancestral gravesite, a team of paranormal experts relocates the remains—and soon discovers what happens to those who dare to mess with the wrong grave.",
             "Studios": [
@@ -2727,12 +2793,14 @@
             "Average_rating": 3.29,
             "Genres": [
                 "History",
-                "Drama",
-                "Epic history and literature",
+                "Drama"
+            ],
+            "Themes": [
+                "Epic history and literature"
+            ],
+            "Nanogenres": [
                 "Surreal and thought-provoking visions of life and death"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 97,
             "Countries": [
                 "USA"
@@ -2772,16 +2840,18 @@
             "Genres": [
                 "Romance",
                 "Thriller",
-                "Drama",
-                "Moving relationship stories",
+                "Drama"
+            ],
+            "Themes": [
+                "Moving relationship stories"
+            ],
+            "Nanogenres": [
                 "Erotic relationships and desire",
                 "Challenging or sexual themes & twists",
                 "Passion and romance",
                 "Graphic violence and brutal revenge",
                 "Emotional LGBTQ relationships"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 125,
             "Countries": [
                 "USA"
@@ -2823,17 +2893,19 @@
             "Genres": [
                 "Science Fiction",
                 "Mystery",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Monsters, aliens, sci-fi and the apocalypse",
-                "Horror, the undead and monster classics",
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Sci-fi horror, creatures, and aliens",
                 "Imaginative space odysseys and alien encounters",
                 "Terrifying, haunted, and supernatural horror",
                 "Action-packed space and alien sagas",
                 "Twisted dark psychological thriller"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 109,
             "Countries": [
                 "USA"
@@ -2873,16 +2945,18 @@
             "Genres": [
                 "Comedy",
                 "Crime",
-                "Action",
-                "Crime, drugs and gangsters",
+                "Action"
+            ],
+            "Themes": [
+                "Crime, drugs and gangsters"
+            ],
+            "Nanogenres": [
                 "Violent action, guns, and crime",
                 "Gritty crime and ruthless gangsters",
                 "Heists and thrilling action",
                 "Violent crime and drugs",
                 "Brutal, violent prison drama"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 108,
             "Countries": [
                 "Japan",
@@ -2932,17 +3006,19 @@
             "Genres": [
                 "Thriller",
                 "Crime",
-                "Mystery",
+                "Mystery"
+            ],
+            "Themes": [
                 "Thrillers and murder mysteries",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Suspenseful crime thrillers",
                 "Terrifying, haunted, and supernatural horror",
                 "Intriguing and suspenseful murder mysteries",
                 "Gripping, intense violent crime"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 108,
             "Countries": [
                 "South Korea"
@@ -2986,17 +3062,19 @@
             "Average_rating": 3.42,
             "Genres": [
                 "Horror",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Gory, gruesome, and slasher horror",
                 "Terrifying, haunted, and supernatural horror",
                 "Challenging or sexual themes & twists",
                 "Extreme gory horror and cannibalism"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 114,
             "Countries": [
                 "USA"
@@ -3035,17 +3113,19 @@
             "Average_rating": 3.09,
             "Genres": [
                 "Thriller",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Gothic and eerie haunting horror",
                 "Gory, gruesome, and slasher horror",
                 "Creepy, chilling, and terrifying horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 104,
             "Countries": [
                 "USA"
@@ -3084,17 +3164,19 @@
             "Genres": [
                 "Horror",
                 "Mystery",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Gory, gruesome, and slasher horror",
                 "Graphic violence and brutal revenge",
                 "Challenging or sexual themes & twists"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 91,
             "Countries": [
                 "Canada",
@@ -3135,15 +3217,17 @@
             ],
             "Average_rating": 3.0,
             "Genres": [
-                "Horror",
-                "Horror, the undead and monster classics",
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Creepy, chilling, and terrifying horror",
                 "Twisted dark psychological thriller",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 73,
             "Countries": [
                 "USA"
@@ -3181,19 +3265,21 @@
             "Average_rating": 3.32,
             "Genres": [
                 "Thriller",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
                 "Faith and religion",
                 "Humanity and the world around us",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Terrifying, haunted, and supernatural horror",
                 "Creepy, chilling, and terrifying horror",
                 "Gothic and eerie haunting horror",
                 "Religious faith, sin, and forgiveness"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 111,
             "Countries": [
                 "USA"
@@ -3235,17 +3321,19 @@
             "Genres": [
                 "Mystery",
                 "Horror",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Gory, gruesome, and slasher horror",
                 "Twisted dark psychological thriller",
                 "Graphic violence and brutal revenge",
                 "Terrifying, haunted, and supernatural horror",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 91,
             "Countries": [
                 "France",
@@ -3253,9 +3341,9 @@
             ],
             "Original_language": "French",
             "Spoken_languages": [
-                "French",
+                "English",
                 "Italian",
-                "English"
+                "French"
             ],
             "Description": "Best friends Marie and Alexia decide to spend a quiet weekend at Alexia's parents' secluded farmhouse. But on the night of their arrival, the girls' idyllic getaway turns into an endless night of horror.",
             "Studios": [
@@ -3289,18 +3377,20 @@
             "Genres": [
                 "Action",
                 "Crime",
-                "Comedy",
+                "Comedy"
+            ],
+            "Themes": [
                 "Crude humor and satire",
                 "Thrillers and murder mysteries",
-                "High speed and special ops",
+                "High speed and special ops"
+            ],
+            "Nanogenres": [
                 "Gags, jokes, and slapstick humor",
                 "Amusing jokes and witty satire",
                 "Funny jokes and crude humor",
                 "Spooky, scary comedy",
                 "Intriguing and suspenseful murder mysteries"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 121,
             "Countries": [
                 "France",
@@ -3343,13 +3433,15 @@
             "Genres": [
                 "Drama",
                 "Horror",
-                "Mystery",
-                "Intense violence and sexual transgression",
+                "Mystery"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Gory, gruesome, and slasher horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 97,
             "Countries": [
                 "Mexico",
@@ -3394,19 +3486,21 @@
             "Average_rating": 4.03,
             "Genres": [
                 "Thriller",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
                 "Horror, the undead and monster classics",
                 "Crime, drugs and gangsters",
-                "Thrillers and murder mysteries",
+                "Thrillers and murder mysteries"
+            ],
+            "Nanogenres": [
                 "Graphic violence and brutal revenge",
                 "Twisted dark psychological thriller",
                 "Gory, gruesome, and slasher horror",
                 "Suspenseful crime thrillers",
                 "Gripping, intense violent crime"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 144,
             "Countries": [
                 "South Korea"
@@ -3451,17 +3545,19 @@
             "Genres": [
                 "Horror",
                 "Mystery",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Thrillers and murder mysteries",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Suspenseful crime thrillers",
                 "Terrifying, haunted, and supernatural horror",
                 "Intriguing and suspenseful murder mysteries",
                 "Noir and dark crime dramas"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 98,
             "Countries": [
                 "USA"
@@ -3499,16 +3595,18 @@
             "Average_rating": 1.85,
             "Genres": [
                 "Horror",
-                "Mystery",
-                "Horror, the undead and monster classics",
+                "Mystery"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Creepy, chilling, and terrifying horror",
                 "Gothic and eerie haunting horror",
                 "Spooky, scary comedy"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 104,
             "Countries": [
                 "USA"
@@ -3548,17 +3646,19 @@
             "Average_rating": 3.8,
             "Genres": [
                 "Mystery",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Gothic and eerie haunting horror",
                 "Creepy, chilling, and terrifying horror",
                 "Dreamlike, quirky, and surreal storytelling",
                 "Gory, gruesome, and slasher horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 95,
             "Countries": [
                 "USA"
@@ -3597,17 +3697,19 @@
             "Genres": [
                 "War",
                 "Drama",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "War and historical adventure",
-                "Epic history and literature",
+                "Epic history and literature"
+            ],
+            "Nanogenres": [
                 "Nazis and World War II",
                 "Graphic violence and brutal revenge",
                 "Military combat and heroic soldiers",
                 "Bravery in War",
                 "Historical battles and epic heroism"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 153,
             "Countries": [
                 "Germany",
@@ -3652,17 +3754,19 @@
             ],
             "Average_rating": 3.45,
             "Genres": [
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Gory, gruesome, and slasher horror",
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Graphic violence and brutal revenge",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 83,
             "Countries": [
                 "France"
@@ -3702,18 +3806,20 @@
             "Genres": [
                 "Thriller",
                 "Horror",
-                "Science Fiction",
+                "Science Fiction"
+            ],
+            "Themes": [
                 "Monsters, aliens, sci-fi and the apocalypse",
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Sci-fi horror, creatures, and aliens",
                 "Twisted dark psychological thriller",
                 "Imaginative space odysseys and alien encounters",
                 "Thought-provoking sci-fi action and future technology"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 80,
             "Countries": [
                 "USA"
@@ -3754,17 +3860,19 @@
             "Genres": [
                 "Drama",
                 "Mystery",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Creepy, chilling, and terrifying horror",
                 "Sci-fi horror, creatures, and aliens",
                 "Survival horror and zombie carnage"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 91,
             "Countries": [
                 "USA"
@@ -3804,18 +3912,20 @@
             "Genres": [
                 "Crime",
                 "Horror",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
                 "Horror, the undead and monster classics",
-                "Crime, drugs and gangsters",
+                "Crime, drugs and gangsters"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Gory, gruesome, and slasher horror",
                 "Gothic and eerie haunting horror",
                 "Terrifying, haunted, and supernatural horror",
                 "Suspenseful crime thrillers"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 95,
             "Countries": [
                 "UK",
@@ -3863,16 +3973,18 @@
             "Genres": [
                 "Drama",
                 "Fantasy",
-                "Horror",
-                "Intense violence and sexual transgression",
+                "Horror"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Terrifying, haunted, and supernatural horror",
                 "Dreamlike, quirky, and surreal storytelling",
                 "Noir and dark crime dramas",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 106,
             "Countries": [
                 "Iceland",
@@ -3914,17 +4026,19 @@
             ],
             "Average_rating": 3.36,
             "Genres": [
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Gory, gruesome, and slasher horror",
                 "Creepy, chilling, and terrifying horror",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 93,
             "Countries": [
                 "Australia",
@@ -3970,23 +4084,25 @@
             "Genres": [
                 "Drama",
                 "Mystery",
-                "Thriller",
-                "Humanity and the world around us",
+                "Thriller"
+            ],
+            "Themes": [
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Thought-provoking sci-fi action and future technology",
                 "Terrifying, haunted, and supernatural horror",
                 "Sci-fi horror, creatures, and aliens"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 140,
             "Countries": [
                 "USA"
             ],
             "Original_language": "English",
             "Spoken_languages": [
-                "Spanish",
-                "English"
+                "English",
+                "Spanish"
             ],
             "Description": "A family's getaway to a luxurious rental home takes an ominous turn when a cyberattack knocks out their devices—and two strangers appear at their door.",
             "Studios": [
@@ -4019,16 +4135,18 @@
             "Average_rating": 3.28,
             "Genres": [
                 "Drama",
-                "Comedy",
-                "Intense violence and sexual transgression",
+                "Comedy"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Challenging or sexual themes & twists",
                 "Quirky and endearing relationships",
                 "Heartbreaking and moving family drama",
                 "Heartfelt and sentimental family stories",
                 "Powerful stories of heartbreak and suffering"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 97,
             "Countries": [
                 "USA"
@@ -4065,17 +4183,19 @@
             ],
             "Average_rating": 3.99,
             "Genres": [
-                "Comedy",
+                "Comedy"
+            ],
+            "Themes": [
                 "Crude humor and satire",
-                "Faith and religion",
+                "Faith and religion"
+            ],
+            "Nanogenres": [
                 "Amusing jokes and witty satire",
                 "Funny jokes and crude humor",
                 "Faith and spiritual journeys",
                 "Gags, jokes, and slapstick humor",
                 "Catchy songs and hilarious musical comedy"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 94,
             "Countries": [
                 "UK"
@@ -4117,18 +4237,20 @@
                 "Comedy",
                 "Animation",
                 "Family",
-                "Science Fiction",
+                "Science Fiction"
+            ],
+            "Themes": [
                 "Monsters, aliens, sci-fi and the apocalypse",
                 "Crude humor and satire",
-                "Song and dance",
+                "Song and dance"
+            ],
+            "Nanogenres": [
                 "Kids' animated fun and adventure",
                 "Adorable animals and heartwarming families",
                 "Fairy-tale fantasy and enchanted magic",
                 "Holiday joy and heartwarming Christmas",
                 "Catchy songs and hilarious musical comedy"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 85,
             "Countries": [
                 "USA"
@@ -4167,18 +4289,20 @@
             "Genres": [
                 "Crime",
                 "Horror",
-                "Mystery",
+                "Mystery"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
                 "Intense violence and sexual transgression",
-                "Thrillers and murder mysteries",
+                "Thrillers and murder mysteries"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Terrifying, haunted, and supernatural horror",
                 "Suspenseful crime thrillers",
                 "Gory, gruesome, and slasher horror",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 101,
             "Countries": [
                 "Canada",
@@ -4222,18 +4346,20 @@
             "Genres": [
                 "Horror",
                 "Thriller",
-                "Drama",
+                "Drama"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
                 "Horror, the undead and monster classics",
-                "Humanity and the world around us",
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
                 "Graphic violence and brutal revenge",
                 "Gory, gruesome, and slasher horror",
                 "Twisted dark psychological thriller",
                 "Terrifying, haunted, and supernatural horror",
                 "Challenging or sexual themes & twists"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 99,
             "Countries": [
                 "Canada",
@@ -4272,16 +4398,18 @@
             ],
             "Average_rating": 4.08,
             "Genres": [
-                "Drama",
-                "Moving relationship stories",
+                "Drama"
+            ],
+            "Themes": [
+                "Moving relationship stories"
+            ],
+            "Nanogenres": [
                 "Powerful stories of heartbreak and suffering",
                 "Emotional and heartfelt family dramas",
                 "Heartbreaking and moving family drama",
                 "Heartfelt and sentimental family stories",
                 "Gripping, intense violent crime"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 111,
             "Countries": [
                 "USA"
@@ -4425,7 +4553,7 @@
                 "Faux Beef"
             ],
             "Film_URL": "https://letterboxd.com/film/munchausen/",
-            "Rating_Igor": 3.0,
+            "Rating_Igor": 0.0,
             "Rating_Valeria": 3.0
         },
         {
@@ -4448,17 +4576,19 @@
             ],
             "Average_rating": 3.53,
             "Genres": [
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Westerns",
+                "Westerns"
+            ],
+            "Nanogenres": [
                 "Bloody vampire horror",
                 "Creepy, chilling, and terrifying horror",
                 "Gothic and eerie haunting horror",
                 "Gory, gruesome, and slasher horror",
                 "Terrifying, haunted, and supernatural horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 94,
             "Countries": [
                 "USA"
@@ -4498,16 +4628,18 @@
             "Average_rating": 2.44,
             "Genres": [
                 "Science Fiction",
-                "Horror",
-                "Horror, the undead and monster classics",
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Sci-fi horror, creatures, and aliens",
                 "Gory, gruesome, and slasher horror",
                 "Chilling experiments and classic monster horror",
                 "Sci-fi monster and dinosaur adventures",
                 "Survival horror and zombie carnage"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 88,
             "Countries": [
                 "USA"
@@ -4546,17 +4678,19 @@
             "Average_rating": 3.39,
             "Genres": [
                 "Horror",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Thrillers and murder mysteries",
-                "Horror, the undead and monster classics",
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Intriguing and suspenseful murder mysteries",
                 "Gory, gruesome, and slasher horror",
                 "Terrifying, haunted, and supernatural horror",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 107,
             "Countries": [
                 "Denmark"
@@ -4595,15 +4729,17 @@
             "Genres": [
                 "Drama",
                 "Thriller",
-                "Crime",
-                "Intense violence and sexual transgression",
+                "Crime"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Gripping, intense violent crime",
                 "Challenging or sexual themes & twists",
                 "Twisted dark psychological thriller",
                 "Powerful stories of heartbreak and suffering"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 112,
             "Countries": [
                 "Australia"
@@ -4642,17 +4778,19 @@
             "Average_rating": 3.03,
             "Genres": [
                 "Science Fiction",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Monsters, aliens, sci-fi and the apocalypse",
-                "Horror, the undead and monster classics",
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Sci-fi horror, creatures, and aliens",
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Thought-provoking sci-fi action and future technology",
                 "Action-packed space and alien sagas"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 93,
             "Countries": [
                 "USA"
@@ -4692,15 +4830,17 @@
             "Genres": [
                 "Crime",
                 "Comedy",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Crude humor and satire",
-                "Humanity and the world around us",
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
                 "Surreal and thought-provoking visions of life and death",
                 "Twisted dark psychological thriller",
                 "Gripping, intense violent crime"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 139,
             "Countries": [
                 "South Korea",
@@ -4708,8 +4848,8 @@
             ],
             "Original_language": "Korean",
             "Spoken_languages": [
-                "Korean",
-                "English"
+                "English",
+                "Korean"
             ],
             "Description": "After being laid off and humiliated by a ruthless job market, a veteran paper mill manager descends into violence in a desperate bid to reclaim his dignity.",
             "Studios": [
@@ -4742,29 +4882,31 @@
             "Average_rating": 3.67,
             "Genres": [
                 "Fantasy",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
                 "Intense violence and sexual transgression",
-                "Humanity and the world around us",
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Creepy, chilling, and terrifying horror",
                 "Gothic and eerie haunting horror",
                 "Bloody vampire horror",
                 "Twisted dark psychological thriller"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 133,
             "Countries": [
                 "USA"
             ],
             "Original_language": "English",
             "Spoken_languages": [
-                "Russian",
-                "German",
-                "Romanian",
                 "English",
-                "Latin"
+                "Latin",
+                "Romanian",
+                "German",
+                "Russian"
             ],
             "Description": "A gothic tale of obsession between a haunted young woman and the terrifying vampire infatuated with her, causing untold horror in its wake.",
             "Studios": [
@@ -4798,17 +4940,19 @@
             "Average_rating": 3.38,
             "Genres": [
                 "Mystery",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Gothic and eerie haunting horror",
                 "Creepy, chilling, and terrifying horror",
                 "Gory, gruesome, and slasher horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 98,
             "Countries": [
                 "Ireland"
@@ -4850,16 +4994,18 @@
                 "Animation",
                 "Family",
                 "Adventure",
-                "Comedy",
-                "Crude humor and satire",
+                "Comedy"
+            ],
+            "Themes": [
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
                 "Kids' animated fun and adventure",
                 "Adorable animals and heartwarming families",
                 "Gags, jokes, and slapstick humor",
                 "Funny jokes and crude humor",
                 "Amusing jokes and witty satire"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 84,
             "Countries": [
                 "USA"
@@ -4894,20 +5040,22 @@
                 "Benny Elledge",
                 "Daniel Danielson"
             ],
-            "Average_rating": 2.96,
+            "Average_rating": 2.95,
             "Genres": [
                 "Horror",
                 "Thriller",
-                "Drama",
-                "Underdogs and coming of age",
+                "Drama"
+            ],
+            "Themes": [
+                "Underdogs and coming of age"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Gripping, intense violent crime",
                 "Heartfelt and sentimental family stories",
                 "Intense political and terrorist thrillers"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 84,
             "Countries": [
                 "USA"
@@ -4949,24 +5097,26 @@
                 "Family",
                 "Fantasy",
                 "Comedy",
-                "Adventure",
-                "Epic heroes",
+                "Adventure"
+            ],
+            "Themes": [
+                "Epic heroes"
+            ],
+            "Nanogenres": [
                 "Kids' animated fun and adventure",
                 "Emotional and captivating fantasy storytelling",
                 "Adorable animals and heartwarming families",
                 "Superheroes in action-packed battles with villains",
                 "Fantasy adventure, heroism, and swordplay"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 103,
             "Countries": [
                 "USA"
             ],
             "Original_language": "English",
             "Spoken_languages": [
-                "Spanish",
-                "English"
+                "English",
+                "Spanish"
             ],
             "Description": "Puss in Boots discovers that his passion for adventure has taken its toll: He has burned through eight of his nine lives, leaving him with only one life left. Puss sets out on an epic journey to find the mythical Last Wish and restore his nine lives.",
             "Studios": [
@@ -4997,17 +5147,19 @@
             "Average_rating": 2.87,
             "Genres": [
                 "Horror",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Creepy, chilling, and terrifying horror",
                 "Gory, gruesome, and slasher horror",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 88,
             "Countries": [
                 "Canada"
@@ -5045,29 +5197,31 @@
                 "Gabrielle Carteris",
                 "Barton Heyman"
             ],
-            "Average_rating": 3.27,
+            "Average_rating": 3.28,
             "Genres": [
                 "Thriller",
                 "Mystery",
-                "Crime",
+                "Crime"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
-                "Horror, the undead and monster classics",
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Terrifying, haunted, and supernatural horror",
                 "Gory, gruesome, and slasher horror",
                 "Dreamlike, quirky, and surreal storytelling",
                 "Chilling experiments and classic monster horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 92,
             "Countries": [
                 "USA"
             ],
             "Original_language": "English",
             "Spoken_languages": [
-                "Spanish",
-                "English"
+                "English",
+                "Spanish"
             ],
             "Description": "Child psychologist Carter Nix is a loving and caring family man, but under this appearance lies a dark and troubled past. Grappling with the consequences of this past on his own psyche and the influence of his returning father and violent brother Cain, Carter becomes involved in a series of murders and kidnappings. Meanwhile, his wife Jenny rekindles an old love affair, placing herself in the crosshairs of her increasingly unstable husband.",
             "Studios": [
@@ -5099,25 +5253,27 @@
             "Average_rating": 3.91,
             "Genres": [
                 "Crime",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
-                "Horror, the undead and monster classics",
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Suspenseful crime thrillers",
                 "Twisted dark psychological thriller",
                 "Graphic violence and brutal revenge",
                 "Gripping, intense violent crime",
                 "Intriguing and suspenseful murder mysteries"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 118,
             "Countries": [
                 "Canada"
             ],
             "Original_language": "French",
             "Spoken_languages": [
-                "French",
-                "English"
+                "English",
+                "French"
             ],
             "Description": "The high-profile case of serial killer Ludovic Chevalier has just gone to trial, and Kelly-Anne is obsessed. When reality blurs with her morbid fantasies, she goes down a dark path to seek the final piece of the case’s puzzle.",
             "Studios": [
@@ -5149,16 +5305,18 @@
             "Genres": [
                 "Horror",
                 "Mystery",
-                "Thriller",
-                "Horror, the undead and monster classics",
+                "Thriller"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Gothic and eerie haunting horror",
                 "Dreamlike, quirky, and surreal storytelling",
                 "Creepy, chilling, and terrifying horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 93,
             "Countries": [
                 "USA"
@@ -5197,16 +5355,18 @@
             "Genres": [
                 "Horror",
                 "Thriller",
-                "Mystery",
-                "Thrillers and murder mysteries",
+                "Mystery"
+            ],
+            "Themes": [
+                "Thrillers and murder mysteries"
+            ],
+            "Nanogenres": [
                 "Intriguing and suspenseful murder mysteries",
                 "Suspenseful crime thrillers",
                 "Terrifying, haunted, and supernatural horror",
                 "Gothic and eerie haunting horror",
                 "Gory, gruesome, and slasher horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 104,
             "Countries": [
                 "Japan"
@@ -5249,16 +5409,18 @@
                 "Crime",
                 "Drama",
                 "Romance",
-                "Thriller",
-                "Moving relationship stories",
+                "Thriller"
+            ],
+            "Themes": [
+                "Moving relationship stories"
+            ],
+            "Nanogenres": [
                 "Gritty crime and ruthless gangsters",
                 "Heists and thrilling action",
                 "Suspenseful crime thrillers",
                 "Enduring stories of family and marital drama",
                 "Intense political and terrorist thrillers"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 121,
             "Countries": [
                 "Austria"
@@ -5297,16 +5459,18 @@
             ],
             "Average_rating": 3.07,
             "Genres": [
-                "Horror",
-                "Intense violence and sexual transgression",
+                "Horror"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Challenging or sexual themes & twists",
                 "Graphic violence and brutal revenge",
                 "Gory, gruesome, and slasher horror",
                 "Gothic and eerie haunting horror",
                 "Extreme gory horror and cannibalism"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 65,
             "Countries": [
                 "Germany"
@@ -5327,7 +5491,7 @@
         {
             "id": 111,
             "Film_title": "Send Help",
-            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/kL4MgAIZIYX3sCeG34N0XfVhCtt.jpg",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/mlV70IuchLZXcXKowjwSpSfdfUB.jpg",
             "Release_year": 2026,
             "Director": "Sam Raimi",
             "Cast": [
@@ -5342,19 +5506,21 @@
                 "Kristy Best",
                 "Francesca Waters"
             ],
-            "Average_rating": 3.5,
+            "Average_rating": 3.49,
             "Genres": [
                 "Thriller",
                 "Horror",
-                "Comedy",
+                "Comedy"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Terrifying, haunted, and supernatural horror",
                 "Gory, gruesome, and slasher horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 113,
             "Countries": [
                 "USA"
@@ -5437,17 +5603,19 @@
             "Genres": [
                 "Thriller",
                 "Drama",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
-                "Crime, drugs and gangsters",
+                "Crime, drugs and gangsters"
+            ],
+            "Nanogenres": [
                 "Gripping, intense violent crime",
                 "Graphic violence and brutal revenge",
                 "Suspenseful crime thrillers",
                 "Twisted dark psychological thriller",
                 "Challenging or sexual themes & twists"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 105,
             "Countries": [
                 "Canada"
@@ -5486,18 +5654,20 @@
             "Genres": [
                 "Thriller",
                 "Comedy",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Crude humor and satire",
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Gory, gruesome, and slasher horror",
                 "Twisted dark psychological thriller",
                 "Spooky, scary comedy",
                 "Amusing jokes and witty satire",
                 "Gags, jokes, and slapstick humor"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 96,
             "Countries": [
                 "UK",
@@ -5507,8 +5677,8 @@
             "Original_language": "English",
             "Spoken_languages": [
                 "English",
-                "Hungarian",
-                "Russian"
+                "Russian",
+                "Hungarian"
             ],
             "Description": "Seven employees of an international weapons manufacturer are treated to a team-building weekend at the company’s newly built luxury spa lodge. Things quickly go awry as the colleagues find their corporate weekend sabotaged by a deadly enemy.",
             "Studios": [
@@ -5547,17 +5717,19 @@
                 "Fantasy",
                 "Family",
                 "Animation",
-                "Comedy",
+                "Comedy"
+            ],
+            "Themes": [
                 "Crude humor and satire",
-                "Relationship comedy",
+                "Relationship comedy"
+            ],
+            "Nanogenres": [
                 "Kids' animated fun and adventure",
                 "Fairy-tale fantasy and enchanted magic",
                 "Funny jokes and crude humor",
                 "Holiday joy and heartwarming Christmas",
                 "Laugh-out-loud relationship entanglements"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 90,
             "Countries": [
                 "USA"
@@ -5581,7 +5753,7 @@
             "Film_title": "Shrek 2",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/2yYP0PQjG8zVqturh1BAqu2Tixl.jpg",
             "Release_year": 2004,
-            "Director": "Andrew Adamson",
+            "Director": "Conrad Vernon",
             "Cast": [
                 "Mike Myers",
                 "Eddie Murphy",
@@ -5600,16 +5772,18 @@
                 "Comedy",
                 "Romance",
                 "Animation",
-                "Fantasy",
-                "Crude humor and satire",
+                "Fantasy"
+            ],
+            "Themes": [
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
                 "Kids' animated fun and adventure",
                 "Fairy-tale fantasy and enchanted magic",
                 "Laugh-out-loud relationship entanglements",
                 "Funny jokes and crude humor",
                 "Holiday joy and heartwarming Christmas"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 92,
             "Countries": [
                 "USA"
@@ -5651,19 +5825,21 @@
                 "Thriller",
                 "Horror",
                 "Mystery",
-                "Science Fiction",
+                "Science Fiction"
+            ],
+            "Themes": [
                 "Monsters, aliens, sci-fi and the apocalypse",
                 "Horror, the undead and monster classics",
                 "Humanity and the world around us",
-                "Faith and religion",
+                "Faith and religion"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Action-packed space and alien sagas",
                 "Sci-fi horror, creatures, and aliens",
                 "Twisted dark psychological thriller",
                 "Imaginative space odysseys and alien encounters"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 106,
             "Countries": [
                 "USA"
@@ -5704,17 +5880,19 @@
             "Average_rating": 3.1,
             "Genres": [
                 "Mystery",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Gothic and eerie haunting horror",
                 "Twisted dark psychological thriller",
                 "Gory, gruesome, and slasher horror",
                 "Creepy, chilling, and terrifying horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 125,
             "Countries": [
                 "Canada",
@@ -5799,16 +5977,18 @@
             "Genres": [
                 "Thriller",
                 "Horror",
-                "Mystery",
-                "Intense violence and sexual transgression",
+                "Mystery"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Terrifying, haunted, and supernatural horror",
                 "Gothic and eerie haunting horror",
                 "Gory, gruesome, and slasher horror",
                 "Creepy, chilling, and terrifying horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 94,
             "Countries": [
                 "South Korea"
@@ -5848,17 +6028,19 @@
             "Average_rating": 3.21,
             "Genres": [
                 "Mystery",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Gory, gruesome, and slasher horror",
                 "Creepy, chilling, and terrifying horror",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 127,
             "Countries": [
                 "USA"
@@ -5898,17 +6080,19 @@
             "Average_rating": 3.41,
             "Genres": [
                 "Crime",
-                "Drama",
+                "Drama"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
-                "Horror, the undead and monster classics",
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Graphic violence and brutal revenge",
                 "Gripping, intense violent crime",
                 "Challenging or sexual themes & twists",
                 "Gory, gruesome, and slasher horror",
                 "Terrifying, haunted, and supernatural horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 120,
             "Countries": [
                 "Australia"
@@ -5949,17 +6133,19 @@
             "Genres": [
                 "Mystery",
                 "Science Fiction",
-                "Drama",
+                "Drama"
+            ],
+            "Themes": [
                 "Humanity and the world around us",
-                "Monsters, aliens, sci-fi and the apocalypse",
+                "Monsters, aliens, sci-fi and the apocalypse"
+            ],
+            "Nanogenres": [
                 "Imaginative space odysseys and alien encounters",
                 "Surreal and thought-provoking visions of life and death",
                 "Humanity's odyssey: earth and beyond",
                 "Thought-provoking sci-fi action and future technology",
                 "Action-packed space and alien sagas"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 167,
             "Countries": [
                 "USSR"
@@ -6082,16 +6268,18 @@
             "Genres": [
                 "Drama",
                 "Horror",
-                "Mystery",
-                "Intense violence and sexual transgression",
+                "Mystery"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Challenging or sexual themes & twists",
                 "Graphic violence and brutal revenge",
                 "Dreamlike, quirky, and surreal storytelling",
                 "Surreal and thought-provoking visions of life and death",
                 "Twisted dark psychological thriller"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 108,
             "Countries": [
                 "Japan"
@@ -6131,15 +6319,16 @@
                 "Adventure",
                 "Fantasy",
                 "Family",
-                "Comedy",
+                "Comedy"
+            ],
+            "Themes": [],
+            "Nanogenres": [
                 "Adorable animals and heartwarming families",
                 "Kids' animated fun and adventure",
                 "Fairy-tale fantasy and enchanted magic",
                 "Holiday joy and heartwarming Christmas",
                 "Laugh-out-loud relationship entanglements"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 84,
             "Countries": [
                 "Germany",
@@ -6182,18 +6371,20 @@
             "Genres": [
                 "Thriller",
                 "Action",
-                "Drama",
+                "Drama"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
                 "Humanity and the world around us",
-                "Crime, drugs and gangsters",
+                "Crime, drugs and gangsters"
+            ],
+            "Nanogenres": [
                 "Graphic violence and brutal revenge",
                 "Gripping, intense violent crime",
                 "Twisted dark psychological thriller",
                 "Challenging or sexual themes & twists",
                 "Gory, gruesome, and slasher horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 129,
             "Countries": [
                 "South Korea"
@@ -6233,16 +6424,18 @@
             "Genres": [
                 "Thriller",
                 "Horror",
-                "Mystery",
-                "Horror, the undead and monster classics",
+                "Mystery"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Gothic and eerie haunting horror",
                 "Creepy, chilling, and terrifying horror",
                 "Intriguing and suspenseful murder mysteries"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 107,
             "Countries": [
                 "UK",
@@ -6287,17 +6480,19 @@
             "Genres": [
                 "Horror",
                 "Mystery",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Terrifying, haunted, and supernatural horror",
                 "Gothic and eerie haunting horror",
                 "Gory, gruesome, and slasher horror",
                 "Creepy, chilling, and terrifying horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 98,
             "Countries": [
                 "USA"
@@ -6337,17 +6532,19 @@
             "Average_rating": 3.58,
             "Genres": [
                 "Thriller",
-                "Science Fiction",
+                "Science Fiction"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
-                "Moving relationship stories",
+                "Moving relationship stories"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Powerful stories of heartbreak and suffering",
                 "Challenging or sexual themes & twists",
                 "Fascinating, emotional stories and documentaries",
                 "Dreamlike, quirky, and surreal storytelling"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 113,
             "Countries": [
                 "Canada",
@@ -6390,15 +6587,16 @@
             "Genres": [
                 "Family",
                 "Science Fiction",
-                "Comedy",
+                "Comedy"
+            ],
+            "Themes": [],
+            "Nanogenres": [
                 "Kids' animated fun and adventure",
                 "Adorable animals and heartwarming families",
                 "Action-packed space and alien sagas",
                 "Fairy-tale fantasy and enchanted magic",
                 "Gags, jokes, and slapstick humor"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 104,
             "Countries": [
                 "USA"
@@ -6435,17 +6633,19 @@
             ],
             "Average_rating": 3.88,
             "Genres": [
-                "Drama",
+                "Drama"
+            ],
+            "Themes": [
                 "Humanity and the world around us",
-                "Moving relationship stories",
+                "Moving relationship stories"
+            ],
+            "Nanogenres": [
                 "Emotional and heartfelt family dramas",
                 "Powerful stories of heartbreak and suffering",
                 "Violent crime and drugs",
                 "Emotional teen coming-of-age stories",
                 "Heartbreaking and moving family drama"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 96,
             "Countries": [
                 "Belgium",
@@ -6488,17 +6688,19 @@
             "Average_rating": 3.02,
             "Genres": [
                 "Horror",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Gory, gruesome, and slasher horror",
                 "Twisted dark psychological thriller",
                 "Graphic violence and brutal revenge",
                 "Terrifying, haunted, and supernatural horror",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 90,
             "Countries": [
                 "USA"
@@ -6539,16 +6741,18 @@
             "Genres": [
                 "Drama",
                 "Crime",
-                "Mystery",
-                "Intense violence and sexual transgression",
+                "Mystery"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Intense political and terrorist thrillers",
                 "Suspenseful crime thrillers",
                 "Intriguing and suspenseful murder mysteries",
                 "Noir and dark crime dramas"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 114,
             "Countries": [
                 "USA"
@@ -6586,17 +6790,19 @@
             ],
             "Average_rating": 2.99,
             "Genres": [
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Gory, gruesome, and slasher horror",
                 "Creepy, chilling, and terrifying horror",
                 "Gothic and eerie haunting horror",
                 "Twisted dark psychological thriller"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 95,
             "Countries": [
                 "USA"
@@ -6638,18 +6844,20 @@
             "Genres": [
                 "Thriller",
                 "Action",
-                "Crime",
+                "Crime"
+            ],
+            "Themes": [
                 "Epic heroes",
                 "Humanity and the world around us",
                 "High speed and special ops",
                 "Crime, drugs and gangsters",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Superheroes in action-packed battles with villains",
                 "Explosive and action-packed heroes vs. villains",
                 "Heists and thrilling action"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 152,
             "Countries": [
                 "UK",
@@ -6692,17 +6900,19 @@
             "Average_rating": 3.25,
             "Genres": [
                 "Horror",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Gory, gruesome, and slasher horror",
                 "Twisted dark psychological thriller",
                 "Gothic and eerie haunting horror",
                 "Creepy, chilling, and terrifying horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 79,
             "Countries": [
                 "UK",
@@ -6743,16 +6953,18 @@
             "Genres": [
                 "Thriller",
                 "Science Fiction",
-                "Horror",
-                "Horror, the undead and monster classics",
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Dreamlike, quirky, and surreal storytelling",
                 "Terrifying, haunted, and supernatural horror",
                 "Gothic and eerie haunting horror",
                 "Surreal and thought-provoking visions of life and death"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 112,
             "Countries": [
                 "USA"
@@ -6793,12 +7005,14 @@
             ],
             "Average_rating": 4.18,
             "Genres": [
-                "Drama",
-                "Humanity and the world around us",
+                "Drama"
+            ],
+            "Themes": [
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
                 "Powerful poetic and passionate drama"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 108,
             "Countries": [
                 "France"
@@ -6835,18 +7049,20 @@
             ],
             "Average_rating": 3.38,
             "Genres": [
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
                 "Faith and religion",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Creepy, chilling, and terrifying horror",
                 "Gothic and eerie haunting horror",
                 "Gory, gruesome, and slasher horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 119,
             "Countries": [
                 "USA"
@@ -6927,18 +7143,20 @@
             "Genres": [
                 "Mystery",
                 "Drama",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
                 "Horror, the undead and monster classics",
-                "Moving relationship stories",
+                "Moving relationship stories"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Intense political and terrorist thrillers",
                 "Terrifying, haunted, and supernatural horror",
                 "Noir and dark crime dramas",
                 "Suspenseful crime thrillers"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 108,
             "Countries": [
                 "Australia",
@@ -6979,17 +7197,19 @@
             "Average_rating": 2.99,
             "Genres": [
                 "Horror",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Gory, gruesome, and slasher horror",
                 "Graphic violence and brutal revenge",
                 "Survival horror and zombie carnage",
                 "Sci-fi horror, creatures, and aliens",
                 "Extreme gory horror and cannibalism"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 107,
             "Countries": [
                 "France",
@@ -7032,17 +7252,19 @@
             "Genres": [
                 "Crime",
                 "Thriller",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Gory, gruesome, and slasher horror",
                 "Twisted dark psychological thriller",
                 "Terrifying, haunted, and supernatural horror",
                 "Adrenaline-fueled action and fast cars",
                 "Creepy, chilling, and terrifying horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 84,
             "Countries": [
                 "USA",
@@ -7085,18 +7307,20 @@
             "Genres": [
                 "Thriller",
                 "Action",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Crude humor and satire",
                 "Epic heroes",
-                "High speed and special ops",
+                "High speed and special ops"
+            ],
+            "Nanogenres": [
                 "Action comedy and silly heroics",
                 "Gags, jokes, and slapstick humor",
                 "Funny jokes and crude humor",
                 "Gory, gruesome, and slasher horror",
                 "Amusing jokes and witty satire"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 90,
             "Countries": [
                 "USA"
@@ -7104,8 +7328,8 @@
             "Original_language": "English",
             "Spoken_languages": [
                 "English",
-                "Arabic",
-                "Croatian"
+                "Croatian",
+                "Arabic"
             ],
             "Description": "Twelve strangers wake up in a clearing. They don't know where they are—or how they got there. In the shadow of a dark internet conspiracy theory, ruthless elitists gather at a remote location to hunt humans for sport. But their master plan is about to be derailed when one of the hunted turns the tables on her pursuers.",
             "Studios": [
@@ -7137,25 +7361,27 @@
             "Average_rating": 3.06,
             "Genres": [
                 "Comedy",
-                "Action",
+                "Action"
+            ],
+            "Themes": [
                 "Crude humor and satire",
-                "Politics and human rights",
+                "Politics and human rights"
+            ],
+            "Nanogenres": [
                 "Gags, jokes, and slapstick humor",
                 "Amusing jokes and witty satire",
                 "Funny jokes and crude humor",
                 "Action comedy and silly heroics",
                 "Catchy songs and hilarious musical comedy"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 112,
             "Countries": [
                 "USA"
             ],
             "Original_language": "English",
             "Spoken_languages": [
-                "Korean",
-                "English"
+                "English",
+                "Korean"
             ],
             "Description": "Dave Skylark and his producer Aaron Rapaport run the celebrity tabloid show \"Skylark Tonight\". When they land an interview with a surprise fan, North Korean dictator Kim Jong-un, they are recruited by the CIA to turn their trip to Pyongyang into an assassination mission.",
             "Studios": [
@@ -7190,17 +7416,19 @@
                 "Crime",
                 "Drama",
                 "Thriller",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
-                "Horror, the undead and monster classics",
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Gory, gruesome, and slasher horror",
                 "Graphic violence and brutal revenge",
                 "Twisted dark psychological thriller",
                 "Gripping, intense violent crime",
                 "Terrifying, haunted, and supernatural horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 113,
             "Countries": [
                 "USA"
@@ -7242,15 +7470,17 @@
             "Average_rating": 3.77,
             "Genres": [
                 "Drama",
-                "Science Fiction",
+                "Science Fiction"
+            ],
+            "Themes": [
                 "Faith and religion",
-                "Humanity and the world around us",
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
                 "Religious faith, sin, and forgiveness",
                 "Surreal and thought-provoking visions of life and death",
                 "Faith and spiritual journeys"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 87,
             "Countries": [
                 "USA"
@@ -7288,13 +7518,15 @@
             "Average_rating": 3.93,
             "Genres": [
                 "Drama",
-                "Crime",
+                "Crime"
+            ],
+            "Themes": [
                 "Humanity and the world around us",
-                "Thrillers and murder mysteries",
+                "Thrillers and murder mysteries"
+            ],
+            "Nanogenres": [
                 "Noir and dark crime dramas"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 116,
             "Countries": [
                 "UK",
@@ -7338,17 +7570,19 @@
             "Genres": [
                 "Thriller",
                 "Drama",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
-                "Horror, the undead and monster classics",
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Gothic and eerie haunting horror",
                 "Surreal and thought-provoking visions of life and death",
                 "Creepy, chilling, and terrifying horror",
                 "Terrifying, haunted, and supernatural horror",
                 "Dreamlike, quirky, and surreal storytelling"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 95,
             "Countries": [
                 "UK",
@@ -7392,16 +7626,18 @@
             "Average_rating": 3.17,
             "Genres": [
                 "Horror",
-                "Mystery",
-                "Horror, the undead and monster classics",
+                "Mystery"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Creepy, chilling, and terrifying horror",
                 "Twisted dark psychological thriller",
                 "Gothic and eerie haunting horror",
                 "Gory, gruesome, and slasher horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 94,
             "Countries": [
                 "Canada",
@@ -7441,19 +7677,21 @@
                 "Chih-Min Chou",
                 "An-Long Cai"
             ],
-            "Average_rating": 3.11,
+            "Average_rating": 3.1,
             "Genres": [
                 "Thriller",
-                "Horror",
-                "Horror, the undead and monster classics",
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Graphic violence and brutal revenge",
                 "Survival horror and zombie carnage",
                 "Gory, gruesome, and slasher horror",
                 "Extreme gory horror and cannibalism",
                 "Challenging or sexual themes & twists"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 100,
             "Countries": [
                 "Taiwan"
@@ -7521,17 +7759,19 @@
             "Average_rating": 3.15,
             "Genres": [
                 "Drama",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
-                "Horror, the undead and monster classics",
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Challenging or sexual themes & twists",
                 "Terrifying, haunted, and supernatural horror",
                 "Graphic violence and brutal revenge",
                 "Emotional and heartfelt family dramas"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 30,
             "Countries": [
                 "USA"
@@ -7569,16 +7809,18 @@
             "Average_rating": 1.88,
             "Genres": [
                 "Thriller",
-                "Horror",
-                "Horror, the undead and monster classics",
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Gory, gruesome, and slasher horror",
                 "Gothic and eerie haunting horror",
                 "Twisted dark psychological thriller",
                 "Creepy, chilling, and terrifying horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 91,
             "Countries": [
                 "UK",
@@ -7621,16 +7863,18 @@
             "Average_rating": 1.79,
             "Genres": [
                 "Thriller",
-                "Horror",
-                "Horror, the undead and monster classics",
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
                 "Gory, gruesome, and slasher horror",
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Gothic and eerie haunting horror",
                 "Creepy, chilling, and terrifying horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 98,
             "Countries": [
                 "UK",
@@ -7674,19 +7918,21 @@
             "Genres": [
                 "Mystery",
                 "Horror",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
                 "Intense violence and sexual transgression",
                 "Thrillers and murder mysteries",
-                "Humanity and the world around us",
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Terrifying, haunted, and supernatural horror",
                 "Gory, gruesome, and slasher horror",
                 "Suspenseful crime thrillers",
                 "Creepy, chilling, and terrifying horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 106,
             "Countries": [
                 "Netherlands",
@@ -7695,8 +7941,8 @@
             ],
             "Original_language": "Dutch",
             "Spoken_languages": [
-                "Dutch",
                 "English",
+                "Dutch",
                 "French"
             ],
             "Description": "Rex and Saskia, a young couple in love, are on vacation when they stop at a busy service station. Saskia is abducted in broad daylight and three years pass with no answers or closure surrounding her disappearance. Rex has nearly given up all hope when he suddenly begins receiving letters from her abductor.",
@@ -7728,18 +7974,20 @@
             "Average_rating": 3.11,
             "Genres": [
                 "Horror",
-                "Thriller",
+                "Thriller"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
                 "Intense violence and sexual transgression",
-                "Crude humor and satire",
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Twisted dark psychological thriller",
                 "Gory, gruesome, and slasher horror",
                 "Creepy, chilling, and terrifying horror",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 94,
             "Countries": [
                 "USA"
@@ -7777,17 +8025,19 @@
             ],
             "Average_rating": 3.69,
             "Genres": [
-                "Drama",
+                "Drama"
+            ],
+            "Themes": [
                 "Moving relationship stories",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Heartbreaking and moving family drama",
                 "Challenging or sexual themes & twists",
                 "Gripping, intense violent crime",
                 "Powerful stories of heartbreak and suffering",
                 "Emotional and heartfelt family dramas"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 98,
             "Countries": [
                 "Italy",
@@ -7828,20 +8078,22 @@
             ],
             "Average_rating": 3.97,
             "Genres": [
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
                 "Faith and religion",
                 "Intense violence and sexual transgression",
                 "Song and dance",
-                "Thrillers and murder mysteries",
+                "Thrillers and murder mysteries"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Gothic and eerie haunting horror",
                 "Twisted dark psychological thriller",
                 "Creepy, chilling, and terrifying horror",
                 "Intriguing and suspenseful murder mysteries"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 93,
             "Countries": [
                 "UK"
@@ -7879,18 +8131,20 @@
             "Average_rating": 3.28,
             "Genres": [
                 "Thriller",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Crude humor and satire",
                 "Horror, the undead and monster classics",
-                "Thrillers and murder mysteries",
+                "Thrillers and murder mysteries"
+            ],
+            "Nanogenres": [
                 "Spooky, scary comedy",
                 "Twisted dark psychological thriller",
                 "Intriguing and suspenseful murder mysteries",
                 "Suspenseful crime thrillers",
                 "Gory, gruesome, and slasher horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 85,
             "Countries": [
                 "USA"
@@ -7929,17 +8183,19 @@
             "Average_rating": 3.09,
             "Genres": [
                 "Thriller",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Gory, gruesome, and slasher horror",
                 "Twisted dark psychological thriller",
                 "Gothic and eerie haunting horror",
                 "Creepy, chilling, and terrifying horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 77,
             "Countries": [
                 "France",
@@ -7947,8 +8203,8 @@
             ],
             "Original_language": "French",
             "Spoken_languages": [
-                "French",
-                "Romanian"
+                "Romanian",
+                "French"
             ],
             "Description": "Lucas and Clementine live peacefully in their isolated country house, but one night they wake up to strange noise. They're not alone... and a group of hooded assailants begin to terrorize them throughout the night.",
             "Studios": [
@@ -7981,17 +8237,19 @@
             "Average_rating": 3.91,
             "Genres": [
                 "Drama",
-                "Mystery",
+                "Mystery"
+            ],
+            "Themes": [
                 "Faith and religion",
-                "Humanity and the world around us",
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
                 "Powerful poetic and passionate drama",
                 "Surreal and thought-provoking visions of life and death",
                 "Religious faith, sin, and forgiveness",
                 "Heartbreaking and moving family drama",
                 "Emotional teen coming-of-age stories"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 95,
             "Countries": [
                 "Italy"
@@ -8031,16 +8289,18 @@
             "Genres": [
                 "Thriller",
                 "Action",
-                "Science Fiction",
-                "Monsters, aliens, sci-fi and the apocalypse",
+                "Science Fiction"
+            ],
+            "Themes": [
+                "Monsters, aliens, sci-fi and the apocalypse"
+            ],
+            "Nanogenres": [
                 "Thought-provoking sci-fi action and future technology",
                 "Action-packed space and alien sagas",
                 "Superheroes in action-packed battles with villains",
                 "Imaginative space odysseys and alien encounters",
                 "Explosive and action-packed heroes vs. villains"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 93,
             "Countries": [
                 "USA"
@@ -8079,17 +8339,19 @@
             "Average_rating": 3.91,
             "Genres": [
                 "Comedy",
-                "Music",
+                "Music"
+            ],
+            "Themes": [
                 "Crude humor and satire",
-                "Song and dance",
+                "Song and dance"
+            ],
+            "Nanogenres": [
                 "Legendary musicians and stardom",
                 "Gags, jokes, and slapstick humor",
                 "Amusing jokes and witty satire",
                 "Funny jokes and crude humor",
                 "Catchy songs and hilarious musical comedy"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 82,
             "Countries": [
                 "USA"
@@ -8129,13 +8391,15 @@
             ],
             "Average_rating": 4.17,
             "Genres": [
-                "Drama",
-                "Intense violence and sexual transgression",
+                "Drama"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Enduring stories of family and marital drama",
                 "Heartbreaking and moving family drama"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 120,
             "Countries": [
                 "Japan",
@@ -8181,14 +8445,16 @@
             "Genres": [
                 "Adventure",
                 "Action",
-                "Drama",
-                "Epic heroes",
+                "Drama"
+            ],
+            "Themes": [
+                "Epic heroes"
+            ],
+            "Nanogenres": [
                 "Adrenaline-fueled action and fast cars",
                 "Superheroes in action-packed battles with villains",
                 "Dangerous technology and the apocalypse"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 113,
             "Countries": [
                 "USA"
@@ -8229,13 +8495,15 @@
             "Genres": [
                 "Mystery",
                 "Animation",
-                "Horror",
-                "Intense violence and sexual transgression",
+                "Horror"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Terrifying, haunted, and supernatural horror",
                 "Gothic and eerie haunting horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 116,
             "Countries": [
                 "Japan",
@@ -8282,16 +8550,18 @@
                 "Action",
                 "Horror",
                 "Adventure",
-                "Science Fiction",
-                "Epic heroes",
+                "Science Fiction"
+            ],
+            "Themes": [
+                "Epic heroes"
+            ],
+            "Nanogenres": [
                 "Bloody vampire horror",
                 "Superheroes in action-packed battles with villains",
                 "Creepy, chilling, and terrifying horror",
                 "Fantasy adventure, heroism, and swordplay",
                 "Action-packed space and alien sagas"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 103,
             "Countries": [
                 "Japan"
@@ -8335,18 +8605,20 @@
             "Genres": [
                 "Mystery",
                 "Science Fiction",
-                "Horror",
+                "Horror"
+            ],
+            "Themes": [
                 "Intense violence and sexual transgression",
                 "Horror, the undead and monster classics",
-                "Humanity and the world around us",
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
                 "Challenging or sexual themes & twists",
                 "Graphic violence and brutal revenge",
                 "Dreamlike, quirky, and surreal storytelling",
                 "Thought-provoking sci-fi action and future technology",
                 "Surreal and thought-provoking visions of life and death"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 88,
             "Countries": [
                 "Canada"
@@ -8389,13 +8661,15 @@
             "Genres": [
                 "Romance",
                 "Drama",
-                "Thriller",
-                "Intense violence and sexual transgression",
+                "Thriller"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Surreal and thought-provoking visions of life and death",
                 "Dreamlike, quirky, and surreal storytelling"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 86,
             "Countries": [
                 "Japan"
@@ -8430,20 +8704,22 @@
                 "Whitmer Thomas",
                 "Callie Schuttera"
             ],
-            "Average_rating": 3.63,
+            "Average_rating": 3.62,
             "Genres": [
                 "Horror",
-                "Mystery",
+                "Mystery"
+            ],
+            "Themes": [
                 "Horror, the undead and monster classics",
-                "Intense violence and sexual transgression",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
                 "Twisted dark psychological thriller",
                 "Terrifying, haunted, and supernatural horror",
                 "Creepy, chilling, and terrifying horror",
                 "Gothic and eerie haunting horror",
                 "Gory, gruesome, and slasher horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 129,
             "Countries": [
                 "USA"
@@ -8487,17 +8763,19 @@
                 "Animation",
                 "Family",
                 "Comedy",
-                "Adventure",
+                "Adventure"
+            ],
+            "Themes": [
                 "Humanity and the world around us",
-                "Crude humor and satire",
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
                 "Kids' animated fun and adventure",
                 "Adorable animals and heartwarming families",
                 "Fairy-tale fantasy and enchanted magic",
                 "Holiday joy and heartwarming Christmas",
                 "Emotional and captivating fantasy storytelling"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 109,
             "Countries": [
                 "USA"
@@ -8538,17 +8816,19 @@
                 "Family",
                 "Comedy",
                 "Animation",
-                "Mystery",
+                "Mystery"
+            ],
+            "Themes": [
                 "Crude humor and satire",
-                "Relationship comedy",
+                "Relationship comedy"
+            ],
+            "Nanogenres": [
                 "Kids' animated fun and adventure",
                 "Holiday joy and heartwarming Christmas",
                 "Adorable animals and heartwarming families",
                 "Fairy-tale fantasy and enchanted magic",
                 "Emotional and captivating fantasy storytelling"
             ],
-            "Themes": [],
-            "Nanogenres": [],
             "Runtime": 108,
             "Countries": [
                 "USA",
@@ -8568,6 +8848,4 @@
             "Rating_Valeria": 4.0
         }
     ]
-
 }
-
