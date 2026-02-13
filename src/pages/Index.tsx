@@ -21,6 +21,8 @@ import {
   getUniqueLanguagesCount,
   getTopActors,
   getTopLanguages,
+  getTopThemes,
+  getTopNanogenres,
   getGlobalSumRating
 } from "@/lib/filmUtils";
 
@@ -40,6 +42,8 @@ const uniqueCountries = getUniqueCountriesCount(movies);
 const uniqueLanguages = getUniqueLanguagesCount(movies);
 const topActors = getTopActors(movies);
 const topLanguages = getTopLanguages(movies);
+const topThemes= getTopThemes(movies);
+const topNanogenres = getTopNanogenres(movies);
 const globalSumRating = getGlobalSumRating(movies);
 
 const Index = () => {
@@ -61,6 +65,8 @@ const Index = () => {
 
         <div className="grid md:grid-cols-2 gap-6">
           <HorizontalBarChart title="Most Watched Genres" data={topGenres} color="green" />
+          <HorizontalBarChart title="Most Watched Themes" data={topThemes} color="blu" />
+          <HorizontalBarChart title="Most Watched Nanogenres" data={topNanogenres} color="green" />
           <HorizontalBarChart title="Most Watched Countries" data={topCountries} color="blue" />
           <RatedGenresChart data={ratedGenres} />
           <HorizontalBarChart title="Most Watched Directors" data={topDirectors} color="orange" />
