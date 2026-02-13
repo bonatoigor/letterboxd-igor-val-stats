@@ -110,12 +110,16 @@ export default function WorldMapChart({ movies }: WorldMapProps) {
         style={{ backgroundColor: "#2c3440", color: "#fff", borderRadius: "8px", fontSize: "12px", zIndex: 100 }}
       />
 
-      {/* Modal de Filmes */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-lb-surface border border-border w-full max-w-md max-h-[70vh] rounded-xl overflow-hidden flex flex-col shadow-2xl">
+        <div 
+          className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div 
+            className="bg-lb-surface border border-border w-full max-w-md max-h-[70vh] rounded-xl overflow-hidden flex flex-col shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
             
-            {/* Header do Modal */}
             <div className="p-4 border-b border-border flex justify-between items-center bg-lb-body/50">
               <h3 className="text-lb-bright font-bold flex items-center gap-2">
                 <span className="text-xl">🎬</span> {selectedCountry}
@@ -128,23 +132,21 @@ export default function WorldMapChart({ movies }: WorldMapProps) {
               </button>
             </div>
       
-            {/* Lista de Filmes */}
             <div className="overflow-y-auto p-4 custom-scrollbar">
               <ul className="space-y-3">
                 {filteredMovies.map((movie, idx) => (
                   <li key={idx} className="flex justify-between items-center group border-b border-white/5 pb-2 last:border-0">
                     <span className="text-lb-bright group-hover:text-lb-blue transition-colors">
-                      {movie.Title}
+                      {movie.Title || movie.title} 
                     </span>
                     <span className="text-lb-text/60 text-sm italic">
-                      {movie.Year}
+                      {movie.Year || movie.year}
                     </span>
                   </li>
                 ))}
               </ul>
             </div>
       
-            {/* Footer */}
             <div className="p-3 bg-lb-body/30 text-center">
               <span className="text-[10px] text-lb-text/40 uppercase tracking-widest">
                 Total: {filteredMovies.length} {filteredMovies.length === 1 ? 'film' : 'films'}
@@ -152,7 +154,6 @@ export default function WorldMapChart({ movies }: WorldMapProps) {
             </div>
           </div>
           
-          {/* Área de clique fora para fechar */}
           <div className="absolute inset-0 -z-10" onClick={() => setIsModalOpen(false)}></div>
         </div>
       )}
