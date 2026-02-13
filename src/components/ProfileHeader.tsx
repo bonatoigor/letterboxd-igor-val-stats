@@ -27,7 +27,7 @@ export default function ProfileHeader({
     const today = new Date();
     const diffInTime = today.getTime() - START_DATE.getTime();
     const diffInDays = Math.ceil(diffInTime / (1000 * 3600 * 24));
-    return (diffInDays / totalMovies).toFixed(1);
+    return Math.round(diffInDays / totalMovies)
   };
 
   const daysPerMovie = calculateFrequency();
