@@ -33,7 +33,7 @@ export default function MovieVibe({ keywords }: MovieVibeProps) {
 
   return (
     <section className="bg-lb-surface rounded-lg p-4 sm:p-6">
-      <h3 className="text-sm sm:text-base font-semibold text-lb-bright mb-4 uppercase tracking-wider">
+      <h3 className="text-sm uppercase tracking-widest text-lb-text mb-4 font-medium">
         The Movie Vibe
       </h3>
       <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
