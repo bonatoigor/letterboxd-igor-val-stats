@@ -33,24 +33,29 @@ export default function MovieVibe({ keywords }: MovieVibeProps) {
   if (!keywords.length) return null;
 
 useEffect(() => {
-    if (keywords.length >= 15) {
+    if (keywords.length >= 10) {
       const visualStyles = ["dark,atmosphere", "noir,shadow", "cinematic,gloomy"];
+      const getRandomWords = (count: number) => {
+        return [...keywords]
+          .sort(() => Math.random() - 0.5)
+          .slice(0, count)
+          .map(k => k.word.trim())
+          .join(",");
+      };
       
       const prompts = [
-        `${visualStyles[0]},${keywords.slice(0, 3).map(k => k.word.trim()).join(",")}`,
-        `${visualStyles[1]},${keywords.slice(3, 6).map(k => k.word.trim()).join(",")}`,
-        `${visualStyles[2]},${keywords.slice(6, 9).map(k => k.word.trim()).join(",")}`,
-        `${visualStyles[2]},${keywords.slice(9, 12).map(k => k.word.trim()).join(",")}`,
-        `${visualStyles[2]},${keywords.slice(12, 15).map(k => k.word.trim()).join(",")}`,
+        `${visualStyles[0]},${getRandomWords(5)}`,
+        `${visualStyles[1]},${getRandomWords(5)}`,
+        `${visualStyles[2]},${getRandomWords(5)}`,
       ];
       setImagePrompts(prompts);
     }
-  }, [keywords]);
+  }, [keywords, seed]);
 
   if (!keywords.length) return null;
 
   const handleRefresh = () => {
-    setSeed(Math.floor(Math.random() * 1000));
+    setSeed(Date.now());
   };
 
   const max = keywords[0].count;
