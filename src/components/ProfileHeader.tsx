@@ -59,7 +59,7 @@ export default function ProfileHeader({
             <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full border-3 sm:border-4 border-lb-blue flex items-center justify-center bg-lb-surface">
               <div className="text-center">
                 <span className="text-xl sm:text-2xl md:text-3xl font-bold text-lb-blue">
-                  {info.Compatibility}
+                  {Number(info.Compatibility).toFixed(1)}
                 </span>
                 <span className="text-[10px] sm:text-xs text-lb-blue">%</span>
               </div>
@@ -89,14 +89,14 @@ export default function ProfileHeader({
         </div>
 
         <div className="flex justify-center gap-4 sm:gap-8 md:gap-16 mt-6 sm:mt-8">
-          <Stat value={info.Sum_Rating_Igor.toFixed(1)} label="Igor ★" />
+          <Stat value={info.Sum_Rating_Igor.toFixed(1)} label="Igor ★" colorClass="text-lb-green" />
 
           <div className="text-center">
               <span className="block text-xl sm:text-2xl md:text-3xl font-bold text-lb-blue">{globalSumRating}</span>
               <span className="text-[10px] sm:text-xs text-lb-text uppercase tracking-widest">Global Avg ★</span>
           </div>
           
-          <Stat value={info.Sum_Rating_Valeria.toFixed(1)} label="Valéria ★" />
+          <Stat value={info.Sum_Rating_Valeria.toFixed(1)} label="Valéria ★" colorClass="text-lb-orange" />
         </div>
         <div className="mt-10 text-center">
           <p className="text-lb-text/80 text-sm md:text-base font-medium tracking-wide italic">
@@ -126,11 +126,15 @@ function MetricCard({ value, label, icon, isDecimal = false }: { value: number; 
   );
 }
 
-function Stat({ value, label }: { value: string; label: string }) {
+function Stat({ value, label, colorClass = "text-lb-bright" }: { value: string; label: string; colorClass?: string }) {
   return (
     <div className="text-center">
-      <span className="block text-xl sm:text-2xl md:text-3xl font-bold text-lb-bright">{value}</span>
-      <span className="text-[10px] sm:text-xs md:text-sm text-lb-text uppercase tracking-wider">{label}</span>
+      <span className={`block text-xl sm:text-2xl md:text-3xl font-bold tabular-nums ${colorClass}`}>
+        {value}
+      </span>
+      <span className="text-[10px] sm:text-xs md:text-sm text-lb-text uppercase tracking-wider">
+        {label}
+      </span>
     </div>
   );
 }
