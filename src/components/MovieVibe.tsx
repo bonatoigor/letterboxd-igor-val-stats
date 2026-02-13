@@ -84,7 +84,7 @@ useEffect(() => {
         })}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
         {imagePrompts.map((prompt, idx) => (
           <div key={`${seed}-${idx}`} className="relative group overflow-hidden rounded-lg bg-lb-body aspect-[3/4] border border-white/5">
             <img
