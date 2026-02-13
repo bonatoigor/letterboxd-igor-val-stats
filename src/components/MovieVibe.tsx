@@ -37,9 +37,11 @@ useEffect(() => {
       const visualStyles = ["dark,atmosphere", "noir,shadow", "cinematic,gloomy"];
       
       const prompts = [
-        `${visualStyles[0]},${keywords.slice(0, 5).map(k => k.word.trim()).join(",")}`,
-        `${visualStyles[1]},${keywords.slice(5, 10).map(k => k.word.trim()).join(",")}`,
-        `${visualStyles[2]},${keywords.slice(10, 15).map(k => k.word.trim()).join(",")}`,
+        `${visualStyles[0]},${keywords.slice(0, 3).map(k => k.word.trim()).join(",")}`,
+        `${visualStyles[1]},${keywords.slice(3, 6).map(k => k.word.trim()).join(",")}`,
+        `${visualStyles[2]},${keywords.slice(6, 9).map(k => k.word.trim()).join(",")}`,
+        `${visualStyles[2]},${keywords.slice(9, 12).map(k => k.word.trim()).join(",")}`,
+        `${visualStyles[2]},${keywords.slice(12, 15).map(k => k.word.trim()).join(",")}`,
       ];
       setImagePrompts(prompts);
     }
