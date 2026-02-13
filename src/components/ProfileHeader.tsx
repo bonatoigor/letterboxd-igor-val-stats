@@ -11,6 +11,8 @@ interface ProfileHeaderProps {
   globalSumRating: string;
 }
 
+const START_DATE = new Date('2024-03-23');
+
 export default function ProfileHeader({
   info,
   totalMovies,
@@ -21,6 +23,15 @@ export default function ProfileHeader({
   uniqueLanguages,
   globalSumRating,
 }: ProfileHeaderProps) {
+    const calculateFrequency = () => {
+    const today = new Date();
+    const diffInTime = today.getTime() - START_DATE.getTime();
+    const diffInDays = Math.ceil(diffInTime / (1000 * 3600 * 24));
+    return (diffInDays / totalMovies).toFixed(1);
+  };
+
+  const daysPerMovie = calculateFrequency();
+  
   return (
     <header className="relative overflow-hidden bg-lb-body border-b border-border">
 
@@ -86,6 +97,14 @@ export default function ProfileHeader({
           </div>
           
           <Stat value={info.Sum_Rating_Valeria.toFixed(1)} label="Valéria ★" />
+        </div>
+        <div className="mt-10 text-center">
+          <p className="text-lb-text/80 text-sm md:text-base font-medium tracking-wide italic">
+            "1 film every {daysPerMovie} days"
+          </p>
+          <p className="text-[10px] text-lb-text/40 uppercase tracking-[0.2em] mt-1">
+            Since March 23, 2024
+          </p>
         </div>
       </div>
     </header>
