@@ -259,10 +259,15 @@ export function getTopKeywords(movies: Movie[], limit = 25): { word: string; cou
     "this","that","these","those","who","which","what","where","when","how","why","if","then","than","so","as",
     "not","no","nor","up","out","about","into","over","after","before","between","under","again","further",
     "once","here","there","all","each","every","both","few","more","most","other","some","such","only","own",
-    "same","too","very","just","also","now","new","one","two","three","find","finds","man","woman","young",
-    "life","world","story","film","movie","while","through","during","against","himself","herself","themselves",
+    "same","too","very","just","also","now","new","one","two","three","find","finds","young",
+    "world","story","film","movie","while","through","during","against","himself","herself","themselves",
     "whose","whom","get","gets","set","sets","back","way","around","take","takes","make","makes","goes","come",
-    "becomes","begins","turns","must","however","yet","upon","among","across","along","within","without",
+    "becomes","begins","turns","must","however","yet","upon","among","across","along","within","without", "off",
+    "tells", "shows", "following", "features", "includes", "including", "involved", 
+    "living", "named", "called", "starts", "starting", "meets", "meeting", "becomes", 
+    "became", "taken", "made", "seen", "gives", "given", "known", "years", "time", 
+    "days", "everything", "something", "anything", "another", "others", 
+    "together", "first", "last", "home", "place", "someone", "everyone", "looking",
     "de","le","la","les","un","une","des","et","en","du","que","qui","dans","par","pour","sur","au","aux",
     "se","ce","son","sa","ses","il","elle","ils","elles","est","sont","ne","pas","di","da","del","della"
   ]);
