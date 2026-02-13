@@ -53,7 +53,7 @@ export default function WorldMapChart({ movies }: WorldMapProps) {
       </div>
       
       <div className="h-[300px] md:h-[450px] w-full overflow-hidden rounded-lg bg-lb-body/50 border border-white/5">
-        <ComposableMap projectionConfig={{ rotate: [-10, 0, 0], scale: 147 }}>
+        <ComposableMap projectionConfig={{ rotate: [-10, 0, 0], scale: 190 }}>
           <ZoomableGroup zoom={1} maxZoom={3}>
             <Geographies geography={geoUrl}>
               {({ geographies }) =>
