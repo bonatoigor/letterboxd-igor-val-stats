@@ -38,7 +38,6 @@ def update_workflow():
     path_json = 'src/data/films_stats.json'
     path_bkp = 'src/data/films_stats_bkp.json'
 
-    # Backup de segurança
     try:
         shutil.copy2(path_json, path_bkp)
     except: pass
@@ -46,12 +45,10 @@ def update_workflow():
     with open(path_json, 'r', encoding='utf-8') as f:
         banco = json.load(f)
 
-    # Verifica duplicado
     if any(m['Film_URL'].endswith(f"/{slug}/") for m in banco["Movies_Info"]):
         print(f"Filme {slug} já existe.")
         return
 
-    # Busca apenas dados técnicos do filme
     m = Movie(slug)
     md = MovieDetails(slug)
     detalhes = md.get_extended_details()
@@ -61,7 +58,7 @@ def update_workflow():
     new_movie = {
         "id": new_id,
         "Film_title": m.title,
-        "Poster_Movie": m.poster, # Simplificado para teste, pode voltar o TMDB depois
+        "Poster_Movie": buscar_poster_tmdb(m), 
         "Release_year": m.year,
         "Director": m.crew['director'][0]['name'] if m.crew['director'] else "N/A",
         "Cast": [actor['name'] for actor in m.cast[:10]],
@@ -76,13 +73,16 @@ def update_workflow():
     
     banco["Movies_Info"].append(new_movie)
     
-    # Recalcula totais
     movies = banco["Movies_Info"]
+    
+    total_comp = sum(1 - abs(f["Rating_Igor"] - f["Rating_Valeria"]) / 5 for f in movies)
+    avg_comp = (total_comp / len(movies) * 100) if movies else 0
+
     gen = banco["General_Info"][0]
     gen["Total_Movies"] = len(movies)
-    gen["Compatibility"] round(avg_comp, 1)
-    gen["Sum_Rating_Igor"] = sum(f["Rating_Igor"] for f in movies)
-    gen["Sum_Rating_Valeria"] = sum(f["Rating_Valeria"] for f in movies)
+    gen["Compatibility"] = round(avg_comp, 1) 
+    gen["Sum_Rating_Igor"] = round(sum(f["Rating_Igor"] for f in movies), 1)
+    gen["Sum_Rating_Valeria"] = round(sum(f["Rating_Valeria"] for f in movies), 1)
 
     with open(path_json, 'w', encoding='utf-8') as f:
         json.dump(banco, f, indent=4, ensure_ascii=False)
