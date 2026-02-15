@@ -42,11 +42,14 @@ export default function ProfileHeader({
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-3 sm:px-4 py-8 sm:py-12 md:py-20">
+        <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20">
+          <LogFilmModal />
+        </div>
+
         <div className="flex items-center justify-center gap-3 mb-3 sm:mb-4">
           <h1 className="text-center font-display text-3xl sm:text-4xl md:text-6xl text-lb-bright tracking-tight">
             A Life in Film
           </h1>
-          <LogFilmModal />
         </div>
 
         <div className="flex items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">

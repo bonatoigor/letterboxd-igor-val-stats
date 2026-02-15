@@ -13,31 +13,30 @@ serve(async (req) => {
 
   try {
     const GITHUB_PAT = Deno.env.get("GITHUB_PAT");
-    if (!GITHUB_PAT) {
-      throw new Error("GITHUB_PAT is not configured");
-    }
+    if (!GITHUB_PAT) throw new Error("GITHUB_PAT is not configured");
 
     const GITHUB_REPO = Deno.env.get("GITHUB_REPO");
-    if (!GITHUB_REPO) {
-      throw new Error("GITHUB_REPO is not configured");
-    }
+    if (!GITHUB_REPO) throw new Error("GITHUB_REPO is not configured");
 
-    const { slugs } = await req.json();
-    if (!slugs || typeof slugs !== "string" || slugs.trim().length === 0) {
+    const { slug, rating_i, rating_v } = await req.json();
+
+    if (!slug || typeof slug !== "string" || slug.trim().length === 0) {
       return new Response(
-        JSON.stringify({ error: "slugs is required (space-separated film slugs)" }),
+        JSON.stringify({ error: "slug is required" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // Validate slugs format (only alphanumeric, hyphens, spaces)
-    const sanitized = slugs.trim();
-    if (!/^[a-zA-Z0-9\- ]+$/.test(sanitized)) {
+    const sanitized = slug.trim();
+    if (!/^[a-zA-Z0-9\-]+$/.test(sanitized)) {
       return new Response(
-        JSON.stringify({ error: "Invalid slug format. Use only letters, numbers, hyphens and spaces." }),
+        JSON.stringify({ error: "Invalid slug format." }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
+
+    const rI = Number(rating_i) || 0;
+    const rV = Number(rating_v) || 0;
 
     const response = await fetch(
       `https://api.github.com/repos/${GITHUB_REPO}/dispatches`,
@@ -50,7 +49,7 @@ serve(async (req) => {
         },
         body: JSON.stringify({
           event_type: "update-film",
-          client_payload: { slugs: sanitized },
+          client_payload: { slug: sanitized, rating_i: rI, rating_v: rV },
         }),
       }
     );
@@ -61,11 +60,11 @@ serve(async (req) => {
     }
 
     return new Response(
-      JSON.stringify({ success: true, message: "Workflow triggered successfully", slugs: sanitized }),
+      JSON.stringify({ success: true, slug: sanitized, rating_i: rI, rating_v: rV }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   } catch (error: unknown) {
-    console.error("Error triggering GitHub workflow:", error);
+    console.error("Error:", error);
     const msg = error instanceof Error ? error.message : "Unknown error";
     return new Response(
       JSON.stringify({ success: false, error: msg }),

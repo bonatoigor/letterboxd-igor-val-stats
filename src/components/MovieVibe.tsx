@@ -29,18 +29,17 @@ const colorClasses = [
 export default function MovieVibe({ keywords }: MovieVibeProps) {
   const [seed, setSeed] = useState(Date.now());
   const [imagePrompts, setImagePrompts] = useState<string[]>([]);
-  
-  if (!keywords.length) return null;
 
-useEffect(() => {
+  useEffect(() => {
     if (keywords.length >= 10) {
       const visualStyles = ["dark,atmosphere", "noir,shadow", "cinematic,gloomy"];
       const getRandomWords = (count: number) => {
-        return [...keywords]
-          .sort(() => Math.random() - 0.5)
-          .slice(0, count)
-          .map(k => k.word.trim())
-          .join(",");
+        const shuffled = [...keywords];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled.slice(0, count).map(k => k.word.trim()).join(",");
       };
       
       const prompts = [
