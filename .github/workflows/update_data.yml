@@ -25,7 +25,7 @@ jobs:
 
       - name: Run Update Script
         # O payload enviado pelo front deve conter a chave "slugs"
-        run: python scripts/update_films.py ${{ github.event.client_payload.slugs }}
+        run: python scripts/update_films.py ${{ github.event.client_payload.slug }} ${{ github.event.client_payload.rating_i }} ${{ github.event.client_payload.rating_v }}
 
       - name: Commit and Push changes
         run: |
