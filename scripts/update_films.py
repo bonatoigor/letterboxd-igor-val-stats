@@ -29,7 +29,9 @@ def update_workflow():
     # Formato esperado: slug1,slug2,slug3
     if len(sys.argv) < 2:
         return
-    new_slugs = sys.argv[1].split(',')
+    
+    raw_args = " ".join(sys.argv[1:]) 
+    new_slugs = [s.strip() for s in raw_args.replace(',', ' ').split() if s.strip()]
 
     path_json = 'src/data/films_stats.json'
     path_bkp = 'src/data/films_stats_bkp.json'
