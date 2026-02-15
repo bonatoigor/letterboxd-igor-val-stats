@@ -1,1 +1,4 @@
 project_id = "ndbrryisgszvfnggsxqg"
+
+[functions.trigger-film-update]
+verify_jwt = false
