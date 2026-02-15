@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 178,
-            "Compatibility": 92.37,
-            "Sum_Rating_Igor": 542.0,
-            "Sum_Rating_Valeria": 534.5,
+            "Total_Movies": 179,
+            "Compatibility": 92.7,
+            "Sum_Rating_Igor": 545.5,
+            "Sum_Rating_Valeria": 538.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -8979,6 +8979,36 @@
             ],
             "Film_URL": "https://letterboxd.com/film/sick-2022/",
             "Rating_Igor": 2.5,
+            "Rating_Valeria": 3.5
+        },
+        {
+            "id": 179,
+            "Film_title": "Cleveland Abduction",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/j2iCc5fjyJvKRQAW7d6XWwDFzmr.jpg",
+            "Release_year": 2015,
+            "Director": "Alex Kalymnios",
+            "Cast": [
+                "Taryn Manning",
+                "Raymond Cruz",
+                "Katie Sarife",
+                "Samantha Droke",
+                "Pam Grier",
+                "Joe Morton",
+                "Jane Mowder",
+                "Kristina Kopf"
+            ],
+            "Average_rating": 3.01,
+            "Genres": [
+                "Drama",
+                "TV Movie",
+                "Crime"
+            ],
+            "Runtime": 88,
+            "Countries": [
+                "USA"
+            ],
+            "Film_URL": "https://letterboxd.com/film/cleveland-abduction/",
+            "Rating_Igor": 3.5,
             "Rating_Valeria": 3.5
         }
     ]
