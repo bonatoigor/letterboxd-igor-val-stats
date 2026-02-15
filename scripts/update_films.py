@@ -27,84 +27,61 @@ def buscar_poster_tmdb(movie_obj):
     return movie_obj.poster
 
 def update_workflow():
-    if len(sys.argv) < 2:
+    if len(sys.argv) < 4:
+        print("Uso: python script.py <slug> <nota_igor> <nota_valeria>")
         return
     
-    raw_args = " ".join(sys.argv[1:]) 
-    new_slugs = [s.strip() for s in raw_args.replace(',', ' ').split() if s.strip()]
+    slug = sys.argv[1]
+    nota_igor = float(sys.argv[2])
+    nota_valeria = float(sys.argv[3])
 
     path_json = 'src/data/films_stats.json'
     path_bkp = 'src/data/films_stats_bkp.json'
 
+    # Backup de segurança
     try:
         shutil.copy2(path_json, path_bkp)
-        print(f"Backup gerado em: {path_bkp}")
-    except FileNotFoundError:
-        print("Arquivo original não encontrado para backup, iniciando novo.")
+    except: pass
 
-    try:
-        with open(path_json, 'r', encoding='utf-8') as f:
-            banco = json.load(f)
-    except FileNotFoundError:
-        banco = {"General_Info": [], "Movies_Info": []}
+    with open(path_json, 'r', encoding='utf-8') as f:
+        banco = json.load(f)
 
-    filmes_igor = User("igorbonato").get_films().get('movies', {})
-    filmes_val = User("vs_ol_").get_films().get('movies', {})
+    # Verifica duplicado
+    if any(m['Film_URL'].endswith(f"/{slug}/") for m in banco["Movies_Info"]):
+        print(f"Filme {slug} já existe.")
+        return
 
-    last_id = max([m['id'] for m in banco["Movies_Info"]], default=0)
-
-    for slug in new_slugs:
-        slug = slug.strip()
-        if any(m['Film_URL'].endswith(f"/{slug}/") for m in banco["Movies_Info"]):
-            print(f"Filme {slug} já existe no banco. Pulando...")
-            continue
-
-        print(f"Processando novo filme: {slug}")
-        try:
-            m = Movie(slug)
-            md = MovieDetails(slug)
-            detalhes_extras = md.get_extended_details()
-            
-            last_id += 1
-            
-            film_dict = {
-                "id": last_id,
-                "Film_title": m.title,
-                "Poster_Movie": buscar_poster_tmdb(m),
-                "Release_year": m.year,
-                "Director": m.crew['director'][0]['name'] if m.crew['director'] else "N/A",
-                "Cast": [actor['name'] for actor in m.cast[:10]],
-                "Average_rating": m.rating,
-                "Genres": [g['name'] for g in m.genres if g['type'] == 'genre'],
-                "Themes": [g['name'] for g in m.genres if g['type'] == 'theme'],
-                "Nanogenres": [g['name'] for g in m.genres if g['type'] == 'mini-theme'],
-                "Runtime": m.runtime,
-                "Countries": detalhes_extras.get('country', []),
-                "Original_language": detalhes_extras.get('language', ["English"])[0] if detalhes_extras.get('language') else "English",
-                "Spoken_languages": list(set(detalhes_extras.get('language', []))),
-                "Description": m.description,
-                "Studios": detalhes_extras.get('studio', []),
-                "Film_URL": f"https://letterboxd.com/film/{slug}/",
-                "Rating_Igor": float(filmes_igor.get(slug, {}).get('rating', 0) or 0),
-                "Rating_Valeria": float(filmes_val.get(slug, {}).get('rating', 0) or 0)
-            }
-            banco["Movies_Info"].append(film_dict)
-            time.sleep(2.0)
-        except Exception as e:
-            print(f"Erro ao processar {slug}: {e}")
-
+    # Busca apenas dados técnicos do filme
+    m = Movie(slug)
+    md = MovieDetails(slug)
+    detalhes = md.get_extended_details()
+    
+    new_id = max([m['id'] for m in banco["Movies_Info"]], default=0) + 1
+    
+    new_movie = {
+        "id": new_id,
+        "Film_title": m.title,
+        "Poster_Movie": m.poster, # Simplificado para teste, pode voltar o TMDB depois
+        "Release_year": m.year,
+        "Director": m.crew['director'][0]['name'] if m.crew['director'] else "N/A",
+        "Cast": [actor['name'] for actor in m.cast[:10]],
+        "Average_rating": m.rating,
+        "Genres": [g['name'] for g in m.genres if g['type'] == 'genre'],
+        "Runtime": m.runtime,
+        "Countries": detalhes.get('country', []),
+        "Film_URL": f"https://letterboxd.com/film/{slug}/",
+        "Rating_Igor": nota_igor, # Valor que veio do Front
+        "Rating_Valeria": nota_valeria # Valor que veio do Front
+    }
+    
+    banco["Movies_Info"].append(new_movie)
+    
+    # Recalcula totais
     movies = banco["Movies_Info"]
-    total_comp = sum(1 - abs(f["Rating_Igor"] - f["Rating_Valeria"]) / 5 for f in movies)
-    avg_comp = (total_comp / len(movies) * 100) if movies else 0
-
-    banco["General_Info"] = [{
-        "Total_Movies": len(movies),
-        "Compatibility": round(avg_comp, 2),
-        "Sum_Rating_Igor": sum(f["Rating_Igor"] for f in movies),
-        "Sum_Rating_Valeria": sum(f["Rating_Valeria"] for f in movies),
-        "Avatar_Igor": User("igorbonato").get_avatar().get('url', ""),
-        "Avatar_Valeria": User("vs_ol_").get_avatar().get('url', "")
-    }]
+    gen = banco["General_Info"][0]
+    gen["Total_Movies"] = len(movies)
+    gen["Sum_Rating_Igor"] = sum(f["Rating_Igor"] for f in movies)
+    gen["Sum_Rating_Valeria"] = sum(f["Rating_Valeria"] for f in movies)
 
     with open(path_json, 'w', encoding='utf-8') as f:
         json.dump(banco, f, indent=4, ensure_ascii=False)
