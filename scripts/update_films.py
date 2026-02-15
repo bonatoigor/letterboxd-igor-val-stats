@@ -70,8 +70,8 @@ def update_workflow():
         "Runtime": m.runtime,
         "Countries": detalhes.get('country', []),
         "Film_URL": f"https://letterboxd.com/film/{slug}/",
-        "Rating_Igor": nota_igor, # Valor que veio do Front
-        "Rating_Valeria": nota_valeria # Valor que veio do Front
+        "Rating_Igor": nota_igor,
+        "Rating_Valeria": nota_valeria
     }
     
     banco["Movies_Info"].append(new_movie)
@@ -80,6 +80,7 @@ def update_workflow():
     movies = banco["Movies_Info"]
     gen = banco["General_Info"][0]
     gen["Total_Movies"] = len(movies)
+    gen["Compatibility"] round(avg_comp, 1)
     gen["Sum_Rating_Igor"] = sum(f["Rating_Igor"] for f in movies)
     gen["Sum_Rating_Valeria"] = sum(f["Rating_Valeria"] for f in movies)
 
