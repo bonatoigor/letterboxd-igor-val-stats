@@ -10,7 +10,6 @@ from letterboxdpy.core.scraper import Scraper
 
 Scraper.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
 
-# Reutilizando sua lógica de poster do TMDB
 def buscar_poster_tmdb(movie_obj):
     tmdb_link = movie_obj.tmdb_link if hasattr(movie_obj, 'tmdb_link') else None
     if tmdb_link:
@@ -28,8 +27,6 @@ def buscar_poster_tmdb(movie_obj):
     return movie_obj.poster
 
 def update_workflow():
-    # 1. Recebe slugs dos argumentos (passados pelo GitHub Action)
-    # Formato esperado: slug1,slug2,slug3
     if len(sys.argv) < 2:
         return
     
@@ -39,21 +36,18 @@ def update_workflow():
     path_json = 'src/data/films_stats.json'
     path_bkp = 'src/data/films_stats_bkp.json'
 
-    # 2. Criar/Sobreescrever Backup antes de qualquer alteração
     try:
         shutil.copy2(path_json, path_bkp)
         print(f"Backup gerado em: {path_bkp}")
     except FileNotFoundError:
         print("Arquivo original não encontrado para backup, iniciando novo.")
 
-    # 3. Carregar dados atuais
     try:
         with open(path_json, 'r', encoding='utf-8') as f:
             banco = json.load(f)
     except FileNotFoundError:
         banco = {"General_Info": [], "Movies_Info": []}
 
-    # Pegar notas atualizadas dos perfis
     filmes_igor = User("igorbonato").get_films().get('movies', {})
     filmes_val = User("vs_ol_").get_films().get('movies', {})
 
@@ -73,7 +67,6 @@ def update_workflow():
             
             last_id += 1
             
-            # Mapeamento
             film_dict = {
                 "id": last_id,
                 "Film_title": m.title,
@@ -96,11 +89,10 @@ def update_workflow():
                 "Rating_Valeria": float(filmes_val.get(slug, {}).get('rating', 0) or 0)
             }
             banco["Movies_Info"].append(film_dict)
-            time.sleep(1.2) # Delay preventivo
+            time.sleep(2.0)
         except Exception as e:
             print(f"Erro ao processar {slug}: {e}")
 
-    # 4. Recalcular General_Info
     movies = banco["Movies_Info"]
     total_comp = sum(1 - abs(f["Rating_Igor"] - f["Rating_Valeria"]) / 5 for f in movies)
     avg_comp = (total_comp / len(movies) * 100) if movies else 0
