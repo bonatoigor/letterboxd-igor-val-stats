@@ -3,6 +3,7 @@ import HorizontalBarChart from "@/components/HorizontalBarChart";
 import RatedGenresChart from "@/components/RatedGenresChart";
 import PosterGrid from "@/components/PosterGrid";
 import DecadeChart from "@/components/DecadeChart";
+import ByYearChart from "@/components/ByYearChart";
 import WorldMapChart from "@/components/WorldMapChart";
 import MovieVibe from "@/components/MovieVibe";
 import {
@@ -66,6 +67,7 @@ const Index = () => {
 
       <main className="max-w-5xl mx-auto px-3 sm:px-4 py-6 sm:py-8 space-y-4 sm:space-y-6">
         <DecadeChart data={decades} />
+        <ByYearChart movies={movies} />
 
         <div className="grid md:grid-cols-2 gap-6">
           <HorizontalBarChart title="Most Watched Genres" data={topGenres} color="green" />
