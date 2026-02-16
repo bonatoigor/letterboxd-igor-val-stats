@@ -251,6 +251,33 @@ export function getTopNanogenres(movies: Movie[], limit = 10): FrequencyItem[] {
   }));
 }
 
+export interface SimilarFilm {
+  id: string;
+  title: string;
+  url: string;
+  poster: string;
+  count: number;
+}
+
+export function getTopSimilarFilms(movies: Movie[], limit = 25): SimilarFilm[] {
+  const freq: Record<string, { title: string; url: string; poster: string; count: number }> = {};
+  movies.forEach((m) => {
+    const similar = (m as any).Similar_Films;
+    if (!Array.isArray(similar)) return;
+    similar.forEach((s: any) => {
+      if (!s.id) return;
+      if (!freq[s.id]) {
+        freq[s.id] = { title: s.title, url: s.url, poster: s.poster, count: 0 };
+      }
+      freq[s.id].count += 1;
+    });
+  });
+  return Object.entries(freq)
+    .sort((a, b) => b[1].count - a[1].count)
+    .slice(0, limit)
+    .map(([id, data]) => ({ id, ...data }));
+}
+
 export function getTopKeywords(movies: Movie[], limit = 25): { word: string; count: number }[] {
   const stopWords = new Set([
     "a","an","the","and","or","but","in","on","at","to","for","of","with","by","from","is","are","was","were","be","been","being",
