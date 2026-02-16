@@ -43,7 +43,6 @@ export interface FrequencyItem {
 export function getTopGenres(movies: Movie[], limit = 10): FrequencyItem[] {
   const freq: Record<string, number> = {};
   movies.forEach((m) => {
-    // Only use primary genres (short names, no descriptions)
     m.Genres.filter((g) => g.split(" ").length <= 3).forEach((g) => {
       freq[g] = (freq[g] || 0) + 1;
     });
@@ -259,7 +258,7 @@ export interface SimilarFilm {
   count: number;
 }
 
-export function getTopSimilarFilms(movies: Movie[], limit = 25): SimilarFilm[] {
+export function getTopSimilarFilms(movies: Movie[], limit = 30): SimilarFilm[] {
   const freq: Record<string, { title: string; url: string; poster: string; count: number }> = {};
   movies.forEach((m) => {
     const similar = (m as any).Similar_Films;
