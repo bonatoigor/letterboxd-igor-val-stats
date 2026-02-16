@@ -25,7 +25,8 @@ import {
   getTopThemes,
   getTopNanogenres,
   getGlobalSumRating,
-  getTopKeywords
+  getTopKeywords,
+  getTopSimilarFilms
 } from "@/lib/filmUtils";
 
 const info = getGeneralInfo();
@@ -47,6 +48,7 @@ const topLanguages = getTopLanguages(movies);
 const topThemes= getTopThemes(movies);
 const topNanogenres = getTopNanogenres(movies);
 const globalSumRating = getGlobalSumRating(movies);
+const similarFilms = getTopSimilarFilms(movies);
 
 const Index = () => {
   return (
@@ -77,7 +79,36 @@ const Index = () => {
         </div>
 
         <WorldMapChart movies={movies} />
-        
+
+        <section className="bg-lb-surface rounded-lg p-5 md:p-6">
+          <h3 className="text-sm uppercase tracking-widest text-lb-text mb-4 font-medium">Similar Films</h3>
+          <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-8 lg:grid-cols-10 gap-2">
+            {similarFilms.map((film) => (
+              <a
+                key={film.id}
+                href={film.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative aspect-[2/3] rounded overflow-hidden bg-lb-bar"
+                title={`${film.title} (${film.count}×)`}
+              >
+                <img
+                  src={film.poster}
+                  alt={film.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-1.5">
+                    <p className="text-[10px] font-medium text-lb-bright leading-tight line-clamp-2">{film.title}</p>
+                    <span className="text-[9px] text-lb-green">{film.count}× recommended</span>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
         <PosterGrid title="Highest Rated" movies={highestRated} />
         <PosterGrid title="Recent Films" movies={recent} />
 
