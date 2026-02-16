@@ -93,25 +93,27 @@ export default function MovieVibe({ keywords }: MovieVibeProps) {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
-        {imagePrompts.map((prompt, idx) => (
-          <div key={`${seed}-${idx}`} className="relative group overflow-hidden rounded-lg bg-lb-body aspect-[3/4] border border-white/5">
-            <img
-              src={`https://loremflickr.com/600/800/${prompt}/all?sig=${seed + (idx * 147)}`}
-              alt="Movie Vibe"
-              className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110 brightness-50 group-hover:brightness-75"
-              loading="lazy"
-              key={`${seed}-${idx}`}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-               <span className="text-[10px] text-lb-bright font-bold uppercase tracking-widest bg-black/60 px-2 py-1 rounded self-start backdrop-blur-sm border border-white/10 mb-2">
-                 Vibe Match
-               </span>
-               <p className="text-[9px] text-lb-text/70 leading-relaxed italic line-clamp-2">
-                 {prompt.replace(/,/g, " • ")}
-               </p>
+        {imagePrompts.map((prompt, idx) => {
+          const imageId = ((seed + idx * 311) % 1000) + 100;
+          return (
+            <div key={`${seed}-${idx}`} className="relative group overflow-hidden rounded-lg bg-lb-body aspect-[3/4] border border-white/5">
+              <img
+                src={`https://picsum.photos/id/${imageId}/600/800`}
+                alt="Movie Vibe"
+                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110 brightness-50 group-hover:brightness-75"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                 <span className="text-[10px] text-lb-bright font-bold uppercase tracking-widest bg-black/60 px-2 py-1 rounded self-start backdrop-blur-sm border border-white/10 mb-2">
+                   Vibe Match
+                 </span>
+                 <p className="text-[9px] text-lb-text/70 leading-relaxed italic line-clamp-2">
+                   {prompt.replace(/,/g, " • ")}
+                 </p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
