@@ -1,5 +1,5 @@
 import filmsData from "@/data/films_stats.json";
-import filmsData from "@/data/films_stats.json";
+import failedFilmsData from "@/data/failed_films.json";
 
 export interface FailedFilm {
   slug: string;
