@@ -6,6 +6,8 @@ import DecadeChart from "@/components/DecadeChart";
 import ByYearChart from "@/components/ByYearChart";
 import WorldMapChart from "@/components/WorldMapChart";
 import MovieVibe from "@/components/MovieVibe";
+import { getFailedFilms } from "@/lib/filmUtils";
+import DeveloperLogs from "@/components/DeveloperLogs";
 import {
   getGeneralInfo,
   getMovies,
@@ -28,8 +30,6 @@ import {
   getGlobalSumRating,
   getTopKeywords,
 } from "@/lib/filmUtils";
-import { getFailedFilms } from "@/lib/filmUtils";
-import DeveloperLogs from "@/components/DeveloperLogs";
 
 const info = getGeneralInfo();
 const movies = getMovies();
