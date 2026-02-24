@@ -53,6 +53,8 @@ const globalSumRating = getGlobalSumRating(movies);
 
 
 const Index = () => {
+  const failedFilms = getFailedFilms();
+  
   return (
     <div className="min-h-screen bg-lb-body">
       <ProfileHeader
@@ -82,8 +84,6 @@ const Index = () => {
         </div>
 
         <WorldMapChart movies={movies} />
-
-
 
         <PosterGrid title="Highest Rated" movies={highestRated} />
         <PosterGrid title="Recent Films" movies={recent} />
