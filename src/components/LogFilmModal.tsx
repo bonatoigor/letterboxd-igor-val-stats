@@ -48,25 +48,32 @@ export default function LogFilmModal() {
   const [ratingV, setRatingV] = useState(0);
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
+  const [stagedFilms, setStagedFilms] = useState<{slug: string, rating_i: number, rating_v: number}[]>([]);
 
-  const handleSubmit = async () => {
+  const handleStageFilm = () => {
     if (!slug.trim()) return;
+    setStagedFilms([...stagedFilms, { slug: slug.trim(), rating_i: ratingI, rating_v: ratingV }]);
+    setSlug("");
+    setRatingI(0);
+    setRatingV(0);
+  };
+  
+  const handleSubmit = async () => {
+    if (stagedFilms.length === 0) return;
     setStatus("loading");
     setMessage("");
 
     try {
       const { data, error } = await supabase.functions.invoke("trigger-film-update", {
-        body: { slug: slug.trim(), rating_i: ratingI, rating_v: ratingV },
+        body: { films: stagedFilms },
       });
 
       if (error) throw error;
 
       if (data?.success) {
         setStatus("success");
-        setMessage(`Filme adicionado à fila! O processamento ocorre a cada 20 min. Slug: ${data.slug}`);
-        setSlug("");
-        setRatingI(0);
-        setRatingV(0);
+        setMessage(`${stagedFilms.length} filmes enviados para a fila de processamento!`);
+        setStagedFilms([]);
       } else {
         throw new Error(data?.error || "Erro ao processar");
       }
