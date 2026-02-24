@@ -149,6 +149,28 @@ export default function LogFilmModal() {
             </div>
           )}
 
+          <Button 
+            type="button" 
+            variant="outline" 
+            onClick={handleStageFilm}
+            disabled={!slug.trim()}
+            className="w-full border-lb-green/30 text-lb-green hover:bg-lb-green/10"
+          >
+            + Adicionar à lista de envio
+          </Button>
+        
+          {stagedFilms.length > 0 && (
+            <div className="bg-black/20 rounded-lg p-3 space-y-2">
+              <p className="text-[10px] uppercase text-lb-text/50 font-bold">Prontos para enviar:</p>
+              {stagedFilms.map((f, i) => (
+                <div key={i} className="flex justify-between text-xs text-lb-bright border-b border-white/5 pb-1">
+                  <span>{f.slug}</span>
+                  <span className="text-lb-green">{f.rating_i} / {f.rating_v}</span>
+                </div>
+              ))}
+            </div>
+          )}
+          
           <Button
             onClick={handleSubmit}
             disabled={!slug.trim() || status === "loading"}
