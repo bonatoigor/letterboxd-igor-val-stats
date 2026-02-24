@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 190,
+            "Total_Movies": 191,
             "Compatibility": 92.6,
-            "Sum_Rating_Igor": 578.0,
-            "Sum_Rating_Valeria": 570.5,
+            "Sum_Rating_Igor": 581.0,
+            "Sum_Rating_Valeria": 573.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -18550,6 +18550,44 @@
             "Film_URL": "https://letterboxd.com/film/the-void-2016/",
             "Rating_Igor": 3.0,
             "Rating_Valeria": 3.0,
+            "Similar_Films": []
+        },
+        {
+            "id": 191,
+            "Film_title": "The Wind",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/kcfPHZHSQODLCWdkUVLYATNyEVo.jpg",
+            "Release_year": 2018,
+            "Director": "Emma Tammi",
+            "Cast": [
+                "Caitlin Gerard",
+                "Ashley Zukerman",
+                "Julia Goldani Telles",
+                "Miles Anderson",
+                "Dylan McTee",
+                "Martin Patterson"
+            ],
+            "Average_rating": 2.95,
+            "Genres": [
+                "Western",
+                "Horror",
+                "Mystery"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
+                "Terrifying, haunted, and supernatural horror",
+                "Gothic and eerie haunting horror",
+                "Creepy, chilling, and terrifying horror",
+                "Twisted dark psychological thriller"
+            ],
+            "Runtime": 86,
+            "Countries": [
+                "USA"
+            ],
+            "Film_URL": "https://letterboxd.com/film/the-wind-2018/",
+            "Rating_Igor": 3.0,
+            "Rating_Valeria": 2.5,
             "Similar_Films": []
         }
     ]
