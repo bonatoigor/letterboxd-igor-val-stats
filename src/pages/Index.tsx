@@ -28,6 +28,8 @@ import {
   getGlobalSumRating,
   getTopKeywords,
 } from "@/lib/filmUtils";
+import { getFailedFilms } from "@/lib/filmUtils";
+import DeveloperLogs from "@/components/DeveloperLogs";
 
 const info = getGeneralInfo();
 const movies = getMovies();
@@ -92,6 +94,8 @@ const Index = () => {
           <p>Igor & Valéria • Film Stats Dashboard</p>
         </footer>
       </main>
+
+      <DeveloperLogs films={failedFilms} />
     </div>
   );
 };
