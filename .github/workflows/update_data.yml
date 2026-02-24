@@ -1,10 +1,11 @@
 name: Update Film Data
 
 on:
+  schedule:
+    - cron: '*/30 * * * *'  # Verifica a fila a cada 20 min
+    - cron: '0 0 */3 * *'
   repository_dispatch:
     types: [update-film]
-  schedule:
-    - cron: '0 0 */3 * *'
 
 jobs:
   update:
@@ -20,29 +21,29 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
-        run: |
-          pip install requests letterboxdpy
+      - name: Check Pending Queue
+        id: check_step
+        if: github.event_name != 'repository_dispatch'
+        run: python scripts/check_queue.py
+        continue-on-error: false 
 
-      - name: Run Update Script
-        run: python scripts/update_films.py ${{ github.event.client_payload.slug }} ${{ github.event.client_payload.rating_i }} ${{ github.event.client_payload.rating_v }}
+      - name: Install dependencies
+        run: pip install requests letterboxdpy
+
+      - name: Run Processing Script
+        run: |
+          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            python scripts/update_films.py ${{ github.event.client_payload.slug }} ${{ github.event.client_payload.rating_i }} ${{ github.event.client_payload.rating_v }}
+          else
+            python scripts/process_queue.py
+          fi
 
       - name: Commit and Push changes
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          
-          # Adicionamos TODOS os arquivos que podem ser alterados pelo Python
-          git add src/data/films_stats.json \
-                  src/data/films_stats_bkp.json \
-                  src/data/igor_watched.json \
-                  src/data/couple_watched.json \
-                  src/data/failed_films.json
-          
-          # Usamos um check mais amigável: se o status não estiver vazio, commita
+          git add src/data/
           if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "Update film data/queue: ${{ github.event.client_payload.slug }}"
+            git commit -m "Automated queue/data update"
             git push
-          else
-            echo "Nada para atualizar no repositório."
           fi
