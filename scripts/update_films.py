@@ -2,13 +2,28 @@ import json
 import sys
 import shutil
 import time
+import random
 from letterboxdpy.user import User
 from letterboxdpy.movie import Movie
 from letterboxdpy.pages.movie_details import MovieDetails
 import requests
 from letterboxdpy.core.scraper import Scraper
 
-Scraper.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+USER_AGENTS = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15",
+]
+
+MAX_RETRIES = 3
+INITIAL_BACKOFF = 30  # seconds
+
+def set_random_user_agent():
+    ua = random.choice(USER_AGENTS)
+    Scraper.user_agent = ua
+    return ua
 
 def buscar_poster_tmdb(movie_obj):
     tmdb_link = movie_obj.tmdb_link if hasattr(movie_obj, 'tmdb_link') else None
@@ -52,9 +67,25 @@ def update_workflow():
         return
 
 
-    m = Movie(slug)
-    md = MovieDetails(slug)
-    detalhes = md.get_extended_details()
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            set_random_user_agent()
+            print(f"[Tentativa {attempt}/{MAX_RETRIES}] Buscando dados de '{slug}'...")
+            time.sleep(random.uniform(2, 5))  # delay antes da request
+            m = Movie(slug)
+            time.sleep(random.uniform(2, 5))  # delay entre requests
+            md = MovieDetails(slug)
+            detalhes = md.get_extended_details()
+            break
+        except Exception as e:
+            print(f"[Erro tentativa {attempt}] {e}")
+            if attempt < MAX_RETRIES:
+                backoff = INITIAL_BACKOFF * (2 ** (attempt - 1)) + random.uniform(0, 10)
+                print(f"Aguardando {backoff:.0f}s antes de tentar novamente...")
+                time.sleep(backoff)
+            else:
+                print(f"Falha após {MAX_RETRIES} tentativas. Abortando.")
+                return
 
     new_id = max([m['id'] for m in banco["Movies_Info"]], default=0) + 1
 
