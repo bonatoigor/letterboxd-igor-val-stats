@@ -37,8 +37,13 @@ serve(async (req) => {
     if (getRes.ok) {
       const fileData = await getRes.json();
       sha = fileData.sha;
-      const decoded = atob(fileData.content.replace(/\n/g, ""));
-      currentContent = JSON.parse(decoded);
+      if (fileData.content) {
+        const cleanedContent = fileData.content.replace(/\s/g, "");
+        const decoded = new TextDecoder().decode(
+          Uint8Array.from(atob(cleanedContent), (c) => c.charCodeAt(0))
+        );
+        currentContent = JSON.parse(decoded);
+      }
     }
 
     films.forEach((f: any) => {
@@ -52,9 +57,13 @@ serve(async (req) => {
       }
     });
 
+    const encoder = new TextEncoder();
+    const data = encoder.encode(JSON.stringify(currentContent, null, 2));
+    const base64Content = btoa(String.fromCharCode(...data));
+    
     const updatedBody = {
       message: `Enfileirando ${films.length} filmes`,
-      content: btoa(JSON.stringify(currentContent, null, 2)),
+      content: base64Content,
       sha: sha,
     };
 
