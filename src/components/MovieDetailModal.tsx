@@ -18,7 +18,6 @@ export default function MovieDetailModal({ movie, isOpen, onClose }: MovieDetail
       <DialogContent className="bg-lb-surface border-border/50 max-w-2xl max-h-[90vh] overflow-hidden flex flex-col p-0">
         <ScrollArea className="flex-1 p-6">
           <div className="flex flex-col md:flex-row gap-6">
-            {/* Poster Lateral */}
             <div className="w-full md:w-1/3 shrink-0">
               <img 
                 src={movie.Poster_Movie} 
@@ -37,7 +36,6 @@ export default function MovieDetailModal({ movie, isOpen, onClose }: MovieDetail
               </div>
             </div>
 
-            {/* Informações Conteúdo */}
             <div className="flex-1 space-y-4">
               <DialogHeader>
                 <DialogTitle className="text-2xl text-lb-bright leading-tight">
