@@ -25,6 +25,7 @@ export interface Movie {
   Poster_Movie: string;
   Release_year: number;
   Director: string;
+  Description: string;
   Cast: string[];
   Average_rating: number;
   Genres: string[];
