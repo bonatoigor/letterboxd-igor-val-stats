@@ -12,6 +12,12 @@ serve(async (req) => {
   }
 
   try {
+    const { films } = await req.json();
+
+    if (!Array.isArray(films) || films.length === 0) {
+      throw new Error("Nenhum filme enviado.");
+    }
+    
     const GITHUB_PAT = Deno.env.get("GITHUB_PAT");
     const GITHUB_REPO = Deno.env.get("GITHUB_REPO");
     const FILE_PATH = "src/data/pending_films.json";
@@ -19,8 +25,6 @@ serve(async (req) => {
     if (!GITHUB_PAT || !GITHUB_REPO) {
       throw new Error("GitHub configuration missing");
     }
-
-    const { slug, rating_i, rating_v } = await req.json();
 
     const getUrl = `https://api.github.com/repos/${GITHUB_REPO}/contents/${FILE_PATH}`;
     const getRes = await fetch(getUrl, {
@@ -37,19 +41,19 @@ serve(async (req) => {
       currentContent = JSON.parse(decoded);
     }
 
-    const newEntry = {
-      slug: slug.trim(),
-      rating_i: Number(rating_i) || 0,
-      rating_v: Number(rating_v) || 0,
-      timestamp: new Date().toISOString(),
-    };
-    
-    if (!currentContent.some((f: any) => f.slug === newEntry.slug)) {
-      currentContent.push(newEntry);
-    }
+    films.forEach((f: any) => {
+      if (!currentContent.some((existing: any) => existing.slug === f.slug)) {
+        currentContent.push({
+          slug: f.slug.trim(),
+          rating_i: Number(f.rating_i) || 0,
+          rating_v: Number(f.rating_v) || 0,
+          timestamp: new Date().toISOString(),
+        });
+      }
+    });
 
     const updatedBody = {
-      message: `Enfileirando filme: ${newEntry.slug}`,
+      message: `Enfileirando ${films.length} filmes`,
       content: btoa(JSON.stringify(currentContent, null, 2)),
       sha: sha,
     };
