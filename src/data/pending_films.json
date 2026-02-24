@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "slug": "the-void-2016",
+    "rating_i": 3.0,
+    "rating_v": 3.0,
+    "timestamp": "2026-02-24T13:17:00Z"
+  },
+  {
+    "slug": "the-wind-2018",
+    "rating_i": 3.0,
+    "rating_v": 2.5,
+    "timestamp": "2026-02-24T13:17:01Z"
+  }
+]
