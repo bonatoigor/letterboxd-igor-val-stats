@@ -122,10 +122,14 @@ def update_workflow():
         "Nanogenres": nanogenres_only, 
         "Runtime": m.runtime,
         "Countries": detalhes.get('country', []),
+        "Original_language": detalhes.get('language', ["English"])[0] if detalhes.get('language') else "English",
+        "Spoken_languages": list(set(detalhes.get('language', []))),
+        "Description": m.description,
+        "Studios": detalhes.get('studio', []),
         "Film_URL": f"https://letterboxd.com/film/{slug}/",
+        "Similar_Films": [],
         "Rating_Igor": nota_igor,
-        "Rating_Valeria": nota_valeria,
-        "Similar_Films": []
+        "Rating_Valeria": nota_valeria
     }
 
     banco["Movies_Info"].append(new_movie)
