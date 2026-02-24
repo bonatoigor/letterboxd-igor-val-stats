@@ -65,7 +65,7 @@ export default function LogFilmModal() {
 
     try {
       const { data, error } = await supabase.functions.invoke("trigger-film-update", {
-        body: { films: stagedFilms },
+        body: { films: stagedFilms }, 
       });
 
       if (error) throw error;
