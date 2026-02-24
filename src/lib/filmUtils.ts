@@ -35,7 +35,6 @@ export interface Movie {
   Countries: string[];
   Original_language: string;
   Spoken_languages: string[];
-  Description: string;
   Studios: string[];
   Film_URL: string;
   Rating_Igor: number;
