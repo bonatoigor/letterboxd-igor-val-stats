@@ -8,6 +8,7 @@ import WorldMapChart from "@/components/WorldMapChart";
 import MovieVibe from "@/components/MovieVibe";
 import { getFailedFilms } from "@/lib/filmUtils";
 import DeveloperLogs from "@/components/DeveloperLogs";
+import AllFilmsGrid from "@/components/AllFilmsGrid";
 import {
   getGeneralInfo,
   getMovies,
@@ -82,7 +83,9 @@ const Index = () => {
         </div>
 
         <WorldMapChart movies={movies} />
-
+        
+        <AllFilmsGrid movies={movies} />
+        
         <PosterGrid title="Highest Rated" movies={highestRated} />
         <PosterGrid title="Recent Films" movies={recent} />
 
