@@ -50,11 +50,9 @@ const topLanguages = getTopLanguages(movies);
 const topThemes= getTopThemes(movies);
 const topNanogenres = getTopNanogenres(movies);
 const globalSumRating = getGlobalSumRating(movies);
-
+const failedFilms = getFailedFilms();
 
 const Index = () => {
-  const failedFilms = getFailedFilms();
-  
   return (
     <div className="min-h-screen bg-lb-body">
       <ProfileHeader
