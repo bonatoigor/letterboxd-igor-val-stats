@@ -13,7 +13,8 @@ serve(async (req) => {
 
   try {
     const { films } = await req.json();
-
+    console.log(`Recebido lote de ${films?.length} filmes.`);
+    
     if (!Array.isArray(films) || films.length === 0) {
       throw new Error("Nenhum filme enviado.");
     }
@@ -23,10 +24,12 @@ serve(async (req) => {
     const FILE_PATH = "src/data/pending_films.json";
 
     if (!GITHUB_PAT || !GITHUB_REPO) {
+      console.error("Erro: Secrets GITHUB_PAT ou GITHUB_REPO não configuradas.");
       throw new Error("GitHub configuration missing");
     }
 
     const getUrl = `https://api.github.com/repos/${GITHUB_REPO}/contents/${FILE_PATH}`;
+    console.log("Buscando arquivo atual no GitHub...");
     const getRes = await fetch(getUrl, {
       headers: { Authorization: `Bearer ${GITHUB_PAT}` },
     });
@@ -37,6 +40,7 @@ serve(async (req) => {
     if (getRes.ok) {
       const fileData = await getRes.json();
       sha = fileData.sha;
+      console.log("Arquivo encontrado. Decodificando conteúdo...");
       if (fileData.content) {
         const cleanedContent = fileData.content.replace(/\s/g, "");
         const decoded = new TextDecoder().decode(
@@ -44,6 +48,8 @@ serve(async (req) => {
         );
         currentContent = JSON.parse(decoded);
       }
+    } else {
+      console.log("Arquivo não existe ou está vazio. Criando nova fila.");
     }
 
     films.forEach((f: any) => {
@@ -57,36 +63,41 @@ serve(async (req) => {
       }
     });
 
-    const encoder = new TextEncoder();
-    const data = encoder.encode(JSON.stringify(currentContent, null, 2));
-    const base64Content = btoa(String.fromCharCode(...data));
-    
-    const updatedBody = {
-      message: `Enfileirando ${films.length} filmes`,
-      content: base64Content,
-      sha: sha,
-    };
+    // 3. Codificação Segura para Base64 (UTF-8)
+    console.log("Codificando nova fila para Base64...");
+    const jsonString = JSON.stringify(currentContent, null, 2);
+    const utf8Bytes = new TextEncoder().encode(jsonString);
+    const base64Content = btoa(String.fromCharCode(...utf8Bytes));
 
+    // 4. Salvar de volta no GitHub
+    console.log("Enviando atualização para o GitHub...");
     const putRes = await fetch(getUrl, {
       method: "PUT",
-      headers: {
-        Authorization: `Bearer ${GITHUB_PAT}`,
-        "Content-Type": "application/json",
+      headers: { 
+        Authorization: `Bearer ${GITHUB_PAT}`, 
+        "Content-Type": "application/json" 
       },
-      body: JSON.stringify(updatedBody),
+      body: JSON.stringify({
+        message: `Queue update: +${films.length} films`,
+        content: base64Content,
+        sha: sha, // Obrigatório para atualizar
+      }),
     });
 
     if (!putRes.ok) {
       const errorText = await putRes.text();
+      console.error("Erro na API do GitHub:", errorText);
       throw new Error(`Erro ao salvar no GitHub: ${errorText}`);
     }
 
+    console.log("Sucesso! Fila atualizada.");
     return new Response(
       JSON.stringify({ success: true, message: "Filme adicionado à fila com sucesso!" }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
 
   } catch (error: any) {
+    console.error("Erro Crítico na Function:", error.message);
     return new Response(
       JSON.stringify({ error: error.message }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
