@@ -71,7 +71,8 @@ def update_workflow():
         "Countries": detalhes.get('country', []),
         "Film_URL": f"https://letterboxd.com/film/{slug}/",
         "Rating_Igor": nota_igor,
-        "Rating_Valeria": nota_valeria
+        "Rating_Valeria": nota_valeria,
+        "Similar_Films": []
     }
 
     banco["Movies_Info"].append(new_movie)
