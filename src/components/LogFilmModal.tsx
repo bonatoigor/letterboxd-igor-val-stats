@@ -63,7 +63,7 @@ export default function LogFilmModal() {
 
       if (data?.success) {
         setStatus("success");
-        setMessage(`Filme adicionado à fila de processamento! Slug: ${data.slug}`);
+        setMessage(`Filme adicionado à fila! O processamento ocorre a cada 20 min. Slug: ${data.slug}`);
         setSlug("");
         setRatingI(0);
         setRatingV(0);
