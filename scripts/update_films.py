@@ -103,6 +103,10 @@ def update_workflow():
                     print(f"Erro ao salvar na fila: {fe}")
                 return
 
+    genres_only = [g['name'] for g in m.genres if g['type'] == 'genre']
+    themes_only = [g['name'] for g in m.genres if g['type'] == 'theme']
+    nanogenres_only = [g['name'] for g in m.genres if g['type'] == 'mini-theme']
+    
     new_id = max([m['id'] for m in banco["Movies_Info"]], default=0) + 1
 
     new_movie = {
@@ -113,7 +117,9 @@ def update_workflow():
         "Director": m.crew['director'][0]['name'] if m.crew['director'] else "N/A",
         "Cast": [actor['name'] for actor in m.cast[:10]],
         "Average_rating": m.rating,
-        "Genres": [g['name'] for g in m.genres if g['type'] == 'genre'],
+        "Genres": genres_only,
+        "Themes": themes_only,
+        "Nanogenres": nanogenres_only, 
         "Runtime": m.runtime,
         "Countries": detalhes.get('country', []),
         "Film_URL": f"https://letterboxd.com/film/{slug}/",
