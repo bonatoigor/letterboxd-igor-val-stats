@@ -52,7 +52,7 @@ def update_workflow():
 
     path_json = 'src/data/films_stats.json'
     path_bkp = 'src/data/films_stats_bkp.json'
-
+    path_failed = 'src/data/failed_films.json'
 
     try:
         shutil.copy2(path_json, path_bkp)
@@ -71,9 +71,9 @@ def update_workflow():
         try:
             set_random_user_agent()
             print(f"[Tentativa {attempt}/{MAX_RETRIES}] Buscando dados de '{slug}'...")
-            time.sleep(random.uniform(2, 5))  # delay antes da request
+            time.sleep(random.uniform(2, 5))
             m = Movie(slug)
-            time.sleep(random.uniform(2, 5))  # delay entre requests
+            time.sleep(random.uniform(2, 5))
             md = MovieDetails(slug)
             detalhes = md.get_extended_details()
             break
@@ -84,7 +84,23 @@ def update_workflow():
                 print(f"Aguardando {backoff:.0f}s antes de tentar novamente...")
                 time.sleep(backoff)
             else:
-                print(f"Falha após {MAX_RETRIES} tentativas. Abortando.")
+                print(f"Falha após {MAX_RETRIES} tentativas. Salvando na fila...")
+                try:
+                    with open(path_failed, 'r', encoding='utf-8') as f:
+                        failed_list = json.load(f)
+                    
+                    if not any(item['slug'] == slug for item in failed_list):
+                        failed_list.append({
+                            "slug": slug,
+                            "rating_i": nota_igor,
+                            "rating_v": nota_valeria,
+                            "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+                        })
+                        
+                        with open(path_failed, 'w', encoding='utf-8') as f:
+                            json.dump(failed_list, f, indent=4, ensure_ascii=False)
+                except Exception as fe:
+                    print(f"Erro ao salvar na fila: {fe}")
                 return
 
     new_id = max([m['id'] for m in banco["Movies_Info"]], default=0) + 1
