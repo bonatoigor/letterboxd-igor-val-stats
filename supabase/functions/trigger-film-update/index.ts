@@ -13,61 +13,69 @@ serve(async (req) => {
 
   try {
     const GITHUB_PAT = Deno.env.get("GITHUB_PAT");
-    if (!GITHUB_PAT) throw new Error("GITHUB_PAT is not configured");
-
     const GITHUB_REPO = Deno.env.get("GITHUB_REPO");
-    if (!GITHUB_REPO) throw new Error("GITHUB_REPO is not configured");
+    const FILE_PATH = "src/data/pending_films.json";
+
+    if (!GITHUB_PAT || !GITHUB_REPO) {
+      throw new Error("GitHub configuration missing");
+    }
 
     const { slug, rating_i, rating_v } = await req.json();
 
-    if (!slug || typeof slug !== "string" || slug.trim().length === 0) {
-      return new Response(
-        JSON.stringify({ error: "slug is required" }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
+    const getUrl = `https://api.github.com/repos/${GITHUB_REPO}/contents/${FILE_PATH}`;
+    const getRes = await fetch(getUrl, {
+      headers: { Authorization: `Bearer ${GITHUB_PAT}` },
+    });
+
+    let currentContent = [];
+    let sha = "";
+
+    if (getRes.ok) {
+      const fileData = await getRes.json();
+      sha = fileData.sha;
+      const decoded = atob(fileData.content.replace(/\n/g, ""));
+      currentContent = JSON.parse(decoded);
     }
 
-    const sanitized = slug.trim();
-    if (!/^[a-zA-Z0-9\-]+$/.test(sanitized)) {
-      return new Response(
-        JSON.stringify({ error: "Invalid slug format." }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
+    const newEntry = {
+      slug: slug.trim(),
+      rating_i: Number(rating_i) || 0,
+      rating_v: Number(rating_v) || 0,
+      timestamp: new Date().toISOString(),
+    };
+    
+    if (!currentContent.some((f: any) => f.slug === newEntry.slug)) {
+      currentContent.push(newEntry);
     }
 
-    const rI = Number(rating_i) || 0;
-    const rV = Number(rating_v) || 0;
+    const updatedBody = {
+      message: `Enfileirando filme: ${newEntry.slug}`,
+      content: btoa(JSON.stringify(currentContent, null, 2)),
+      sha: sha,
+    };
 
-    const response = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO}/dispatches`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${GITHUB_PAT}`,
-          Accept: "application/vnd.github.v3+json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          event_type: "update-film",
-          client_payload: { slug: sanitized, rating_i: rI, rating_v: rV },
-        }),
-      }
-    );
+    const putRes = await fetch(getUrl, {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${GITHUB_PAT}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedBody),
+    });
 
-    if (!response.ok) {
-      const text = await response.text();
-      throw new Error(`GitHub API error [${response.status}]: ${text}`);
+    if (!putRes.ok) {
+      const errorText = await putRes.text();
+      throw new Error(`Erro ao salvar no GitHub: ${errorText}`);
     }
 
     return new Response(
-      JSON.stringify({ success: true, slug: sanitized, rating_i: rI, rating_v: rV }),
+      JSON.stringify({ success: true, message: "Filme adicionado à fila com sucesso!" }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
-  } catch (error: unknown) {
-    console.error("Error:", error);
-    const msg = error instanceof Error ? error.message : "Unknown error";
+
+  } catch (error: any) {
     return new Response(
-      JSON.stringify({ success: false, error: msg }),
+      JSON.stringify({ error: error.message }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
