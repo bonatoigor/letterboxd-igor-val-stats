@@ -130,7 +130,6 @@ def update_workflow():
 
     banco["Movies_Info"].append(new_movie)
 
-
     movies = banco["Movies_Info"]
     
     total_comp = sum(1 - abs(f["Rating_Igor"] - f["Rating_Valeria"]) / 5 for f in movies)
@@ -144,6 +143,19 @@ def update_workflow():
 
     with open(path_json, 'w', encoding='utf-8') as f:
         json.dump(banco, f, indent=4, ensure_ascii=False)
+
+    try:
+        with open(path_failed, 'r', encoding='utf-8') as f:
+            failed_list = json.load(f)
+        
+        new_failed_list = [item for item in failed_list if item['slug'] != slug]
+        
+        if len(new_failed_list) < len(failed_list):
+            with open(path_failed, 'w', encoding='utf-8') as f:
+                json.dump(new_failed_list, f, indent=4, ensure_ascii=False)
+            print(f"Filme '{slug}' removido da fila de falhas.")
+    except Exception as e:
+        print(f"Erro ao atualizar fila de falhas: {e}")
 
 if __name__ == "__main__":
     update_workflow()
