@@ -1,4 +1,14 @@
 import filmsData from "@/data/films_stats.json";
+import filmsData from "@/data/films_stats.json";
+
+export interface FailedFilm {
+  slug: string;
+  rating_i: number;
+  rating_v: number;
+  timestamp: string;
+}
+
+export const getFailedFilms = (): FailedFilm[] => failedFilmsData as FailedFilm[];
 
 export interface GeneralInfo {
   Total_Movies: number;
