@@ -1,11 +1,5 @@
 [
     {
-        "slug": "pontypool",
-        "rating_i": 2.0,
-        "rating_v": 3.0,
-        "timestamp": "2026-02-24T13:17:02Z"
-    },
-    {
         "slug": "wrong-turn",
         "rating_i": 3.0,
         "rating_v": 3.0,
