@@ -9,21 +9,37 @@ export default function DeveloperLogs({ films }: { films: FailedFilm[] }) {
   const [isRetrying, setIsRetrying] = useState(false);
   const { toast } = useToast();
 
-  const handleRetry = async () => {
+const handleRetry = async () => {
+    if (films.length === 0) return;
+    
     setIsRetrying(true);
     try {
-      for (const film of films) {
-        await supabase.functions.invoke("trigger-film-update", {
-          body: { 
-            slug: film.slug, 
-            rating_i: film.rating_i, 
-            rating_v: film.rating_v 
-          },
+      const { data, error } = await supabase.functions.invoke("trigger-film-update", {
+        body: { 
+          films: films.map(film => ({
+            slug: film.slug,
+            rating_i: film.rating_i,
+            rating_v: film.rating_v
+          }))
+        },
+      });
+
+      if (error) throw error;
+
+      if (data?.success) {
+        toast({ 
+          title: "Signal sent to GitHub Actions", 
+          description: `${films.length} movies sent for reprocessing.` 
         });
+      } else {
+        throw new Error(data?.error || "Execution failed");
       }
-      toast({ title: "Signal sent to GitHub Actions", description: "Reprocessing queue..." });
-    } catch (err) {
-      toast({ variant: "destructive", title: "Execution failed" });
+    } catch (err: unknown) {
+      toast({ 
+        variant: "destructive", 
+        title: "Execution failed",
+        description: err instanceof Error ? err.message : "Error triggering workflow"
+      });
     } finally {
       setIsRetrying(false);
     }
