@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "slug": "test-film",
+    "rating_i": 3,
+    "rating_v": 4,
+    "timestamp": "2026-02-25T15:42:21.528Z"
+  }
+]
