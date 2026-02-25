@@ -18551,44 +18551,6 @@
             "Rating_Igor": 3.0,
             "Rating_Valeria": 3.0,
             "Similar_Films": []
-        },
-        {
-            "id": 191,
-            "Film_title": "The Wind",
-            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/kcfPHZHSQODLCWdkUVLYATNyEVo.jpg",
-            "Release_year": 2018,
-            "Director": "Emma Tammi",
-            "Cast": [
-                "Caitlin Gerard",
-                "Ashley Zukerman",
-                "Julia Goldani Telles",
-                "Miles Anderson",
-                "Dylan McTee",
-                "Martin Patterson"
-            ],
-            "Average_rating": 2.95,
-            "Genres": [
-                "Western",
-                "Horror",
-                "Mystery"
-            ],
-            "Themes": [
-                "Horror, the undead and monster classics"
-            ],
-            "Nanogenres": [
-                "Terrifying, haunted, and supernatural horror",
-                "Gothic and eerie haunting horror",
-                "Creepy, chilling, and terrifying horror",
-                "Twisted dark psychological thriller"
-            ],
-            "Runtime": 86,
-            "Countries": [
-                "USA"
-            ],
-            "Film_URL": "https://letterboxd.com/film/the-wind-2018/",
-            "Rating_Igor": 3.0,
-            "Rating_Valeria": 2.5,
-            "Similar_Films": []
         }
     ]
 }
