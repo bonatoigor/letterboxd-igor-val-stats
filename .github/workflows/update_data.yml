@@ -2,7 +2,7 @@ name: Update Film Data
 
 on:
   schedule:
-    - cron: '*/30 * * * *' 
+    - cron: '*/59 * * * *' 
     - cron: '0 0 */3 * *' 
   workflow_dispatch:
   repository_dispatch:
