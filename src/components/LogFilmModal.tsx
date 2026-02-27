@@ -96,10 +96,10 @@ export default function LogFilmModal() {
       <DialogTrigger asChild>
         <Button
           size="sm"
-          className="gap-1.5 bg-lb-green hover:bg-lb-green/80 text-black font-bold text-[10px] uppercase tracking-widest shadow-lg active:scale-95 transition-transform"
+          className="bg-lb-green hover:bg-lb-green/80 text-black font-bold shadow-lg active:scale-95 transition-transform md:gap-1.5 md:text-[10px] md:uppercase md:tracking-widest w-8 h-8 p-0 md:w-auto md:h-auto md:px-3 md:py-1.5 rounded-full md:rounded-md"
         >
-          <Plus className="w-3 h-3" />
-          Add Movie
+          <Plus className="w-4 h-4 md:w-3 md:h-3" />
+          <span className="hidden md:inline">Add Movie</span>
         </Button>
       </DialogTrigger>
       <DialogContent className="bg-lb-surface border-border/50 w-[95vw] max-w-md rounded-2xl p-6 overflow-hidden">
