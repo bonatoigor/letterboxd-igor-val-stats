@@ -18551,6 +18551,55 @@
             "Rating_Igor": 3.0,
             "Rating_Valeria": 3.0,
             "Similar_Films": []
+        },
+        {
+            "id": 191,
+            "Film_title": "The Wind",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/kcfPHZHSQODLCWdkUVLYATNyEVo.jpg",
+            "Release_year": 2018,
+            "Director": "Emma Tammi",
+            "Cast": [
+                "Caitlin Gerard",
+                "Ashley Zukerman",
+                "Julia Goldani Telles",
+                "Miles Anderson",
+                "Dylan McTee",
+                "Martin Patterson"
+            ],
+            "Average_rating": 2.95,
+            "Genres": [
+                "Western",
+                "Horror",
+                "Mystery"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
+                "Terrifying, haunted, and supernatural horror",
+                "Gothic and eerie haunting horror",
+                "Creepy, chilling, and terrifying horror",
+                "Twisted dark psychological thriller"
+            ],
+            "Runtime": 86,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English",
+                "German"
+            ],
+            "Description": "Lizzy is a tough, resourceful frontierswoman settling a remote stretch of land on the 19th-century American frontier. Isolated from civilization in a desolate wilderness where the wind never stops howling, she begins to sense a sinister presence that seems to be borne of the land itself, and when a newlywed couple arrive at a nearby homestead, their presence amplifies Lizzy's fears, setting into motion a shocking chain of events.",
+            "Studios": [
+                "Divide / Conquer",
+                "Soapbox Films",
+                "Mind Hive Films"
+            ],
+            "Film_URL": "https://letterboxd.com/film/the-wind-2018/",
+            "Similar_Films": [],
+            "Rating_Igor": 3.0,
+            "Rating_Valeria": 2.5
         }
     ]
 }
