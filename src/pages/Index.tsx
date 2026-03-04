@@ -1,3 +1,4 @@
+import { useState, useCallback } from "react";
 import ProfileHeader from "@/components/ProfileHeader";
 import HorizontalBarChart from "@/components/HorizontalBarChart";
 import RatedGenresChart from "@/components/RatedGenresChart";
@@ -9,6 +10,7 @@ import MovieVibe from "@/components/MovieVibe";
 import { getFailedFilms } from "@/lib/filmUtils";
 import DeveloperLogs from "@/components/DeveloperLogs";
 import AllFilmsGrid from "@/components/AllFilmsGrid";
+import FilmListModal from "@/components/FilmListModal";
 import {
   getGeneralInfo,
   getMovies,
@@ -30,6 +32,7 @@ import {
   getTopNanogenres,
   getGlobalSumRating,
   getTopKeywords,
+  Movie,
 } from "@/lib/filmUtils";
 
 const info = getGeneralInfo();
@@ -48,12 +51,33 @@ const uniqueCountries = getUniqueCountriesCount(movies);
 const uniqueLanguages = getUniqueLanguagesCount(movies);
 const topActors = getTopActors(movies);
 const topLanguages = getTopLanguages(movies);
-const topThemes= getTopThemes(movies);
+const topThemes = getTopThemes(movies);
 const topNanogenres = getTopNanogenres(movies);
 const globalSumRating = getGlobalSumRating(movies);
 const failedFilms = getFailedFilms();
 
+type FilterType = "Genres" | "Themes" | "Nanogenres" | "Countries" | "Director" | "Cast" | "Spoken_languages";
+
+const filterMovies = (field: FilterType, value: string): Movie[] => {
+  return movies.filter((m) => {
+    if (field === "Director") return m.Director === value;
+    const arr = m[field] as string[];
+    return arr?.includes(value);
+  });
+};
+
 const Index = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalTitle, setModalTitle] = useState("");
+  const [modalMovies, setModalMovies] = useState<Movie[]>([]);
+
+  const handleCountClick = useCallback((field: FilterType) => (name: string) => {
+    const filtered = filterMovies(field, name);
+    setModalTitle(name);
+    setModalMovies(filtered);
+    setModalOpen(true);
+  }, []);
+
   return (
     <div className="min-h-screen bg-lb-body">
       <ProfileHeader
@@ -72,14 +96,14 @@ const Index = () => {
         <ByYearChart movies={movies} />
 
         <div className="grid md:grid-cols-2 gap-6">
-          <HorizontalBarChart title="Most Watched Genres" data={topGenres} color="green" />
-          <HorizontalBarChart title="Most Watched Themes" data={topThemes} color="blue" />
-          <HorizontalBarChart title="Most Watched Nanogenres" data={topNanogenres} color="green" />
-          <HorizontalBarChart title="Most Watched Countries" data={topCountries} color="blue" />
+          <HorizontalBarChart title="Most Watched Genres" data={topGenres} color="green" onCountClick={handleCountClick("Genres")} />
+          <HorizontalBarChart title="Most Watched Themes" data={topThemes} color="blue" onCountClick={handleCountClick("Themes")} />
+          <HorizontalBarChart title="Most Watched Nanogenres" data={topNanogenres} color="green" onCountClick={handleCountClick("Nanogenres")} />
+          <HorizontalBarChart title="Most Watched Countries" data={topCountries} color="blue" onCountClick={handleCountClick("Countries")} />
           <RatedGenresChart data={ratedGenres} />
-          <HorizontalBarChart title="Most Watched Directors" data={topDirectors} color="blue" />
-          <HorizontalBarChart title="Most Watched Actors" data={topActors} color="green" />
-          <HorizontalBarChart title="Most Watched Languages" data={topLanguages} color="blue" />
+          <HorizontalBarChart title="Most Watched Directors" data={topDirectors} color="blue" onCountClick={handleCountClick("Director")} />
+          <HorizontalBarChart title="Most Watched Actors" data={topActors} color="green" onCountClick={handleCountClick("Cast")} />
+          <HorizontalBarChart title="Most Watched Languages" data={topLanguages} color="blue" onCountClick={handleCountClick("Spoken_languages")} />
         </div>
 
         <WorldMapChart movies={movies} />
@@ -97,6 +121,13 @@ const Index = () => {
       </main>
 
       <DeveloperLogs films={failedFilms} />
+
+      <FilmListModal
+        open={modalOpen}
+        onOpenChange={setModalOpen}
+        title={modalTitle}
+        movies={modalMovies}
+      />
     </div>
   );
 };
