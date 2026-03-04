@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Plus, Film, Loader2, CheckCircle, AlertCircle } from "lucide-react";
+import { Plus, Film, Loader2, CheckCircle, AlertCircle, Lock, LogOut } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -14,6 +14,24 @@ import { supabase } from "@/integrations/supabase/client";
 type Status = "idle" | "loading" | "success" | "error";
 
 const RATING_OPTIONS = Array.from({ length: 11 }, (_, i) => i * 0.5);
+const AUTH_KEY = "lb_admin_auth";
+
+function useAdminAuth() {
+  const [authed, setAuthed] = useState(() => localStorage.getItem(AUTH_KEY) === "true");
+  const login = (user: string, pass: string) => {
+    if (user === "igorbonato" && pass === "C@melodromo12") {
+      localStorage.setItem(AUTH_KEY, "true");
+      setAuthed(true);
+      return true;
+    }
+    return false;
+  };
+  const logout = () => {
+    localStorage.removeItem(AUTH_KEY);
+    setAuthed(false);
+  };
+  return { authed, login, logout };
+}
 
 function StarRating({ value, onChange, label, color }: { value: number; onChange: (v: number) => void; label: string; color: string }) {
   return (
@@ -42,7 +60,11 @@ function StarRating({ value, onChange, label, color }: { value: number; onChange
 }
 
 export default function LogFilmModal() {
+  const { authed, login, logout } = useAdminAuth();
   const [open, setOpen] = useState(false);
+  const [loginUser, setLoginUser] = useState("");
+  const [loginPass, setLoginPass] = useState("");
+  const [loginError, setLoginError] = useState(false);
   const [slug, setSlug] = useState("");
   const [ratingI, setRatingI] = useState(0);
   const [ratingV, setRatingV] = useState(0);
@@ -91,6 +113,14 @@ export default function LogFilmModal() {
     }
   };
 
+  const handleLogin = () => {
+    if (login(loginUser, loginPass)) {
+      setLoginError(false);
+    } else {
+      setLoginError(true);
+    }
+  };
+
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
@@ -103,89 +133,134 @@ export default function LogFilmModal() {
         </Button>
       </DialogTrigger>
       <DialogContent className="bg-lb-surface border-border/50 w-[95vw] max-w-md rounded-2xl p-6 overflow-hidden">
-        <DialogHeader className="mb-4">
-          <DialogTitle className="text-lb-bright flex items-center gap-2 text-lg">
-            <Film className="w-5 h-5 text-lb-green" />
-            Log New Film
-          </DialogTitle>
-          <DialogDescription className="text-lb-text/70 text-xs">
-            Insira o slug do Letterboxd e as notas individuais.
-          </DialogDescription>
-        </DialogHeader>
-
-        <div className="space-y-6">
-          <div>
-            <label className="text-[11px] text-lb-text uppercase tracking-wider mb-2 block font-semibold">
-              Letterboxd Slug
-            </label>
-            <input
-              value={slug}
-              onChange={(e) => setSlug(e.target.value)}
-              placeholder="ex: everything-everywhere-all-at-once"
-              className="w-full bg-lb-body/50 border border-border/30 rounded-lg px-4 py-2.5 text-sm text-lb-bright placeholder:text-lb-text/30 focus:outline-none focus:ring-2 focus:ring-lb-green/20 focus:border-lb-green/50 transition-all"
-              disabled={status === "loading"}
-            />
-          </div>
-
-          <div className="space-y-6">
-            <StarRating value={ratingI} onChange={setRatingI} label="Igor ★" color="text-lb-green" />
-            <StarRating value={ratingV} onChange={setRatingV} label="Valéria ★" color="text-lb-orange" />
-          </div>
-
-          {message && (
-            <div
-              className={`flex items-start gap-3 text-xs p-3.5 rounded-xl border animate-in fade-in slide-in-from-top-2 ${
-                status === "success"
-                  ? "bg-green-500/10 text-green-400 border-green-500/20"
-                  : "bg-red-500/10 text-red-400 border-red-500/20"
-              }`}
-            >
-              {status === "success" ? (
-                <CheckCircle className="w-4 h-4 mt-0.5 shrink-0" />
-              ) : (
-                <AlertCircle className="w-4 h-4 mt-0.5 shrink-0" />
+        {!authed ? (
+          <>
+            <DialogHeader className="mb-4">
+              <DialogTitle className="text-lb-bright flex items-center gap-2 text-lg">
+                <Lock className="w-5 h-5 text-lb-orange" />
+                Admin Login
+              </DialogTitle>
+              <DialogDescription className="text-lb-text/70 text-xs">
+                Faça login para adicionar filmes.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="space-y-4">
+              <input
+                value={loginUser}
+                onChange={(e) => setLoginUser(e.target.value)}
+                placeholder="Usuário"
+                className="w-full bg-lb-body/50 border border-border/30 rounded-lg px-4 py-2.5 text-sm text-lb-bright placeholder:text-lb-text/30 focus:outline-none focus:ring-2 focus:ring-lb-green/20 focus:border-lb-green/50 transition-all"
+              />
+              <input
+                type="password"
+                value={loginPass}
+                onChange={(e) => setLoginPass(e.target.value)}
+                placeholder="Senha"
+                onKeyDown={(e) => e.key === "Enter" && handleLogin()}
+                className="w-full bg-lb-body/50 border border-border/30 rounded-lg px-4 py-2.5 text-sm text-lb-bright placeholder:text-lb-text/30 focus:outline-none focus:ring-2 focus:ring-lb-green/20 focus:border-lb-green/50 transition-all"
+              />
+              {loginError && (
+                <p className="text-red-400 text-xs flex items-center gap-1.5">
+                  <AlertCircle className="w-3.5 h-3.5" /> Credenciais inválidas.
+                </p>
               )}
-              <span className="leading-relaxed">{message}</span>
+              <Button onClick={handleLogin} className="w-full bg-lb-green hover:bg-lb-green/90 text-black font-bold h-11 rounded-xl">
+                Entrar
+              </Button>
             </div>
-          )}
+          </>
+        ) : (
+          <>
+            <DialogHeader className="mb-4">
+              <div className="flex items-center justify-between">
+                <DialogTitle className="text-lb-bright flex items-center gap-2 text-lg">
+                  <Film className="w-5 h-5 text-lb-green" />
+                  Log New Film
+                </DialogTitle>
+                <button onClick={logout} className="text-lb-text/50 hover:text-red-400 transition-colors" title="Sair">
+                  <LogOut className="w-4 h-4" />
+                </button>
+              </div>
+              <DialogDescription className="text-lb-text/70 text-xs">
+                Insira o slug do Letterboxd e as notas individuais.
+              </DialogDescription>
+            </DialogHeader>
 
-          <Button 
-            type="button" 
-            variant="outline" 
-            onClick={handleStageFilm}
-            disabled={!slug.trim()}
-            className="w-full border-lb-green/30 text-lb-green hover:bg-lb-green/10"
-          >
-            + Adicionar à lista de envio
-          </Button>
-        
-          {stagedFilms.length > 0 && (
-            <div className="bg-black/20 rounded-lg p-3 space-y-2">
-              <p className="text-[10px] uppercase text-lb-text/50 font-bold">Prontos para enviar:</p>
-              {stagedFilms.map((f, i) => (
-                <div key={i} className="flex justify-between text-xs text-lb-bright border-b border-white/5 pb-1">
-                  <span>{f.slug}</span>
-                  <span className="text-lb-green">{f.rating_i} / {f.rating_v}</span>
+            <div className="space-y-6">
+              <div>
+                <label className="text-[11px] text-lb-text uppercase tracking-wider mb-2 block font-semibold">
+                  Letterboxd Slug
+                </label>
+                <input
+                  value={slug}
+                  onChange={(e) => setSlug(e.target.value)}
+                  placeholder="ex: everything-everywhere-all-at-once"
+                  className="w-full bg-lb-body/50 border border-border/30 rounded-lg px-4 py-2.5 text-sm text-lb-bright placeholder:text-lb-text/30 focus:outline-none focus:ring-2 focus:ring-lb-green/20 focus:border-lb-green/50 transition-all"
+                  disabled={status === "loading"}
+                />
+              </div>
+
+              <div className="space-y-6">
+                <StarRating value={ratingI} onChange={setRatingI} label="Igor ★" color="text-lb-green" />
+                <StarRating value={ratingV} onChange={setRatingV} label="Valéria ★" color="text-lb-orange" />
+              </div>
+
+              {message && (
+                <div
+                  className={`flex items-start gap-3 text-xs p-3.5 rounded-xl border animate-in fade-in slide-in-from-top-2 ${
+                    status === "success"
+                      ? "bg-green-500/10 text-green-400 border-green-500/20"
+                      : "bg-red-500/10 text-red-400 border-red-500/20"
+                  }`}
+                >
+                  {status === "success" ? (
+                    <CheckCircle className="w-4 h-4 mt-0.5 shrink-0" />
+                  ) : (
+                    <AlertCircle className="w-4 h-4 mt-0.5 shrink-0" />
+                  )}
+                  <span className="leading-relaxed">{message}</span>
                 </div>
-              ))}
+              )}
+
+              <Button 
+                type="button" 
+                variant="outline" 
+                onClick={handleStageFilm}
+                disabled={!slug.trim()}
+                className="w-full border-lb-green/30 text-lb-green hover:bg-lb-green/10"
+              >
+                + Adicionar à lista de envio
+              </Button>
+            
+              {stagedFilms.length > 0 && (
+                <div className="bg-black/20 rounded-lg p-3 space-y-2">
+                  <p className="text-[10px] uppercase text-lb-text/50 font-bold">Prontos para enviar:</p>
+                  {stagedFilms.map((f, i) => (
+                    <div key={i} className="flex justify-between text-xs text-lb-bright border-b border-white/5 pb-1">
+                      <span>{f.slug}</span>
+                      <span className="text-lb-green">{f.rating_i} / {f.rating_v}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+              
+              <Button
+                onClick={handleSubmit}
+                disabled={stagedFilms.length === 0 || status === "loading"}
+                className="w-full bg-lb-green hover:bg-lb-green/90 text-black font-bold h-11 rounded-xl shadow-lg shadow-lb-green/10 disabled:opacity-50 disabled:grayscale transition-all"
+              >
+                {status === "loading" ? (
+                  <>
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    Processing...
+                  </>
+                ) : (
+                  "Confirm & Add to Stats"
+                )}
+              </Button>
             </div>
-          )}
-          
-          <Button
-            onClick={handleSubmit}
-            disabled={!slug.trim() || status === "loading"}
-            className="w-full bg-lb-green hover:bg-lb-green/90 text-black font-bold h-11 rounded-xl shadow-lg shadow-lb-green/10 disabled:opacity-50 disabled:grayscale transition-all"
-          >
-            {status === "loading" ? (
-              <>
-                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                Processing...
-              </>
-            ) : (
-              "Confirm & Add to Stats"
-            )}
-          </Button>
-        </div>
+          </>
+        )}
       </DialogContent>
     </Dialog>
   );
