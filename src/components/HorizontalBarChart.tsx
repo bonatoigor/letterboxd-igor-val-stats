@@ -4,6 +4,7 @@ interface HorizontalBarChartProps {
   title: string;
   data: FrequencyItem[];
   color: "green" | "blue" | "orange";
+  onCountClick?: (name: string) => void;
 }
 
 const colorMap = {
@@ -18,7 +19,7 @@ const textColorMap = {
   orange: "text-lb-orange",
 };
 
-export default function HorizontalBarChart({ title, data, color }: HorizontalBarChartProps) {
+export default function HorizontalBarChart({ title, data, color, onCountClick }: HorizontalBarChartProps) {
   return (
     <div className="bg-lb-surface rounded-lg p-5 md:p-6">
       <h3 className="text-sm uppercase tracking-widest text-lb-text mb-4 font-medium">{title}</h3>
@@ -29,9 +30,12 @@ export default function HorizontalBarChart({ title, data, color }: HorizontalBar
               <span className="text-sm sm:text-base text-lb-bright truncate mr-2 sm:mr-3 font-medium">
                 {item.name}
               </span>
-              <span className={`text-xs sm:text-sm font-bold ${textColorMap[color]} tabular-nums shrink-0`}>
+              <button
+                onClick={() => onCountClick?.(item.name)}
+                className={`text-xs sm:text-sm font-bold ${textColorMap[color]} tabular-nums shrink-0 hover:underline cursor-pointer transition-opacity hover:opacity-80`}
+              >
                 {item.count}
-              </span>
+              </button>
             </div>
             <div className="h-2 bg-lb-bar rounded-full overflow-hidden">
               <div
