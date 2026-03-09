@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 194,
-            "Compatibility": 92.5,
-            "Sum_Rating_Igor": 589.5,
-            "Sum_Rating_Valeria": 581.0,
+            "Total_Movies": 195,
+            "Compatibility": 92.6,
+            "Sum_Rating_Igor": 593.0,
+            "Sum_Rating_Valeria": 584.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -18749,6 +18749,65 @@
             "Similar_Films": [],
             "Rating_Igor": 3.0,
             "Rating_Valeria": 2.5
+        },
+        {
+            "id": 195,
+            "Film_title": "Upgrade",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/woLGROUdPWdBnLVFKYdGD3kFkPY.jpg",
+            "Release_year": 2018,
+            "Director": "Leigh Whannell",
+            "Cast": [
+                "Logan Marshall-Green",
+                "Betty Gabriel",
+                "Harrison Gilbertson",
+                "Melanie Vallejo",
+                "Benedict Hardie",
+                "Linda Cropper",
+                "Simon Maiden",
+                "Steve Danielsen",
+                "Richard Cawthorne",
+                "Christopher Kirby"
+            ],
+            "Average_rating": 3.65,
+            "Genres": [
+                "Thriller",
+                "Science Fiction",
+                "Action"
+            ],
+            "Themes": [
+                "Thrillers and murder mysteries",
+                "Epic heroes"
+            ],
+            "Nanogenres": [
+                "Thought-provoking sci-fi action and future technology",
+                "Adrenaline-fueled action and fast cars",
+                "Twisted dark psychological thriller",
+                "Action-packed space and alien sagas",
+                "Explosive and action-packed heroes vs. villains"
+            ],
+            "Runtime": 100,
+            "Countries": [
+                "Australia",
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "A brutal mugging leaves Grey Trace paralyzed in the hospital and his beloved wife dead. A billionaire inventor soon offers Trace a cure — an artificial intelligence implant called STEM that will enhance his body. Now able to walk, Grey finds that he also has superhuman strength and agility — skills he uses to seek revenge against the thugs who destroyed his life.",
+            "Studios": [
+                "Goalpost Pictures",
+                "Automatik Entertainment",
+                "Blumhouse Productions",
+                "Nervous Tick Productions",
+                "Film Victoria",
+                "BH Tilt",
+                "Fulcrum Media Finance"
+            ],
+            "Film_URL": "https://letterboxd.com/film/upgrade/",
+            "Similar_Films": [],
+            "Rating_Igor": 3.5,
+            "Rating_Valeria": 3.5
         }
     ]
 }
