@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
 import ProfileHeader from "@/components/ProfileHeader";
+import CastGrid from "@/components/CastGrid";
 import HorizontalBarChart from "@/components/HorizontalBarChart";
 import RatedGenresChart from "@/components/RatedGenresChart";
 import PosterGrid from "@/components/PosterGrid";
@@ -49,7 +50,7 @@ const totalDays = getTotalDays(movies);
 const uniqueDirectors = getUniqueDirectorsCount(movies);
 const uniqueCountries = getUniqueCountriesCount(movies);
 const uniqueLanguages = getUniqueLanguagesCount(movies);
-const topActors = getTopActors(movies);
+const topActors = getTopActors(movies, 15);
 const topLanguages = getTopLanguages(movies);
 const topThemes = getTopThemes(movies);
 const topNanogenres = getTopNanogenres(movies);
@@ -102,7 +103,7 @@ const Index = () => {
           <HorizontalBarChart title="Most Watched Countries" data={topCountries} color="blue" onCountClick={handleCountClick("Countries")} />
           <RatedGenresChart data={ratedGenres} />
           <HorizontalBarChart title="Most Watched Directors" data={topDirectors} color="blue" onCountClick={handleCountClick("Director")} />
-          <HorizontalBarChart title="Most Watched Actors" data={topActors} color="green" onCountClick={handleCountClick("Cast")} />
+          <CastGrid data={topActors} onActorClick={handleCountClick("Cast")} />
           <HorizontalBarChart title="Most Watched Languages" data={topLanguages} color="blue" onCountClick={handleCountClick("Spoken_languages")} />
         </div>
 
