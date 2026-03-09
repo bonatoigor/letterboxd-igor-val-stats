@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 192,
-            "Compatibility": 92.6,
-            "Sum_Rating_Igor": 583.0,
-            "Sum_Rating_Valeria": 575.5,
+            "Total_Movies": 193,
+            "Compatibility": 92.5,
+            "Sum_Rating_Igor": 586.5,
+            "Sum_Rating_Valeria": 578.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -18652,6 +18652,47 @@
             "Similar_Films": [],
             "Rating_Igor": 2.0,
             "Rating_Valeria": 2.5
+        },
+        {
+            "id": 193,
+            "Film_title": "The War Game",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/puJGNnrAPOv3BUMI9mKlCJp3UrQ.jpg",
+            "Release_year": 1966,
+            "Director": "Peter Watkins",
+            "Cast": [
+                "Michael Aspel",
+                "Kathy Staff",
+                "Peter Watkins",
+                "Peter Graham"
+            ],
+            "Average_rating": 4.08,
+            "Genres": [
+                "War",
+                "TV Movie"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
+                "Dangerous technology and the apocalypse",
+                "Politics, propaganda, and political documentaries"
+            ],
+            "Runtime": 48,
+            "Countries": [
+                "UK"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "A docudrama depicting a hypothetical nuclear attack on Britain. After backing the film's development, the BBC refused to air it, publicly stating \"the effect of the film has been judged by the BBC to be too horrifying for the medium of broadcasting.\" It debuted in theaters in 1966 and went on to great acclaim, but remained unseen on British television until 1985.",
+            "Studios": [
+                "BBC"
+            ],
+            "Film_URL": "https://letterboxd.com/film/the-war-game/",
+            "Similar_Films": [],
+            "Rating_Igor": 3.5,
+            "Rating_Valeria": 3.0
         }
     ]
 }
