@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 191,
+            "Total_Movies": 192,
             "Compatibility": 92.6,
-            "Sum_Rating_Igor": 581.0,
-            "Sum_Rating_Valeria": 573.0,
+            "Sum_Rating_Igor": 583.0,
+            "Sum_Rating_Valeria": 575.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -18599,6 +18599,58 @@
             "Film_URL": "https://letterboxd.com/film/the-wind-2018/",
             "Similar_Films": [],
             "Rating_Igor": 3.0,
+            "Rating_Valeria": 2.5
+        },
+        {
+            "id": 192,
+            "Film_title": "Testament",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/sIc7cgiGi1p4YK4zFEiObCUztXj.jpg",
+            "Release_year": 1983,
+            "Director": "Lynne Littman",
+            "Cast": [
+                "Jane Alexander",
+                "William Devane",
+                "Rossie Harris",
+                "Roxana Zal",
+                "Lukas Haas",
+                "Philip Anglim",
+                "Lilia Skala",
+                "Leon Ames",
+                "Lurene Tuttle",
+                "Rebecca De Mornay"
+            ],
+            "Average_rating": 3.58,
+            "Genres": [
+                "Drama",
+                "Science Fiction"
+            ],
+            "Themes": [
+                "Moving relationship stories"
+            ],
+            "Nanogenres": [
+                "Emotional and heartfelt family dramas",
+                "Heartbreaking and moving family drama",
+                "Powerful stories of heartbreak and suffering",
+                "Heartfelt and sentimental family stories",
+                "Enduring stories of family and marital drama"
+            ],
+            "Runtime": 90,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "It is just another day in the small town of Hamlin until something disastrous happens. Suddenly, news breaks that a series of nuclear warheads has been dropped along the Eastern Seaboard and, more locally, in California. As people begin coping with the devastating aftermath of the attacks — many suffer radiation poisoning — the Wetherly family tries to survive.",
+            "Studios": [
+                "American Playhouse",
+                "Entertainment Events",
+                "Paramount Pictures"
+            ],
+            "Film_URL": "https://letterboxd.com/film/testament/",
+            "Similar_Films": [],
+            "Rating_Igor": 2.0,
             "Rating_Valeria": 2.5
         }
     ]
