@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
 import ProfileHeader from "@/components/ProfileHeader";
+import CastGrid from "@/components/CastGrid";
 import HorizontalBarChart from "@/components/HorizontalBarChart";
 import RatedGenresChart from "@/components/RatedGenresChart";
 import PosterGrid from "@/components/PosterGrid";
