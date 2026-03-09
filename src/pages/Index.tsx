@@ -103,7 +103,7 @@ const Index = () => {
           <HorizontalBarChart title="Most Watched Countries" data={topCountries} color="blue" onCountClick={handleCountClick("Countries")} />
           <RatedGenresChart data={ratedGenres} />
           <HorizontalBarChart title="Most Watched Directors" data={topDirectors} color="blue" onCountClick={handleCountClick("Director")} />
-          <HorizontalBarChart title="Most Watched Actors" data={topActors} color="green" onCountClick={handleCountClick("Cast")} />
+          <CastGrid data={topActors} onActorClick={handleCountClick("Cast")} />
           <HorizontalBarChart title="Most Watched Languages" data={topLanguages} color="blue" onCountClick={handleCountClick("Spoken_languages")} />
         </div>
 
