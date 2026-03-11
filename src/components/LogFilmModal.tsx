@@ -67,6 +67,9 @@ export default function LogFilmModal() {
   const [loginPass, setLoginPass] = useState("");
   const [loginError, setLoginError] = useState(false);
   
+  // Mode: search vs manual slug
+  const [mode, setMode] = useState<"search" | "manual">("search");
+  
   // Search fields
   const [filmName, setFilmName] = useState("");
   const [filmYear, setFilmYear] = useState("");
@@ -74,6 +77,9 @@ export default function LogFilmModal() {
   const [searching, setSearching] = useState(false);
   const [selectedSlug, setSelectedSlug] = useState("");
   const [selectedTitle, setSelectedTitle] = useState("");
+  
+  // Manual slug
+  const [manualSlug, setManualSlug] = useState("");
   
   const [ratingI, setRatingI] = useState(0);
   const [ratingV, setRatingV] = useState(0);
@@ -118,12 +124,15 @@ export default function LogFilmModal() {
   };
 
   const handleStageFilm = () => {
-    if (!selectedSlug) return;
-    setStagedFilms([...stagedFilms, { slug: selectedSlug, title: selectedTitle, rating_i: ratingI, rating_v: ratingV }]);
+    const slug = mode === "manual" ? manualSlug.trim() : selectedSlug;
+    const title = mode === "manual" ? manualSlug.trim() : selectedTitle;
+    if (!slug) return;
+    setStagedFilms([...stagedFilms, { slug, title, rating_i: ratingI, rating_v: ratingV }]);
     setFilmName("");
     setFilmYear("");
     setSelectedSlug("");
     setSelectedTitle("");
+    setManualSlug("");
     setSearchResults([]);
     setRatingI(0);
     setRatingV(0);
@@ -234,11 +243,36 @@ export default function LogFilmModal() {
                 </button>
               </div>
               <DialogDescription className="text-lb-text/70 text-xs">
-                Pesquise o filme pelo nome e selecione o resultado correto.
+                Pesquise pelo nome ou insira o slug manualmente.
               </DialogDescription>
             </DialogHeader>
 
             <div className="space-y-5">
+              {/* Mode toggle */}
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setMode("search")}
+                  className={`flex-1 text-xs font-bold py-2 rounded-lg border transition-all ${
+                    mode === "search"
+                      ? "bg-lb-green/15 text-lb-green border-lb-green/30"
+                      : "text-lb-text/50 border-border/20 hover:text-lb-text/70"
+                  }`}
+                >
+                  🔍 Buscar por Nome
+                </button>
+                <button
+                  onClick={() => setMode("manual")}
+                  className={`flex-1 text-xs font-bold py-2 rounded-lg border transition-all ${
+                    mode === "manual"
+                      ? "bg-lb-green/15 text-lb-green border-lb-green/30"
+                      : "text-lb-text/50 border-border/20 hover:text-lb-text/70"
+                  }`}
+                >
+                  ✏️ Slug Manual
+                </button>
+              </div>
+              {mode === "search" ? (
+              <>
               {/* Search fields */}
               <div className="space-y-3">
                 <div>
@@ -317,6 +351,22 @@ export default function LogFilmModal() {
                   <span>Selecionado: <strong>{selectedTitle}</strong></span>
                 </div>
               )}
+              </>
+              ) : (
+              /* Manual slug input */
+              <div>
+                <label className="text-[11px] text-lb-text uppercase tracking-wider mb-2 block font-semibold">
+                  Letterboxd Slug
+                </label>
+                <input
+                  value={manualSlug}
+                  onChange={(e) => setManualSlug(e.target.value)}
+                  placeholder="ex: everything-everywhere-all-at-once"
+                  className="w-full bg-lb-body/50 border border-border/30 rounded-lg px-4 py-2.5 text-sm text-lb-bright placeholder:text-lb-text/30 focus:outline-none focus:ring-2 focus:ring-lb-green/20 focus:border-lb-green/50 transition-all"
+                  disabled={status === "loading"}
+                />
+              </div>
+              )}
 
               <div className="space-y-6">
                 <StarRating value={ratingI} onChange={setRatingI} label="Igor ★" color="text-lb-green" />
@@ -344,7 +394,7 @@ export default function LogFilmModal() {
                 type="button" 
                 variant="outline" 
                 onClick={handleStageFilm}
-                disabled={!selectedSlug}
+                disabled={mode === "search" ? !selectedSlug : !manualSlug.trim()}
                 className="w-full border-lb-green/30 text-lb-green hover:bg-lb-green/10"
               >
                 + Adicionar à lista de envio
