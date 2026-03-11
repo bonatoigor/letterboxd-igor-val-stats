@@ -271,6 +271,8 @@ export default function LogFilmModal() {
                   ✏️ Slug Manual
                 </button>
               </div>
+              {mode === "search" ? (
+              <>
               {/* Search fields */}
               <div className="space-y-3">
                 <div>
@@ -348,6 +350,22 @@ export default function LogFilmModal() {
                   <CheckCircle className="w-3.5 h-3.5 shrink-0" />
                   <span>Selecionado: <strong>{selectedTitle}</strong></span>
                 </div>
+              )}
+              </>
+              ) : (
+              /* Manual slug input */
+              <div>
+                <label className="text-[11px] text-lb-text uppercase tracking-wider mb-2 block font-semibold">
+                  Letterboxd Slug
+                </label>
+                <input
+                  value={manualSlug}
+                  onChange={(e) => setManualSlug(e.target.value)}
+                  placeholder="ex: everything-everywhere-all-at-once"
+                  className="w-full bg-lb-body/50 border border-border/30 rounded-lg px-4 py-2.5 text-sm text-lb-bright placeholder:text-lb-text/30 focus:outline-none focus:ring-2 focus:ring-lb-green/20 focus:border-lb-green/50 transition-all"
+                  disabled={status === "loading"}
+                />
+              </div>
               )}
 
               <div className="space-y-6">
