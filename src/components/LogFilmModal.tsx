@@ -394,7 +394,7 @@ export default function LogFilmModal() {
                 type="button" 
                 variant="outline" 
                 onClick={handleStageFilm}
-                disabled={!selectedSlug}
+                disabled={mode === "search" ? !selectedSlug : !manualSlug.trim()}
                 className="w-full border-lb-green/30 text-lb-green hover:bg-lb-green/10"
               >
                 + Adicionar à lista de envio
