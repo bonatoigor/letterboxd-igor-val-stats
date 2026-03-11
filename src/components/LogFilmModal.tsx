@@ -124,12 +124,15 @@ export default function LogFilmModal() {
   };
 
   const handleStageFilm = () => {
-    if (!selectedSlug) return;
-    setStagedFilms([...stagedFilms, { slug: selectedSlug, title: selectedTitle, rating_i: ratingI, rating_v: ratingV }]);
+    const slug = mode === "manual" ? manualSlug.trim() : selectedSlug;
+    const title = mode === "manual" ? manualSlug.trim() : selectedTitle;
+    if (!slug) return;
+    setStagedFilms([...stagedFilms, { slug, title, rating_i: ratingI, rating_v: ratingV }]);
     setFilmName("");
     setFilmYear("");
     setSelectedSlug("");
     setSelectedTitle("");
+    setManualSlug("");
     setSearchResults([]);
     setRatingI(0);
     setRatingV(0);
