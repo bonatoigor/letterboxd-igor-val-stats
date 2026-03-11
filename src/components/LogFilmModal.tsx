@@ -243,11 +243,34 @@ export default function LogFilmModal() {
                 </button>
               </div>
               <DialogDescription className="text-lb-text/70 text-xs">
-                Pesquise o filme pelo nome e selecione o resultado correto.
+                Pesquise pelo nome ou insira o slug manualmente.
               </DialogDescription>
             </DialogHeader>
 
             <div className="space-y-5">
+              {/* Mode toggle */}
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setMode("search")}
+                  className={`flex-1 text-xs font-bold py-2 rounded-lg border transition-all ${
+                    mode === "search"
+                      ? "bg-lb-green/15 text-lb-green border-lb-green/30"
+                      : "text-lb-text/50 border-border/20 hover:text-lb-text/70"
+                  }`}
+                >
+                  🔍 Buscar por Nome
+                </button>
+                <button
+                  onClick={() => setMode("manual")}
+                  className={`flex-1 text-xs font-bold py-2 rounded-lg border transition-all ${
+                    mode === "manual"
+                      ? "bg-lb-green/15 text-lb-green border-lb-green/30"
+                      : "text-lb-text/50 border-border/20 hover:text-lb-text/70"
+                  }`}
+                >
+                  ✏️ Slug Manual
+                </button>
+              </div>
               {/* Search fields */}
               <div className="space-y-3">
                 <div>
