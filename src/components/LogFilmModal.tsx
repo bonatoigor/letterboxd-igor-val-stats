@@ -67,6 +67,9 @@ export default function LogFilmModal() {
   const [loginPass, setLoginPass] = useState("");
   const [loginError, setLoginError] = useState(false);
   
+  // Mode: search vs manual slug
+  const [mode, setMode] = useState<"search" | "manual">("search");
+  
   // Search fields
   const [filmName, setFilmName] = useState("");
   const [filmYear, setFilmYear] = useState("");
@@ -74,6 +77,9 @@ export default function LogFilmModal() {
   const [searching, setSearching] = useState(false);
   const [selectedSlug, setSelectedSlug] = useState("");
   const [selectedTitle, setSelectedTitle] = useState("");
+  
+  // Manual slug
+  const [manualSlug, setManualSlug] = useState("");
   
   const [ratingI, setRatingI] = useState(0);
   const [ratingV, setRatingV] = useState(0);
