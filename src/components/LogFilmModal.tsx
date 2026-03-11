@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Plus, Film, Loader2, CheckCircle, AlertCircle, Lock, LogOut } from "lucide-react";
+import { Plus, Film, Loader2, CheckCircle, AlertCircle, Lock, LogOut, Search } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 
 type Status = "idle" | "loading" | "success" | "error";
+type SearchResult = { slug: string; title: string; year: string };
 
 const RATING_OPTIONS = Array.from({ length: 11 }, (_, i) => i * 0.5);
 const AUTH_KEY = "lb_admin_auth";
@@ -65,17 +66,65 @@ export default function LogFilmModal() {
   const [loginUser, setLoginUser] = useState("");
   const [loginPass, setLoginPass] = useState("");
   const [loginError, setLoginError] = useState(false);
-  const [slug, setSlug] = useState("");
+  
+  // Search fields
+  const [filmName, setFilmName] = useState("");
+  const [filmYear, setFilmYear] = useState("");
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  const [searching, setSearching] = useState(false);
+  const [selectedSlug, setSelectedSlug] = useState("");
+  const [selectedTitle, setSelectedTitle] = useState("");
+  
   const [ratingI, setRatingI] = useState(0);
   const [ratingV, setRatingV] = useState(0);
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
-  const [stagedFilms, setStagedFilms] = useState<{slug: string, rating_i: number, rating_v: number}[]>([]);
+  const [stagedFilms, setStagedFilms] = useState<{slug: string, title: string, rating_i: number, rating_v: number}[]>([]);
+
+  const handleSearch = async () => {
+    if (!filmName.trim()) return;
+    setSearching(true);
+    setSearchResults([]);
+    setSelectedSlug("");
+    setSelectedTitle("");
+
+    try {
+      const { data, error } = await supabase.functions.invoke("search-film", {
+        body: { name: filmName.trim(), year: filmYear.trim() || undefined },
+      });
+
+      if (error) throw error;
+
+      if (data?.results?.length > 0) {
+        setSearchResults(data.results);
+        // Auto-select first result
+        setSelectedSlug(data.results[0].slug);
+        setSelectedTitle(`${data.results[0].title} (${data.results[0].year})`);
+      } else {
+        setMessage("Nenhum filme encontrado. Tente outro nome.");
+        setStatus("error");
+      }
+    } catch (err: unknown) {
+      setMessage(err instanceof Error ? err.message : "Erro na busca");
+      setStatus("error");
+    } finally {
+      setSearching(false);
+    }
+  };
+
+  const handleSelectResult = (r: SearchResult) => {
+    setSelectedSlug(r.slug);
+    setSelectedTitle(`${r.title} (${r.year})`);
+  };
 
   const handleStageFilm = () => {
-    if (!slug.trim()) return;
-    setStagedFilms([...stagedFilms, { slug: slug.trim(), rating_i: ratingI, rating_v: ratingV }]);
-    setSlug("");
+    if (!selectedSlug) return;
+    setStagedFilms([...stagedFilms, { slug: selectedSlug, title: selectedTitle, rating_i: ratingI, rating_v: ratingV }]);
+    setFilmName("");
+    setFilmYear("");
+    setSelectedSlug("");
+    setSelectedTitle("");
+    setSearchResults([]);
     setRatingI(0);
     setRatingV(0);
   };
@@ -87,7 +136,7 @@ export default function LogFilmModal() {
 
     try {
       const { data, error } = await supabase.functions.invoke("trigger-film-update", {
-        body: { films: stagedFilms }, 
+        body: { films: stagedFilms.map(f => ({ slug: f.slug, rating_i: f.rating_i, rating_v: f.rating_v })) }, 
       });
 
       if (error) throw error;
@@ -110,6 +159,9 @@ export default function LogFilmModal() {
     if (!v) {
       setStatus("idle");
       setMessage("");
+      setSearchResults([]);
+      setSelectedSlug("");
+      setSelectedTitle("");
     }
   };
 
@@ -132,7 +184,7 @@ export default function LogFilmModal() {
           <span className="hidden md:inline">Add Movie</span>
         </Button>
       </DialogTrigger>
-      <DialogContent className="bg-lb-surface border-border/50 w-[95vw] max-w-md rounded-2xl p-6 overflow-hidden">
+      <DialogContent className="bg-lb-surface border-border/50 w-[95vw] max-w-md rounded-2xl p-6 overflow-hidden max-h-[90vh] overflow-y-auto">
         {!authed ? (
           <>
             <DialogHeader className="mb-4">
@@ -182,23 +234,89 @@ export default function LogFilmModal() {
                 </button>
               </div>
               <DialogDescription className="text-lb-text/70 text-xs">
-                Insira o slug do Letterboxd e as notas individuais.
+                Pesquise o filme pelo nome e selecione o resultado correto.
               </DialogDescription>
             </DialogHeader>
 
-            <div className="space-y-6">
-              <div>
-                <label className="text-[11px] text-lb-text uppercase tracking-wider mb-2 block font-semibold">
-                  Letterboxd Slug
-                </label>
-                <input
-                  value={slug}
-                  onChange={(e) => setSlug(e.target.value)}
-                  placeholder="ex: everything-everywhere-all-at-once"
-                  className="w-full bg-lb-body/50 border border-border/30 rounded-lg px-4 py-2.5 text-sm text-lb-bright placeholder:text-lb-text/30 focus:outline-none focus:ring-2 focus:ring-lb-green/20 focus:border-lb-green/50 transition-all"
-                  disabled={status === "loading"}
-                />
+            <div className="space-y-5">
+              {/* Search fields */}
+              <div className="space-y-3">
+                <div>
+                  <label className="text-[11px] text-lb-text uppercase tracking-wider mb-2 block font-semibold">
+                    Nome do Filme
+                  </label>
+                  <input
+                    value={filmName}
+                    onChange={(e) => setFilmName(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                    placeholder="ex: Everything Everywhere All at Once"
+                    className="w-full bg-lb-body/50 border border-border/30 rounded-lg px-4 py-2.5 text-sm text-lb-bright placeholder:text-lb-text/30 focus:outline-none focus:ring-2 focus:ring-lb-green/20 focus:border-lb-green/50 transition-all"
+                    disabled={status === "loading"}
+                  />
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-28">
+                    <label className="text-[11px] text-lb-text uppercase tracking-wider mb-2 block font-semibold">
+                      Ano
+                    </label>
+                    <input
+                      value={filmYear}
+                      onChange={(e) => setFilmYear(e.target.value)}
+                      onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                      placeholder="1994"
+                      maxLength={4}
+                      className="w-full bg-lb-body/50 border border-border/30 rounded-lg px-4 py-2.5 text-sm text-lb-bright placeholder:text-lb-text/30 focus:outline-none focus:ring-2 focus:ring-lb-green/20 focus:border-lb-green/50 transition-all"
+                      disabled={status === "loading"}
+                    />
+                  </div>
+                  <div className="flex items-end flex-1">
+                    <Button
+                      onClick={handleSearch}
+                      disabled={!filmName.trim() || searching}
+                      className="w-full bg-lb-green/20 hover:bg-lb-green/30 text-lb-green font-bold h-[42px] rounded-lg border border-lb-green/30"
+                    >
+                      {searching ? (
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                      ) : (
+                        <>
+                          <Search className="w-4 h-4 mr-1.5" />
+                          Buscar
+                        </>
+                      )}
+                    </Button>
+                  </div>
+                </div>
               </div>
+
+              {/* Search results */}
+              {searchResults.length > 0 && (
+                <div className="bg-black/20 rounded-lg p-2 space-y-1 max-h-40 overflow-y-auto">
+                  <p className="text-[10px] uppercase text-lb-text/50 font-bold px-2 pt-1">Resultados:</p>
+                  {searchResults.map((r) => (
+                    <button
+                      key={r.slug}
+                      onClick={() => handleSelectResult(r)}
+                      className={`w-full text-left px-3 py-2 rounded-md text-sm transition-all ${
+                        selectedSlug === r.slug
+                          ? "bg-lb-green/15 text-lb-green border border-lb-green/30"
+                          : "text-lb-bright hover:bg-white/5 border border-transparent"
+                      }`}
+                    >
+                      <span className="font-medium">{r.title}</span>
+                      {r.year && <span className="text-lb-text/50 ml-2">({r.year})</span>}
+                      <span className="text-lb-text/30 text-[10px] block mt-0.5">{r.slug}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {/* Selected film indicator */}
+              {selectedSlug && (
+                <div className="flex items-center gap-2 text-xs text-lb-green bg-lb-green/5 border border-lb-green/20 rounded-lg px-3 py-2">
+                  <CheckCircle className="w-3.5 h-3.5 shrink-0" />
+                  <span>Selecionado: <strong>{selectedTitle}</strong></span>
+                </div>
+              )}
 
               <div className="space-y-6">
                 <StarRating value={ratingI} onChange={setRatingI} label="Igor ★" color="text-lb-green" />
@@ -226,7 +344,7 @@ export default function LogFilmModal() {
                 type="button" 
                 variant="outline" 
                 onClick={handleStageFilm}
-                disabled={!slug.trim()}
+                disabled={!selectedSlug}
                 className="w-full border-lb-green/30 text-lb-green hover:bg-lb-green/10"
               >
                 + Adicionar à lista de envio
@@ -237,7 +355,7 @@ export default function LogFilmModal() {
                   <p className="text-[10px] uppercase text-lb-text/50 font-bold">Prontos para enviar:</p>
                   {stagedFilms.map((f, i) => (
                     <div key={i} className="flex justify-between text-xs text-lb-bright border-b border-white/5 pb-1">
-                      <span>{f.slug}</span>
+                      <span>{f.title}</span>
                       <span className="text-lb-green">{f.rating_i} / {f.rating_v}</span>
                     </div>
                   ))}
