@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 195,
+            "Total_Movies": 196,
             "Compatibility": 92.6,
-            "Sum_Rating_Igor": 593.0,
-            "Sum_Rating_Valeria": 584.5,
+            "Sum_Rating_Igor": 596.0,
+            "Sum_Rating_Valeria": 587.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -18108,6 +18108,7 @@
                 "France",
                 "Italy"
             ],
+            "Description": "Clumsy Monsieur Hulot finds himself perplexed by the intimidating complexity of a gadget-filled Paris. He attempts to meet with a business contact but soon becomes lost. His roundabout journey parallels that of an American tourist, and as they weave through the inventive urban environment, they intermittently meet, developing an interest in one another.",
             "Film_URL": "https://letterboxd.com/film/playtime/",
             "Rating_Igor": 3.0,
             "Rating_Valeria": 1.0,
@@ -18153,6 +18154,7 @@
                 "USA",
                 "Bahrain"
             ],
+            "Description": "Every seven years, in an unsuspecting town, The Tournament takes place. A battle royale between 30 of the world's deadliest assassins. The last man standing receives the $10,000,000 cash prize and the title of World's No. 1 Assassin.",
             "Film_URL": "https://letterboxd.com/film/the-tournament/",
             "Rating_Igor": 2.5,
             "Rating_Valeria": 2.5,
@@ -18197,6 +18199,7 @@
             "Countries": [
                 "USA"
             ],
+            "Description": "Intent on seeing the Cahulawassee River before it's turned into one huge lake, outdoor fanatic Lewis Medlock takes his friends on a river-rafting trip they'll never forget into the dangerous American back-country.",
             "Film_URL": "https://letterboxd.com/film/deliverance/",
             "Rating_Igor": 3.5,
             "Rating_Valeria": 3.0,
@@ -18241,6 +18244,7 @@
             "Countries": [
                 "Canada"
             ],
+            "Description": "When disc jockey Grant Mazzy reports to his basement radio station in the Canadian town of Pontypool, he thinks it's just another day at work. But when he hears reports of a virus that turns people into zombies, Mazzy barricades himself in the radio booth and tries to figure out a way to warn his listeners about the virus and its unlikely mode of transmission.",
             "Film_URL": "https://letterboxd.com/film/pontypool/",
             "Rating_Igor": 2.0,
             "Rating_Valeria": 3.0,
@@ -18285,6 +18289,7 @@
                 "Germany",
                 "USA"
             ],
+            "Description": "Chris crashes into a carload of other young people, and the group of stranded motorists is soon lost in the woods of West Virginia, where they're hunted by three cannibalistic mountain men who are grossly disfigured by generations of inbreeding.",
             "Film_URL": "https://letterboxd.com/film/wrong-turn/",
             "Rating_Igor": 3.0,
             "Rating_Valeria": 3.0,
@@ -18330,6 +18335,7 @@
                 "Australia",
                 "UK"
             ],
+            "Description": "Documentary-style account of a nuclear holocaust and its effect on the working class city of Sheffield, England; and the eventual long term effects of nuclear war on civilization.",
             "Film_URL": "https://letterboxd.com/film/threads/",
             "Rating_Igor": 4.0,
             "Rating_Valeria": 5.0,
@@ -18373,6 +18379,7 @@
                 "Germany",
                 "USA"
             ],
+            "Description": "Retired military commander Colonel Dale Murphy hosts the simulated post-apocalyptic reality show where participants are challenged to survive a remote West Virginia wasteland. But the show turns into a nightmarish showdown when each realizes they are being hunted by an inbred family of cannibals determined to make them all dinner!",
             "Film_URL": "https://letterboxd.com/film/wrong-turn-2-dead-end/",
             "Rating_Igor": 2.0,
             "Rating_Valeria": 2.5,
@@ -18417,6 +18424,7 @@
             "Countries": [
                 "USA"
             ],
+            "Description": "In the mid-1980s, the U.S. is poised on the brink of nuclear war. This shadow looms over the residents of a small town in Kansas as they continue their daily lives. When the unthinkable happens and the bombs come down, the town's residents are thrust into the horrors of nuclear winter.",
             "Film_URL": "https://letterboxd.com/film/the-day-after/",
             "Rating_Igor": 3.5,
             "Rating_Valeria": 3.5,
@@ -18459,6 +18467,7 @@
             "Countries": [
                 "UK"
             ],
+            "Description": "The housemates of a fictional series of Big Brother face a terrifying zombie apocalypse, which leaves the Big Brother house as one of the last remaining safe places in a devastated Britain.",
             "Film_URL": "https://letterboxd.com/film/dead-set/",
             "Rating_Igor": 3.0,
             "Rating_Valeria": 3.0,
@@ -18504,6 +18513,7 @@
                 "USA",
                 "Germany"
             ],
+            "Description": "A psychotherapist journeys inside a comatose serial killer in the hopes of saving his latest victim.",
             "Film_URL": "https://letterboxd.com/film/the-cell/",
             "Rating_Igor": 3.0,
             "Rating_Valeria": 3.0,
@@ -18547,6 +18557,7 @@
             "Countries": [
                 "Canada"
             ],
+            "Description": "In the middle of a routine patrol, officer Daniel Carter happens upon a blood-soaked figure limping down a deserted stretch of road. He rushes the young man to a nearby rural hospital staffed by a skeleton crew, only to discover that patients and personnel are transforming into something inhuman.",
             "Film_URL": "https://letterboxd.com/film/the-void-2016/",
             "Rating_Igor": 3.0,
             "Rating_Valeria": 3.0,
@@ -18808,6 +18819,57 @@
             "Similar_Films": [],
             "Rating_Igor": 3.5,
             "Rating_Valeria": 3.5
+        },
+        {
+            "id": 196,
+            "Film_title": "Dead Man's Letters",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/uPfG3ZnXCdRdxZ88DqMe0UuIwBS.jpg",
+            "Release_year": 1986,
+            "Director": "Konstantin Lopushansky",
+            "Cast": [
+                "Rolan Bykov",
+                "Iosif Ryklin",
+                "Aleksandr Sabinin",
+                "Nora Gryakalova",
+                "Vadim Lobanov",
+                "Viktor Mikhaylov",
+                "Vera Mayorova",
+                "Svetlana Smirnova",
+                "Natalya Vlasova",
+                "Vatslav Dvorzhetsky"
+            ],
+            "Average_rating": 4.15,
+            "Genres": [
+                "Science Fiction",
+                "Drama"
+            ],
+            "Themes": [
+                "Monsters, aliens, sci-fi and the apocalypse"
+            ],
+            "Nanogenres": [
+                "Dangerous technology and the apocalypse",
+                "Thought-provoking sci-fi action and future technology",
+                "Imaginative space odysseys and alien encounters",
+                "Humanity's odyssey: earth and beyond",
+                "Surreal and thought-provoking visions of life and death"
+            ],
+            "Runtime": 83,
+            "Countries": [
+                "USSR"
+            ],
+            "Original_language": "Russian",
+            "Spoken_languages": [
+                "Russian"
+            ],
+            "Description": "In a desolate world following the nuclear apocalypse, a scholar helps a small group of adults and children survive in the basement of a former museum of history. In his mind, he writes letters to his only son that will never be read and tries to find shreds of hope in his new reality.",
+            "Studios": [
+                "Lenfilm",
+                "Pervoe Tvorcheskoe Obyedinenie"
+            ],
+            "Film_URL": "https://letterboxd.com/film/dead-mans-letters/",
+            "Similar_Films": [],
+            "Rating_Igor": 3.0,
+            "Rating_Valeria": 2.5
         }
     ]
 }
