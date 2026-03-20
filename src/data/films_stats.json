@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 199,
+            "Total_Movies": 200,
             "Compatibility": 92.4,
-            "Sum_Rating_Igor": 603.0,
-            "Sum_Rating_Valeria": 593.5,
+            "Sum_Rating_Igor": 607.0,
+            "Sum_Rating_Valeria": 597.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -19030,6 +19030,61 @@
             "Similar_Films": [],
             "Rating_Igor": 2.5,
             "Rating_Valeria": 2.0
+        },
+        {
+            "id": 200,
+            "Film_title": "Ready or Not",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/oJD9KQFoObZmxAS1je56SIFVNJt.jpg",
+            "Release_year": 2019,
+            "Director": "Matt Bettinelli-Olpin",
+            "Cast": [
+                "Samara Weaving",
+                "Mark O'Brien",
+                "Adam Brody",
+                "Henry Czerny",
+                "Andie MacDowell",
+                "Melanie Scrofano",
+                "Kristian Bruun",
+                "Elyse Levesque",
+                "Nicky Guadagni",
+                "John Ralston"
+            ],
+            "Average_rating": 3.51,
+            "Genres": [
+                "Horror",
+                "Comedy"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics",
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
+                "Twisted dark psychological thriller",
+                "Gory, gruesome, and slasher horror",
+                "Terrifying, haunted, and supernatural horror",
+                "Creepy, chilling, and terrifying horror",
+                "Bloody vampire horror"
+            ],
+            "Runtime": 95,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "A young bride's wedding night turns into her worst nightmare when her ridiculously rich in-laws force her to play a gruesome game of hide-and-seek.",
+            "Studios": [
+                "Mythology Entertainment",
+                "Vinson Films",
+                "Fox Searchlight Pictures",
+                "Radio Silence",
+                "TSG Entertainment"
+            ],
+            "Film_URL": "https://letterboxd.com/film/ready-or-not-2019/",
+            "Similar_Films": [],
+            "Rating_Igor": 4.0,
+            "Rating_Valeria": 3.5
         }
     ]
 }
