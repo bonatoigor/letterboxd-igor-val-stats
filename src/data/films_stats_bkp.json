@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 201,
-            "Compatibility": 92.4,
-            "Sum_Rating_Igor": 609.5,
-            "Sum_Rating_Valeria": 599.5,
+            "Total_Movies": 202,
+            "Compatibility": 92.5,
+            "Sum_Rating_Igor": 613.5,
+            "Sum_Rating_Valeria": 603.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -19140,6 +19140,59 @@
             "Similar_Films": [],
             "Rating_Igor": 2.5,
             "Rating_Valeria": 2.5
+        },
+        {
+            "id": 202,
+            "Film_title": "Scary Movie",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/fVQFPRuw3yWXojYDJvA5EoFjUOY.jpg",
+            "Release_year": 2000,
+            "Director": "Keenen Ivory Wayans",
+            "Cast": [
+                "Anna Faris",
+                "Regina Hall",
+                "Marlon Wayans",
+                "Shawn Wayans",
+                "Jon Abrahams",
+                "Lochlyn Munro",
+                "Shannon Elizabeth",
+                "Dave Sheridan",
+                "Cheri Oteri",
+                "Tanja Reichert"
+            ],
+            "Average_rating": 3.22,
+            "Genres": [
+                "Comedy"
+            ],
+            "Themes": [
+                "Crude humor and satire",
+                "Underdogs and coming of age"
+            ],
+            "Nanogenres": [
+                "Funny jokes and crude humor",
+                "Gags, jokes, and slapstick humor",
+                "Amusing jokes and witty satire",
+                "Spooky, scary comedy",
+                "Teen school antics and laughter"
+            ],
+            "Runtime": 88,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "A familiar-looking group of teenagers find themselves being stalked by a more-than-vaguely recognizable masked killer! As the victims begin to pile up and the laughs pile on, none of your favorite scary movies escape the razor-sharp satire of this outrageously funny parody!",
+            "Studios": [
+                "Brad Grey Pictures",
+                "Gold/Miller Productions",
+                "Wayans Bros. Entertainment",
+                "Dimension Films"
+            ],
+            "Film_URL": "https://letterboxd.com/film/scary-movie-2000/",
+            "Similar_Films": [],
+            "Rating_Igor": 4.0,
+            "Rating_Valeria": 4.0
         }
     ]
 }

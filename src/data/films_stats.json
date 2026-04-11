@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 202,
-            "Compatibility": 92.5,
-            "Sum_Rating_Igor": 613.5,
-            "Sum_Rating_Valeria": 603.5,
+            "Total_Movies": 203,
+            "Compatibility": 92.4,
+            "Sum_Rating_Igor": 616.5,
+            "Sum_Rating_Valeria": 607.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -19192,6 +19192,58 @@
             "Film_URL": "https://letterboxd.com/film/scary-movie-2000/",
             "Similar_Films": [],
             "Rating_Igor": 4.0,
+            "Rating_Valeria": 4.0
+        },
+        {
+            "id": 203,
+            "Film_title": "Scary Movie 2",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/7Eb1JWK0Cb0rbfsYjwfc9g0PbQH.jpg",
+            "Release_year": 2001,
+            "Director": "Keenen Ivory Wayans",
+            "Cast": [
+                "Anna Faris",
+                "Regina Hall",
+                "Marlon Wayans",
+                "Shawn Wayans",
+                "Christopher Masterson",
+                "Kathleen Robertson",
+                "David Cross",
+                "James Woods",
+                "Tim Curry",
+                "Tori Spelling"
+            ],
+            "Average_rating": 2.8,
+            "Genres": [
+                "Comedy"
+            ],
+            "Themes": [
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
+                "Funny jokes and crude humor",
+                "Spooky, scary comedy",
+                "Gags, jokes, and slapstick humor",
+                "Amusing jokes and witty satire",
+                "Action comedy and silly heroics"
+            ],
+            "Runtime": 82,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "While the original parodied slasher flicks like Scream, Keenen Ivory Wayans's sequel to Scary Movie takes comedic aim at haunted house movies. A group of students visit a mansion called \"Hell House,\" and murderous high jinks ensue.",
+            "Studios": [
+                "Brad Grey Pictures",
+                "Gold/Miller Productions",
+                "Wayans Bros. Entertainment",
+                "Dimension Films"
+            ],
+            "Film_URL": "https://letterboxd.com/film/scary-movie-2/",
+            "Similar_Films": [],
+            "Rating_Igor": 3.0,
             "Rating_Valeria": 4.0
         }
     ]
