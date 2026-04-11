@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 200,
+            "Total_Movies": 201,
             "Compatibility": 92.4,
-            "Sum_Rating_Igor": 607.0,
-            "Sum_Rating_Valeria": 597.0,
+            "Sum_Rating_Igor": 609.5,
+            "Sum_Rating_Valeria": 599.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -19085,6 +19085,61 @@
             "Similar_Films": [],
             "Rating_Igor": 4.0,
             "Rating_Valeria": 3.5
+        },
+        {
+            "id": 201,
+            "Film_title": "Dead End",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/7zEQIztSdusobBMM2TNHcffaldp.jpg",
+            "Release_year": 2003,
+            "Director": "Jean-Baptiste Andrea",
+            "Cast": [
+                "Ray Wise",
+                "Alexandra Holden",
+                "Lin Shaye",
+                "Mick Cain",
+                "William Rosenfeld",
+                "Amber Smith",
+                "Karen S. Gregan",
+                "Sharon Madden",
+                "Steve Valentine",
+                "Jimmie F. Skaggs"
+            ],
+            "Average_rating": 3.11,
+            "Genres": [
+                "Thriller",
+                "Horror",
+                "Mystery"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics",
+                "Intense violence and sexual transgression",
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
+                "Gory, gruesome, and slasher horror",
+                "Twisted dark psychological thriller",
+                "Terrifying, haunted, and supernatural horror",
+                "Gothic and eerie haunting horror",
+                "Creepy, chilling, and terrifying horror"
+            ],
+            "Runtime": 83,
+            "Countries": [
+                "France",
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "Christmas Eve. On his way to his in-laws with his family, Frank Harrington decides to try a shortcut, for the first time in 20 years. It turns out to be the biggest mistake of his life.",
+            "Studios": [
+                "Sagittaire Films",
+                "Captain Movies"
+            ],
+            "Film_URL": "https://letterboxd.com/film/dead-end-2003/",
+            "Similar_Films": [],
+            "Rating_Igor": 2.5,
+            "Rating_Valeria": 2.5
         }
     ]
 }

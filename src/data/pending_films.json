@@ -1,44 +1,38 @@
 [
-  {
-    "slug": "scary-movie-2000",
-    "rating_i": 4,
-    "rating_v": 4,
-    "timestamp": "2026-04-11T18:50:48.363Z"
-  },
-  {
-    "slug": "scary-movie-2",
-    "rating_i": 3,
-    "rating_v": 4,
-    "timestamp": "2026-04-11T18:50:48.363Z"
-  },
-  {
-    "slug": "scary-movie-3",
-    "rating_i": 3,
-    "rating_v": 2.5,
-    "timestamp": "2026-04-11T18:50:48.363Z"
-  },
-  {
-    "slug": "scary-movie-4",
-    "rating_i": 2.5,
-    "rating_v": 2.5,
-    "timestamp": "2026-04-11T18:50:48.363Z"
-  },
-  {
-    "slug": "scary-movie-5",
-    "rating_i": 2,
-    "rating_v": 2,
-    "timestamp": "2026-04-11T18:50:48.363Z"
-  },
-  {
-    "slug": "28-years-later-the-bone-temple",
-    "rating_i": 2,
-    "rating_v": 2,
-    "timestamp": "2026-04-11T18:50:48.363Z"
-  },
-  {
-    "slug": "affliction",
-    "rating_i": 2,
-    "rating_v": 2,
-    "timestamp": "2026-04-11T18:50:48.363Z"
-  }
+    {
+        "slug": "scary-movie-2",
+        "rating_i": 3,
+        "rating_v": 4,
+        "timestamp": "2026-04-11T18:50:48.363Z"
+    },
+    {
+        "slug": "scary-movie-3",
+        "rating_i": 3,
+        "rating_v": 2.5,
+        "timestamp": "2026-04-11T18:50:48.363Z"
+    },
+    {
+        "slug": "scary-movie-4",
+        "rating_i": 2.5,
+        "rating_v": 2.5,
+        "timestamp": "2026-04-11T18:50:48.363Z"
+    },
+    {
+        "slug": "scary-movie-5",
+        "rating_i": 2,
+        "rating_v": 2,
+        "timestamp": "2026-04-11T18:50:48.363Z"
+    },
+    {
+        "slug": "28-years-later-the-bone-temple",
+        "rating_i": 2,
+        "rating_v": 2,
+        "timestamp": "2026-04-11T18:50:48.363Z"
+    },
+    {
+        "slug": "affliction",
+        "rating_i": 2,
+        "rating_v": 2,
+        "timestamp": "2026-04-11T18:50:48.363Z"
+    }
 ]
