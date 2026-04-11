@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 205,
-            "Compatibility": 92.4,
-            "Sum_Rating_Igor": 622.0,
-            "Sum_Rating_Valeria": 612.5,
+            "Total_Movies": 206,
+            "Compatibility": 92.5,
+            "Sum_Rating_Igor": 624.0,
+            "Sum_Rating_Valeria": 614.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -19347,6 +19347,56 @@
             "Similar_Films": [],
             "Rating_Igor": 2.5,
             "Rating_Valeria": 2.5
+        },
+        {
+            "id": 206,
+            "Film_title": "Scary Movie 5",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/vBqLLxE6GaAPhO6v9EFvFbLZ7Ap.jpg",
+            "Release_year": 2013,
+            "Director": "Malcolm D. Lee",
+            "Cast": [
+                "Ashley French",
+                "Simon Rex",
+                "Charlie Sheen",
+                "Gracie Whitton",
+                "Ava Kolker",
+                "Heather Locklear",
+                "Molly Shannon",
+                "Josh Robert Thompson",
+                "Darrell Hammond",
+                "Marisa Saks"
+            ],
+            "Average_rating": 1.69,
+            "Genres": [
+                "Comedy"
+            ],
+            "Themes": [
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
+                "Funny jokes and crude humor",
+                "Gags, jokes, and slapstick humor",
+                "Spooky, scary comedy",
+                "Amusing jokes and witty satire",
+                "Action comedy and silly heroics"
+            ],
+            "Runtime": 88,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "Home with their newly-formed family, happy parents Dan and Jody are haunted by sinister, paranormal activities. Determined to expel the insidious force, they install security cameras and discover their family is being stalked by an evil dead demon.",
+            "Studios": [
+                "Dimension Films",
+                "Brad Grey Pictures"
+            ],
+            "Film_URL": "https://letterboxd.com/film/scary-movie-5/",
+            "Similar_Films": [],
+            "Rating_Igor": 2.0,
+            "Rating_Valeria": 2.0
         }
     ]
 }
