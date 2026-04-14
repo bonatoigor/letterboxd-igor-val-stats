@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "slug": "man-on-the-roof",
+    "rating_i": 2.5,
+    "rating_v": 3,
+    "timestamp": "2026-04-14T13:33:52.454Z"
+  },
+  {
+    "slug": "the-stone-tape",
+    "rating_i": 2,
+    "rating_v": 2.5,
+    "timestamp": "2026-04-14T13:33:52.454Z"
+  }
+]
