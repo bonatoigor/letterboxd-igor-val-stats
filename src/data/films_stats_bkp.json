@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 209,
+            "Total_Movies": 210,
             "Compatibility": 92.5,
-            "Sum_Rating_Igor": 630.5,
-            "Sum_Rating_Valeria": 621.5,
+            "Sum_Rating_Igor": 632.5,
+            "Sum_Rating_Valeria": 624.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -19553,6 +19553,58 @@
             "Similar_Films": [],
             "Rating_Igor": 2.5,
             "Rating_Valeria": 3.0
+        },
+        {
+            "id": 210,
+            "Film_title": "The Stone Tape",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/oNa0LrdaOCZUFmSJZviBHBoXepZ.jpg",
+            "Release_year": 1972,
+            "Director": "Peter Sasdy",
+            "Cast": [
+                "Michael Bryant",
+                "Jane Asher",
+                "Iain Cuthbertson",
+                "Michael Bates",
+                "Reginald Marsh",
+                "Tom Chadbon",
+                "John Forgeham",
+                "Philip Trewinnard",
+                "James Cosmo",
+                "Neil Wilson"
+            ],
+            "Average_rating": 3.28,
+            "Genres": [
+                "Horror",
+                "Mystery",
+                "Drama",
+                "TV Movie"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
+                "Terrifying, haunted, and supernatural horror",
+                "Creepy, chilling, and terrifying horror",
+                "Chilling experiments and classic monster horror",
+                "Spooky, scary comedy",
+                "Twisted dark psychological thriller"
+            ],
+            "Runtime": 90,
+            "Countries": [
+                "UK"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "A research team from an electronics company move into an old Victorian house to start work on finding a new recording medium. When team member Jill Greeley witnesses a ghost, team director Peter Brock decides not only to analyse the apparition, which he believes is a psychic impression trapped in a stone wall (dubbed a \"stone tape\"), but to exorcise it too - with terrifying results...",
+            "Studios": [
+                "BBC"
+            ],
+            "Film_URL": "https://letterboxd.com/film/the-stone-tape/",
+            "Similar_Films": [],
+            "Rating_Igor": 2.0,
+            "Rating_Valeria": 2.5
         }
     ]
 }

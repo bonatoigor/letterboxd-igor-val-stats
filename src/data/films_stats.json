@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 210,
+            "Total_Movies": 211,
             "Compatibility": 92.5,
-            "Sum_Rating_Igor": 632.5,
-            "Sum_Rating_Valeria": 624.0,
+            "Sum_Rating_Igor": 635.0,
+            "Sum_Rating_Valeria": 625.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -19605,6 +19605,58 @@
             "Similar_Films": [],
             "Rating_Igor": 2.0,
             "Rating_Valeria": 2.5
+        },
+        {
+            "id": 211,
+            "Film_title": "Dracula 2000",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/jnAfl6GSZbBMigL98RJGbOSk4V1.jpg",
+            "Release_year": 2000,
+            "Director": "Patrick Lussier",
+            "Cast": [
+                "Gerard Butler",
+                "Christopher Plummer",
+                "Jonny Lee Miller",
+                "Justine Waddell",
+                "Vitamin C",
+                "Jennifer Esposito",
+                "Omar Epps",
+                "Sean Patrick Thomas",
+                "Danny Masterson",
+                "Lochlyn Munro"
+            ],
+            "Average_rating": 2.33,
+            "Genres": [
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics",
+                "Faith and religion"
+            ],
+            "Nanogenres": [
+                "Bloody vampire horror",
+                "Creepy, chilling, and terrifying horror",
+                "Gothic and eerie haunting horror",
+                "Gory, gruesome, and slasher horror",
+                "Terrifying, haunted, and supernatural horror"
+            ],
+            "Runtime": 99,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "When a team of techno-savvy thieves break into a high-security vault, they don't discover priceless works of art... they find a crypt unopened for 100 years.",
+            "Studios": [
+                "Wes Craven Films",
+                "Dimension Films",
+                "Neo Art & Logic"
+            ],
+            "Film_URL": "https://letterboxd.com/film/dracula-2000/",
+            "Similar_Films": [],
+            "Rating_Igor": 2.5,
+            "Rating_Valeria": 1.5
         }
     ]
 }
