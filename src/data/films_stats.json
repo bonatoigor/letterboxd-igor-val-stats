@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 216,
+            "Total_Movies": 217,
             "Compatibility": 92.5,
-            "Sum_Rating_Igor": 652.0,
-            "Sum_Rating_Valeria": 641.0,
+            "Sum_Rating_Igor": 654.0,
+            "Sum_Rating_Valeria": 643.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -19922,6 +19922,43 @@
             "Film_URL": "https://letterboxd.com/film/world-war-z/",
             "Similar_Films": [],
             "Rating_Igor": 3.0,
+            "Rating_Valeria": 2.5
+        },
+        {
+            "id": 217,
+            "Film_title": "History of the Occult",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/b8qA9L6ZZyX57zprm9GlZ9Ta3uv.jpg",
+            "Release_year": null,
+            "Director": "Cristian Ponce",
+            "Cast": [
+                "Héctor Ostrovsky",
+                "Nadia Lozano",
+                "Casper Uncal",
+                "Agustín Recondo",
+                "Iván Esquerre",
+                "Luciano Guglielmino",
+                "Hernán Altamirano",
+                "Lucía Arreche",
+                "Cristian Salgueiro",
+                "Germán Baudino"
+            ],
+            "Average_rating": 3.57,
+            "Genres": [
+                "Drama",
+                "Horror",
+                "Thriller"
+            ],
+            "Themes": [],
+            "Nanogenres": [],
+            "Runtime": 82,
+            "Countries": [],
+            "Original_language": "English",
+            "Spoken_languages": [],
+            "Description": "During the last broadcast of 60 Minutes Before Midnight, the most watched journalistic program on television, Adrián Marcato could expose a conspiracy and link the government to a obscure secret society.",
+            "Studios": [],
+            "Film_URL": "https://letterboxd.com/film/history-of-the-occult/",
+            "Similar_Films": [],
+            "Rating_Igor": 2.0,
             "Rating_Valeria": 2.5
         }
     ]
