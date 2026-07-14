@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 224,
+            "Total_Movies": 225,
             "Compatibility": 92.4,
-            "Sum_Rating_Igor": 671.0,
-            "Sum_Rating_Valeria": 659.5,
+            "Sum_Rating_Igor": 673.5,
+            "Sum_Rating_Valeria": 662.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -20268,6 +20268,49 @@
             "Similar_Films": [],
             "Rating_Igor": 3.0,
             "Rating_Valeria": 3.5
+        },
+        {
+            "id": 225,
+            "Film_title": "Hokum",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/x6rHcQFiYcczLQPrmxXPAicm54E.jpg",
+            "Release_year": null,
+            "Director": "Damian McCarthy",
+            "Cast": [
+                "Adam Scott",
+                "Peter Coonan",
+                "David Wilmot",
+                "Florence Ordesh",
+                "Will O'Connell",
+                "Michael Patric",
+                "Brendan Conroy",
+                "Austin Amelio",
+                "Ezra Carlisle",
+                "Mallory Adams"
+            ],
+            "Average_rating": 3.31,
+            "Genres": [
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
+                "Terrifying, haunted, and supernatural horror",
+                "Twisted dark psychological thriller",
+                "Creepy, chilling, and terrifying horror",
+                "Gothic and eerie haunting horror",
+                "Spooky, scary comedy"
+            ],
+            "Runtime": 108,
+            "Countries": [],
+            "Original_language": "English",
+            "Spoken_languages": [],
+            "Description": "When novelist Ohm Bauman retreats to a remote inn to scatter his parents' ashes, he is consumed by tales of a witch haunting the honeymoon suite. Disturbing visions and a shocking disappearance forces him to confront dark corners of his past.",
+            "Studios": [],
+            "Film_URL": "https://letterboxd.com/film/hokum/",
+            "Similar_Films": [],
+            "Rating_Igor": 2.5,
+            "Rating_Valeria": 2.5
         }
     ]
 }
