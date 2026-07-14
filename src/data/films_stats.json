@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 226,
+            "Total_Movies": 227,
             "Compatibility": 92.4,
-            "Sum_Rating_Igor": 676.0,
-            "Sum_Rating_Valeria": 664.0,
+            "Sum_Rating_Igor": 678.5,
+            "Sum_Rating_Valeria": 666.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -20356,6 +20356,52 @@
             "Similar_Films": [],
             "Rating_Igor": 2.5,
             "Rating_Valeria": 2.0
+        },
+        {
+            "id": 227,
+            "Film_title": "Ready or Not 2: Here I Come",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/jRf89HVEtBZiSnOXXWDhZOfuTwW.jpg",
+            "Release_year": null,
+            "Director": "Matt Bettinelli-Olpin",
+            "Cast": [
+                "Samara Weaving",
+                "Kathryn Newton",
+                "Sarah Michelle Gellar",
+                "Shawn Hatosy",
+                "Nestor Carbonell",
+                "David Cronenberg",
+                "Elijah Wood",
+                "Kevin Durand",
+                "Olivia Cheng",
+                "Varun Saranga"
+            ],
+            "Average_rating": 3.31,
+            "Genres": [
+                "Thriller",
+                "Comedy",
+                "Horror"
+            ],
+            "Themes": [
+                "Crude humor and satire",
+                "Epic heroes"
+            ],
+            "Nanogenres": [
+                "Bloody vampire horror",
+                "Action comedy and silly heroics",
+                "Twisted dark psychological thriller",
+                "Gory, gruesome, and slasher horror",
+                "Laugh-out-loud relationship entanglements"
+            ],
+            "Runtime": 108,
+            "Countries": [],
+            "Original_language": "English",
+            "Spoken_languages": [],
+            "Description": "Moments after surviving an all-out attack from the Le Domas family, Grace discovers she’s reached the next level of the nightmarish game — and this time with her estranged sister Faith at her side. Grace has one chance to survive, keep her sister alive, and claim the High Seat of the Council that controls the world. Four rival families are hunting her for the throne, and whoever wins rules it all.",
+            "Studios": [],
+            "Film_URL": "https://letterboxd.com/film/ready-or-not-2-here-i-come/",
+            "Similar_Films": [],
+            "Rating_Igor": 2.5,
+            "Rating_Valeria": 2.5
         }
     ]
 }
