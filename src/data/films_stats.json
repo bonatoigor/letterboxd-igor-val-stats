@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 220,
-            "Compatibility": 92.5,
-            "Sum_Rating_Igor": 660.0,
-            "Sum_Rating_Valeria": 650.0,
+            "Total_Movies": 221,
+            "Compatibility": 92.4,
+            "Sum_Rating_Igor": 663.0,
+            "Sum_Rating_Valeria": 652.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -20096,6 +20096,52 @@
             "Similar_Films": [],
             "Rating_Igor": 2.0,
             "Rating_Valeria": 3.0
+        },
+        {
+            "id": 221,
+            "Film_title": "Starve Acre",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/5j37QHXuNygzEa2X54RMlOb6hj3.jpg",
+            "Release_year": null,
+            "Director": "Daniel Kokotajlo",
+            "Cast": [
+                "Matt Smith",
+                "Morfydd Clark",
+                "Arthur Shaw",
+                "Erin Richards",
+                "Sean Gilder",
+                "Melanie Kilburn",
+                "Robert Emms",
+                "Roger Barclay",
+                "Matilda Firth",
+                "Rocco Haynes"
+            ],
+            "Average_rating": 2.88,
+            "Genres": [
+                "Drama",
+                "Fantasy",
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
+                "Terrifying, haunted, and supernatural horror",
+                "Creepy, chilling, and terrifying horror",
+                "Gory, gruesome, and slasher horror",
+                "Gothic and eerie haunting horror",
+                "Twisted dark psychological thriller"
+            ],
+            "Runtime": 98,
+            "Countries": [],
+            "Original_language": "English",
+            "Spoken_languages": [],
+            "Description": "When their son starts acting strangely, a couple unwittingly allow dark and sinister forces into their home, awakening a long-dormant ancient evil rooted deep in the countryside.",
+            "Studios": [],
+            "Film_URL": "https://letterboxd.com/film/starve-acre/",
+            "Similar_Films": [],
+            "Rating_Igor": 3.0,
+            "Rating_Valeria": 2.0
         }
     ]
 }
