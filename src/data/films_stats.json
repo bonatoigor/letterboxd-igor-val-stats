@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 225,
+            "Total_Movies": 226,
             "Compatibility": 92.4,
-            "Sum_Rating_Igor": 673.5,
-            "Sum_Rating_Valeria": 662.0,
+            "Sum_Rating_Igor": 676.0,
+            "Sum_Rating_Valeria": 664.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -20311,6 +20311,51 @@
             "Similar_Films": [],
             "Rating_Igor": 2.5,
             "Rating_Valeria": 2.5
+        },
+        {
+            "id": 226,
+            "Film_title": "Good Luck, Have Fun, Don't Die",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/rWcfOdY7TU6lTdazWj0ebDZnAfO.jpg",
+            "Release_year": null,
+            "Director": "Gore Verbinski",
+            "Cast": [
+                "Sam Rockwell",
+                "Juno Temple",
+                "Haley Lu Richardson",
+                "Michael Peña",
+                "Zazie Beetz",
+                "Asim Chaudhry",
+                "Tom Taylor",
+                "Georgia Goodman",
+                "Daniel Barnett",
+                "Artie Wilkinson-Hunt"
+            ],
+            "Average_rating": 3.37,
+            "Genres": [
+                "Action",
+                "Science Fiction",
+                "Comedy"
+            ],
+            "Themes": [
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
+                "Dreamlike, quirky, and surreal storytelling",
+                "Thought-provoking sci-fi action and future technology",
+                "Surreal and thought-provoking visions of life and death",
+                "Funny jokes and crude humor",
+                "Action-packed space and alien sagas"
+            ],
+            "Runtime": 134,
+            "Countries": [],
+            "Original_language": "English",
+            "Spoken_languages": [],
+            "Description": "A 'Man from the Future' arrives at an LA diner where he must recruit the precise combination of disgruntled patrons to join him on a one-night quest to save the world from the terminal threat of a rogue artificial intelligence.",
+            "Studios": [],
+            "Film_URL": "https://letterboxd.com/film/good-luck-have-fun-dont-die/",
+            "Similar_Films": [],
+            "Rating_Igor": 2.5,
+            "Rating_Valeria": 2.0
         }
     ]
 }
