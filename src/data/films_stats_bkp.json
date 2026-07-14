@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 217,
+            "Total_Movies": 218,
             "Compatibility": 92.5,
-            "Sum_Rating_Igor": 654.0,
-            "Sum_Rating_Valeria": 643.5,
+            "Sum_Rating_Igor": 657.0,
+            "Sum_Rating_Valeria": 646.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -19960,6 +19960,52 @@
             "Similar_Films": [],
             "Rating_Igor": 2.0,
             "Rating_Valeria": 2.5
+        },
+        {
+            "id": 218,
+            "Film_title": "They Will Kill You",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/6oI4oQKTWMVUlr8Ivqydp28Ruu6.jpg",
+            "Release_year": null,
+            "Director": "Kirill Sokolov",
+            "Cast": [
+                "Zazie Beetz",
+                "Myha'la",
+                "Paterson Joseph",
+                "Tom Felton",
+                "Heather Graham",
+                "Patricia Arquette",
+                "Willie Ludik",
+                "David Viviers",
+                "Gabe Gabriel",
+                "Viktoria Korotkova"
+            ],
+            "Average_rating": 2.95,
+            "Genres": [
+                "Action",
+                "Comedy",
+                "Horror"
+            ],
+            "Themes": [
+                "Epic heroes",
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
+                "Bloody vampire horror",
+                "Action comedy and silly heroics",
+                "Intense combat and martial arts",
+                "Spooky, scary comedy",
+                "Superheroes in action-packed battles with villains"
+            ],
+            "Runtime": 94,
+            "Countries": [],
+            "Original_language": "English",
+            "Spoken_languages": [],
+            "Description": "A woman answers a help wanted ad to be a housekeeper in a mysterious New York City high-rise, unaware that she is entering a community that has seen a number of disappearances over the years and may be under the grip of a Satanic cult.",
+            "Studios": [],
+            "Film_URL": "https://letterboxd.com/film/they-will-kill-you/",
+            "Similar_Films": [],
+            "Rating_Igor": 3.0,
+            "Rating_Valeria": 3.0
         }
     ]
 }
