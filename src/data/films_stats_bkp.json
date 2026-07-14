@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 222,
+            "Total_Movies": 223,
             "Compatibility": 92.4,
-            "Sum_Rating_Igor": 665.0,
-            "Sum_Rating_Valeria": 654.0,
+            "Sum_Rating_Igor": 668.0,
+            "Sum_Rating_Valeria": 656.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -20188,6 +20188,52 @@
             "Film_URL": "https://letterboxd.com/film/a-working-man/",
             "Similar_Films": [],
             "Rating_Igor": 2.0,
+            "Rating_Valeria": 2.0
+        },
+        {
+            "id": 223,
+            "Film_title": "Opera",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/v5VBvSVu2sWLAmyQhKQwBV5aPJA.jpg",
+            "Release_year": null,
+            "Director": "Dario Argento",
+            "Cast": [
+                "Cristina Marsillach",
+                "Ian Charleson",
+                "Urbano Barberini",
+                "Daria Nicolodi",
+                "Coralina Cataldi-Tassoni",
+                "Antonella Vitale",
+                "William McNamara",
+                "Barbara Cupisti",
+                "Antonino Iuorio",
+                "Carola Stagnaro"
+            ],
+            "Average_rating": 3.65,
+            "Genres": [
+                "Thriller",
+                "Horror",
+                "Mystery"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics",
+                "Thrillers and murder mysteries"
+            ],
+            "Nanogenres": [
+                "Gory, gruesome, and slasher horror",
+                "Gothic and eerie haunting horror",
+                "Intriguing and suspenseful murder mysteries",
+                "Graphic violence and brutal revenge",
+                "Twisted dark psychological thriller"
+            ],
+            "Runtime": 107,
+            "Countries": [],
+            "Original_language": "English",
+            "Spoken_languages": [],
+            "Description": "A young opera singer is stalked by a deranged fan bent on killing the people associated with her to claim her for himself.",
+            "Studios": [],
+            "Film_URL": "https://letterboxd.com/film/opera/",
+            "Similar_Films": [],
+            "Rating_Igor": 3.0,
             "Rating_Valeria": 2.0
         }
     ]
