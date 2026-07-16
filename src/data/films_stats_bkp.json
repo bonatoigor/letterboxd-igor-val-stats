@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 228,
+            "Total_Movies": 229,
             "Compatibility": 92.4,
-            "Sum_Rating_Igor": 681.5,
-            "Sum_Rating_Valeria": 668.5,
+            "Sum_Rating_Igor": 683.5,
+            "Sum_Rating_Valeria": 670.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -20443,6 +20443,52 @@
             "Film_URL": "https://letterboxd.com/film/exit-8/",
             "Similar_Films": [],
             "Rating_Igor": 3.0,
+            "Rating_Valeria": 2.0
+        },
+        {
+            "id": 229,
+            "Film_title": "Sorry to Bother You",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/peTl1V04E9ppvhgvNmSX0r2ALqO.jpg",
+            "Release_year": null,
+            "Director": "Boots Riley",
+            "Cast": [
+                "LaKeith Stanfield",
+                "Tessa Thompson",
+                "Jermaine Fowler",
+                "Omari Hardwick",
+                "Terry Crews",
+                "Kate Berlant",
+                "Michael X. Sommers",
+                "Danny Glover",
+                "Steven Yeun",
+                "Armie Hammer"
+            ],
+            "Average_rating": 3.73,
+            "Genres": [
+                "Fantasy",
+                "Science Fiction",
+                "Comedy"
+            ],
+            "Themes": [
+                "Crude humor and satire",
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
+                "Dreamlike, quirky, and surreal storytelling",
+                "Amusing jokes and witty satire",
+                "Funny jokes and crude humor",
+                "Gags, jokes, and slapstick humor",
+                "Challenging or sexual themes & twists"
+            ],
+            "Runtime": 112,
+            "Countries": [],
+            "Original_language": "English",
+            "Spoken_languages": [],
+            "Description": "In an alternate present-day version of Oakland, black telemarketer Cassius Green discovers a magical key to professional success – which propels him into a macabre universe.",
+            "Studios": [],
+            "Film_URL": "https://letterboxd.com/film/sorry-to-bother-you/",
+            "Similar_Films": [],
+            "Rating_Igor": 2.0,
             "Rating_Valeria": 2.0
         }
     ]
