@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "slug": "sorry-to-bother-you",
+    "rating_i": 2,
+    "rating_v": 2,
+    "timestamp": "2026-07-16T00:06:09.982Z"
+  },
+  {
+    "slug": "the-empty-man",
+    "rating_i": 2.5,
+    "rating_v": 3,
+    "timestamp": "2026-07-16T00:06:09.982Z"
+  }
+]
