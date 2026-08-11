@@ -28,5 +28,11 @@
         "rating_i": 2.0,
         "rating_v": 1.0,
         "timestamp": "2026-08-11 21:17:28"
+    },
+    {
+        "slug": "scary-movie-2026",
+        "rating_i": 1.0,
+        "rating_v": 1.5,
+        "timestamp": "2026-08-11 22:10:06"
     }
 ]
