@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 231,
+            "Total_Movies": 232,
             "Compatibility": 92.3,
-            "Sum_Rating_Igor": 687.5,
-            "Sum_Rating_Valeria": 674.0,
+            "Sum_Rating_Igor": 691.0,
+            "Sum_Rating_Valeria": 678.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -20572,6 +20572,50 @@
             "Similar_Films": [],
             "Rating_Igor": 1.5,
             "Rating_Valeria": 0.5
+        },
+        {
+            "id": 232,
+            "Film_title": "The Godfather",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+            "Release_year": null,
+            "Director": "Francis Ford Coppola",
+            "Cast": [
+                "Marlon Brando",
+                "Al Pacino",
+                "James Caan",
+                "Robert Duvall",
+                "Richard S. Castellano",
+                "Diane Keaton",
+                "Talia Shire",
+                "Gianni Russo",
+                "Sterling Hayden",
+                "John Marley"
+            ],
+            "Average_rating": 4.51,
+            "Genres": [
+                "Crime",
+                "Drama"
+            ],
+            "Themes": [
+                "Crime, drugs and gangsters"
+            ],
+            "Nanogenres": [
+                "Gritty crime and ruthless gangsters",
+                "Violent crime and drugs",
+                "Gripping, intense violent crime",
+                "Violent action, guns, and crime",
+                "Brutal, violent prison drama"
+            ],
+            "Runtime": 175,
+            "Countries": [],
+            "Original_language": "English",
+            "Spoken_languages": [],
+            "Description": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+            "Studios": [],
+            "Film_URL": "https://letterboxd.com/film/the-godfather/",
+            "Similar_Films": [],
+            "Rating_Igor": 3.5,
+            "Rating_Valeria": 4.0
         }
     ]
 }
