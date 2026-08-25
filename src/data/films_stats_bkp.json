@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 230,
-            "Compatibility": 92.4,
-            "Sum_Rating_Igor": 686.0,
-            "Sum_Rating_Valeria": 673.5,
+            "Total_Movies": 231,
+            "Compatibility": 92.3,
+            "Sum_Rating_Igor": 687.5,
+            "Sum_Rating_Valeria": 674.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -20535,6 +20535,43 @@
             "Similar_Films": [],
             "Rating_Igor": 2.5,
             "Rating_Valeria": 3.0
+        },
+        {
+            "id": 231,
+            "Film_title": "The House",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/3TQR2KEWbtBtabKIBwadrVmLydY.jpg",
+            "Release_year": null,
+            "Director": "Rick Ostermann",
+            "Cast": [
+                "Tobias Moretti",
+                "Valery Tscheplanowa",
+                "Hans-Jochen Wagner",
+                "Lisa Vicari",
+                "Max von der Groeben",
+                "Samir Fuchs",
+                "Daniel Krauss",
+                "Alexander Wipprecht",
+                "Aminata Belli",
+                "Verena Vorjohann"
+            ],
+            "Average_rating": 2.3,
+            "Genres": [
+                "Thriller",
+                "Science Fiction",
+                "Drama"
+            ],
+            "Themes": [],
+            "Nanogenres": [],
+            "Runtime": 90,
+            "Countries": [],
+            "Original_language": "English",
+            "Spoken_languages": [],
+            "Description": "A married couple retreats to a luxury, high-tech, fully automated house on a remote island. The house AI system goes rogue and turns against them.",
+            "Studios": [],
+            "Film_URL": "https://letterboxd.com/film/the-house-2021/",
+            "Similar_Films": [],
+            "Rating_Igor": 1.5,
+            "Rating_Valeria": 0.5
         }
     ]
 }
