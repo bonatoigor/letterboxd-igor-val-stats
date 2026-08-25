@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 234,
+            "Total_Movies": 235,
             "Compatibility": 92.3,
-            "Sum_Rating_Igor": 697.0,
-            "Sum_Rating_Valeria": 683.0,
+            "Sum_Rating_Igor": 699.0,
+            "Sum_Rating_Valeria": 684.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -20705,6 +20705,53 @@
             "Similar_Films": [],
             "Rating_Igor": 2.5,
             "Rating_Valeria": 2.0
+        },
+        {
+            "id": 235,
+            "Film_title": "The Sheep Detectives",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/iKy5460GdsoknM8ppmGlJbKxAKa.jpg",
+            "Release_year": null,
+            "Director": "Kyle Balda",
+            "Cast": [
+                "Hugh Jackman",
+                "Nicholas Braun",
+                "Nicholas Galitzine",
+                "Molly Gordon",
+                "Julia Louis-Dreyfus",
+                "Bryan Cranston",
+                "Chris O'Dowd",
+                "Regina Hall",
+                "Patrick Stewart",
+                "Bella Ramsey"
+            ],
+            "Average_rating": 3.78,
+            "Genres": [
+                "Mystery",
+                "Family",
+                "Comedy"
+            ],
+            "Themes": [
+                "Crude humor and satire",
+                "Thrillers and murder mysteries",
+                "Moving relationship stories"
+            ],
+            "Nanogenres": [
+                "Adorable animals and heartwarming families",
+                "Intriguing and suspenseful murder mysteries",
+                "Kids' animated fun and adventure",
+                "Laugh-out-loud relationship entanglements",
+                "Quirky and endearing relationships"
+            ],
+            "Runtime": 109,
+            "Countries": [],
+            "Original_language": "English",
+            "Spoken_languages": [],
+            "Description": "George Hardy is a shepherd who reads detective novels to his beloved sheep every night, assuming they can't possibly understand. But when a mysterious incident disrupts life on the farm, the sheep realize they must become the detectives. As they follow the clues and investigate human suspects, they prove that even sheep can be brilliant crime-solvers.",
+            "Studios": [],
+            "Film_URL": "https://letterboxd.com/film/the-sheep-detectives/",
+            "Similar_Films": [],
+            "Rating_Igor": 2.0,
+            "Rating_Valeria": 1.0
         }
     ]
 }
