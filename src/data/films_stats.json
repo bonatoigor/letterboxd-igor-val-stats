@@ -19835,7 +19835,7 @@
             "id": 215,
             "Film_title": "Terminator 2: Judgment Day",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/jFTVD4XoWQTcg7wdyJKa8PEds5q.jpg",
-            "Release_year": null,
+            "Release_year": 1991,
             "Director": "James Cameron",
             "Cast": [
                 "Arnold Schwarzenegger",
@@ -19868,11 +19868,22 @@
                 "Adrenaline-fueled action and fast cars"
             ],
             "Runtime": 137,
-            "Countries": [],
+            "Countries": [
+                "France",
+                "USA"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "English",
+                "Spanish"
+            ],
             "Description": "Ten years after the events of the original, a reprogrammed T-800 is sent back in time to protect young John Connor from the shape-shifting T-1000. Together with his mother Sarah, he fights to stop Skynet from triggering a nuclear apocalypse.",
-            "Studios": [],
+            "Studios": [
+                "Carolco Pictures",
+                "Pacific Western",
+                "Lightstorm Entertainment",
+                "Le Studio Canal+"
+            ],
             "Film_URL": "https://letterboxd.com/film/terminator-2-judgment-day/",
             "Similar_Films": [],
             "Rating_Igor": 4.0,
@@ -19882,7 +19893,7 @@
             "id": 216,
             "Film_title": "World War Z",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/aCnVdvExw6UWSeQfr0tUH3jr4qG.jpg",
-            "Release_year": null,
+            "Release_year": 2013,
             "Director": "Marc Forster",
             "Cast": [
                 "Brad Pitt",
@@ -19914,11 +19925,22 @@
                 "Thought-provoking sci-fi action and future technology"
             ],
             "Runtime": 116,
-            "Countries": [],
+            "Countries": [
+                "USA"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "English"
+            ],
             "Description": "Life for former United Nations investigator Gerry Lane and his family seems content. Suddenly, the world is plagued by a mysterious infection turning whole human populations into rampaging mindless zombies. After barely escaping the chaos, Lane is persuaded to go on a mission to investigate this disease. What follows is a perilous trek around the world where Lane must brave horrific dangers and long odds to find answers before human civilization falls.",
-            "Studios": [],
+            "Studios": [
+                "GK Films",
+                "Paramount Pictures",
+                "Hemisphere Media Capital",
+                "2DUX",
+                "Skydance Media",
+                "Plan B Entertainment"
+            ],
             "Film_URL": "https://letterboxd.com/film/world-war-z/",
             "Similar_Films": [],
             "Rating_Igor": 3.0,
@@ -19928,7 +19950,7 @@
             "id": 217,
             "Film_title": "History of the Occult",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/b8qA9L6ZZyX57zprm9GlZ9Ta3uv.jpg",
-            "Release_year": null,
+            "Release_year": 2023,
             "Director": "Cristian Ponce",
             "Cast": [
                 "Héctor Ostrovsky",
@@ -19951,11 +19973,17 @@
             "Themes": [],
             "Nanogenres": [],
             "Runtime": 82,
-            "Countries": [],
-            "Original_language": "English",
-            "Spoken_languages": [],
+            "Countries": [
+                "Argentina"
+            ],
+            "Original_language": "Spanish",
+            "Spoken_languages": [
+                "Spanish"
+            ],
             "Description": "During the last broadcast of 60 Minutes Before Midnight, the most watched journalistic program on television, Adrián Marcato could expose a conspiracy and link the government to a obscure secret society.",
-            "Studios": [],
+            "Studios": [
+                "Tangram Cine"
+            ],
             "Film_URL": "https://letterboxd.com/film/history-of-the-occult/",
             "Similar_Films": [],
             "Rating_Igor": 2.0,
@@ -19965,7 +19993,7 @@
             "id": 218,
             "Film_title": "They Will Kill You",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/6oI4oQKTWMVUlr8Ivqydp28Ruu6.jpg",
-            "Release_year": null,
+            "Release_year": 2026,
             "Director": "Kirill Sokolov",
             "Cast": [
                 "Zazie Beetz",
@@ -19997,11 +20025,21 @@
                 "Superheroes in action-packed battles with villains"
             ],
             "Runtime": 94,
-            "Countries": [],
+            "Countries": [
+                "USA",
+                "South Africa"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "English"
+            ],
             "Description": "A woman answers a help wanted ad to be a housekeeper in a mysterious New York City high-rise, unaware that she is entering a community that has seen a number of disappearances over the years and may be under the grip of a Satanic cult.",
-            "Studios": [],
+            "Studios": [
+                "Nocturna",
+                "New Line Cinema",
+                "Domain Entertainment",
+                "Film Afrika"
+            ],
             "Film_URL": "https://letterboxd.com/film/they-will-kill-you/",
             "Similar_Films": [],
             "Rating_Igor": 3.0,
@@ -20011,7 +20049,7 @@
             "id": 219,
             "Film_title": "I Saw the TV Glow",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/hS4GYkYpN1rfl4GIxyc02sCyfAj.jpg",
-            "Release_year": null,
+            "Release_year": 2024,
             "Director": "Jane Schoenbrun",
             "Cast": [
                 "Justice Smith",
@@ -20042,11 +20080,20 @@
                 "Gothic and eerie haunting horror"
             ],
             "Runtime": 100,
-            "Countries": [],
+            "Countries": [
+                "USA"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "English"
+            ],
             "Description": "Teenager Owen is just trying to make it through life in the suburbs when his classmate Maddy introduces him to a mysterious TV show — a vision of a supernatural world beneath their own. In the pale glow of the television, Owen’s view of reality begins to crack.",
-            "Studios": [],
+            "Studios": [
+                "A24",
+                "Fruit Tree",
+                "Smudge Films",
+                "Hypnic Jerk"
+            ],
             "Film_URL": "https://letterboxd.com/film/i-saw-the-tv-glow/",
             "Similar_Films": [],
             "Rating_Igor": 1.0,
@@ -20056,7 +20103,7 @@
             "id": 220,
             "Film_title": "undertone",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/2PFgFMnrdCPXWiZl1PUvky7Mo9D.jpg",
-            "Release_year": null,
+            "Release_year": 2026,
             "Director": "Ian Tuason",
             "Cast": [
                 "Nina Kiri",
@@ -20087,11 +20134,23 @@
                 "Gory, gruesome, and slasher horror"
             ],
             "Runtime": 94,
-            "Countries": [],
+            "Countries": [
+                "Canada",
+                "USA"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "English"
+            ],
             "Description": "The host of a popular paranormal podcast becomes haunted by terrifying recordings mysteriously sent her way.",
-            "Studios": [],
+            "Studios": [
+                "Black Fawn Films",
+                "Slaterverse Pictures",
+                "KINO Studios",
+                "Spooky Pictures",
+                "DimensionGate",
+                "Feel Everything Productions"
+            ],
             "Film_URL": "https://letterboxd.com/film/undertone-2025/",
             "Similar_Films": [],
             "Rating_Igor": 2.0,
@@ -20101,7 +20160,7 @@
             "id": 221,
             "Film_title": "Starve Acre",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/5j37QHXuNygzEa2X54RMlOb6hj3.jpg",
-            "Release_year": null,
+            "Release_year": 2024,
             "Director": "Daniel Kokotajlo",
             "Cast": [
                 "Matt Smith",
@@ -20133,11 +20192,22 @@
                 "Twisted dark psychological thriller"
             ],
             "Runtime": 98,
-            "Countries": [],
+            "Countries": [
+                "UK",
+                "USA"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "English"
+            ],
             "Description": "When their son starts acting strangely, a couple unwittingly allow dark and sinister forces into their home, awakening a long-dormant ancient evil rooted deep in the countryside.",
-            "Studios": [],
+            "Studios": [
+                "House Productions",
+                "Brainstorm Media",
+                "BBC Film",
+                "BFI",
+                "Access Entertainment"
+            ],
             "Film_URL": "https://letterboxd.com/film/starve-acre/",
             "Similar_Films": [],
             "Rating_Igor": 3.0,
@@ -20147,7 +20217,7 @@
             "id": 222,
             "Film_title": "A Working Man",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/6FRFIogh3zFnVWn7Z6zcYnIbRcX.jpg",
-            "Release_year": null,
+            "Release_year": 2025,
             "Director": "David Ayer",
             "Cast": [
                 "Jason Statham",
@@ -20180,11 +20250,26 @@
                 "Brutal, violent prison drama"
             ],
             "Runtime": 116,
-            "Countries": [],
+            "Countries": [
+                "UK",
+                "USA"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "English",
+                "Russian",
+                "Spanish"
+            ],
             "Description": "Levon Cade left behind a decorated military career in the black ops to live a simple life working construction. But when his boss's daughter, who is like family to him, is taken by human traffickers, his search to bring her home uncovers a world of corruption far greater than he ever could have imagined.",
-            "Studios": [],
+            "Studios": [
+                "Cedar Park Entertainment",
+                "BlockFilm",
+                "Punch Palace Productions",
+                "Balboa Productions",
+                "Black Bear Pictures",
+                "Fifth Season",
+                "CAT5"
+            ],
             "Film_URL": "https://letterboxd.com/film/a-working-man/",
             "Similar_Films": [],
             "Rating_Igor": 2.0,
@@ -20194,7 +20279,7 @@
             "id": 223,
             "Film_title": "Opera",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/v5VBvSVu2sWLAmyQhKQwBV5aPJA.jpg",
-            "Release_year": null,
+            "Release_year": 1987,
             "Director": "Dario Argento",
             "Cast": [
                 "Cristina Marsillach",
@@ -20226,11 +20311,19 @@
                 "Twisted dark psychological thriller"
             ],
             "Runtime": 107,
-            "Countries": [],
-            "Original_language": "English",
-            "Spoken_languages": [],
+            "Countries": [
+                "Italy"
+            ],
+            "Original_language": "Italian",
+            "Spoken_languages": [
+                "Italian"
+            ],
             "Description": "A young opera singer is stalked by a deranged fan bent on killing the people associated with her to claim her for himself.",
-            "Studios": [],
+            "Studios": [
+                "ADC Films",
+                "Cecchi Gori Group Tiger Cinematografica",
+                "C.G. Silver Film"
+            ],
             "Film_URL": "https://letterboxd.com/film/opera/",
             "Similar_Films": [],
             "Rating_Igor": 3.0,
@@ -20240,7 +20333,7 @@
             "id": 224,
             "Film_title": "Arctic",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/dxRc0Y4IjSRLC2fYaguXQtJCI4e.jpg",
-            "Release_year": null,
+            "Release_year": 2018,
             "Director": "Joe Penna",
             "Cast": [
                 "Mads Mikkelsen",
@@ -20259,11 +20352,23 @@
                 "Air pilot heroism and survival"
             ],
             "Runtime": 98,
-            "Countries": [],
+            "Countries": [
+                "Iceland",
+                "USA"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "Danish",
+                "English"
+            ],
             "Description": "A man stranded in the Arctic is finally about to receive his long awaited rescue. However, after a tragic accident, his opportunity is lost and he must then decide whether to remain in the relative safety of his camp or embark on a deadly trek through the unknown for potential salvation.",
-            "Studios": [],
+            "Studios": [
+                "Armory Films",
+                "Pegasus Pictures",
+                "Union Entertainment Group",
+                "The Domain Group",
+                "XYZ Films"
+            ],
             "Film_URL": "https://letterboxd.com/film/arctic-2018/",
             "Similar_Films": [],
             "Rating_Igor": 3.0,
@@ -20273,7 +20378,7 @@
             "id": 225,
             "Film_title": "Hokum",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/x6rHcQFiYcczLQPrmxXPAicm54E.jpg",
-            "Release_year": null,
+            "Release_year": 2026,
             "Director": "Damian McCarthy",
             "Cast": [
                 "Adam Scott",
@@ -20302,11 +20407,26 @@
                 "Spooky, scary comedy"
             ],
             "Runtime": 108,
-            "Countries": [],
+            "Countries": [
+                "USA",
+                "Ireland",
+                "United Arab Emirates",
+                "Hong Kong"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "English",
+                "Spanish"
+            ],
             "Description": "When novelist Ohm Bauman retreats to a remote inn to scatter his parents' ashes, he is consumed by tales of a witch haunting the honeymoon suite. Disturbing visions and a shocking disappearance forces him to confront dark corners of his past.",
-            "Studios": [],
+            "Studios": [
+                "Spooky Pictures",
+                "Image Nation Abu Dhabi",
+                "Cweature Features",
+                "Team Thrives",
+                "Tailored Films",
+                "Fís Éireann/Screen Ireland"
+            ],
             "Film_URL": "https://letterboxd.com/film/hokum/",
             "Similar_Films": [],
             "Rating_Igor": 2.5,
@@ -20316,7 +20436,7 @@
             "id": 226,
             "Film_title": "Good Luck, Have Fun, Don't Die",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/rWcfOdY7TU6lTdazWj0ebDZnAfO.jpg",
-            "Release_year": null,
+            "Release_year": 2026,
             "Director": "Gore Verbinski",
             "Cast": [
                 "Sam Rockwell",
@@ -20347,11 +20467,21 @@
                 "Action-packed space and alien sagas"
             ],
             "Runtime": 134,
-            "Countries": [],
+            "Countries": [
+                "USA",
+                "Germany"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "English"
+            ],
             "Description": "A 'Man from the Future' arrives at an LA diner where he must recruit the precise combination of disgruntled patrons to join him on a one-night quest to save the world from the terminal threat of a rogue artificial intelligence.",
-            "Studios": [],
+            "Studios": [
+                "Constantin Film",
+                "Blind Wink",
+                "3 Arts Entertainment",
+                "North.Five.Six."
+            ],
             "Film_URL": "https://letterboxd.com/film/good-luck-have-fun-dont-die/",
             "Similar_Films": [],
             "Rating_Igor": 2.5,
@@ -20361,7 +20491,7 @@
             "id": 227,
             "Film_title": "Ready or Not 2: Here I Come",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/jRf89HVEtBZiSnOXXWDhZOfuTwW.jpg",
-            "Release_year": null,
+            "Release_year": 2026,
             "Director": "Matt Bettinelli-Olpin",
             "Cast": [
                 "Samara Weaving",
@@ -20393,11 +20523,23 @@
                 "Laugh-out-loud relationship entanglements"
             ],
             "Runtime": 108,
-            "Countries": [],
+            "Countries": [
+                "USA"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "Spanish",
+                "English",
+                "Mandarin"
+            ],
             "Description": "Moments after surviving an all-out attack from the Le Domas family, Grace discovers she’s reached the next level of the nightmarish game — and this time with her estranged sister Faith at her side. Grace has one chance to survive, keep her sister alive, and claim the High Seat of the Council that controls the world. Four rival families are hunting her for the throne, and whoever wins rules it all.",
-            "Studios": [],
+            "Studios": [
+                "Searchlight Pictures",
+                "Mythology Entertainment",
+                "Radio Silence",
+                "Big Indie Pictures",
+                "Vinson Films"
+            ],
             "Film_URL": "https://letterboxd.com/film/ready-or-not-2-here-i-come/",
             "Similar_Films": [],
             "Rating_Igor": 2.5,
@@ -20407,7 +20549,7 @@
             "id": 228,
             "Film_title": "Exit 8",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/nQXYTvm6AY4WmtcPskroqC7Skh.jpg",
-            "Release_year": null,
+            "Release_year": 2025,
             "Director": "Genki Kawamura",
             "Cast": [
                 "Kazunari Ninomiya",
@@ -20435,11 +20577,25 @@
                 "Gothic and eerie haunting horror"
             ],
             "Runtime": 95,
-            "Countries": [],
-            "Original_language": "English",
-            "Spoken_languages": [],
+            "Countries": [
+                "Japan"
+            ],
+            "Original_language": "Japanese",
+            "Spoken_languages": [
+                "Japanese",
+                "English"
+            ],
             "Description": "A man trapped in an endless sterile subway passageway sets out to find Exit 8. The rules of his quest are simple: do not overlook anything out of the ordinary. If you discover an anomaly, turn back immediately. If you don’t, carry on. Then leave from Exit 8. But even a single oversight will send him back to the beginning. Will he ever reach his goal and escape this infinite corridor?",
-            "Studios": [],
+            "Studios": [
+                "TOHO",
+                "AOI Pro.",
+                "Story",
+                "Lawson",
+                "Suirinsha",
+                "Tohan",
+                "Office Nino",
+                "Metro Ad Agency"
+            ],
             "Film_URL": "https://letterboxd.com/film/exit-8/",
             "Similar_Films": [],
             "Rating_Igor": 3.0,
@@ -20449,7 +20605,7 @@
             "id": 229,
             "Film_title": "Sorry to Bother You",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/peTl1V04E9ppvhgvNmSX0r2ALqO.jpg",
-            "Release_year": null,
+            "Release_year": 2018,
             "Director": "Boots Riley",
             "Cast": [
                 "LaKeith Stanfield",
@@ -20481,11 +20637,21 @@
                 "Challenging or sexual themes & twists"
             ],
             "Runtime": 112,
-            "Countries": [],
+            "Countries": [
+                "USA"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "English"
+            ],
             "Description": "In an alternate present-day version of Oakland, black telemarketer Cassius Green discovers a magical key to professional success – which propels him into a macabre universe.",
-            "Studios": [],
+            "Studios": [
+                "Cinereach",
+                "Significant Productions",
+                "MACRO",
+                "MNM Creative",
+                "The Space Program"
+            ],
             "Film_URL": "https://letterboxd.com/film/sorry-to-bother-you/",
             "Similar_Films": [],
             "Rating_Igor": 2.0,
@@ -20495,7 +20661,7 @@
             "id": 230,
             "Film_title": "The Empty Man",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/8apzu9JFTUMtOpYkHk6LNPOs3pY.jpg",
-            "Release_year": null,
+            "Release_year": 2020,
             "Director": "David Prior",
             "Cast": [
                 "James Badge Dale",
@@ -20526,11 +20692,20 @@
                 "Gory, gruesome, and slasher horror"
             ],
             "Runtime": 137,
-            "Countries": [],
+            "Countries": [
+                "South Africa",
+                "USA"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "English"
+            ],
             "Description": "On the trail of a missing girl, an ex-cop comes across a secretive group attempting to summon a terrifying supernatural entity.",
-            "Studios": [],
+            "Studios": [
+                "BOOM! Studios",
+                "Out of Africa Entertainment",
+                "20th Century Fox"
+            ],
             "Film_URL": "https://letterboxd.com/film/the-empty-man/",
             "Similar_Films": [],
             "Rating_Igor": 2.5,
@@ -20540,7 +20715,7 @@
             "id": 231,
             "Film_title": "The House",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/3TQR2KEWbtBtabKIBwadrVmLydY.jpg",
-            "Release_year": null,
+            "Release_year": 2021,
             "Director": "Rick Ostermann",
             "Cast": [
                 "Tobias Moretti",
@@ -20563,11 +20738,20 @@
             "Themes": [],
             "Nanogenres": [],
             "Runtime": 90,
-            "Countries": [],
-            "Original_language": "English",
-            "Spoken_languages": [],
+            "Countries": [
+                "Germany"
+            ],
+            "Original_language": "German",
+            "Spoken_languages": [
+                "German"
+            ],
             "Description": "A married couple retreats to a luxury, high-tech, fully automated house on a remote island. The house AI system goes rogue and turns against them.",
-            "Studios": [],
+            "Studios": [
+                "NDR",
+                "RBB",
+                "ARTE",
+                "Wüste Film"
+            ],
             "Film_URL": "https://letterboxd.com/film/the-house-2021/",
             "Similar_Films": [],
             "Rating_Igor": 1.5,
@@ -20577,7 +20761,7 @@
             "id": 232,
             "Film_title": "The Godfather",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
-            "Release_year": null,
+            "Release_year": 1972,
             "Director": "Francis Ford Coppola",
             "Cast": [
                 "Marlon Brando",
@@ -20607,11 +20791,21 @@
                 "Brutal, violent prison drama"
             ],
             "Runtime": 175,
-            "Countries": [],
+            "Countries": [
+                "USA"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "English",
+                "Italian",
+                "Latin"
+            ],
             "Description": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
-            "Studios": [],
+            "Studios": [
+                "Paramount Pictures",
+                "Alfran Productions",
+                "Albert S. Ruddy Productions"
+            ],
             "Film_URL": "https://letterboxd.com/film/the-godfather/",
             "Similar_Films": [],
             "Rating_Igor": 3.5,
@@ -20621,7 +20815,7 @@
             "id": 233,
             "Film_title": "Alone",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/n9OzZmPMnVrV0cMQ7amX0DtBkQH.jpg",
-            "Release_year": null,
+            "Release_year": 2020,
             "Director": "John Hyams",
             "Cast": [
                 "Jules Willcox",
@@ -20649,11 +20843,20 @@
                 "Terrifying, haunted, and supernatural horror"
             ],
             "Runtime": 98,
-            "Countries": [],
+            "Countries": [
+                "USA"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "French",
+                "English"
+            ],
             "Description": "A recently widowed traveler is kidnapped by a cold blooded killer, only to escape into the wilderness where she is forced to battle against the elements as her pursuer closes in on her.",
-            "Studios": [],
+            "Studios": [
+                "Mill House Motion Pictures",
+                "Paperclip",
+                "XYZ Films"
+            ],
             "Film_URL": "https://letterboxd.com/film/alone-2020-1/",
             "Similar_Films": [],
             "Rating_Igor": 3.5,
@@ -20663,7 +20866,7 @@
             "id": 234,
             "Film_title": "Hoppers",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
-            "Release_year": null,
+            "Release_year": 2026,
             "Director": "Daniel Chong",
             "Cast": [
                 "Piper Curda",
@@ -20696,11 +20899,17 @@
                 "Holiday joy and heartwarming Christmas"
             ],
             "Runtime": 104,
-            "Countries": [],
+            "Countries": [
+                "USA"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "English"
+            ],
             "Description": "Scientists have discovered how to 'hop' human consciousness into lifelike robotic animals, allowing people to communicate with animals as animals. Animal lover Mabel seizes an opportunity to use the technology, uncovering mysteries within the animal world beyond anything she could have imagined.",
-            "Studios": [],
+            "Studios": [
+                "Pixar"
+            ],
             "Film_URL": "https://letterboxd.com/film/hoppers/",
             "Similar_Films": [],
             "Rating_Igor": 2.5,
@@ -20710,7 +20919,7 @@
             "id": 235,
             "Film_title": "The Sheep Detectives",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/iKy5460GdsoknM8ppmGlJbKxAKa.jpg",
-            "Release_year": null,
+            "Release_year": 2026,
             "Director": "Kyle Balda",
             "Cast": [
                 "Hugh Jackman",
@@ -20743,11 +20952,20 @@
                 "Quirky and endearing relationships"
             ],
             "Runtime": 109,
-            "Countries": [],
+            "Countries": [
+                "USA",
+                "UK"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "English"
+            ],
             "Description": "George Hardy is a shepherd who reads detective novels to his beloved sheep every night, assuming they can't possibly understand. But when a mysterious incident disrupts life on the farm, the sheep realize they must become the detectives. As they follow the clues and investigate human suspects, they prove that even sheep can be brilliant crime-solvers.",
-            "Studios": [],
+            "Studios": [
+                "Working Title Films",
+                "Three Strange Angels",
+                "Amazon MGM Studios"
+            ],
             "Film_URL": "https://letterboxd.com/film/the-sheep-detectives/",
             "Similar_Films": [],
             "Rating_Igor": 2.0,
@@ -20757,7 +20975,7 @@
             "id": 236,
             "Film_title": "Scary Movie",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/znHT8peERZRWG1ME3r0Db0EV8k8.jpg",
-            "Release_year": null,
+            "Release_year": 2026,
             "Director": "Michael Tiddes",
             "Cast": [
                 "Marlon Wayans",
@@ -20786,11 +21004,21 @@
                 "Amusing jokes and witty satire"
             ],
             "Runtime": 96,
-            "Countries": [],
+            "Countries": [
+                "USA"
+            ],
             "Original_language": "English",
-            "Spoken_languages": [],
+            "Spoken_languages": [
+                "English",
+                "Korean",
+                "Portuguese",
+                "Spanish"
+            ],
             "Description": "Twenty-six years after outrunning a suspiciously familiar masked killer, the Core Four are back in the killer's crosshairs and no horror movie IP is safe.",
-            "Studios": [],
+            "Studios": [
+                "Wayans Bros. Entertainment",
+                "Miramax"
+            ],
             "Film_URL": "https://letterboxd.com/film/scary-movie-2026/",
             "Similar_Films": [],
             "Rating_Igor": 1.0,
@@ -20800,7 +21028,7 @@
             "id": 237,
             "Film_title": "Frontier(s)",
             "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/6GISAjE0XiSucmzXIhb1tdnV2yC.jpg",
-            "Release_year": null,
+            "Release_year": 2007,
             "Director": "Xavier Gens",
             "Cast": [
                 "Samuel Le Bihan",
@@ -20824,11 +21052,23 @@
             "Themes": [],
             "Nanogenres": [],
             "Runtime": 108,
-            "Countries": [],
-            "Original_language": "English",
-            "Spoken_languages": [],
+            "Countries": [
+                "France",
+                "Switzerland"
+            ],
+            "Original_language": "French",
+            "Spoken_languages": [
+                "French",
+                "German"
+            ],
             "Description": "A gang of young thieves flee Paris during the violent aftermath of a political election, only to hole up at an Inn run by neo-Nazis.",
-            "Studios": [],
+            "Studios": [
+                "Chemin Vert",
+                "Cartel Productions",
+                "EuropaCorp",
+                "Pacific Films",
+                "BR Films"
+            ],
             "Film_URL": "https://letterboxd.com/film/frontiers/",
             "Similar_Films": [],
             "Rating_Igor": 3.0,
