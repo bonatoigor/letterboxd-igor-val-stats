@@ -3,7 +3,39 @@ import requests
 import time
 from letterboxdpy.user import User
 from letterboxdpy.movie import Movie
-from letterboxdpy.pages.movie_details import MovieDetails
+
+# ISO 639-1 code -> full language name, matching the naming already used in films_stats.json.
+LANGUAGE_NAMES = {
+    "en": "English", "es": "Spanish", "fr": "French", "de": "German", "it": "Italian",
+    "pt": "Portuguese", "ru": "Russian", "ja": "Japanese", "ko": "Korean", "zh": "Chinese",
+    "ar": "Arabic", "hi": "Hindi", "nl": "Dutch", "sv": "Swedish", "no": "Norwegian",
+    "da": "Danish", "fi": "Finnish", "pl": "Polish", "tr": "Turkish", "el": "Greek",
+    "he": "Hebrew", "th": "Thai", "vi": "Vietnamese", "id": "Indonesian", "cs": "Czech",
+    "hu": "Hungarian", "ro": "Romanian", "uk": "Ukrainian", "bg": "Bulgarian", "hr": "Croatian",
+    "sr": "Serbian", "sk": "Slovak", "sl": "Slovenian", "et": "Estonian", "lv": "Latvian",
+    "lt": "Lithuanian", "is": "Icelandic", "ga": "Irish", "ca": "Catalan", "eu": "Basque",
+    "gl": "Galician", "af": "Afrikaans", "sw": "Swahili", "fa": "Persian", "ur": "Urdu",
+    "bn": "Bengali", "ta": "Tamil", "te": "Telugu", "ml": "Malayalam", "mr": "Marathi",
+    "pa": "Punjabi", "gu": "Gujarati", "kn": "Kannada", "ne": "Nepali", "si": "Sinhala",
+    "km": "Khmer", "lo": "Lao", "my": "Burmese", "ka": "Georgian", "hy": "Armenian",
+    "az": "Azerbaijani", "kk": "Kazakh", "uz": "Uzbek", "mn": "Mongolian", "tl": "Tagalog",
+    "ms": "Malay", "la": "Latin", "cy": "Welsh", "mt": "Maltese", "sq": "Albanian",
+    "mk": "Macedonian", "bs": "Bosnian", "am": "Amharic", "yo": "Yoruba", "ig": "Igbo",
+    "zu": "Zulu", "xh": "Xhosa", "so": "Somali", "ku": "Kurdish", "ps": "Pashto",
+    "sd": "Sindhi", "yi": "Yiddish", "eo": "Esperanto", "zxx": "No spoken language",
+}
+
+def language_name(code):
+    return LANGUAGE_NAMES.get(code, code.upper()) if code else code
+
+def extract_extended_details(movie_obj):
+    """Country/studio/language from the movie's own JSON-LD (avoids the broken
+    /details page 'tab-details' selector in letterboxdpy and the extra request)."""
+    script = movie_obj.pages.profile.script or {}
+    countries = [c.get("name") for c in (script.get("countryOfOrigin") or []) if c.get("name")]
+    studios = [s.get("name") for s in (script.get("productionCompany") or []) if s.get("name")]
+    languages = [language_name(code) for code in (script.get("inLanguage") or []) if code]
+    return {"country": countries, "studio": studios, "language": languages}
 
 
 def buscar_poster_tmdb(movie_obj):
@@ -67,9 +99,7 @@ def gerar_banco_completo():
         print(f"[{i}/{total}] Processando: {slug}")
         try:
             m = Movie(slug)
-            md = MovieDetails(slug)
-
-            detalhes_extras = md.get_extended_details()
+            detalhes_extras = extract_extended_details(m)
             similar_list = []
 
             similares_raw = m.get_similar_movies()
