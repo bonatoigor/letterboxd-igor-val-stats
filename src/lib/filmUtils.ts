@@ -155,6 +155,7 @@ export function getRecentMovies(movies: Movie[], limit = 12): Movie[] {
 export function getDecadeDistribution(movies: Movie[]) {
   const decades: Record<string, number> = {};
   movies.forEach((m) => {
+    if (typeof m.Release_year !== "number" || Number.isNaN(m.Release_year)) return;
     const decade = `${Math.floor(m.Release_year / 10) * 10}s`;
     decades[decade] = (decades[decade] || 0) + 1;
   });

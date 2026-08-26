@@ -11,6 +11,7 @@ export default function ByYearChart({ movies }: ByYearChartProps) {
   const yearData = useMemo(() => {
     const byYear: Record<number, { count: number; ratingSum: number }> = {};
     movies.forEach((m) => {
+      if (typeof m.Release_year !== "number" || Number.isNaN(m.Release_year)) return;
       if (!byYear[m.Release_year]) byYear[m.Release_year] = { count: 0, ratingSum: 0 };
       byYear[m.Release_year].count += 1;
       const avg = ((m.Rating_Igor || 0) + (m.Rating_Valeria || 0)) / 2;
