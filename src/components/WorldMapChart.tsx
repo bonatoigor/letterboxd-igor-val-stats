@@ -142,7 +142,7 @@ export default function WorldMapChart({ movies }: WorldMapProps) {
                       {movie.Film_title} 
                     </span>
                     <span className="text-lb-text/60 text-sm italic">
-                      {movie.Release_year}
+                      {movie.Release_year ?? "—"}
                     </span>
                   </li>
                 ))}

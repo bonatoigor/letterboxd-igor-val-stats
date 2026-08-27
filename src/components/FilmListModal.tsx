@@ -45,7 +45,7 @@ export default function FilmListModal({ open, onOpenChange, title, movies }: Fil
                     </span>
                   </div>
                   <span className="text-xs sm:text-sm text-lb-text tabular-nums shrink-0">
-                    {movie.Release_year}
+                    {movie.Release_year ?? "—"}
                   </span>
                 </div>
               ))}

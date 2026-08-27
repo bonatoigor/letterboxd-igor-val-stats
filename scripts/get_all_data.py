@@ -180,7 +180,7 @@ def gerar_banco_completo():
 
     banco_final["General_Info"].append({
         "Total_Movies": len(movies),
-        "Compatibility": round(avg_comp, 2),
+        "Compatibility": round(avg_comp, 1),
         "Sum_Rating_Igor": sum(f["Rating_Igor"] for f in movies),
         "Sum_Rating_Valeria": sum(f["Rating_Valeria"] for f in movies),
         "Avatar_Igor": User("igorbonato").get_avatar().get('url', ""),

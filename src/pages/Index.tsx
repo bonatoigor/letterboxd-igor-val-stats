@@ -31,7 +31,7 @@ import {
   getTopLanguages,
   getTopThemes,
   getTopNanogenres,
-  getGlobalSumRating,
+  getGlobalAverage,
   getTopKeywords,
   Movie,
 } from "@/lib/filmUtils";
@@ -54,7 +54,7 @@ const topActors = getTopActors(movies, 15);
 const topLanguages = getTopLanguages(movies);
 const topThemes = getTopThemes(movies);
 const topNanogenres = getTopNanogenres(movies);
-const globalSumRating = getGlobalSumRating(movies);
+const globalAverage = getGlobalAverage(movies);
 const failedFilms = getFailedFilms();
 
 type FilterType = "Genres" | "Themes" | "Nanogenres" | "Countries" | "Director" | "Cast" | "Spoken_languages";
@@ -83,10 +83,10 @@ const Index = () => {
     <div className="min-h-screen bg-lb-body">
       <ProfileHeader
         info={info}
-        totalMovies={movies.length}
+        totalMovies={info.Total_Movies}
         totalHours={totalHours}
         totalDays={totalDays}
-        globalSumRating={globalSumRating}
+        globalAverage={globalAverage}
         uniqueDirectors={uniqueDirectors}
         uniqueCountries={uniqueCountries}
         uniqueLanguages={uniqueLanguages}

@@ -31,7 +31,7 @@ export default function MovieDetailModal({ movie, isOpen, onClose }: MovieDetail
                     {movie.Film_title}
                   </DialogTitle>
                   <div className="flex flex-wrap gap-2 text-lb-text/70 text-xs mt-1">
-                    <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {movie.Release_year}</span>
+                    <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {movie.Release_year ?? "—"}</span>
                     <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {movie.Runtime}m</span>
                     <span className="flex items-center gap-1"><Star className="w-3 h-3 text-yellow-500" /> {movie.Average_rating}</span>
                   </div>
@@ -53,7 +53,7 @@ export default function MovieDetailModal({ movie, isOpen, onClose }: MovieDetail
                   {movie.Film_title}
                 </DialogTitle>
                 <div className="flex flex-wrap gap-3 text-lb-text/70 text-sm mt-1">
-                  <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {movie.Release_year}</span>
+                  <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {movie.Release_year ?? "—"}</span>
                   <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {movie.Runtime} min</span>
                   <span className="flex items-center gap-1"><Star className="w-3 h-3 text-yellow-500" /> {movie.Average_rating}</span>
                 </div>
