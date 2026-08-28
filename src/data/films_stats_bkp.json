@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 237,
+            "Total_Movies": 238,
             "Compatibility": 92.2,
-            "Sum_Rating_Igor": 703.0,
-            "Sum_Rating_Valeria": 689.0,
+            "Sum_Rating_Igor": 706.5,
+            "Sum_Rating_Valeria": 692.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -21073,6 +21073,58 @@
             "Similar_Films": [],
             "Rating_Igor": 3.0,
             "Rating_Valeria": 3.5
+        },
+        {
+            "id": 238,
+            "Film_title": "Toy Story 4",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/w9kR8qbmQ01HwnvK4alvnQ2ca0L.jpg",
+            "Release_year": 2019,
+            "Director": "Josh Cooley",
+            "Cast": [
+                "Tom Hanks",
+                "Tim Allen",
+                "Annie Potts",
+                "Tony Hale",
+                "Keegan-Michael Key",
+                "Madeleine McGraw",
+                "Christina Hendricks",
+                "Jordan Peele",
+                "Keanu Reeves",
+                "Ally Maki"
+            ],
+            "Average_rating": 3.29,
+            "Genres": [
+                "Adventure",
+                "Animation",
+                "Comedy",
+                "Family"
+            ],
+            "Themes": [
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
+                "Kids' animated fun and adventure",
+                "Adorable animals and heartwarming families",
+                "Holiday joy and heartwarming Christmas",
+                "Emotional and captivating fantasy storytelling",
+                "Fairy-tale fantasy and enchanted magic"
+            ],
+            "Runtime": 100,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "Woody has always been confident about his place in the world, devoted to taking care of his kid—whether that's Andy or Bonnie. But after Bonnie creates a reluctant new toy called \"Forky\", a road trip adventure alongside old and new friends challenges everything Woody believes about loyalty, purpose, and what it truly means to be a toy.",
+            "Studios": [
+                "Pixar"
+            ],
+            "Film_URL": "https://letterboxd.com/film/toy-story-4/",
+            "Similar_Films": [],
+            "Rating_Igor": 3.5,
+            "Rating_Valeria": 3.0
         }
     ]
 }
