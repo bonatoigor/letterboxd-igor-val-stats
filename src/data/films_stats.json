@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 241,
+            "Total_Movies": 242,
             "Compatibility": 92.2,
-            "Sum_Rating_Igor": 715.5,
-            "Sum_Rating_Valeria": 701.5,
+            "Sum_Rating_Igor": 718.5,
+            "Sum_Rating_Valeria": 704.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -21287,6 +21287,57 @@
             "Similar_Films": [],
             "Rating_Igor": 3.5,
             "Rating_Valeria": 3.5
+        },
+        {
+            "id": 242,
+            "Film_title": "Colony",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/tN799oUR0f1gUKDYdMNrDaY7I51.jpg",
+            "Release_year": 2026,
+            "Director": "Yeon Sang-ho",
+            "Cast": [
+                "Gianna Jun",
+                "Koo Kyo-hwan",
+                "Ji Chang-wook",
+                "Kim Shin-rock",
+                "Shin Hyun-been",
+                "Go Soo",
+                "Lee Jung-ok",
+                "Kim Jong-tae",
+                "Hwang Jae-yeol",
+                "Lee Dam-hee"
+            ],
+            "Average_rating": 3.36,
+            "Genres": [
+                "Action",
+                "Horror",
+                "Science Fiction"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
+                "Survival horror and zombie carnage",
+                "Sci-fi horror, creatures, and aliens",
+                "Twisted dark psychological thriller"
+            ],
+            "Runtime": 123,
+            "Countries": [
+                "South Korea"
+            ],
+            "Original_language": "Korean",
+            "Spoken_languages": [
+                "Korean"
+            ],
+            "Description": "Professor Se-jeong is thrust into a bloody nightmare when a rapidly mutating virus is released during a biotech conference causing authorities to seal the facility. Trapped inside with no escape, Se-jeong along with a small group of survivors must fight to stay alive while the infected undergo horrific transformations.",
+            "Studios": [
+                "Wow Point",
+                "Smilegate Entertainment",
+                "Midnight Studio"
+            ],
+            "Film_URL": "https://letterboxd.com/film/colony-2026/",
+            "Similar_Films": [],
+            "Rating_Igor": 3.0,
+            "Rating_Valeria": 2.5
         }
     ]
 }
