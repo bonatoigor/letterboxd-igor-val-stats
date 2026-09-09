@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 242,
+            "Total_Movies": 243,
             "Compatibility": 92.2,
-            "Sum_Rating_Igor": 718.5,
-            "Sum_Rating_Valeria": 704.0,
+            "Sum_Rating_Igor": 721.0,
+            "Sum_Rating_Valeria": 706.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -21337,6 +21337,58 @@
             "Film_URL": "https://letterboxd.com/film/colony-2026/",
             "Similar_Films": [],
             "Rating_Igor": 3.0,
+            "Rating_Valeria": 2.5
+        },
+        {
+            "id": 243,
+            "Film_title": "Inside Out 2",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
+            "Release_year": 2024,
+            "Director": "Kelsey Mann",
+            "Cast": [
+                "Amy Poehler",
+                "Maya Hawke",
+                "Kensington Tallman",
+                "Liza Lapira",
+                "Tony Hale",
+                "Lewis Black",
+                "Phyllis Smith",
+                "Ayo Edebiri",
+                "Lilimar",
+                "Grace Lu"
+            ],
+            "Average_rating": 3.52,
+            "Genres": [
+                "Comedy",
+                "Family",
+                "Adventure",
+                "Animation"
+            ],
+            "Themes": [
+                "Underdogs and coming of age"
+            ],
+            "Nanogenres": [
+                "Kids' animated fun and adventure",
+                "Adorable animals and heartwarming families",
+                "Emotional teen coming-of-age stories",
+                "Emotional and captivating fantasy storytelling",
+                "Emotional and heartfelt family dramas"
+            ],
+            "Runtime": 97,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "Teenager Riley's mind headquarters is undergoing a sudden demolition to make room for something entirely unexpected: new Emotions! Joy, Sadness, Anger, Fear and Disgust, who’ve long been running a successful operation by all accounts, aren’t sure how to feel when Anxiety shows up. And it looks like she’s not alone.",
+            "Studios": [
+                "Pixar"
+            ],
+            "Film_URL": "https://letterboxd.com/film/inside-out-2-2024/",
+            "Similar_Films": [],
+            "Rating_Igor": 2.5,
             "Rating_Valeria": 2.5
         }
     ]
