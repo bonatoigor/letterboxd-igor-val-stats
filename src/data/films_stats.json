@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 243,
-            "Compatibility": 92.2,
-            "Sum_Rating_Igor": 721.0,
-            "Sum_Rating_Valeria": 706.5,
+            "Total_Movies": 244,
+            "Compatibility": 92.3,
+            "Sum_Rating_Igor": 723.0,
+            "Sum_Rating_Valeria": 708.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -21390,6 +21390,57 @@
             "Similar_Films": [],
             "Rating_Igor": 2.5,
             "Rating_Valeria": 2.5
+        },
+        {
+            "id": 244,
+            "Film_title": "Nefarious",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/xwjWUAajQJPj5aik1tounPguZbz.jpg",
+            "Release_year": 2023,
+            "Director": "Chuck Konzelman",
+            "Cast": [
+                "Sean Patrick Flanery",
+                "Jordan Belfi",
+                "Tom Ohmer",
+                "Glenn Beck",
+                "Daniel Martin Berkey",
+                "Mark De Alessandro",
+                "Cameron Arnett",
+                "James Healy Jr.",
+                "Sarah Hernandez",
+                "Jarret LeMaster"
+            ],
+            "Average_rating": 2.63,
+            "Genres": [
+                "Drama",
+                "Horror"
+            ],
+            "Themes": [
+                "Faith and religion"
+            ],
+            "Nanogenres": [
+                "Religious faith, sin, and forgiveness",
+                "Faith and spiritual journeys",
+                "Terrifying, haunted, and supernatural horror",
+                "Twisted dark psychological thriller",
+                "Intense political and terrorist thrillers"
+            ],
+            "Runtime": 98,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "On the day of his scheduled execution, a convicted serial killer gets a psychiatric evaluation during which he claims he is a demon, and further claims that before their time is over, the psychiatrist will commit three murders of his own.",
+            "Studios": [
+                "Believe Entertainment",
+                "Soli Deo Gloria Releasing"
+            ],
+            "Film_URL": "https://letterboxd.com/film/nefarious-2023/",
+            "Similar_Films": [],
+            "Rating_Igor": 2.0,
+            "Rating_Valeria": 2.0
         }
     ]
 }
