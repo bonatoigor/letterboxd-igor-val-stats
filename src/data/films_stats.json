@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 245,
+            "Total_Movies": 246,
             "Compatibility": 92.2,
-            "Sum_Rating_Igor": 726.0,
-            "Sum_Rating_Valeria": 712.0,
+            "Sum_Rating_Igor": 728.5,
+            "Sum_Rating_Valeria": 714.0,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -21495,6 +21495,56 @@
             "Similar_Films": [],
             "Rating_Igor": 3.0,
             "Rating_Valeria": 3.5
+        },
+        {
+            "id": 246,
+            "Film_title": "Hell House LLC",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/xUSCQEbbAy3Lv6r00RfXtdxhRDX.jpg",
+            "Release_year": 2015,
+            "Director": "Stephen Cognetti",
+            "Cast": [
+                "Danny Bellini",
+                "Ryan Jennifer Jones",
+                "Gore Abrams",
+                "Jared Hacker",
+                "Adam Schneider",
+                "Alice Bahlke",
+                "Jeb Kreager",
+                "Lauren A. Kennedy",
+                "Theodore Bouloukos",
+                "Phil Hess"
+            ],
+            "Average_rating": 3.09,
+            "Genres": [
+                "Mystery",
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
+                "Terrifying, haunted, and supernatural horror",
+                "Gothic and eerie haunting horror",
+                "Creepy, chilling, and terrifying horror",
+                "Twisted dark psychological thriller"
+            ],
+            "Runtime": 91,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "Five years after an unexplained malfunction causes the death of 15 tour-goers and staff on the opening night of a Halloween haunted house tour, a documentary crew travels back to the scene of the tragedy to find out what really happened.",
+            "Studios": [
+                "Cognetti Films",
+                "Marlyous' Boys"
+            ],
+            "Film_URL": "https://letterboxd.com/film/hell-house-llc/",
+            "Similar_Films": [],
+            "Rating_Igor": 2.5,
+            "Rating_Valeria": 2.0
         }
     ]
 }
