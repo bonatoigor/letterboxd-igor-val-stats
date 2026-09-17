@@ -1,20 +1,14 @@
 [
-  {
-    "slug": "toy-story-5",
-    "rating_i": 3,
-    "rating_v": 3.5,
-    "timestamp": "2026-09-17T23:31:52.246Z"
-  },
-  {
-    "slug": "hell-house-llc",
-    "rating_i": 2.5,
-    "rating_v": 2,
-    "timestamp": "2026-09-17T23:31:52.246Z"
-  },
-  {
-    "slug": "killing-ground",
-    "rating_i": 3,
-    "rating_v": 3,
-    "timestamp": "2026-09-17T23:31:52.246Z"
-  }
+    {
+        "slug": "hell-house-llc",
+        "rating_i": 2.5,
+        "rating_v": 2,
+        "timestamp": "2026-09-17T23:31:52.246Z"
+    },
+    {
+        "slug": "killing-ground",
+        "rating_i": 3,
+        "rating_v": 3,
+        "timestamp": "2026-09-17T23:31:52.246Z"
+    }
 ]
