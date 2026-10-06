@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 247,
-            "Compatibility": 92.3,
-            "Sum_Rating_Igor": 731.5,
-            "Sum_Rating_Valeria": 717.0,
+            "Total_Movies": 248,
+            "Compatibility": 92.2,
+            "Sum_Rating_Igor": 734.0,
+            "Sum_Rating_Valeria": 720.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -21600,6 +21600,59 @@
             "Similar_Films": [],
             "Rating_Igor": 3.0,
             "Rating_Valeria": 3.0
+        },
+        {
+            "id": 248,
+            "Film_title": "Manhunter",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/6rb24x39vV8n5301IelC8rCPJTH.jpg",
+            "Release_year": 1986,
+            "Director": "Michael Mann",
+            "Cast": [
+                "William L. Petersen",
+                "Tom Noonan",
+                "Dennis Farina",
+                "Brian Cox",
+                "Kim Greist",
+                "Joan Allen",
+                "Stephen Lang",
+                "David Seaman",
+                "Benjamin Hendrickson",
+                "Chris Elliott"
+            ],
+            "Average_rating": 3.87,
+            "Genres": [
+                "Horror",
+                "Thriller",
+                "Crime"
+            ],
+            "Themes": [
+                "Thrillers and murder mysteries",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
+                "Suspenseful crime thrillers",
+                "Terrifying, haunted, and supernatural horror",
+                "Intriguing and suspenseful murder mysteries",
+                "Twisted dark psychological thriller",
+                "Gory, gruesome, and slasher horror"
+            ],
+            "Runtime": 120,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "FBI Agent Will Graham, who retired after catching Hannibal Lecktor, returns to duty to engage in a risky cat-and-mouse game with Lecktor to capture a new killer.",
+            "Studios": [
+                "DEG",
+                "Red Dragon Productions S.A."
+            ],
+            "Film_URL": "https://letterboxd.com/film/manhunter/",
+            "Similar_Films": [],
+            "Rating_Igor": 2.5,
+            "Rating_Valeria": 3.5
         }
     ]
 }
