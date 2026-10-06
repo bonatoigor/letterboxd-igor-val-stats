@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 249,
+            "Total_Movies": 250,
             "Compatibility": 92.2,
-            "Sum_Rating_Igor": 738.0,
-            "Sum_Rating_Valeria": 724.5,
+            "Sum_Rating_Igor": 741.5,
+            "Sum_Rating_Valeria": 727.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -21713,6 +21713,59 @@
             "Similar_Films": [],
             "Rating_Igor": 4.0,
             "Rating_Valeria": 4.0
+        },
+        {
+            "id": 250,
+            "Film_title": "Kung Fu Panda",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/wWt4JYXTg5Wr3xBW2phBrMKgp3x.jpg",
+            "Release_year": 2008,
+            "Director": "Mark Osborne",
+            "Cast": [
+                "Jack Black",
+                "Dustin Hoffman",
+                "Angelina Jolie",
+                "Ian McShane",
+                "Seth Rogen",
+                "Lucy Liu",
+                "David Cross",
+                "Randall Duk Kim",
+                "James Hong",
+                "Dan Fogler"
+            ],
+            "Average_rating": 3.94,
+            "Genres": [
+                "Comedy",
+                "Family",
+                "Animation",
+                "Action"
+            ],
+            "Themes": [
+                "Epic heroes",
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
+                "Kids' animated fun and adventure",
+                "Intense combat and martial arts",
+                "Gags, jokes, and slapstick humor",
+                "Action comedy and silly heroics",
+                "Fantasy adventure, heroism, and swordplay"
+            ],
+            "Runtime": 90,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "Chosen by prophecy but doubted by all, Po is an unlikely choice for the mystical title of the Dragon Warrior—a clumsy panda thrust into the world of kung fu as a deadly enemy threatens the Valley of Peace. Under reluctant guidance by Master Shifu and the Furious Five, Po must embrace who he is to unlock the power that no scroll can teach.",
+            "Studios": [
+                "DreamWorks Animation"
+            ],
+            "Film_URL": "https://letterboxd.com/film/kung-fu-panda/",
+            "Similar_Films": [],
+            "Rating_Igor": 3.5,
+            "Rating_Valeria": 3.0
         }
     ]
 }
