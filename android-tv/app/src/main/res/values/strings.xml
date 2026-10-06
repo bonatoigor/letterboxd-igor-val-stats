@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Igor &amp; Val Stats</string>
+    <string name="offline">Sem conexão com o site.\nPressione OK para tentar de novo.</string>
+</resources>
