@@ -10,6 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -34,3 +36,15 @@ jobs:
         with:
           name: letterboxd-tv-apk
           path: android-tv/app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Publish APK as direct download
+        run: cp android-tv/app/build/outputs/apk/debug/app-debug.apk letterboxd-tv.apk
+
+      - name: Update release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: tv-apk
+          name: TV APK
+          body: "APK para a TV box. Link direto: https://github.com/${{ github.repository }}/releases/download/tv-apk/letterboxd-tv.apk"
+          files: letterboxd-tv.apk
+          make_latest: true
