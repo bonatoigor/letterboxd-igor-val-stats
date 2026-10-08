@@ -12,6 +12,8 @@ import { getFailedFilms } from "@/lib/filmUtils";
 import DeveloperLogs from "@/components/DeveloperLogs";
 import AllFilmsGrid from "@/components/AllFilmsGrid";
 import FilmListModal from "@/components/FilmListModal";
+import DisagreementGrid from "@/components/DisagreementGrid";
+import RatingDuel from "@/components/RatingDuel";
 import {
   getGeneralInfo,
   getMovies,
@@ -33,6 +35,11 @@ import {
   getTopNanogenres,
   getGlobalAverage,
   getTopKeywords,
+  getBiggestDisagreements,
+  getGenreRatingsByPerson,
+  getRatingDistribution,
+  getRaterStats,
+  getCriticGap,
   Movie,
 } from "@/lib/filmUtils";
 
@@ -56,6 +63,11 @@ const topThemes = getTopThemes(movies);
 const topNanogenres = getTopNanogenres(movies);
 const globalAverage = getGlobalAverage(movies);
 const failedFilms = getFailedFilms();
+const disagreements = getBiggestDisagreements(movies);
+const raterStats = getRaterStats(movies);
+const ratingDistribution = getRatingDistribution(movies);
+const genreGaps = getGenreRatingsByPerson(movies);
+const criticGap = getCriticGap(movies);
 
 type FilterType = "Genres" | "Themes" | "Nanogenres" | "Countries" | "Director" | "Cast" | "Spoken_languages";
 
@@ -108,13 +120,16 @@ const Index = () => {
           </div>
         </div>
 
+        <DisagreementGrid movies={disagreements} />
+        <RatingDuel stats={raterStats} distribution={ratingDistribution} genreGaps={genreGaps} criticGap={criticGap} />
+
         <CastGrid data={topActors} onActorClick={handleCountClick("Cast")} />
         <WorldMapChart movies={movies} />
         
         <AllFilmsGrid movies={movies} />
         
         <PosterGrid title="Highest Rated" movies={highestRated} />
-        <PosterGrid title="Recent Films" movies={recent} />
+        <PosterGrid title="Newest Releases" movies={recent} />
 
         <MovieVibe keywords={getTopKeywords(movies)} />
 

@@ -295,3 +295,102 @@ export function getTopKeywords(movies: Movie[], limit = 25): { word: string; cou
     .slice(0, limit)
     .map(([word, count]) => ({ word, count }));
 }
+
+// --- Igor vs Valéria ---
+
+const isRatedByBoth = (m: Movie) => m.Rating_Igor > 0 && m.Rating_Valeria > 0;
+
+export function getBiggestDisagreements(movies: Movie[], limit = 6): Movie[] {
+  return movies
+    .filter((m) => isRatedByBoth(m) && m.Rating_Igor !== m.Rating_Valeria)
+    .sort((a, b) =>
+      Math.abs(b.Rating_Igor - b.Rating_Valeria) - Math.abs(a.Rating_Igor - a.Rating_Valeria) ||
+      a.Film_title.localeCompare(b.Film_title))
+    .slice(0, limit);
+}
+
+export interface GenreRatingGap extends RatedGenre {
+  count: number;
+}
+
+// Genres where Igor's and Valéria's averages differ the most.
+export function getGenreRatingsByPerson(movies: Movie[], limit = 8, minCount = 5): GenreRatingGap[] {
+  const genreRatings: Record<string, { igorSum: number; valeriaSum: number; count: number }> = {};
+  movies.filter(isRatedByBoth).forEach((m) => {
+    m.Genres.filter((g) => g.split(" ").length <= 3).forEach((g) => {
+      if (!genreRatings[g]) genreRatings[g] = { igorSum: 0, valeriaSum: 0, count: 0 };
+      genreRatings[g].igorSum += m.Rating_Igor;
+      genreRatings[g].valeriaSum += m.Rating_Valeria;
+      genreRatings[g].count += 1;
+    });
+  });
+  return Object.entries(genreRatings)
+    .filter(([, v]) => v.count >= minCount)
+    .map(([name, v]) => ({
+      name,
+      count: v.count,
+      avgIgor: v.igorSum / v.count,
+      avgValeria: v.valeriaSum / v.count,
+    }))
+    .sort((a, b) => Math.abs(b.avgIgor - b.avgValeria) - Math.abs(a.avgIgor - a.avgValeria))
+    .slice(0, limit);
+}
+
+export interface RatingBucket {
+  rating: number;
+  igor: number;
+  valeria: number;
+}
+
+export function getRatingDistribution(movies: Movie[]): RatingBucket[] {
+  const buckets: RatingBucket[] = Array.from({ length: 10 }, (_, i) => ({ rating: (i + 1) * 0.5, igor: 0, valeria: 0 }));
+  movies.filter(isRatedByBoth).forEach((m) => {
+    const bi = buckets.find((b) => b.rating === m.Rating_Igor);
+    const bv = buckets.find((b) => b.rating === m.Rating_Valeria);
+    if (bi) bi.igor += 1;
+    if (bv) bv.valeria += 1;
+  });
+  return buckets;
+}
+
+export interface RaterStats {
+  avg: number;
+  stdDev: number;
+  vsCommunity: number;
+}
+
+export function getRaterStats(movies: Movie[]): { igor: RaterStats; valeria: RaterStats } {
+  const rated = movies.filter(isRatedByBoth);
+  const withAvg = rated.filter((m) => m.Average_rating > 0);
+  const stats = (pick: (m: Movie) => number): RaterStats => {
+    if (rated.length === 0) return { avg: 0, stdDev: 0, vsCommunity: 0 };
+    const avg = rated.reduce((acc, m) => acc + pick(m), 0) / rated.length;
+    const variance = rated.reduce((acc, m) => acc + (pick(m) - avg) ** 2, 0) / rated.length;
+    const vsCommunity = withAvg.length
+      ? withAvg.reduce((acc, m) => acc + pick(m) - m.Average_rating, 0) / withAvg.length
+      : 0;
+    return { avg, stdDev: Math.sqrt(variance), vsCommunity };
+  };
+  return { igor: stats((m) => m.Rating_Igor), valeria: stats((m) => m.Rating_Valeria) };
+}
+
+export interface CriticGapItem {
+  movie: Movie;
+  coupleAvg: number;
+  gap: number;
+}
+
+// Films where the couple's average strays furthest from the Letterboxd average.
+export function getCriticGap(movies: Movie[], limit = 4): { above: CriticGapItem[]; below: CriticGapItem[] } {
+  const items = movies
+    .filter((m) => isRatedByBoth(m) && m.Average_rating > 0)
+    .map((m) => {
+      const coupleAvg = (m.Rating_Igor + m.Rating_Valeria) / 2;
+      return { movie: m, coupleAvg, gap: coupleAvg - m.Average_rating };
+    })
+    .sort((a, b) => b.gap - a.gap);
+  return {
+    above: items.filter((i) => i.gap > 0).slice(0, limit),
+    below: items.filter((i) => i.gap < 0).reverse().slice(0, limit),
+  };
+}
