@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { EyeOff } from "lucide-react";
+import { X } from "lucide-react";
 import { Movie, getRecommendations } from "@/lib/filmUtils";
 import { supabase } from "@/integrations/supabase/client";
 import { useAdminAuth } from "@/hooks/use-admin-auth";
@@ -33,7 +33,7 @@ export default function WatchNextGrid({ movies }: WatchNextGridProps) {
   const { authed } = useAdminAuth();
   const { toast } = useToast();
   const [hidden, setHidden] = useState<string[]>(readHidden);
-  const recommendations = useMemo(() => getRecommendations(movies, 18, 3, hidden), [movies, hidden]);
+  const recommendations = useMemo(() => getRecommendations(movies, 12, 3, hidden), [movies, hidden]);
 
   const updateHidden = (update: (prev: string[]) => string[]) => {
     setHidden((prev) => {
@@ -96,7 +96,7 @@ export default function WatchNextGrid({ movies }: WatchNextGridProps) {
                     title="Já vi / não quero"
                     className="absolute bottom-1 left-1 right-1 flex items-center justify-center gap-1 bg-black/80 hover:bg-black text-lb-bright text-[10px] font-semibold py-1 rounded"
                   >
-                    <EyeOff className="w-3 h-3" /> Já vi
+                    <X className="w-3 h-3" /> Remover
                   </button>
                 )}
               </div>

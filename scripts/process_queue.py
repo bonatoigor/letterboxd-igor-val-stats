@@ -5,7 +5,7 @@ from update_films import update_workflow
 
 PATH_PENDING = 'src/data/pending_films.json'
 PATH_EXCLUDED = 'src/data/watch_next_excluded.json'
-# The site's "Já vi" button queues films with both ratings at -1 (via the already
+# The site's Watch Next "Remover" button queues films with both ratings at -1 (via the already
 # deployed trigger-film-update function): exclude them from Watch Next instead of logging them.
 EXCLUDE_RATING = -1
 

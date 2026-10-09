@@ -424,7 +424,7 @@ const slugFromUrl = (url: string) => url.replace(/\/+$/, "").split("/").pop() ??
 // Letterboxd (watched_slugs.json, synced daily) and the manual "already seen" list.
 export function getRecommendations(
   movies: Movie[],
-  limit = 18,
+  limit = 12,
   minRating = 3,
   extraExcluded: Iterable<string> = [],
 ): Recommendation[] {
