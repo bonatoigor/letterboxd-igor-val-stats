@@ -1,6 +1,8 @@
 import filmsData from "@/data/films_stats.json";
 import failedFilmsData from "@/data/failed_films.json";
 import coupleWatchedData from "@/data/couple_watched.json";
+import igorWatchedData from "@/data/igor_watched.json";
+import watchNextExcludedData from "@/data/watch_next_excluded.json";
 
 export interface FailedFilm {
   slug: string;
@@ -418,15 +420,29 @@ const slugFromUrl = (url: string) => url.replace(/\/+$/, "").split("/").pop() ??
 
 // Unwatched films that Letterboxd lists as similar to the ones we rated well,
 // scored by the couple's average rating of each film that points to them.
-export function getRecommendations(movies: Movie[], limit = 12, minRating = 3): Recommendation[] {
-  const watched = new Set([...movies.map((m) => slugFromUrl(m.Film_URL)), ...(coupleWatchedData as string[])]);
+// Skips unreleased films, films we logged, Igor's watched list and the manual "already seen" list.
+export function getRecommendations(
+  movies: Movie[],
+  limit = 18,
+  minRating = 3,
+  extraExcluded: Iterable<string> = [],
+): Recommendation[] {
+  const watched = new Set([
+    ...movies.map((m) => slugFromUrl(m.Film_URL)),
+    ...(coupleWatchedData as string[]),
+    ...(igorWatchedData as string[]),
+    ...(watchNextExcludedData as string[]),
+    ...extraExcluded,
+  ]);
+  const currentYear = new Date().getFullYear();
   const recs: Record<string, Recommendation> = {};
   movies.filter(isRatedByBoth).forEach((m) => {
     const coupleAvg = (m.Rating_Igor + m.Rating_Valeria) / 2;
     if (coupleAvg < minRating) return;
     (m.Similar_Films ?? []).forEach((film) => {
       const slug = film.slug ?? slugFromUrl(film.url);
-      if (!film.poster || watched.has(slug)) return;
+      const unreleased = !film.year || film.year > currentYear;
+      if (!film.poster || unreleased || watched.has(slug)) return;
       if (!recs[slug]) recs[slug] = { film, score: 0, because: [] };
       recs[slug].score += coupleAvg;
       recs[slug].because.push(m);

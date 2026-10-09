@@ -63,7 +63,13 @@ def buscar_poster_tmdb(movie_obj):
 
 def buscar_poster_por_titulo_ano(title, year):
     """TMDB search by title + year; title-only search picks wrong films (e.g. 'Us' -> 'Let Us Prey')."""
-    # Letterboxd also lists miniseries (e.g. The Haunting of Hill House), so fall back to TV search.
+    # Letterboxd also lists miniseries (e.g. Chernobyl), and a movie search for those returns
+    # look-alikes ("Mother of Chernobyl"), so prefer an exact title match in movies, then in TV,
+    # and only then the first result with a poster.
+    def normalize(text):
+        return re.sub(r"[^a-z0-9]", "", (text or "").lower())
+
+    results = []
     for kind, year_param in (("movie", "year"), ("tv", "first_air_date_year")):
         params = {"api_key": TMDB_API_KEY, "query": title}
         if year:
@@ -71,12 +77,16 @@ def buscar_poster_por_titulo_ano(title, year):
         try:
             res = requests.get(f"https://api.themoviedb.org/3/search/{kind}", params=params, timeout=5)
             if res.status_code == 200:
-                for r in res.json().get("results", []):
-                    if r.get("poster_path"):
-                        return f"https://image.tmdb.org/t/p/w300_and_h450_bestv2{r['poster_path']}"
+                results.append([r for r in res.json().get("results", []) if r.get("poster_path")])
         except Exception:
-            pass
-    return None
+            results.append([])
+
+    wanted = normalize(title)
+    exact = [r for rs in results for r in rs
+             if wanted in (normalize(r.get("title") or r.get("name")),
+                           normalize(r.get("original_title") or r.get("original_name")))]
+    best = exact[0] if exact else next((rs[0] for rs in results if rs), None)
+    return f"https://image.tmdb.org/t/p/w300_and_h450_bestv2{best['poster_path']}" if best else None
 
 def extract_similar_films(dom):
     """Similar films from the 'Similar Films' section of the film page that was already

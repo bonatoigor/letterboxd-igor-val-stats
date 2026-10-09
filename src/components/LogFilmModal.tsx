@@ -10,30 +10,12 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
+import { useAdminAuth } from "@/hooks/use-admin-auth";
 
 type Status = "idle" | "loading" | "success" | "error";
 type SearchResult = { slug: string; title: string; year: string };
 
 const RATING_OPTIONS = Array.from({ length: 11 }, (_, i) => i * 0.5);
-const AUTH_KEY = "lb_admin_auth";
-
-function useAdminAuth() {
-  const [authed, setAuthed] = useState(() => localStorage.getItem(AUTH_KEY) === "true");
-  const login = (user: string, pass: string) => {
-    if (user === "igorbonato" && pass === "C@melodromo12") {
-      localStorage.setItem(AUTH_KEY, "true");
-      setAuthed(true);
-      return true;
-    }
-    return false;
-  };
-  const logout = () => {
-    localStorage.removeItem(AUTH_KEY);
-    setAuthed(false);
-  };
-  return { authed, login, logout };
-}
-
 function StarRating({ value, onChange, label, color }: { value: number; onChange: (v: number) => void; label: string; color: string }) {
   return (
     <div className="w-full">

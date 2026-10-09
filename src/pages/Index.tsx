@@ -41,7 +41,6 @@ import {
   getRatingDistribution,
   getRaterStats,
   getCriticGap,
-  getRecommendations,
   Movie,
 } from "@/lib/filmUtils";
 
@@ -70,7 +69,6 @@ const raterStats = getRaterStats(movies);
 const ratingDistribution = getRatingDistribution(movies);
 const genreGaps = getGenreRatingsByPerson(movies);
 const criticGap = getCriticGap(movies);
-const recommendations = getRecommendations(movies);
 
 type FilterType = "Genres" | "Themes" | "Nanogenres" | "Countries" | "Director" | "Cast" | "Spoken_languages";
 
@@ -133,7 +131,7 @@ const Index = () => {
         
         <PosterGrid title="Highest Rated" movies={highestRated} />
         <PosterGrid title="Newest Releases" movies={recent} />
-        <WatchNextGrid recommendations={recommendations} />
+        <WatchNextGrid movies={movies} />
 
         <MovieVibe keywords={getTopKeywords(movies)} />
 

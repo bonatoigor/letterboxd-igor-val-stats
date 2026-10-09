@@ -1,11 +1,15 @@
 """One-off: refill Similar_Films for every film in films_stats.json from the
 'Similar Films' section of each film page (one Letterboxd request per film).
-Resumable: films already in the new format (entries with 'slug') are skipped."""
+Resumable: films already in the new format (entries with 'slug') are skipped.
+
+--posters: only redo the TMDB poster lookup of the stored similars (no Letterboxd requests)."""
 import json
 import random
+import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 from letterboxdpy.core.scraper import parse_url
-from update_films import extract_similar_films, MAX_RETRIES
+from update_films import extract_similar_films, buscar_poster_por_titulo_ano, MAX_RETRIES
 
 PATH_JSON = 'src/data/films_stats.json'
 SAVE_EVERY = 10
@@ -32,9 +36,29 @@ def save(banco):
         json.dump(banco, f, indent=4, ensure_ascii=False)
 
 
+def refresh_posters(banco):
+    similars = [s for m in banco["Movies_Info"] for s in m.get("Similar_Films") or [] if "slug" in s]
+    unique = list({(s["title"], s.get("year")) for s in similars})
+    print(f"Buscando {len(unique)} posters no TMDB...")
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        posters = dict(zip(unique, pool.map(lambda k: buscar_poster_por_titulo_ano(*k), unique)))
+    changed = 0
+    for s in similars:
+        new = posters[(s["title"], s.get("year"))]
+        if new and new != s["poster"]:
+            s["poster"] = new
+            changed += 1
+    save(banco)
+    print(f"Concluido. Posters alterados: {changed}")
+
+
 def main():
     with open(PATH_JSON, 'r', encoding='utf-8') as f:
         banco = json.load(f)
+
+    if "--posters" in sys.argv:
+        refresh_posters(banco)
+        return
 
     movies = banco["Movies_Info"]
     pending = [m for m in movies if not is_done(m)]

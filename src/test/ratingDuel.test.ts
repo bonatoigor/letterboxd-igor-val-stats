@@ -88,4 +88,16 @@ describe("getRecommendations", () => {
     expect(recs[0].score).toBe(8.5);
     expect(recs[0].because.map((m) => m.id)).toEqual([1, 2]);
   });
+
+  it("skips unreleased films", () => {
+    const future = { ...similar("future"), year: new Date().getFullYear() + 1 };
+    const noYear = { ...similar("no-year"), year: null };
+    const recs = getRecommendations([source(1, 5, 5, [future, noYear, similar("a")])]);
+    expect(recs.map((r) => r.film.slug)).toEqual(["a"]);
+  });
+
+  it("skips films in the extra exclusion list", () => {
+    const recs = getRecommendations([source(1, 5, 5, [similar("a"), similar("b")])], 18, 3, ["a"]);
+    expect(recs.map((r) => r.film.slug)).toEqual(["b"]);
+  });
 });
