@@ -9,8 +9,8 @@ interface WatchNextGridProps {
   movies: Movie[];
 }
 
-// Films marked as seen stay hidden on this device until the deploy with the
-// updated watch_next_excluded.json goes live.
+// Films marked as seen stay hidden on this device until the queue workflow (every 3h)
+// adds them to watch_next_excluded.json and the new deploy goes live.
 const HIDDEN_KEY = "lb_watch_next_hidden";
 
 const readHidden = (): string[] => {
@@ -45,7 +45,10 @@ export default function WatchNextGrid({ movies }: WatchNextGridProps) {
 
   const markAsSeen = async (slug: string, title: string) => {
     updateHidden((prev) => [...prev, slug]);
-    const { error } = await supabase.functions.invoke("exclude-watch-next", { body: { slugs: [slug] } });
+    // Reuses the queue function; process_queue.py turns -1/-1 entries into Watch Next exclusions.
+    const { error } = await supabase.functions.invoke("trigger-film-update", {
+      body: { films: [{ slug, rating_i: -1, rating_v: -1 }] },
+    });
     if (error) {
       updateHidden((prev) => prev.filter((s) => s !== slug));
       toast({ title: "Não foi possível excluir", description: title, variant: "destructive" });
