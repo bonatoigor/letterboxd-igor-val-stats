@@ -123,6 +123,44 @@ def extract_similar_films(dom):
         print(f"Aviso: erro ao extrair similares: {e}")
     return similar
 
+# TMDB country names -> the Letterboxd names already used in films_stats.json.
+TMDB_COUNTRY_NAMES = {
+    "United States of America": "USA",
+    "United Kingdom": "UK",
+    "Korea, Republic of": "South Korea",
+    "Russian Federation": "Russia",
+}
+
+
+def tmdb_get(path, **params):
+    try:
+        res = requests.get(f"https://api.themoviedb.org/3/{path}",
+                           params={"api_key": TMDB_API_KEY, **params}, timeout=5)
+        return res.json() if res.status_code == 200 else {}
+    except Exception:
+        return {}
+
+
+def tmdb_countries_by_search(title, year):
+    """TMDB dropped the movie entries of many TV episodes, so search the title and,
+    for 'Series: Episode' titles, the series itself (an episode shares its country)."""
+    def normalize(text):
+        return re.sub(r"[^a-z0-9]", "", (text or "").lower())
+
+    candidates = [("movie", title, {"year": year}), ("tv", title, {})]
+    if ":" in title:
+        candidates.append(("tv", title.split(":")[0], {}))
+    for kind, query, extra in candidates:
+        results = tmdb_get(f"search/{kind}", query=query, **extra).get("results", [])
+        match = next((r for r in results if normalize(r.get("title") or r.get("name")) == normalize(query)), None)
+        if match:
+            details = tmdb_get(f"{kind}/{match['id']}")
+            names = [c.get("name") for c in details.get("production_countries", []) if c.get("name")]
+            if names:
+                return [TMDB_COUNTRY_NAMES.get(n, n) for n in names]
+    return []
+
+
 def update_workflow():
     if len(sys.argv) < 4:
         print("Uso: python script.py <slug> <nota_igor> <nota_valeria>")
@@ -200,7 +238,7 @@ def update_workflow():
         "Themes": themes_only,
         "Nanogenres": nanogenres_only, 
         "Runtime": m.runtime,
-        "Countries": detalhes.get('country', []),
+        "Countries": detalhes.get('country', []) or tmdb_countries_by_search(m.title, m.year),
         "Original_language": detalhes.get('language', ["English"])[0] if detalhes.get('language') else "English",
         "Spoken_languages": list(set(detalhes.get('language', []))),
         "Description": m.description,

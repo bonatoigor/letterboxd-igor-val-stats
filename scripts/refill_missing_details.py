@@ -5,23 +5,14 @@ Countries Letterboxd doesn't have come from TMDB (e.g. TV episodes).
 --countries: only fill empty Countries from a TMDB search by title/year (no Letterboxd requests)."""
 import json
 import random
-import re
 import sys
 import time
 import requests
 from letterboxdpy.movie import Movie
-from update_films import extract_extended_details, TMDB_API_KEY, MAX_RETRIES
+from update_films import (extract_extended_details, tmdb_countries_by_search,
+                          TMDB_API_KEY, TMDB_COUNTRY_NAMES, MAX_RETRIES)
 
 PATH_JSON = 'src/data/films_stats.json'
-
-# TMDB country names -> the Letterboxd names already used in films_stats.json.
-TMDB_COUNTRY_NAMES = {
-    "United States of America": "USA",
-    "United Kingdom": "UK",
-    "Korea, Republic of": "South Korea",
-    "Russian Federation": "Russia",
-}
-
 
 def tmdb_countries(movie_obj):
     link = getattr(movie_obj, "tmdb_link", None) or ""
@@ -38,35 +29,6 @@ def tmdb_countries(movie_obj):
         return [TMDB_COUNTRY_NAMES.get(n, n) for n in names]
     except Exception:
         return []
-
-
-def tmdb_get(path, **params):
-    try:
-        res = requests.get(f"https://api.themoviedb.org/3/{path}",
-                           params={"api_key": TMDB_API_KEY, **params}, timeout=5)
-        return res.json() if res.status_code == 200 else {}
-    except Exception:
-        return {}
-
-
-def tmdb_countries_by_search(title, year):
-    """TMDB dropped the movie entries of many TV episodes, so search the title and,
-    for 'Series: Episode' titles, the series itself (an episode shares its country)."""
-    def normalize(text):
-        return re.sub(r"[^a-z0-9]", "", (text or "").lower())
-
-    candidates = [("movie", title, {"year": year}), ("tv", title, {})]
-    if ":" in title:
-        candidates.append(("tv", title.split(":")[0], {}))
-    for kind, query, extra in candidates:
-        results = tmdb_get(f"search/{kind}", query=query, **extra).get("results", [])
-        match = next((r for r in results if normalize(r.get("title") or r.get("name")) == normalize(query)), None)
-        if match:
-            details = tmdb_get(f"{kind}/{match['id']}")
-            names = [c.get("name") for c in details.get("production_countries", []) if c.get("name")]
-            if names:
-                return [TMDB_COUNTRY_NAMES.get(n, n) for n in names]
-    return []
 
 
 def fill_countries_only(banco):
