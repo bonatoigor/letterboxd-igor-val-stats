@@ -1,5 +1,6 @@
 import filmsData from "@/data/films_stats.json";
 import failedFilmsData from "@/data/failed_films.json";
+import coupleWatchedData from "@/data/couple_watched.json";
 
 export interface FailedFilm {
   slug: string;
@@ -17,6 +18,15 @@ export interface GeneralInfo {
   Sum_Rating_Valeria: number;
   Avatar_Igor: string;
   Avatar_Valeria: string;
+}
+
+export interface SimilarFilm {
+  id: string;
+  slug?: string;
+  title: string;
+  year?: number | null;
+  url: string;
+  poster: string | null;
 }
 
 export interface Movie {
@@ -37,6 +47,7 @@ export interface Movie {
   Spoken_languages: string[];
   Studios: string[];
   Film_URL: string;
+  Similar_Films?: SimilarFilm[];
   Rating_Igor: number;
   Rating_Valeria: number;
 }
@@ -393,4 +404,39 @@ export function getCriticGap(movies: Movie[], limit = 4): { above: CriticGapItem
     above: items.filter((i) => i.gap > 0).slice(0, limit),
     below: items.filter((i) => i.gap < 0).reverse().slice(0, limit),
   };
+}
+
+// --- Watch next ---
+
+export interface Recommendation {
+  film: SimilarFilm;
+  score: number;
+  because: Movie[];
+}
+
+const slugFromUrl = (url: string) => url.replace(/\/+$/, "").split("/").pop() ?? "";
+
+// Unwatched films that Letterboxd lists as similar to the ones we rated well,
+// scored by the couple's average rating of each film that points to them.
+export function getRecommendations(movies: Movie[], limit = 12, minRating = 3): Recommendation[] {
+  const watched = new Set([...movies.map((m) => slugFromUrl(m.Film_URL)), ...(coupleWatchedData as string[])]);
+  const recs: Record<string, Recommendation> = {};
+  movies.filter(isRatedByBoth).forEach((m) => {
+    const coupleAvg = (m.Rating_Igor + m.Rating_Valeria) / 2;
+    if (coupleAvg < minRating) return;
+    (m.Similar_Films ?? []).forEach((film) => {
+      const slug = film.slug ?? slugFromUrl(film.url);
+      if (!film.poster || watched.has(slug)) return;
+      if (!recs[slug]) recs[slug] = { film, score: 0, because: [] };
+      recs[slug].score += coupleAvg;
+      recs[slug].because.push(m);
+    });
+  });
+  return Object.values(recs)
+    .map((r) => ({
+      ...r,
+      because: [...r.because].sort((a, b) => b.Rating_Igor + b.Rating_Valeria - (a.Rating_Igor + a.Rating_Valeria)),
+    }))
+    .sort((a, b) => b.score - a.score || a.film.title.localeCompare(b.film.title))
+    .slice(0, limit);
 }

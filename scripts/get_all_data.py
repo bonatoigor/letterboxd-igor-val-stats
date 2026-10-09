@@ -3,6 +3,7 @@ import requests
 import time
 from letterboxdpy.user import User
 from letterboxdpy.movie import Movie
+from update_films import extract_similar_films
 
 # ISO 639-1 code -> full language name, matching the naming already used in films_stats.json.
 LANGUAGE_NAMES = {
@@ -57,23 +58,6 @@ def buscar_poster_tmdb(movie_obj):
     return movie_obj.poster
 
 
-def buscar_poster_por_slug_tmdb(slug):
-    api_key = "9db1612712db88e78b09c26a17aa0c35"
-    search_url = f"https://api.themoviedb.org/3/search/movie?api_key={api_key}&query={slug.replace('-', ' ')}"
-    try:
-        res = requests.get(search_url, timeout=5)
-        if res.status_code == 200:
-            results = res.json().get("results")
-            if results:
-                path = results[0].get("poster_path")
-                title = results[0].get("title")
-                if path:
-                    return f"https://image.tmdb.org/t/p/w300_and_h450_bestv2{path}", title
-    except:
-        pass
-    return None, None
-
-
 def gerar_banco_completo():
     try:
         with open('slugs_unicos.json', 'r', encoding='utf-8') as f:
@@ -81,12 +65,6 @@ def gerar_banco_completo():
     except FileNotFoundError:
         print("Erro: Arquivo slugs_unicos.json não encontrado.")
         return
-
-    try:
-        with open('meus_vistos.json', 'r', encoding='utf-8') as f:
-            vistos_set = set(json.load(f))
-    except FileNotFoundError:
-        vistos_set = set()
 
     print(f"Buscando notas de igorbonato e vs_ol_...")
     filmes_igor = User("igorbonato").get_films().get('movies', {})
@@ -100,36 +78,7 @@ def gerar_banco_completo():
         try:
             m = Movie(slug)
             detalhes_extras = extract_extended_details(m)
-            similar_list = []
-
-            similares_raw = m.get_similar_movies()
-            try:
-                if similares_raw:
-                    count_sim = 0
-                    for film_id, data in similares_raw.items():
-                        if count_sim >= 10:
-                            break
-
-                        sim_slug = data.get('slug') if isinstance(
-                            data, dict) else str(data).split('/')[-2]
-
-                        if sim_slug in vistos_set:
-                            continue
-
-                        poster_url, real_title = buscar_poster_por_slug_tmdb(
-                            sim_slug)
-
-                        if real_title:
-                            similar_list.append({
-                                "id": film_id,
-                                "title": real_title,
-                                "url": f"https://letterboxd.com/film/{sim_slug}/",
-                                "poster": poster_url if poster_url else f"https://a.ltrbxd.com/resized/film-poster/{film_id}.jpg"
-                            })
-                            count_sim += 1
-                            time.sleep(0.2)
-            except Exception as e:
-                print(f"Aviso: Erro nos similares: {e}")
+            similar_list = extract_similar_films(m.pages.profile.dom)
 
             rating_raw_igor = filmes_igor.get(slug, {}).get('rating', 0)
             rating_raw_val = filmes_val.get(slug, {}).get('rating', 0)

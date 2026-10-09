@@ -6,6 +6,7 @@ import {
   getRatingDistribution,
   getRaterStats,
   getCriticGap,
+  getRecommendations,
 } from "@/lib/filmUtils";
 
 const movie = (id: number, igor: number, valeria: number, avg: number, genres = ["Horror"]): Movie => ({
@@ -64,5 +65,27 @@ describe("Igor vs Valéria stats", () => {
     const { above, below } = getCriticGap(movies);
     expect(above.map((i) => i.movie.id)).toEqual([3, 2]);
     expect(below).toEqual([]);
+  });
+});
+
+describe("getRecommendations", () => {
+  const similar = (slug: string, poster: string | null = "p.jpg") => ({
+    id: slug, slug, title: slug, year: 2000, url: `https://letterboxd.com/film/${slug}/`, poster,
+  });
+  const source = (id: number, igor: number, valeria: number, slugs: ReturnType<typeof similar>[]) => ({
+    ...movie(id, igor, valeria, 3),
+    Film_URL: `https://letterboxd.com/film/source-${id}/`,
+    Similar_Films: slugs,
+  });
+
+  it("scores unwatched similars by the couple rating and skips watched, posterless and low-rated sources", () => {
+    const recs = getRecommendations([
+      source(1, 5, 5, [similar("a"), similar("b"), similar("source-2"), similar("no-poster", null)]),
+      source(2, 4, 3, [similar("b")]),
+      source(3, 2, 2, [similar("c")]),
+    ]);
+    expect(recs.map((r) => r.film.slug)).toEqual(["b", "a"]);
+    expect(recs[0].score).toBe(8.5);
+    expect(recs[0].because.map((m) => m.id)).toEqual([1, 2]);
   });
 });

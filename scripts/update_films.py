@@ -3,12 +3,15 @@ import sys
 import shutil
 import time
 import random
+import re
 from letterboxdpy.user import User
 from letterboxdpy.movie import Movie
 import requests
 
 MAX_RETRIES = 3
 INITIAL_BACKOFF = 30  # seconds
+TMDB_API_KEY = "9db1612712db88e78b09c26a17aa0c35"
+MAX_SIMILAR = 6
 
 # ISO 639-1 code -> full language name, matching the naming already used in films_stats.json.
 LANGUAGE_NAMES = {
@@ -47,8 +50,7 @@ def buscar_poster_tmdb(movie_obj):
     tmdb_link = movie_obj.tmdb_link if hasattr(movie_obj, 'tmdb_link') else None
     if tmdb_link:
         tmdb_id = tmdb_link.strip('/').split('/')[-1]
-        api_key = "9db1612712db88e78b09c26a17aa0c35"
-        url = f"https://api.themoviedb.org/3/movie/{tmdb_id}?api_key={api_key}"
+        url = f"https://api.themoviedb.org/3/movie/{tmdb_id}?api_key={TMDB_API_KEY}"
         try:
             response = requests.get(url, timeout=5)
             if response.status_code == 200:
@@ -58,6 +60,58 @@ def buscar_poster_tmdb(movie_obj):
                     return f"https://image.tmdb.org/t/p/w300_and_h450_bestv2{path}"
         except: pass
     return movie_obj.poster
+
+def buscar_poster_por_titulo_ano(title, year):
+    """TMDB search by title + year; title-only search picks wrong films (e.g. 'Us' -> 'Let Us Prey')."""
+    # Letterboxd also lists miniseries (e.g. The Haunting of Hill House), so fall back to TV search.
+    for kind, year_param in (("movie", "year"), ("tv", "first_air_date_year")):
+        params = {"api_key": TMDB_API_KEY, "query": title}
+        if year:
+            params[year_param] = year
+        try:
+            res = requests.get(f"https://api.themoviedb.org/3/search/{kind}", params=params, timeout=5)
+            if res.status_code == 200:
+                for r in res.json().get("results", []):
+                    if r.get("poster_path"):
+                        return f"https://image.tmdb.org/t/p/w300_and_h450_bestv2{r['poster_path']}"
+        except Exception:
+            pass
+    return None
+
+def extract_similar_films(dom):
+    """Similar films from the 'Similar Films' section of the film page that was already
+    downloaded. The /similar/ and /films/like/ routes are blocked (403) by Cloudflare."""
+    similar = []
+    try:
+        section = dom.find("section", class_="related-films")
+        items = section.find_all("div", class_="react-component") if section else []
+        for item in items:
+            slug = item.get("data-item-slug")
+            name = item.get("data-item-name") or ""
+            if not slug or not name:
+                continue
+            try:
+                poster_meta = json.loads(item.get("data-resolvable-poster-path") or "{}")
+            except ValueError:
+                poster_meta = {}
+            if poster_meta.get("isAdultThemed"):
+                continue
+            match = re.match(r"^(.*) \((\d{4})\)$", name)
+            title, year = (match.group(1), int(match.group(2))) if match else (name, None)
+            uid = (poster_meta.get("postered") or {}).get("uid", "")
+            similar.append({
+                "id": uid.split(":")[-1] if uid else slug,
+                "slug": slug,
+                "title": title,
+                "year": year,
+                "url": f"https://letterboxd.com/film/{slug}/",
+                "poster": buscar_poster_por_titulo_ano(title, year),
+            })
+            if len(similar) >= MAX_SIMILAR:
+                break
+    except Exception as e:
+        print(f"Aviso: erro ao extrair similares: {e}")
+    return similar
 
 def update_workflow():
     if len(sys.argv) < 4:
@@ -142,7 +196,7 @@ def update_workflow():
         "Description": m.description,
         "Studios": detalhes.get('studio', []),
         "Film_URL": f"https://letterboxd.com/film/{slug}/",
-        "Similar_Films": [],
+        "Similar_Films": extract_similar_films(m.pages.profile.dom),
         "Rating_Igor": nota_igor,
         "Rating_Valeria": nota_valeria
     }

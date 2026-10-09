@@ -14,6 +14,7 @@ import AllFilmsGrid from "@/components/AllFilmsGrid";
 import FilmListModal from "@/components/FilmListModal";
 import DisagreementGrid from "@/components/DisagreementGrid";
 import RatingDuel from "@/components/RatingDuel";
+import WatchNextGrid from "@/components/WatchNextGrid";
 import {
   getGeneralInfo,
   getMovies,
@@ -40,6 +41,7 @@ import {
   getRatingDistribution,
   getRaterStats,
   getCriticGap,
+  getRecommendations,
   Movie,
 } from "@/lib/filmUtils";
 
@@ -68,6 +70,7 @@ const raterStats = getRaterStats(movies);
 const ratingDistribution = getRatingDistribution(movies);
 const genreGaps = getGenreRatingsByPerson(movies);
 const criticGap = getCriticGap(movies);
+const recommendations = getRecommendations(movies);
 
 type FilterType = "Genres" | "Themes" | "Nanogenres" | "Countries" | "Director" | "Cast" | "Spoken_languages";
 
@@ -130,6 +133,7 @@ const Index = () => {
         
         <PosterGrid title="Highest Rated" movies={highestRated} />
         <PosterGrid title="Newest Releases" movies={recent} />
+        <WatchNextGrid recommendations={recommendations} />
 
         <MovieVibe keywords={getTopKeywords(movies)} />
 
