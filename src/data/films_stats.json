@@ -1782,7 +1782,9 @@
             "Themes": [],
             "Nanogenres": [],
             "Runtime": 48,
-            "Countries": [],
+            "Countries": [
+                "UK"
+            ],
             "Original_language": "English",
             "Spoken_languages": [
                 "English"
@@ -1951,7 +1953,9 @@
             "Themes": [],
             "Nanogenres": [],
             "Runtime": 62,
-            "Countries": [],
+            "Countries": [
+                "UK"
+            ],
             "Original_language": "English",
             "Spoken_languages": [
                 "English"
@@ -2034,7 +2038,9 @@
             "Themes": [],
             "Nanogenres": [],
             "Runtime": 60,
-            "Countries": [],
+            "Countries": [
+                "UK"
+            ],
             "Original_language": "English",
             "Spoken_languages": [
                 "English"
@@ -2115,7 +2121,9 @@
             "Themes": [],
             "Nanogenres": [],
             "Runtime": 63,
-            "Countries": [],
+            "Countries": [
+                "UK"
+            ],
             "Original_language": "English",
             "Spoken_languages": [
                 "English"
@@ -2155,7 +2163,9 @@
             "Themes": [],
             "Nanogenres": [],
             "Runtime": 52,
-            "Countries": [],
+            "Countries": [
+                "UK"
+            ],
             "Original_language": "English",
             "Spoken_languages": [
                 "English"
@@ -2195,7 +2205,9 @@
             "Themes": [],
             "Nanogenres": [],
             "Runtime": 49,
-            "Countries": [],
+            "Countries": [
+                "UK"
+            ],
             "Original_language": "English",
             "Spoken_languages": [
                 "English"
@@ -2235,7 +2247,9 @@
             "Themes": [],
             "Nanogenres": [],
             "Runtime": 43,
-            "Countries": [],
+            "Countries": [
+                "UK"
+            ],
             "Original_language": "English",
             "Spoken_languages": [
                 "English"
@@ -2313,7 +2327,9 @@
             "Themes": [],
             "Nanogenres": [],
             "Runtime": 90,
-            "Countries": [],
+            "Countries": [
+                "UK"
+            ],
             "Original_language": "English",
             "Spoken_languages": [
                 "English"
@@ -2352,7 +2368,9 @@
             "Themes": [],
             "Nanogenres": [],
             "Runtime": 42,
-            "Countries": [],
+            "Countries": [
+                "UK"
+            ],
             "Original_language": "English",
             "Spoken_languages": [
                 "English"
@@ -3294,8 +3312,17 @@
                 "Thriller",
                 "Horror"
             ],
-            "Themes": [],
-            "Nanogenres": [],
+            "Themes": [
+                "Horror, the undead and monster classics",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
+                "Terrifying, haunted, and supernatural horror",
+                "Twisted dark psychological thriller",
+                "Gothic and eerie haunting horror",
+                "Creepy, chilling, and terrifying horror",
+                "Gory, gruesome, and slasher horror"
+            ],
             "Runtime": 45,
             "Countries": [
                 "Japan"
