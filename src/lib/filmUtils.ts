@@ -1,7 +1,7 @@
 import filmsData from "@/data/films_stats.json";
 import failedFilmsData from "@/data/failed_films.json";
 import coupleWatchedData from "@/data/couple_watched.json";
-import igorWatchedData from "@/data/igor_watched.json";
+import watchedSlugsData from "@/data/watched_slugs.json";
 import watchNextExcludedData from "@/data/watch_next_excluded.json";
 
 export interface FailedFilm {
@@ -420,7 +420,8 @@ const slugFromUrl = (url: string) => url.replace(/\/+$/, "").split("/").pop() ??
 
 // Unwatched films that Letterboxd lists as similar to the ones we rated well,
 // scored by the couple's average rating of each film that points to them.
-// Skips unreleased films, films we logged, Igor's watched list and the manual "already seen" list.
+// Skips unreleased films, films we logged, anything either of us marked as watched on
+// Letterboxd (watched_slugs.json, synced daily) and the manual "already seen" list.
 export function getRecommendations(
   movies: Movie[],
   limit = 18,
@@ -430,7 +431,7 @@ export function getRecommendations(
   const watched = new Set([
     ...movies.map((m) => slugFromUrl(m.Film_URL)),
     ...(coupleWatchedData as string[]),
-    ...(igorWatchedData as string[]),
+    ...(watchedSlugsData as string[]),
     ...(watchNextExcludedData as string[]),
     ...extraExcluded,
   ]);
