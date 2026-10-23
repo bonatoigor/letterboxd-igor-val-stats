@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 254,
+            "Total_Movies": 255,
             "Compatibility": 92.3,
-            "Sum_Rating_Igor": 752.0,
-            "Sum_Rating_Valeria": 738.0,
+            "Sum_Rating_Igor": 754.0,
+            "Sum_Rating_Valeria": 740.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -22128,6 +22128,111 @@
             ],
             "Rating_Igor": 2.0,
             "Rating_Valeria": 2.0
+        },
+        {
+            "id": 255,
+            "Film_title": "A Lonely Place to Die",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/xVYY1U5nYfx2PfJMs6knO8VZRk0.jpg",
+            "Release_year": 2011,
+            "Director": "Julian Gilbey",
+            "Cast": [
+                "Melissa George",
+                "Ed Speleers",
+                "Eamonn Walker",
+                "Alec Newman",
+                "Karel Roden",
+                "Kate Magowan",
+                "Garry Sweeney",
+                "Stephen McCole",
+                "Holly Boyd",
+                "Paul Anderson"
+            ],
+            "Average_rating": 2.85,
+            "Genres": [
+                "Crime",
+                "Thriller",
+                "Action",
+                "Adventure"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
+                "Twisted dark psychological thriller",
+                "Violent action, guns, and crime",
+                "Gory, gruesome, and slasher horror",
+                "Heists and thrilling action",
+                "Explosive and action-packed heroes vs. villains"
+            ],
+            "Runtime": 99,
+            "Countries": [
+                "UK"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English",
+                "Serbian"
+            ],
+            "Description": "A group of five mountaineers are hiking and climbing in the Scottish Highlands when they discover a young Serbian girl buried in a small chamber in the wilderness. They become caught up in a terrifying game of cat and mouse with the kidnappers as they try to get the girl to safety.",
+            "Studios": [
+                "Carnaby International",
+                "Eigerwand Pictures",
+                "Molinare Studios",
+                "Kaleidoscope Entertainment"
+            ],
+            "Film_URL": "https://letterboxd.com/film/a-lonely-place-to-die/",
+            "Similar_Films": [
+                {
+                    "id": "405328",
+                    "slug": "calibre",
+                    "title": "Calibre",
+                    "year": 2018,
+                    "url": "https://letterboxd.com/film/calibre/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/gCVOQzV7Z556WnJFNeX7y8BFhyW.jpg"
+                },
+                {
+                    "id": "1199247",
+                    "slug": "apex-2026",
+                    "title": "Apex",
+                    "year": 2026,
+                    "url": "https://letterboxd.com/film/apex-2026/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/eTp7gSPkSF3Aw79mNx1NkBP1PZT.jpg"
+                },
+                {
+                    "id": "1118880",
+                    "slug": "dead-of-winter-2025",
+                    "title": "Dead of Winter",
+                    "year": 2025,
+                    "url": "https://letterboxd.com/film/dead-of-winter-2025/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/5DcrN62sGAiRJxt8rXSRlSRLwIE.jpg"
+                },
+                {
+                    "id": "118113",
+                    "slug": "the-call-2013",
+                    "title": "The Call",
+                    "year": 2013,
+                    "url": "https://letterboxd.com/film/the-call-2013/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/mG334OlDVJpD8gMfTCM2Mpp0gQH.jpg"
+                },
+                {
+                    "id": "749008",
+                    "slug": "no-exit-2022",
+                    "title": "No Exit",
+                    "year": 2022,
+                    "url": "https://letterboxd.com/film/no-exit-2022/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/5cnLoWq9o5tuLe1Zq4BTX4LwZ2B.jpg"
+                },
+                {
+                    "id": "506729",
+                    "slug": "those-who-wish-me-dead",
+                    "title": "Those Who Wish Me Dead",
+                    "year": 2021,
+                    "url": "https://letterboxd.com/film/those-who-wish-me-dead/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/xCEg6KowNISWvMh8GvPSxtdf9TO.jpg"
+                }
+            ],
+            "Rating_Igor": 2.0,
+            "Rating_Valeria": 2.5
         }
     ]
 }
