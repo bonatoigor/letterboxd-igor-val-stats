@@ -93,8 +93,8 @@ export default function WorldMapChart({ movies }: WorldMapProps) {
           <button
             onClick={() => setIsListOpen(true)}
             className="text-lb-text/60 hover:text-lb-green transition-colors p-2.5 -m-2"
-            title="Ver lista de países"
-            aria-label="Ver lista de países"
+            title="Show country list"
+            aria-label="Show country list"
           >
             <List className="w-4 h-4" />
           </button>
@@ -161,7 +161,7 @@ export default function WorldMapChart({ movies }: WorldMapProps) {
           >
             <div className="p-4 border-b border-border flex justify-between items-center bg-lb-body/50">
               <h3 className="text-lb-bright font-bold flex items-center gap-2">
-                <span className="text-xl">🌍</span> Países
+                <span className="text-xl">🌍</span> Countries
               </h3>
               <button
                 onClick={() => setIsListOpen(false)}
@@ -176,13 +176,13 @@ export default function WorldMapChart({ movies }: WorldMapProps) {
                 onClick={() => setListTab("visited")}
                 className={`flex-1 py-2.5 transition-colors ${listTab === "visited" ? "text-lb-green border-b-2 border-lb-green" : "text-lb-text/60 hover:text-lb-text"}`}
               >
-                Já foram ({visitedCountries.length})
+                Visited ({visitedCountries.length})
               </button>
               <button
                 onClick={() => setListTab("missing")}
                 className={`flex-1 py-2.5 transition-colors ${listTab === "missing" ? "text-lb-orange border-b-2 border-lb-orange" : "text-lb-text/60 hover:text-lb-text"}`}
               >
-                Faltam ({missingCountries.length})
+                Missing ({missingCountries.length})
               </button>
             </div>
 
