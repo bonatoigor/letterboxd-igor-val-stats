@@ -34,7 +34,7 @@ import {
   getTopLanguages,
   getTopThemes,
   getTopNanogenres,
-  getGlobalAverage,
+  getGlobalRatingSum,
   getTopKeywords,
   getBiggestDisagreements,
   getGenreRatingsByPerson,
@@ -62,7 +62,7 @@ const topActors = getTopActors(movies, 15);
 const topLanguages = getTopLanguages(movies);
 const topThemes = getTopThemes(movies);
 const topNanogenres = getTopNanogenres(movies);
-const globalAverage = getGlobalAverage(movies);
+const globalRatingSum = getGlobalRatingSum(movies);
 const failedFilms = getFailedFilms();
 const disagreements = getBiggestDisagreements(movies);
 const raterStats = getRaterStats(movies);
@@ -99,7 +99,7 @@ const Index = () => {
         totalMovies={info.Total_Movies}
         totalHours={totalHours}
         totalDays={totalDays}
-        globalAverage={globalAverage}
+        globalRatingSum={globalRatingSum}
         uniqueDirectors={uniqueDirectors}
         uniqueCountries={uniqueCountries}
         uniqueLanguages={uniqueLanguages}

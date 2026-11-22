@@ -148,10 +148,10 @@ export function getHighestRatedMovies(movies: Movie[], limit = 12): Movie[] {
     .slice(0, limit);
 }
 
-export function getGlobalAverage(movies: Movie[]): string {
-  if (movies.length === 0) return "0.0";
+// Sum of the Letterboxd averages, comparable to Sum_Rating_Igor / Sum_Rating_Valeria.
+export function getGlobalRatingSum(movies: Movie[]): string {
   const sum = movies.reduce((acc, m) => acc + (m.Average_rating || 0), 0);
-  return (sum / movies.length).toFixed(1);
+  return sum.toFixed(1);
 }
 
 export function getRecentMovies(movies: Movie[], limit = 12): Movie[] {

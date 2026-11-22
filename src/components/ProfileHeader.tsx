@@ -9,7 +9,7 @@ interface ProfileHeaderProps {
   uniqueDirectors: number;
   uniqueCountries: number;
   uniqueLanguages: number;
-  globalAverage: string;
+  globalRatingSum: string;
 }
 
 const START_DATE = new Date('2024-03-23');
@@ -22,7 +22,7 @@ export default function ProfileHeader({
   uniqueDirectors,
   uniqueCountries,
   uniqueLanguages,
-  globalAverage,
+  globalRatingSum,
 }: ProfileHeaderProps) {
     const calculateFrequency = () => {
     const today = new Date();
@@ -99,8 +99,8 @@ export default function ProfileHeader({
           <Stat value={info.Sum_Rating_Igor.toFixed(1)} label="Igor ★" colorClass="text-lb-green" />
 
           <div className="text-center">
-              <span className="block text-xl sm:text-2xl md:text-3xl font-bold text-lb-blue">{globalAverage}</span>
-              <span className="text-[10px] sm:text-xs text-lb-text uppercase tracking-widest">Global Avg ★</span>
+              <span className="block text-xl sm:text-2xl md:text-3xl font-bold text-lb-blue">{globalRatingSum}</span>
+              <span className="text-[10px] sm:text-xs text-lb-text uppercase tracking-widest">Global ★</span>
           </div>
           
           <Stat value={info.Sum_Rating_Valeria.toFixed(1)} label="Valéria ★" colorClass="text-lb-orange" />

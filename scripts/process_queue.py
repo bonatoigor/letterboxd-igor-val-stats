@@ -43,25 +43,28 @@ def main():
     if not queue:
         return
 
-    movie = queue[0]
-    slug = movie['slug']
-    r_i = movie['rating_i']
-    r_v = movie['rating_v']
+    # Drain the whole queue in one run instead of one film per scheduled run.
+    while queue:
+        movie = queue[0]
+        slug = movie['slug']
+        r_i = movie['rating_i']
+        r_v = movie['rating_v']
 
-    print(f"--- Iniciando processamento de: {slug} ---")
+        print(f"--- Iniciando processamento de: {slug} ---")
 
-    try:
-        sys.argv = [sys.argv[0], slug, str(r_i), str(r_v)]
-        update_workflow()
-        
-        queue.pop(0)
-        
-        with open(PATH_PENDING, 'w', encoding='utf-8') as f:
-            json.dump(queue, f, indent=4, ensure_ascii=False)
-        print(f"--- Sucesso: {slug} removido da fila de pendentes ---")
+        try:
+            sys.argv = [sys.argv[0], slug, str(r_i), str(r_v)]
+            update_workflow()
 
-    except Exception as e:
-        print(f"Erro ao processar fila: {e}")
+            queue.pop(0)
+
+            with open(PATH_PENDING, 'w', encoding='utf-8') as f:
+                json.dump(queue, f, indent=4, ensure_ascii=False)
+            print(f"--- Sucesso: {slug} removido da fila de pendentes ---")
+
+        except Exception as e:
+            print(f"Erro ao processar fila: {e}")
+            break
 
 if __name__ == "__main__":
     main()
