@@ -1,10 +1,10 @@
 {
     "General_Info": [
         {
-            "Total_Movies": 255,
+            "Total_Movies": 264,
             "Compatibility": 92.3,
-            "Sum_Rating_Igor": 754.0,
-            "Sum_Rating_Valeria": 740.5,
+            "Sum_Rating_Igor": 779.0,
+            "Sum_Rating_Valeria": 762.5,
             "Avatar_Igor": "https://a.ltrbxd.com/resized/avatar/upload/5/9/9/7/8/8/shard/avtr-0-1000-0-1000-crop.jpg",
             "Avatar_Valeria": "https://a.ltrbxd.com/resized/avatar/upload/9/4/0/5/5/6/8/shard/avtr-0-1000-0-1000-crop.jpg"
         }
@@ -22232,6 +22232,846 @@
                 }
             ],
             "Rating_Igor": 2.0,
+            "Rating_Valeria": 2.5
+        },
+        {
+            "id": 256,
+            "Film_title": "The End of Oak Street",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/7DmtuAK5gYGlMFA45Oxkl1bEpIC.jpg",
+            "Release_year": 2026,
+            "Director": "David Robert Mitchell",
+            "Cast": [
+                "Anne Hathaway",
+                "Ewan McGregor",
+                "Maisy Stella",
+                "Christian Convery",
+                "Jordan Alexa Davis",
+                "P.J. Byrne",
+                "Hudson Meek",
+                "Anne Gee Byrd",
+                "Emily Kuroda",
+                "Simms May"
+            ],
+            "Average_rating": 2.95,
+            "Genres": [
+                "Mystery",
+                "Thriller",
+                "Science Fiction"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
+                "Sci-fi monster and dinosaur adventures",
+                "Sci-fi horror, creatures, and aliens",
+                "Superheroes in action-packed battles with villains"
+            ],
+            "Runtime": 100,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "Spanish",
+                "Portuguese",
+                "English"
+            ],
+            "Description": "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together as they navigate their now unrecognizable surroundings.",
+            "Studios": [
+                "Warner Bros. Pictures",
+                "Domain Entertainment",
+                "Bad Robot",
+                "Jackson Pictures"
+            ],
+            "Film_URL": "https://letterboxd.com/film/the-end-of-oak-street/",
+            "Similar_Films": [
+                {
+                    "id": "1117926",
+                    "slug": "jurassic-world-rebirth",
+                    "title": "Jurassic World Rebirth",
+                    "year": 2025,
+                    "url": "https://letterboxd.com/film/jurassic-world-rebirth/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/1RICxzeoNCAO5NpcRMIgg1XT6fm.jpg"
+                },
+                {
+                    "id": "104174",
+                    "slug": "jurassic-world",
+                    "title": "Jurassic World",
+                    "year": 2015,
+                    "url": "https://letterboxd.com/film/jurassic-world/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/bkXjL03yWPmiuFqxWEp4zSYVZBY.jpg"
+                },
+                {
+                    "id": "624070",
+                    "slug": "65",
+                    "title": "65",
+                    "year": 2023,
+                    "url": "https://letterboxd.com/film/65/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/rzRb63TldOKdKydCvWJM8B6EkPM.jpg"
+                },
+                {
+                    "id": "94598",
+                    "slug": "the-dinosaur-project",
+                    "title": "The Dinosaur Project",
+                    "year": 2012,
+                    "url": "https://letterboxd.com/film/the-dinosaur-project/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/js6rDLqluuYF01DXKdOu34GqRLt.jpg"
+                },
+                {
+                    "id": "441665",
+                    "slug": "crawl-2019",
+                    "title": "Crawl",
+                    "year": 2019,
+                    "url": "https://letterboxd.com/film/crawl-2019/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/4WH6AZd473lRZ3hUp8TYiv2LfZW.jpg"
+                },
+                {
+                    "id": "138634",
+                    "slug": "age-of-dinosaurs",
+                    "title": "Age of Dinosaurs",
+                    "year": 2013,
+                    "url": "https://letterboxd.com/film/age-of-dinosaurs/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/uTHMlbIYbC860HfD128QCaJbs0X.jpg"
+                }
+            ],
+            "Rating_Igor": 2.5,
+            "Rating_Valeria": 2.5
+        },
+        {
+            "id": 257,
+            "Film_title": "Stuck",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/dEJCk1vTOaldD8hzOYY96AdFdr6.jpg",
+            "Release_year": 2007,
+            "Director": "Stuart Gordon",
+            "Cast": [
+                "Stephen Rea",
+                "Mena Suvari",
+                "Russell Hornsby",
+                "Rukiya Bernard",
+                "Carolyn Purdy-Gordon",
+                "Lionel Mark Smith",
+                "Wayne Robson",
+                "R.D. Reid",
+                "Patrick McKenna",
+                "Sharlene Royer"
+            ],
+            "Average_rating": 3.26,
+            "Genres": [
+                "Comedy",
+                "Thriller"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression",
+                "Crude humor and satire"
+            ],
+            "Nanogenres": [
+                "Twisted dark psychological thriller",
+                "Graphic violence and brutal revenge",
+                "Gory, gruesome, and slasher horror",
+                "Funny jokes and crude humor",
+                "Gripping, intense violent crime"
+            ],
+            "Runtime": 85,
+            "Countries": [
+                "Canada",
+                "Germany",
+                "UK",
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "Spanish",
+                "English"
+            ],
+            "Description": "A young woman commits a hit-and-run, then finds her fate tied to her victim.",
+            "Studios": [
+                "Prodigy Pictures"
+            ],
+            "Film_URL": "https://letterboxd.com/film/stuck-2007/",
+            "Similar_Films": [
+                {
+                    "id": "46613",
+                    "slug": "very-bad-things",
+                    "title": "Very Bad Things",
+                    "year": 1998,
+                    "url": "https://letterboxd.com/film/very-bad-things/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/rYmyRxF5e9fBdgcQScKu0CUtMy5.jpg"
+                },
+                {
+                    "id": "128326",
+                    "slug": "cheap-thrills",
+                    "title": "Cheap Thrills",
+                    "year": 2013,
+                    "url": "https://letterboxd.com/film/cheap-thrills/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/cnGzB8L2Y4oEyAZ4VvLxAwTRA3N.jpg"
+                },
+                {
+                    "id": "420472",
+                    "slug": "arizona-2018",
+                    "title": "Arizona",
+                    "year": 2018,
+                    "url": "https://letterboxd.com/film/arizona-2018/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/AcqXQms8AzkrTL22FbT9VKcjt7.jpg"
+                },
+                {
+                    "id": "47310",
+                    "slug": "11-14",
+                    "title": "11:14",
+                    "year": 2003,
+                    "url": "https://letterboxd.com/film/11-14/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/3TFB0Doe92l9Jgc5qtUnE6r9rqt.jpg"
+                },
+                {
+                    "id": "359045",
+                    "slug": "i-dont-feel-at-home-in-this-world-anymore",
+                    "title": "I Don't Feel at Home in This World Anymore",
+                    "year": 2017,
+                    "url": "https://letterboxd.com/film/i-dont-feel-at-home-in-this-world-anymore/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/1stdUlXBc3nxqhdWvZ6wWWEbCQW.jpg"
+                },
+                {
+                    "id": "51781",
+                    "slug": "fargo",
+                    "title": "Fargo",
+                    "year": 1996,
+                    "url": "https://letterboxd.com/film/fargo/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/rt7cpEr1uP6RTZykBFhBTcRaKvG.jpg"
+                }
+            ],
+            "Rating_Igor": 2.5,
+            "Rating_Valeria": 2.0
+        },
+        {
+            "id": 258,
+            "Film_title": "Come True",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/hGPGRRz6FTIRed1zestdWrV2Iwd.jpg",
+            "Release_year": 2020,
+            "Director": "Anthony Scott Burns",
+            "Cast": [
+                "Julia Sarah Stone",
+                "Landon Liboiron",
+                "Carlee Ryski",
+                "Christopher Heatherington",
+                "Tedra Rogers",
+                "Brandon DeWyn",
+                "John Tasker",
+                "Austin Baker",
+                "Shane Ghostkeeper",
+                "Christopher Thomas"
+            ],
+            "Average_rating": 3.0,
+            "Genres": [
+                "Science Fiction",
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
+                "Dreamlike, quirky, and surreal storytelling",
+                "Twisted dark psychological thriller",
+                "Terrifying, haunted, and supernatural horror",
+                "Gothic and eerie haunting horror",
+                "Creepy, chilling, and terrifying horror"
+            ],
+            "Runtime": 105,
+            "Countries": [
+                "Canada"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "Looking for an escape from her recurring nightmares, 18-year-old Sarah submits to a university sleep study, but soon realizes she's become the conduit to a frightening new discovery.",
+            "Studios": [
+                "Copperheart Entertainment",
+                "Angel Entertainment",
+                "Téléfilm Canada"
+            ],
+            "Film_URL": "https://letterboxd.com/film/come-true/",
+            "Similar_Films": [
+                {
+                    "id": "32893",
+                    "slug": "the-night-walker",
+                    "title": "The Night Walker",
+                    "year": 1964,
+                    "url": "https://letterboxd.com/film/the-night-walker/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/yWIO2LYQvluWSIWNYqEGmqcmynf.jpg"
+                },
+                {
+                    "id": "48586",
+                    "slug": "brain-dead",
+                    "title": "Brain Dead",
+                    "year": 1990,
+                    "url": "https://letterboxd.com/film/brain-dead/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/eaoGvqROCuJTKKKRUze8ZUSlzba.jpg"
+                },
+                {
+                    "id": "127973",
+                    "slug": "mr-jones-2013",
+                    "title": "Mr. Jones",
+                    "year": 2013,
+                    "url": "https://letterboxd.com/film/mr-jones-2013/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/AoEmA1sRxIOTxoRHX257phXQPgu.jpg"
+                },
+                {
+                    "id": "976419",
+                    "slug": "backrooms-2026",
+                    "title": "Backrooms",
+                    "year": 2026,
+                    "url": "https://letterboxd.com/film/backrooms-2026/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/rhGx6E3qRNMgj3i5su2oukNHwIQ.jpg"
+                },
+                {
+                    "id": "210852",
+                    "slug": "horsehead",
+                    "title": "Horsehead",
+                    "year": 2014,
+                    "url": "https://letterboxd.com/film/horsehead/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/zbRQXLN90LOs7iTnJzNq15WFDn5.jpg"
+                },
+                {
+                    "id": "1082160",
+                    "slug": "black-phone-2",
+                    "title": "Black Phone 2",
+                    "year": 2025,
+                    "url": "https://letterboxd.com/film/black-phone-2/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/vBOpqxW0SDhACwEO2LZT29DuNG2.jpg"
+                }
+            ],
+            "Rating_Igor": 2.5,
+            "Rating_Valeria": 2.5
+        },
+        {
+            "id": 259,
+            "Film_title": "Trick 'r Treat",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/w0nmol4g7n6MFfhfphV7GzHHYjB.jpg",
+            "Release_year": 2007,
+            "Director": "Michael Dougherty",
+            "Cast": [
+                "Brian Cox",
+                "Quinn Lord",
+                "Anna Paquin",
+                "Dylan Baker",
+                "Leslie Bibb",
+                "Tahmoh Penikett",
+                "Rochelle Aytes",
+                "Britt McKillip",
+                "Moneca Delain",
+                "Lauren Lee Smith"
+            ],
+            "Average_rating": 3.39,
+            "Genres": [
+                "Fantasy",
+                "Comedy",
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
+                "Gory, gruesome, and slasher horror",
+                "Creepy, chilling, and terrifying horror",
+                "Terrifying, haunted, and supernatural horror",
+                "Bloody vampire horror",
+                "Survival horror and zombie carnage"
+            ],
+            "Runtime": 82,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "Four interwoven stories that occur on Halloween: an everyday high school principal has a secret life as a serial killer; a college virgin might have just met the one guy for her; a group of teenagers pull a mean prank, and a bitter old recluse receives an uninvited guest.",
+            "Studios": [
+                "Legendary Pictures",
+                "Bad Hat Harry Productions",
+                "Little Sam Films",
+                "Warner Bros. Pictures"
+            ],
+            "Film_URL": "https://letterboxd.com/film/trick-r-treat/",
+            "Similar_Films": [
+                {
+                    "id": "234078",
+                    "slug": "tales-of-halloween",
+                    "title": "Tales of Halloween",
+                    "year": 2015,
+                    "url": "https://letterboxd.com/film/tales-of-halloween/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/fc4YBCqjfXv8EZpV5MpNsKPW3fY.jpg"
+                },
+                {
+                    "id": "41682",
+                    "slug": "creepshow",
+                    "title": "Creepshow",
+                    "year": 1982,
+                    "url": "https://letterboxd.com/film/creepshow/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/4SoyTCEpsgLjX6yAyMsx3AsAyRQ.jpg"
+                },
+                {
+                    "id": "453842",
+                    "slug": "the-mortuary-collection",
+                    "title": "The Mortuary Collection",
+                    "year": 2019,
+                    "url": "https://letterboxd.com/film/the-mortuary-collection/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/5WXeYnezavNI6hXH74aQYv6yFzj.jpg"
+                },
+                {
+                    "id": "37598",
+                    "slug": "the-cabin-in-the-woods",
+                    "title": "The Cabin in the Woods",
+                    "year": 2011,
+                    "url": "https://letterboxd.com/film/the-cabin-in-the-woods/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/zZZe5wn0udlhMtdlDjN4NB72R6e.jpg"
+                },
+                {
+                    "id": "70737",
+                    "slug": "v-h-s",
+                    "title": "V/H/S",
+                    "year": 2012,
+                    "url": "https://letterboxd.com/film/v-h-s/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/iB87cxOXa10ll3eXsLlZjRhM16j.jpg"
+                },
+                {
+                    "id": "1260087",
+                    "slug": "v-h-s-halloween",
+                    "title": "V/H/S/Halloween",
+                    "year": 2025,
+                    "url": "https://letterboxd.com/film/v-h-s-halloween/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/bvMKSZtN8KAdtlKoYbEi1Zhyaou.jpg"
+                }
+            ],
+            "Rating_Igor": 3.0,
+            "Rating_Valeria": 2.0
+        },
+        {
+            "id": 260,
+            "Film_title": "Jacob's Ladder",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/ufLcHIi1aXjjH8MediAMvnwDsVI.jpg",
+            "Release_year": 1990,
+            "Director": "Adrian Lyne",
+            "Cast": [
+                "Tim Robbins",
+                "Elizabeth Peña",
+                "Danny Aiello",
+                "Matt Craven",
+                "Pruitt Taylor Vince",
+                "Jason Alexander",
+                "Patricia Kalember",
+                "Eriq La Salle",
+                "Ving Rhames",
+                "Brian Tarantina"
+            ],
+            "Average_rating": 3.88,
+            "Genres": [
+                "Horror",
+                "Drama",
+                "Mystery"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression",
+                "Horror, the undead and monster classics",
+                "Humanity and the world around us"
+            ],
+            "Nanogenres": [
+                "Twisted dark psychological thriller",
+                "Terrifying, haunted, and supernatural horror",
+                "Surreal and thought-provoking visions of life and death",
+                "Dreamlike, quirky, and surreal storytelling",
+                "Creepy, chilling, and terrifying horror"
+            ],
+            "Runtime": 113,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "After returning home from the Vietnam War, veteran Jacob Singer struggles to maintain his sanity. Plagued by hallucinations and flashbacks, Singer rapidly falls apart as the world and people around him morph and twist into disturbing images. His girlfriend, Jezzie, and ex-wife, Sarah, try to help, but to little avail. Even Singer's chiropractor friend, Louis, fails to reach him as he descends into madness.",
+            "Studios": [
+                "Carolco Pictures"
+            ],
+            "Film_URL": "https://letterboxd.com/film/jacobs-ladder/",
+            "Similar_Films": [
+                {
+                    "id": "49944",
+                    "slug": "1408",
+                    "title": "1408",
+                    "year": 2007,
+                    "url": "https://letterboxd.com/film/1408/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/yE9MCW7ZNxSw5SC1TMqm51pMBIV.jpg"
+                },
+                {
+                    "id": "476490",
+                    "slug": "the-night-house",
+                    "title": "The Night House",
+                    "year": 2020,
+                    "url": "https://letterboxd.com/film/the-night-house/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/rqs2CXpc4d5FzeP1EZCYItAVo81.jpg"
+                },
+                {
+                    "id": "273979",
+                    "slug": "geralds-game",
+                    "title": "Gerald's Game",
+                    "year": 2017,
+                    "url": "https://letterboxd.com/film/geralds-game/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/32dippiypDdaKv7XFEfUlQ7kPup.jpg"
+                },
+                {
+                    "id": "32853",
+                    "slug": "images",
+                    "title": "Images",
+                    "year": 1972,
+                    "url": "https://letterboxd.com/film/images/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/d9EobHDOwYc1c59vgzEgtTDS1lM.jpg"
+                },
+                {
+                    "id": "117687",
+                    "slug": "oculus",
+                    "title": "Oculus",
+                    "year": 2013,
+                    "url": "https://letterboxd.com/film/oculus/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/yCzR1yKRLiJyTDLgY1ppazXEmdE.jpg"
+                },
+                {
+                    "id": "444215",
+                    "slug": "you-should-have-left",
+                    "title": "You Should Have Left",
+                    "year": 2020,
+                    "url": "https://letterboxd.com/film/you-should-have-left/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/tpOwE6xsWnu4lKeKbKW0R3iClM.jpg"
+                }
+            ],
+            "Rating_Igor": 3.5,
+            "Rating_Valeria": 3.0
+        },
+        {
+            "id": 261,
+            "Film_title": "Speak No Evil",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/ukYuuFzPTumN1QNpQyz863bcNvr.jpg",
+            "Release_year": 2022,
+            "Director": "Christian Tafdrup",
+            "Cast": [
+                "Morten Burian",
+                "Sidsel Siem Koch",
+                "Fedja van Huêt",
+                "Karina Smulders",
+                "Liva Forsberg",
+                "Marius Damslev",
+                "Hichem Yacoubi",
+                "Lea Baastrup Rønne",
+                "Jesper Dupont",
+                "Sieger Sloot"
+            ],
+            "Average_rating": 3.4,
+            "Genres": [
+                "Horror",
+                "Thriller",
+                "Drama"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression",
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
+                "Twisted dark psychological thriller",
+                "Terrifying, haunted, and supernatural horror",
+                "Graphic violence and brutal revenge",
+                "Gory, gruesome, and slasher horror",
+                "Challenging or sexual themes & twists"
+            ],
+            "Runtime": 98,
+            "Countries": [
+                "Denmark",
+                "Netherlands"
+            ],
+            "Original_language": "Danish",
+            "Spoken_languages": [
+                "English",
+                "Danish",
+                "Dutch"
+            ],
+            "Description": "A Danish family visits a Dutch family they met on a holiday. What was supposed to be an idyllic weekend slowly starts unraveling as the Danes try to stay polite in the face of unpleasantness.",
+            "Studios": [
+                "Profile Pictures",
+                "OAK Motion Pictures"
+            ],
+            "Film_URL": "https://letterboxd.com/film/speak-no-evil-2022/",
+            "Similar_Films": [
+                {
+                    "id": "1004531",
+                    "slug": "speak-no-evil-2024",
+                    "title": "Speak No Evil",
+                    "year": 2024,
+                    "url": "https://letterboxd.com/film/speak-no-evil-2024/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/dA4N6uWOnEMgbxXwFX7qX7adzs8.jpg"
+                },
+                {
+                    "id": "634949",
+                    "slug": "coming-home-in-the-dark",
+                    "title": "Coming Home in the Dark",
+                    "year": 2021,
+                    "url": "https://letterboxd.com/film/coming-home-in-the-dark/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/ubDpUo7z5Kz8HMz2qv2bS66Y9uo.jpg"
+                },
+                {
+                    "id": "43830",
+                    "slug": "eden-lake",
+                    "title": "Eden Lake",
+                    "year": 2008,
+                    "url": "https://letterboxd.com/film/eden-lake/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/tOg6ElTe1mJwaCFN0172U4oso22.jpg"
+                },
+                {
+                    "id": "38544",
+                    "slug": "orphan",
+                    "title": "Orphan",
+                    "year": 2009,
+                    "url": "https://letterboxd.com/film/orphan/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/lCGpOgoTOGLtZnBiGY9HRg5Xnjd.jpg"
+                },
+                {
+                    "id": "585957",
+                    "slug": "the-innocents-2021",
+                    "title": "The Innocents",
+                    "year": 2021,
+                    "url": "https://letterboxd.com/film/the-innocents-2021/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/dqvkxOLmnHgDOqZlT7GgMWEQViR.jpg"
+                },
+                {
+                    "id": "1037627",
+                    "slug": "bring-her-back",
+                    "title": "Bring Her Back",
+                    "year": 2025,
+                    "url": "https://letterboxd.com/film/bring-her-back/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/1Q3GlCXGYWELifxANYZ5OVMRVZl.jpg"
+                }
+            ],
+            "Rating_Igor": 3.0,
+            "Rating_Valeria": 3.0
+        },
+        {
+            "id": 262,
+            "Film_title": "Speak No Evil",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/dA4N6uWOnEMgbxXwFX7qX7adzs8.jpg",
+            "Release_year": 2024,
+            "Director": "James Watkins",
+            "Cast": [
+                "James McAvoy",
+                "Mackenzie Davis",
+                "Scoot McNairy",
+                "Aisling Franciosi",
+                "Alix West Lefler",
+                "Dan Hough",
+                "Kris Hitchen",
+                "Motaz Malhees",
+                "Jakob Højlev Jørgensen"
+            ],
+            "Average_rating": 3.26,
+            "Genres": [
+                "Thriller",
+                "Horror"
+            ],
+            "Themes": [
+                "Intense violence and sexual transgression",
+                "Horror, the undead and monster classics"
+            ],
+            "Nanogenres": [
+                "Twisted dark psychological thriller",
+                "Terrifying, haunted, and supernatural horror",
+                "Creepy, chilling, and terrifying horror",
+                "Gory, gruesome, and slasher horror",
+                "Suspenseful crime thrillers"
+            ],
+            "Runtime": 110,
+            "Countries": [
+                "USA"
+            ],
+            "Original_language": "English",
+            "Spoken_languages": [
+                "English"
+            ],
+            "Description": "When an American family is invited to spend the weekend at the idyllic country estate of a charming British family they befriended on vacation, what begins as a dream holiday soon warps into a snarled psychological nightmare.",
+            "Studios": [
+                "Blumhouse Productions"
+            ],
+            "Film_URL": "https://letterboxd.com/film/speak-no-evil-2024/",
+            "Similar_Films": [
+                {
+                    "id": "748943",
+                    "slug": "speak-no-evil-2022",
+                    "title": "Speak No Evil",
+                    "year": 2022,
+                    "url": "https://letterboxd.com/film/speak-no-evil-2022/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/ukYuuFzPTumN1QNpQyz863bcNvr.jpg"
+                },
+                {
+                    "id": "50846",
+                    "slug": "misery",
+                    "title": "Misery",
+                    "year": 1990,
+                    "url": "https://letterboxd.com/film/misery/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/klPO5oh1LOxiPpdDXZo1ADgpKcw.jpg"
+                },
+                {
+                    "id": "353117",
+                    "slug": "get-out-2017",
+                    "title": "Get Out",
+                    "year": 2017,
+                    "url": "https://letterboxd.com/film/get-out-2017/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/tFXcEccSQMf3lfhfXKSU9iRBpa3.jpg"
+                },
+                {
+                    "id": "38544",
+                    "slug": "orphan",
+                    "title": "Orphan",
+                    "year": 2009,
+                    "url": "https://letterboxd.com/film/orphan/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/lCGpOgoTOGLtZnBiGY9HRg5Xnjd.jpg"
+                },
+                {
+                    "id": "1249840",
+                    "slug": "the-hand-that-rocks-the-cradle-2025",
+                    "title": "The Hand That Rocks the Cradle",
+                    "year": 2025,
+                    "url": "https://letterboxd.com/film/the-hand-that-rocks-the-cradle-2025/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/qnLwCl7HPprx3OQCPXHIRZXOfPw.jpg"
+                },
+                {
+                    "id": "515419",
+                    "slug": "the-rental",
+                    "title": "The Rental",
+                    "year": 2020,
+                    "url": "https://letterboxd.com/film/the-rental/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/3ynPnBXQVT2Y0s19fDIPlWKUlxH.jpg"
+                }
+            ],
+            "Rating_Igor": 2.5,
+            "Rating_Valeria": 2.0
+        },
+        {
+            "id": 263,
+            "Film_title": "Wolf Creek",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/545PYpfCeDwVgdgydHCQqXFr168.jpg",
+            "Release_year": 2005,
+            "Director": "Greg McLean",
+            "Cast": [
+                "John Jarratt",
+                "Cassandra Magrath",
+                "Kestie Morassi",
+                "Nathan Phillips",
+                "Gordon Poole",
+                "Guy O'Donnell",
+                "Phil Stevenson",
+                "Geoff Revell",
+                "Andy McPhee",
+                "Aaron Sterns"
+            ],
+            "Average_rating": 2.98,
+            "Genres": [
+                "Thriller",
+                "Horror"
+            ],
+            "Themes": [
+                "Horror, the undead and monster classics",
+                "Intense violence and sexual transgression"
+            ],
+            "Nanogenres": [
+                "Gory, gruesome, and slasher horror",
+                "Terrifying, haunted, and supernatural horror",
+                "Graphic violence and brutal revenge",
+                "Creepy, chilling, and terrifying horror",
+                "Twisted dark psychological thriller"
+            ],
+            "Runtime": 99,
+            "Countries": [
+                "Australia"
+            ],
+            "Original_language": "Swedish",
+            "Spoken_languages": [
+                "English",
+                "Swedish"
+            ],
+            "Description": "Three backpackers stranded in the Australian outback are plunged inside a hellish nightmare of insufferable torture by a sadistic psychopathic local.",
+            "Studios": [
+                "Australian Film Finance Corporation",
+                "South Australian Film Corporation",
+                "403 Productions",
+                "True Crime Channel",
+                "Best FX (Boom Sound)",
+                "Emu Creek Pictures"
+            ],
+            "Film_URL": "https://letterboxd.com/film/wolf-creek/",
+            "Similar_Films": [
+                {
+                    "id": "143135",
+                    "slug": "wolf-creek-2",
+                    "title": "Wolf Creek 2",
+                    "year": 2013,
+                    "url": "https://letterboxd.com/film/wolf-creek-2/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/uELzdTzPOpZwSFqBbwpjuKE7UW3.jpg"
+                },
+                {
+                    "id": "277625",
+                    "slug": "wolf-creek-legacy",
+                    "title": "Wolf Creek: Legacy",
+                    "year": 2027,
+                    "url": "https://letterboxd.com/film/wolf-creek-legacy/",
+                    "poster": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/52zXdhykGI006vMp7YzqJoP9ty5.jpg"
+                }
+            ],
+            "Rating_Igor": 2.5,
+            "Rating_Valeria": 2.5
+        },
+        {
+            "id": 264,
+            "Film_title": "Serpent's Path",
+            "Poster_Movie": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/8ah4EUBfuOXhPNW5Z2cgAe4wTbM.jpg",
+            "Release_year": 2024,
+            "Director": "Kiyoshi Kurosawa",
+            "Cast": [
+                "Ko Shibasaki",
+                "Damien Bonnard",
+                "Hidetoshi Nishijima",
+                "Munetaka Aoki",
+                "Mathieu Amalric",
+                "Grégoire Colin",
+                "Vimala Pons",
+                "Slimane Dazi",
+                "Michaël Vander-Meiren",
+                "Anouchka Csernakova"
+            ],
+            "Average_rating": 3.28,
+            "Genres": [
+                "Thriller",
+                "Crime"
+            ],
+            "Themes": [],
+            "Nanogenres": [],
+            "Runtime": 113,
+            "Countries": [
+                "France",
+                "Japan",
+                "Belgium",
+                "Luxembourg"
+            ],
+            "Original_language": "French",
+            "Spoken_languages": [
+                "French",
+                "Japanese"
+            ],
+            "Description": "A mysterious woman teams up with a man whose daughter was killed and who is now seeking revenge. Together they kidnap members of an organization and torture them to find out what really happened.",
+            "Studios": [
+                "Cinéfrance Studios",
+                "KADOKAWA",
+                "Tarantula",
+                "Tarantula"
+            ],
+            "Film_URL": "https://letterboxd.com/film/serpents-path-2024/",
+            "Similar_Films": [],
+            "Rating_Igor": 3.0,
             "Rating_Valeria": 2.5
         }
     ]
